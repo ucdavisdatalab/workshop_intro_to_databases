@@ -1,74 +1,41 @@
-# Template: Workshop Reader
 
-This repository is a template for workshop readers for the UC Davis DataLab.
-This template uses **bookdown** to knit the reader. You can also optionally use
-**renv** to manage packages and Git Large File Storage to manage large files
-(instructions included).
-
-To get started, create a new repo on GitHub from this template
-([instructions][gh]), then `git clone` your new repo.
-
-[gh]: https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template
-
-Once you've cloned the repo, here's a checklist of things to do to prepare the
-repo:
-
-1. **renv** (optional): To set up **renv**, open R at the top level of the repo
-   and run:
-
-    ```r
-    renv::init()
-    ```
-
-    Restart R. Then, to install the **bookdown** toolchain to the project
-    package library, run:
-
-    ```r
-    install.packages("bookdown")
-    renv::snapshot()
-    ```
-
-    You can skip this step if you're not going to use **renv**.
-
-2. `index.Rmd`: Replace the all-caps text with your workshop details.
-    + Title (in 2 places, 1 of them in the `output:` HTML block)
-    + Author's name
-    + Repo name (in 4 places, 2 of them in the `output:` HTML block)
-    + Description, learning goals, & prerequisites
-
-3. `README.md`: Replace the all-caps text with your workshop details.
-    + Title
-    + Quarter & year
-    + Author's name & email
-    + Reader URL
-    + Event URL
-    + Description, learning goals, & prerequisites
-
-4. If this workshop does not have an assessment, delete `99_assessment.Rmd`.
-
-5. GitHub: In the repo's About section, add the reader URL and appropriate
-   tags.
-
-6. GitHub: In the repo's Settings page, enable GitHub pages. Set the branch to
-   `main` and the directory to `docs/`.
-
-7. `README.md`: Remove these template instructions, which end at the `#
-   Workshop:` header below
-
-8. `git add` all changed files, then `git commit` and `git push`.
-
-
-# Workshop: YOUR WORKSHOP TITLE
+# Workshop: Introduction to Databases
 
 _[UC Davis DataLab](https://datalab.ucdavis.edu/)_  
-_QUARTER YEAR_  
-_Instructor: YOUR NAME <<YOUR_EMAIL@ucdavis.edu>>_  
-_Maintainer: MAINTAINER'S NAME <<MAINTAINER_EMAIL@ucdavis.edu>>_
+_Spring 2024_  
+_Instructor: Elise Hellwig <<echellwig@ucdavis.edu>>_  
+_Maintainer: Elise Hellwig <<echellwig@ucdavis.edu>>_
 
-* [Reader](https://ucdavisdatalab.github.io/YOUR_REPOSITORY/)
+* [Reader](https://ucdavisdatalab.github.io/workshop_intro_to_databases/)
 * [Event Page](https://datalab.ucdavis.edu/eventscalendar/YOUR_EVENT/)
+* [Google Drive](https://drive.google.com/drive/folders/1eNbJfYcjpQsc6fx8FLcqWrgrrQaGfqL3)
 
-YOUR DESCRIPTION, LEARNING GOALS, PREREQUISITES, ETC
+## Description
+
+This workshop provides a broad overview of the various technologies for storing
+and organizing different collections of data. We will discuss how data structure
+and data types impact your storage options, when you should use a database, and
+which platforms you might consider for your research.  This workshop is a
+general lecture with case studies and Q&A (no laptops necessary). This workshop
+is a prerequisite for DataLab's "Getting started with SQL for querying
+databases" workshop and part of the Research Computing micro-credential.
+
+### Learning Goals
+
+By the end of this workshop, learners should be able to:
+
+* Describe different data set structures
+
+* Compare and contrast different data storage platforms
+
+* Explain the differences between SQL and noSQL databases
+
+* Explain the components of an Entity Relationship Diagram (ERD)
+
+* Define relational keys
+
+* Identify appropriate data storage solutions based on the structure of a 
+  research data set
 
 
 ## Contributing
@@ -104,43 +71,16 @@ To make alterations to the reader:
 4.  Run `knit.R` to regenerate the HTML files in the `docs/`. You can do this
     in the shell with `./knit.R` or in R with `source("knit.R")`.
 
-5.  Run `renv::snapshot()` in an R session at the top level of the repo to
-    automatically add any packages your code uses to the project package
-    library.
-
-6.  When you're finished, `git add`:
+5.  When you're finished, `git add`:
     - Any files you added or edited directly, including in `data/` and `img/`
     - `docs/` (all of it)
     - `_bookdown_files/` (contains the **knitr** cache)
-    * `renv.lock` (contains the **renv** package list)
 <!--
     - `.gitattributes` (contains the Git LFS file list)
 -->
 
     Then `git commit` and `git push`. The live web page will update
     automatically after 1-10 minutes.
-
-
-### Caching
-
-If one of your code chunks takes a lot of time or memory to run, consider
-caching the result, so the chunk won't run every time someone knits the
-reader. To cache a code chunk, add `cache=TRUE` in the chunk header. It's
-best practice to label cached chunks, like so:
-
-````
-```{r YOUR_CHUNK_NAME, cache=TRUE}
-# Your code...
-```
-````
-
-Cached files are stored in the `_bookdown_files/` directory. If you ever want
-to clear the cache, you can delete this directory (or its subdirectories).
-The cache will be rebuilt the next time you knit the reader.
-
-Beware that caching doesn't work with some packages, especially packages that
-use external libraries. Because of this, it's best to leave caching off for
-code chunks that are not resource-intensive.
 
 
 <!--
@@ -199,22 +139,5 @@ repo.
 [git-lfs]: https://git-lfs.github.com/
 -->
 
-
-### R Packages
-
-This repo uses [**renv**](https://rstudio.github.io/renv/) for package
-management. Install **renv** according to the installation instructions on
-their website.
-
-Then open an R session at the top level of the repo and run:
-
-```r
-renv::restore()
-```
-
-This will download and install the correct versions of all the required
-packages to **renv**'s package library. This is separate from your global R
-package library and will not interfere with other versions of packages you have
-installed.
 
 [Back to Top](#top)
