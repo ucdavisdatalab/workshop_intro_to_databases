@@ -32,8 +32,6 @@ output:
 
 # Overview {.unnumbered}
 
-## Description
-
 This workshop provides a broad overview of the various technologies for storing
 and organizing different collections of data. We will discuss how data structure
 and data types impact your storage options, when you should use a database, and
@@ -42,7 +40,7 @@ lecture with case studies and Q&A (no laptops necessary). This workshop is a
 prerequisite for DataLab's [Intro to SQL for Querying Databases][sql] workshop
 and part of the [Research Computing micro-credential][micro_cred]
 
-## Learning Goals
+## Learning Goals {-}
 
 By the end of this workshop, learners should be able to:
 
