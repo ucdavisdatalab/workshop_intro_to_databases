@@ -1,10 +1,10 @@
 ---
-title: YOUR WORKSHOP TITLE
-author: [YOUR NAME]
+title:  An Overview of Databases and Data Storage Technologies
+author: [Elise Hellwig]
 date: "`r Sys.Date()`"
 
-github-repo: ucdavisdatalab/YOUR_REPO
-url: "https://ucdavisdatalab.github.io/YOUR_REPO/"
+github-repo: ucdavisdatalab/workshop_intro_to_databases
+url: "https://ucdavisdatalab.github.io/workshop_intro_to_databases/"
 
 lang: en-us
 
@@ -19,17 +19,46 @@ output:
           <li><a href="https://datalab.ucdavis.edu/">
             <img src="https://datalab.ucdavis.edu/wp-content/uploads/2019/07/datalab-logo-full-color-rgb-1.png" style="height: 100%; width: 100%; object-fit: contain" />
           </a></li>
-          <li><a href="./" style="font-size: 18px">YOUR WORKSHOP TITLE</a></li>
+          <li><a href="./" style="font-size: 18px">An Overview of Databases and Data Storage Technologies</a></li>
         after: |
           <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
             <img alt="CC BY-SA 4.0" src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg" style="float: right; padding-right: 10px;" />
           </a>
         collapse: section
       sharing: no
-      view: https://github.com/ucdavisdatalab/YOUR_REPO/blob/master/%s
-      edit: https://github.com/ucdavisdatalab/YOUR_REPO/edit/master/%s
+      view: https://github.com/ucdavisdatalab/workshop_intro_to_databases/blob/main/%s
+      edit: https://github.com/ucdavisdatalab/workshop_intro_to_databases/edit/main/%s
 ---
 
-# Overview {-}
+# Overview {.unnumbered}
 
-YOUR DESCRIPTION, LEARNING GOALS, PREREQUISITES, ETC
+## Description
+
+This workshop provides a broad overview of the various technologies for storing
+and organizing different collections of data. We will discuss how data structure
+and data types impact your storage options, when you should use a database, and
+which platforms you might consider for your research. This workshop is a general
+lecture with case studies and Q&A (no laptops necessary). This workshop is a
+prerequisite for DataLab's [Intro to SQL for Querying Databases][sql] workshop
+and part of the [Research Computing micro-credential][micro_cred]
+
+## Learning Goals
+
+By the end of this workshop, learners should be able to:
+
+-   Describe different data set structures
+
+-   Compare and contrast different data storage platforms
+
+-   Explain the differences between SQL and noSQL databases
+
+-   Explain the components of an Entity Relationship Diagram (ERD)
+
+-   Define relational keys
+
+-   Identify appropriate data storage solutions based on the structure
+    of a research data set
+
+[sql]: https://ucdavisdatalab.github.io/workshop_intro_to_sql/
+[micro_cred]: https://gradpathways.ucdavis.edu/research-computing-pathway
+
