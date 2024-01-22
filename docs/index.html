@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-us" xml:lang="en-us">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>An Overview of Databases and Data Storage Technologies</title>
+  <meta name="description" content="An Overview of Databases and Data Storage Technologies" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="An Overview of Databases and Data Storage Technologies" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="ucdavisdatalab/workshop_intro_to_databases" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="An Overview of Databases and Data Storage Technologies" />
+  
+  
+  
+
+<meta name="author" content="Elise Hellwig" />
+
+
+<meta name="date" content="2024-01-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="assessment.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="https://datalab.ucdavis.edu/">
+  <img src="https://datalab.ucdavis.edu/wp-content/uploads/2019/07/datalab-logo-full-color-rgb-1.png" style="height: 100%; width: 100%; object-fit: contain" />
+</a></li>
+<li><a href="./" style="font-size: 18px">An Overview of Databases and Data Storage Technologies</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#description"><i class="fa fa-check"></i><b>0.1</b> Description</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#learning-goals"><i class="fa fa-check"></i><b>0.2</b> Learning Goals</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="assessment.html"><a href="assessment.html"><i class="fa fa-check"></i><b>1</b> Assessment</a></li>
+<li class="divider"></li>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+  <img alt="CC BY-SA 4.0" src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg" style="float: right; padding-right: 10px;" />
+</a>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">An Overview of Databases and Data Storage Technologies</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">An Overview of Databases and Data Storage Technologies</h1>
+<p class="author"><em>Elise Hellwig</em></p>
+<p class="date"><em>2024-01-22</em></p>
+</div>
+<div id="overview" class="section level1 unnumbered hasAnchor">
+<h1>Overview<a href="index.html#overview" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="description" class="section level2 hasAnchor" number="0.1">
+<h2><span class="header-section-number">0.1</span> Description<a href="index.html#description" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This workshop provides a broad overview of the various technologies for storing
+and organizing different collections of data. We will discuss how data structure
+and data types impact your storage options, when you should use a database, and
+which platforms you might consider for your research. This workshop is a general
+lecture with case studies and Q&amp;A (no laptops necessary). This workshop is a
+prerequisite for DataLab’s <a href="https://ucdavisdatalab.github.io/workshop_intro_to_sql/">Intro to SQL for Querying Databases</a> workshop
+and part of the <a href="https://gradpathways.ucdavis.edu/research-computing-pathway">Research Computing micro-credential</a></p>
+</div>
+<div id="learning-goals" class="section level2 hasAnchor" number="0.2">
+<h2><span class="header-section-number">0.2</span> Learning Goals<a href="index.html#learning-goals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>By the end of this workshop, learners should be able to:</p>
+<ul>
+<li><p>Describe different data set structures</p></li>
+<li><p>Compare and contrast different data storage platforms</p></li>
+<li><p>Explain the differences between SQL and noSQL databases</p></li>
+<li><p>Explain the components of an Entity Relationship Diagram (ERD)</p></li>
+<li><p>Define relational keys</p></li>
+<li><p>Identify appropriate data storage solutions based on the structure
+of a research data set</p></li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="assessment.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/ucdavisdatalab/workshop_intro_to_databases/edit/main/index.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/ucdavisdatalab/workshop_intro_to_databases/blob/main/index.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
