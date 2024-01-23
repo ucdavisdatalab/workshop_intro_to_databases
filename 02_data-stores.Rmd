@@ -1,7 +1,15 @@
 # Data Stores
 
+> A repository for persistently storing and managing collections of data which 
+> include not just repositories like databases, but also simpler store types 
+> such as simple files, emails etc.
+>
+> Wikipedia
+
+
 A data store is a repository for storing and managing data, generally speaking
-digitally. Though you could argue that a filing cabinet is an analog data store.
+digitally. Though you could argue that a things like a filing cabinet or a
+library qualify as analog data stores.
 Data stores have two primary functions. First, they need to facilitate people
 accessing data from the data store (reading) and making changes to the data in
 the data store (writing). Second, they need to maintain the integrity of the
