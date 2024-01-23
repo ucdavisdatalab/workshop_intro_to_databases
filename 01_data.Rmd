@@ -10,9 +10,26 @@ Over the centuries, nay millennia, humans have stored information in a
 startlingly diverse set of mediums, from oral narratives and pictographs, to 
 printed text and now 1s and 0s. While in current times data is generally 
 digital, people collected data long before the existence of the computer. They
-just had to store it differently.
+just had to store it differently. In general, data (singular datum) is
+information that has been translated into a form that can be easily shared
+and stored for later use.
 
 ## Data Types
+
+A datum's type tells the computer what types of operations a user will do with
+the given data. Common data types include integers, decimal or floating point
+numbers, characters (text), Boolean values (TRUE and FALSE) and date/times. Data
+type also influences how data is stored. Unlike other characteristics we will
+discuss later, an individual datum can have a type.
+
+Data type is not necessarily inherent to a piece of information, though it is
+often strongly suggested. For example, you can store the value of 1 as the
+integer 1, the decimal 1.0, the text "1", the Boolean TRUE, or the date
+1900-01-01 00:00:00. The underlying information is the same (1), but the
+computer will treat each of these pieces of data differently. It will not allow
+you to add "1" to another number, and it may have issues combining the integer
+or decimal 1.0 with text. Text itself can only be stored as characters, and
+decimal numbers can only be stored as floats and characters.
 
 ## Data Structures
 
