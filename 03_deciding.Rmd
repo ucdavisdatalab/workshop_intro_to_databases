@@ -1,0 +1,5 @@
+# Choosing the Right Data Store
+
+## CAP Theorem
+
+## Polyglot Persistance
