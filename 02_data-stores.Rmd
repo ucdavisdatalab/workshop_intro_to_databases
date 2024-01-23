@@ -1,0 +1,49 @@
+# Data Stores
+
+A data store is a repository for storing and managing data, generally speaking
+digitally. Though you could argue that a filing cabinet is an analog data store.
+Data stores have two primary functions. First, they need to facilitate people
+accessing data from the data store (reading) and making changes to the data in
+the data store (writing). Second, they need to maintain the integrity of the
+data over time.
+
+It is important to note, not all data stores are databases. A pile of papers on
+a desk is definitely not a database, but it could be considered a data store,
+albeit a bad one.
+
+## Principles of Data Storage
+
+When you are trying to decide what type of data storage to use, consider these
+ideas:
+
+  1. All data has an inherent structure.
+
+  2. Different data structures facilitate different research questions.
+
+  3. All data stores impose an underlying data structure.
+
+  4. The best data storage technology for any research question matches the 
+     structure of the data with the structure of the data store.
+
+
+## Data Store Vocabulary
+
+### Normalization
+
+### Join
+
+### Vertical Scaling
+
+### Horizontal Scaling
+
+## Types of Data Stores
+
+### Spreadsheets
+
+### Relational Database Management System
+
+#### ERDs
+
+#### Relationship keys
+
+### NoSQL
