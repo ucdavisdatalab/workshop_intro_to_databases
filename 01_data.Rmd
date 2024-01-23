@@ -1,0 +1,27 @@
+# Data
+
+> Quantities, characters, or symbols on which operations are performed by a 
+> computer, considered collectively. Also (in non-technical contexts): 
+> information in digital form.
+>
+> \- Oxford English Dictionary
+
+Over the centuries, nay millennia, humans have stored information in a 
+startlingly diverse set of mediums, from oral narratives and pictographs, to 
+printed text and now 1s and 0s. While in current times data is generally 
+digital, people collected data long before the existence of the computer. They
+just had to store it differently.
+
+## Data Types
+
+## Data Structures
+
+### Columnar/Tabular
+
+### Graph
+
+### Tree
+
+### Relational/Categorical
+
+## Picking a Data Structure
