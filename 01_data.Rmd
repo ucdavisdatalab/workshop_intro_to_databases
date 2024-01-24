@@ -11,8 +11,8 @@ startlingly diverse set of mediums, from oral narratives and pictographs, to
 printed text and now 1s and 0s. While in current times data is generally 
 digital, people collected data long before the existence of the computer. They
 just had to store it differently. In general, data (singular datum) is
-information that has been translated into a form that can be easily shared
-and stored for later use.
+information about the real world that has been translated into a form that can
+be easily shared and stored for later use.
 
 ## Data Types
 
@@ -33,12 +33,51 @@ decimal numbers can only be stored as floats and characters.
 
 ## Data Structures
 
+> A data structure is a collection of data values, the relationships among them,
+> and the functions or operations that can be applied to the data.
+>
+> Wikipedia
+
+As mentioned previously, data represents information from the real world. 
+Because we have limited processing power and storage space, we cannot fully
+capture all >>>>>>>>>>
+
+You can use this context to identify the best structure to use for your data. 
+
+Unlike with data types, a single datum cannot have a data structure. This is
+because data structure is about capturing relationships between data points,
+there isn't any meaningful information to be gained from the relationship of a
+data point with itself.
+
+There are four basic data structures: tabular/columnar, graph, tree, and
+categorical/relational data. In practice, data often traits from multiple data
+structures.
+
 ### Columnar/Tabular
+
+Tabular or columnar data is made up of rows and columns, collectively referred
+to as a table. Each row represents an observation, and each column a measurement
+from that observation. There are no explicit relationships between observations.
 
 ### Graph
 
-### Tree
+Graph data structure explicitly captures between entities. In graphs, 
+relationships are defined by position and distance. *relationships are directional*
 
-### Relational/Categorical
+## Tree 
+
+Tree data is very similar to graph data in many ways trees also explicitly
+capture relationships between entities. However, in trees the relationships
+are hierarchical. 
+
+## Categorical - Relational 
+
+In categorical data, category membership is the organizing principle of the 
+data structure. Entities can have membership in multiple categories, and
+relationships are defined between categories instead of the entities themselves.
+As such, relationships tend to represent complex processes rather than
+individual entities.
+
+
 
 ## Picking a Data Structure
