@@ -38,20 +38,12 @@ decimal numbers can only be stored as floats and characters.
 >
 > Wikipedia
 
-As mentioned previously, data represents information from the real world. 
-Because we have limited processing power and storage space, we cannot fully
-capture all >>>>>>>>>>
-
-You can use this context to identify the best structure to use for your data. 
-
 Unlike with data types, a single datum cannot have a data structure. This is
 because data structure is about capturing relationships between data points,
 there isn't any meaningful information to be gained from the relationship of a
-data point with itself.
-
-There are four basic data structures: tabular/columnar, graph, tree, and
-categorical/relational data. In practice, data often traits from multiple data
-structures.
+data point with itself. There are four basic data structures: tabular/columnar,
+graph, tree, and categorical/relational data. In practice, data often traits
+from multiple data structures.
 
 ### Columnar/Tabular
 
@@ -68,7 +60,8 @@ relationships are defined by position and distance. *relationships are direction
 
 Tree data is very similar to graph data in many ways trees also explicitly
 capture relationships between entities. However, in trees the relationships
-are hierarchical. 
+are hierarchical. The number of nodes separating an entity from a common root
+defines that entity's place in the hierarchy.
 
 ## Categorical - Relational 
 
@@ -78,6 +71,22 @@ relationships are defined between categories instead of the entities themselves.
 As such, relationships tend to represent complex processes rather than
 individual entities.
 
-
-
 ## Picking a Data Structure
+
+As mentioned previously, data represents information from the real world. And
+all information in the real world can be thought of in a larger context, like
+zooming out with a camera lens. You can use this context to identify the best
+structure to use for your data. If you view your data as observation of some
+larger phenomenon, tabular data could be a good fit. If you are more concerned
+about how various entities relate to each other in the context of your research,
+a graph may be more appropriate.
+
+Additionally, many research questions are complex enough that one data structure
+on its own may not be sufficient to capture all the information necessary to
+answer the question. It it is very common to combine data structures to capture
+more information that one could on its own. Most observation based data sets are
+actually a combination of tabular data and categorical - relational data, which
+captures information about the relationships between observations. Phylogenetic
+trees, the data structure most commonly used in the study of evolution, is a
+combination of the graph and tree data structures.
+
