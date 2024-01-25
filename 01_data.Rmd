@@ -56,14 +56,14 @@ from that observation. There are no explicit relationships between observations.
 Graph data structure explicitly captures between entities. In graphs, 
 relationships are defined by position and distance. *relationships are directional*
 
-## Tree 
+### Tree 
 
 Tree data is very similar to graph data in many ways trees also explicitly
 capture relationships between entities. However, in trees the relationships
 are hierarchical. The number of nodes separating an entity from a common root
 defines that entity's place in the hierarchy.
 
-## Categorical - Relational 
+### Categorical - Relational 
 
 In categorical data, category membership is the organizing principle of the 
 data structure. Entities can have membership in multiple categories, and
