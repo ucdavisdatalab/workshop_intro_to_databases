@@ -1,19 +1,17 @@
 # Data Stores
 
-> A repository for persistently storing and managing collections of data which 
-> include not just repositories like databases, but also simpler store types 
-> such as simple files, emails etc.
+> A data store is repository for persistently storing and managing collections
+> of data which include not just repositories like databases, but also simpler
+> store types such as simple files, emails etc.
 >
 > Wikipedia
 
-
 A data store is a repository for storing and managing data, generally speaking
 digitally. Though you could argue that a things like a filing cabinet or a
-library qualify as analog data stores.
-Data stores have two primary functions. First, they need to facilitate people
-accessing data from the data store (reading) and making changes to the data in
-the data store (writing). Second, they need to maintain the integrity of the
-data over time.
+library qualify as analog data stores. Data stores have two primary functions.
+First, they need to facilitate people accessing data from the data store
+(reading) and making changes to the data in the data store (writing). Second,
+they need to facilitate this access over a period of time.
 
 It is important to note, not all data stores are databases. A pile of papers on
 a desk is definitely not a database, but it could be considered a data store,
@@ -36,19 +34,86 @@ ideas:
 
 ## Data Store Vocabulary
 
+There are a few concepts that will be useful when describing types of data 
+stores and comparing their functionality. 
+
 ### Normalization
+
+Data normalization is the process of organizing data in a database in a way
+that reduces the database's size. It the organization structure also protects
+against typos and other data quality issues from sneaking in. In general, data
+normalization will break one group of data into multiple groups.
 
 ### Join
 
-### Vertical Scaling
+While it is much easier to store normalized data, most data analysis will
+require you to work with data in a non-normalized form. A data join reverses the
+normalization process. It takes multiple groups of data and combines them into
+one.
 
-### Horizontal Scaling
+### Scaling
+
+As you add data to a data store, you may need to add computing resources to
+the data store to maintain your data store's performance. 
+
+#### Horizontal Scaling
+
+Horizontal scaling is like urban sprawl. It involves adding more individual computers,
+servers, or nodes to the database. Because you don't have to muck around with 
+upgrading already existing computers, it is easier to implement. Additionally,
+there is no theoretical limit on the number of servers you could add to your
+database. However, having multiple servers running the same database does 
+increase complexity and ongoing support costs.
+
+#### Vertical Scaling
+
+Vertical scaling is like building a high rise apartment. It involves adding
+computing resources (memory, storage) to a single computer or server. It tends
+to be more difficult and expensive than horizontal scaling at the outset, but 
+system complexity and ongoing costs stay relatively constant. Additionally,
+there is a limit to how much you can upgrade a single machine, so at a certain
+point you may need to replace the hardware all together.
+
 
 ## Types of Data Stores
 
 ### Spreadsheets
 
+Spreadsheets are one of the most, if not the most, ubiquitous form of (digital)
+data store. If you have used Microsoft Excel or Google Sheets, you have used a a
+spreadsheet. In fact spreadsheet applications transformed the use of the
+personal computer, particularly in business circles. Despite this, a spreadsheet
+is not a database. Like most modern applications, spreadsheet software have
+graphical user interfaces, making the barrier to entry very low. Spreadsheet
+applications also offer some built in analysis tools, so you don't have to learn
+a new application to do basic statistics and data visualization.
+
+However, spreadsheets suffer from some severe limitations. They offer limited
+storage capacity, don't have normalization capabilities, so your 
+data takes up even more space than it would otherwise. The lack of normalization
+means it is easy to compromise data integrity and end up with ____ (ex. yes,
+Yes, and YES coded as different responses). There is also no way to 
+independently scale up computing resources for a spreadsheet application. 
+
+Finally, most spreadsheet applications store their data locally, so unless you
+are militant about version control outside of the application, it is easy to end
+up with people working on multiple versions of the data. Google Sheets offers
+shared access and some version control, but still fails to deliver on storage
+capacity, resource scaling, and data integrity.
+
+#### Examples
+
+  * Microsoft Excel
+  * Google Sheets
+  * Numbers
+  * LibreOffice Calc
+  * OpenRefine
+  * Open Science Framework
+  
+
 ### Relational Database Management System
+
+Relational Database Management Systems (RDBMSs) are one type of database. 
 
 #### ERDs
 
