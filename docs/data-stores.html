@@ -23,7 +23,7 @@
 <meta name="author" content="Elise Hellwig" />
 
 
-<meta name="date" content="2024-01-22" />
+<meta name="date" content="2024-01-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="data.html"/>
-<link rel="next" href="assessment.html"/>
+<link rel="next" href="choosing-the-right-data-store.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -89,10 +89,10 @@
 <ul>
 <li class="chapter" data-level="1.2.1" data-path="data.html"><a href="data.html#columnartabular"><i class="fa fa-check"></i><b>1.2.1</b> Columnar/Tabular</a></li>
 <li class="chapter" data-level="1.2.2" data-path="data.html"><a href="data.html#graph"><i class="fa fa-check"></i><b>1.2.2</b> Graph</a></li>
-<li class="chapter" data-level="1.2.3" data-path="data.html"><a href="data.html#tree"><i class="fa fa-check"></i><b>1.2.3</b> Tree</a></li>
-<li class="chapter" data-level="1.2.4" data-path="data.html"><a href="data.html#relationalcategorical"><i class="fa fa-check"></i><b>1.2.4</b> Relational/Categorical</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="data.html"><a href="data.html#picking-a-data-structure"><i class="fa fa-check"></i><b>1.3</b> Picking a Data Structure</a></li>
+<li class="chapter" data-level="1.3" data-path="data.html"><a href="data.html#tree"><i class="fa fa-check"></i><b>1.3</b> Tree</a></li>
+<li class="chapter" data-level="1.4" data-path="data.html"><a href="data.html#categorical---relational"><i class="fa fa-check"></i><b>1.4</b> Categorical - Relational</a></li>
+<li class="chapter" data-level="1.5" data-path="data.html"><a href="data.html#picking-a-data-structure"><i class="fa fa-check"></i><b>1.5</b> Picking a Data Structure</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="data-stores.html"><a href="data-stores.html"><i class="fa fa-check"></i><b>2</b> Data Stores</a>
 <ul>
@@ -101,8 +101,7 @@
 <ul>
 <li class="chapter" data-level="2.2.1" data-path="data-stores.html"><a href="data-stores.html#normalization"><i class="fa fa-check"></i><b>2.2.1</b> Normalization</a></li>
 <li class="chapter" data-level="2.2.2" data-path="data-stores.html"><a href="data-stores.html#join"><i class="fa fa-check"></i><b>2.2.2</b> Join</a></li>
-<li class="chapter" data-level="2.2.3" data-path="data-stores.html"><a href="data-stores.html#vertical-scaling"><i class="fa fa-check"></i><b>2.2.3</b> Vertical Scaling</a></li>
-<li class="chapter" data-level="2.2.4" data-path="data-stores.html"><a href="data-stores.html#horizontal-scaling"><i class="fa fa-check"></i><b>2.2.4</b> Horizontal Scaling</a></li>
+<li class="chapter" data-level="2.2.3" data-path="data-stores.html"><a href="data-stores.html#scaling"><i class="fa fa-check"></i><b>2.2.3</b> Scaling</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="data-stores.html"><a href="data-stores.html#types-of-data-stores"><i class="fa fa-check"></i><b>2.3</b> Types of Data Stores</a>
 <ul>
@@ -111,7 +110,12 @@
 <li class="chapter" data-level="2.3.3" data-path="data-stores.html"><a href="data-stores.html#nosql"><i class="fa fa-check"></i><b>2.3.3</b> NoSQL</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="assessment.html"><a href="assessment.html"><i class="fa fa-check"></i><b>3</b> Assessment</a></li>
+<li class="chapter" data-level="3" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html"><i class="fa fa-check"></i><b>3</b> Choosing the Right Data Store</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html#cap-theorem"><i class="fa fa-check"></i><b>3.1</b> CAP Theorem</a></li>
+<li class="chapter" data-level="3.2" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html#polyglot-persistance"><i class="fa fa-check"></i><b>3.2</b> Polyglot Persistance</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="assessment.html"><a href="assessment.html"><i class="fa fa-check"></i><b>4</b> Assessment</a></li>
 <li class="divider"></li>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
   <img alt="CC BY-SA 4.0" src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg" style="float: right; padding-right: 10px;" />
@@ -137,18 +141,17 @@
 <div id="data-stores" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">2</span> Data Stores<a href="data-stores.html#data-stores" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <blockquote>
-<p>A repository for persistently storing and managing collections of data which
-include not just repositories like databases, but also simpler store types
-such as simple files, emails etc.</p>
+<p>A data store is repository for persistently storing and managing collections
+of data which include not just repositories like databases, but also simpler
+store types such as simple files, emails etc.</p>
 <p>Wikipedia</p>
 </blockquote>
 <p>A data store is a repository for storing and managing data, generally speaking
 digitally. Though you could argue that a things like a filing cabinet or a
-library qualify as analog data stores.
-Data stores have two primary functions. First, they need to facilitate people
-accessing data from the data store (reading) and making changes to the data in
-the data store (writing). Second, they need to maintain the integrity of the
-data over time.</p>
+library qualify as analog data stores. Data stores have two primary functions.
+First, they need to facilitate people accessing data from the data store
+(reading) and making changes to the data in the data store (writing). Second,
+they need to facilitate this access over a period of time.</p>
 <p>It is important to note, not all data stores are databases. A pile of papers on
 a desk is definitely not a database, but it could be considered a data store,
 albeit a bad one.</p>
@@ -166,26 +169,84 @@ structure of the data with the structure of the data store.</p></li>
 </div>
 <div id="data-store-vocabulary" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Data Store Vocabulary<a href="data-stores.html#data-store-vocabulary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>There are a few concepts that will be useful when describing types of data
+stores and comparing their functionality.</p>
 <div id="normalization" class="section level3 hasAnchor" number="2.2.1">
 <h3><span class="header-section-number">2.2.1</span> Normalization<a href="data-stores.html#normalization" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Data normalization is the process of organizing data in a database in a way
+that reduces the database’s size. It the organization structure also protects
+against typos and other data quality issues from sneaking in. In general, data
+normalization will break one group of data into multiple groups.</p>
 </div>
 <div id="join" class="section level3 hasAnchor" number="2.2.2">
 <h3><span class="header-section-number">2.2.2</span> Join<a href="data-stores.html#join" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>While it is much easier to store normalized data, most data analysis will
+require you to work with data in a non-normalized form. A data join reverses the
+normalization process. It takes multiple groups of data and combines them into
+one.</p>
 </div>
-<div id="vertical-scaling" class="section level3 hasAnchor" number="2.2.3">
-<h3><span class="header-section-number">2.2.3</span> Vertical Scaling<a href="data-stores.html#vertical-scaling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="scaling" class="section level3 hasAnchor" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> Scaling<a href="data-stores.html#scaling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>As you add data to a data store, you may need to add computing resources to
+the data store to maintain your data store’s performance.</p>
+<div id="horizontal-scaling" class="section level4 hasAnchor" number="2.2.3.1">
+<h4><span class="header-section-number">2.2.3.1</span> Horizontal Scaling<a href="data-stores.html#horizontal-scaling" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Horizontal scaling is like urban sprawl. It involves adding more individual computers,
+servers, or nodes to the database. Because you don’t have to muck around with
+upgrading already existing computers, it is easier to implement. Additionally,
+there is no theoretical limit on the number of servers you could add to your
+database. However, having multiple servers running the same database does
+increase complexity and ongoing support costs.</p>
 </div>
-<div id="horizontal-scaling" class="section level3 hasAnchor" number="2.2.4">
-<h3><span class="header-section-number">2.2.4</span> Horizontal Scaling<a href="data-stores.html#horizontal-scaling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="vertical-scaling" class="section level4 hasAnchor" number="2.2.3.2">
+<h4><span class="header-section-number">2.2.3.2</span> Vertical Scaling<a href="data-stores.html#vertical-scaling" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Vertical scaling is like building a high rise apartment. It involves adding
+computing resources (memory, storage) to a single computer or server. It tends
+to be more difficult and expensive than horizontal scaling at the outset, but
+system complexity and ongoing costs stay relatively constant. Additionally,
+there is a limit to how much you can upgrade a single machine, so at a certain
+point you may need to replace the hardware all together.</p>
+</div>
 </div>
 </div>
 <div id="types-of-data-stores" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Types of Data Stores<a href="data-stores.html#types-of-data-stores" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="spreadsheets" class="section level3 hasAnchor" number="2.3.1">
 <h3><span class="header-section-number">2.3.1</span> Spreadsheets<a href="data-stores.html#spreadsheets" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Spreadsheets are one of the most, if not the most, ubiquitous form of (digital)
+data store. If you have used Microsoft Excel or Google Sheets, you have used a a
+spreadsheet. In fact spreadsheet applications transformed the use of the
+personal computer, particularly in business circles. Despite this, a spreadsheet
+is not a database. Like most modern applications, spreadsheet software have
+graphical user interfaces, making the barrier to entry very low. Spreadsheet
+applications also offer some built in analysis tools, so you don’t have to learn
+a new application to do basic statistics and data visualization.</p>
+<p>However, spreadsheets suffer from some severe limitations. They offer limited
+storage capacity, don’t have normalization capabilities, so your
+data takes up even more space than it would otherwise. The lack of normalization
+means it is easy to compromise data integrity and end up with ____ (ex. yes,
+Yes, and YES coded as different responses). There is also no way to
+independently scale up computing resources for a spreadsheet application.</p>
+<p>Finally, most spreadsheet applications store their data locally, so unless you
+are militant about version control outside of the application, it is easy to end
+up with people working on multiple versions of the data. Google Sheets offers
+shared access and some version control, but still fails to deliver on storage
+capacity, resource scaling, and data integrity.</p>
+<div id="examples" class="section level4 hasAnchor" number="2.3.1.1">
+<h4><span class="header-section-number">2.3.1.1</span> Examples<a href="data-stores.html#examples" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Microsoft Excel</li>
+<li>Google Sheets</li>
+<li>Numbers</li>
+<li>LibreOffice Calc</li>
+<li>OpenRefine</li>
+<li>Open Science Framework</li>
+</ul>
+</div>
 </div>
 <div id="relational-database-management-system" class="section level3 hasAnchor" number="2.3.2">
 <h3><span class="header-section-number">2.3.2</span> Relational Database Management System<a href="data-stores.html#relational-database-management-system" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Relational Database Management Systems (RDBMSs) are one type of database.</p>
 <div id="erds" class="section level4 hasAnchor" number="2.3.2.1">
 <h4><span class="header-section-number">2.3.2.1</span> ERDs<a href="data-stores.html#erds" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 </div>
@@ -205,7 +266,7 @@ structure of the data with the structure of the data store.</p></li>
         </div>
       </div>
 <a href="data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="assessment.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="choosing-the-right-data-store.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
