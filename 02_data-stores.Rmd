@@ -22,20 +22,25 @@ albeit a bad one.
 When you are trying to decide what type of data storage to use, consider these
 ideas:
 
-  1. All data has an inherent structure.
+1.  All data has an inherent structure.
 
-  2. Different data structures facilitate different research questions.
+2.  Different data structures facilitate different research questions.
 
-  3. All data stores impose an underlying data structure.
+3.  All data stores impose an underlying data structure.
 
-  4. The best data storage technology for any research question matches the 
-     structure of the data with the structure of the data store.
-
+4.  The best data storage technology for any research question matches the
+    structure of the data with the structure of the data store.
 
 ## Data Store Vocabulary
 
-There are a few concepts that will be useful when describing types of data 
-stores and comparing their functionality. 
+There are a few concepts that will be useful when describing types of data
+stores and comparing their functionality.
+
+### Transaction
+
+A transaction is a unit of work within a database. Any time you change a
+database, either by adding, removing or modifiying data, you are completing a
+transaction. Extracting data from a database is also a transaction.
 
 ### Normalization
 
@@ -47,76 +52,170 @@ normalization will break one group of data into multiple groups.
 ### Join
 
 While it is much easier to store normalized data, most data analysis will
-require you to work with data in a non-normalized form. A data join reverses the
-normalization process. It takes multiple groups of data and combines them into
-one.
+require you to work with data in a non-normalized form. A data join reverses
+the normalization process. It takes multiple groups of data and combines them
+into one.
 
 ### Scaling
 
-As you add data to a data store, you may need to add computing resources to
-the data store to maintain your data store's performance. 
+As you add data to a data store, you may need to add computing resources to the
+data store to maintain your data store's performance.
 
 #### Horizontal Scaling
 
-Horizontal scaling is like urban sprawl. It involves adding more individual computers,
-servers, or nodes to the database. Because you don't have to muck around with 
-upgrading already existing computers, it is easier to implement. Additionally,
-there is no theoretical limit on the number of servers you could add to your
-database. However, having multiple servers running the same database does 
-increase complexity and ongoing support costs.
+Horizontal scaling is like urban sprawl. It involves adding more individual
+computers, servers, or nodes to the database. Because you don't have to muck
+around with upgrading already existing computers, it is easier to implement.
+Additionally, there is no theoretical limit on the number of servers you could
+add to your database. However, having multiple servers running the same
+database does increase complexity and ongoing support costs.
 
 #### Vertical Scaling
 
 Vertical scaling is like building a high rise apartment. It involves adding
 computing resources (memory, storage) to a single computer or server. It tends
-to be more difficult and expensive than horizontal scaling at the outset, but 
+to be more difficult and expensive than horizontal scaling at the outset, but
 system complexity and ongoing costs stay relatively constant. Additionally,
 there is a limit to how much you can upgrade a single machine, so at a certain
 point you may need to replace the hardware all together.
 
-
 ## Types of Data Stores
 
-### Spreadsheets
+## Spreadsheets
 
 Spreadsheets are one of the most, if not the most, ubiquitous form of (digital)
-data store. If you have used Microsoft Excel or Google Sheets, you have used a a
-spreadsheet. In fact spreadsheet applications transformed the use of the
-personal computer, particularly in business circles. Despite this, a spreadsheet
-is not a database. Like most modern applications, spreadsheet software have
-graphical user interfaces, making the barrier to entry very low. Spreadsheet
-applications also offer some built in analysis tools, so you don't have to learn
-a new application to do basic statistics and data visualization.
+data store. If you have used Microsoft Excel or Google Sheets, you have used a
+a spreadsheet. In fact spreadsheet applications transformed the use of the
+personal computer, particularly in business circles. Despite this, a
+spreadsheet is not a database. Like most modern applications, spreadsheet
+software have graphical user interfaces, making the barrier to entry very low.
+Spreadsheet applications also offer some built in analysis tools, so you don't
+have to learn a new application to do basic statistics and data visualization.
 
 However, spreadsheets suffer from some severe limitations. They offer limited
-storage capacity, don't have normalization capabilities, so your 
-data takes up even more space than it would otherwise. The lack of normalization
-means it is easy to compromise data integrity and end up with ____ (ex. yes,
-Yes, and YES coded as different responses). There is also no way to 
-independently scale up computing resources for a spreadsheet application. 
+storage capacity, don't have normalization capabilities, so your data takes up
+even more space than it would otherwise. The lack of normalization means it is
+easy to compromise data integrity and end up with \_\_\_\_ (ex. yes, Yes, and
+YES coded as different responses). There is also no way to independently scale
+up computing resources for a spreadsheet application.
 
 Finally, most spreadsheet applications store their data locally, so unless you
-are militant about version control outside of the application, it is easy to end
-up with people working on multiple versions of the data. Google Sheets offers
-shared access and some version control, but still fails to deliver on storage
-capacity, resource scaling, and data integrity.
+are militant about version control outside of the application, it is easy to
+end up with people working on multiple versions of the data. Google Sheets
+offers shared access and some version control, but still fails to deliver on
+storage capacity, resource scaling, and data integrity.
 
-#### Examples
+### Examples
 
-  * Microsoft Excel
-  * Google Sheets
-  * Numbers
-  * LibreOffice Calc
-  * OpenRefine
-  * Open Science Framework
-  
+-   Microsoft Excel
+-   Google Sheets
+-   Numbers
+-   LibreOffice Calc
+-   OpenRefine
+-   Open Science Framework
 
-### Relational Database Management System
+## Relational Database Management System
 
-Relational Database Management Systems (RDBMSs) are one type of database. 
+Relational Database Management Systems (RDBMSs), or relational databases
+informally, are one type of database. When people use the word "database", nine
+times out of ten they are referring to a relational database. Like
+spreadsheets, RDBMSs impose a structure on the data they contain. Unlike
+spreadsheets the structure of that data can be fairly complicated. Relational
+databases are made up of tables that are connected through shared columns,
+called indexes or keys.
 
-#### ERDs
+Users interact with an RDBMS through SQL, which stands for structured query
+language. SQL allows you to standardize your interactions with a database. It
+gives you a log of the transactions to ___, and makes it easy to ensure everyone
+is working with the same set of data. To learn more about using SQL in practice,
+check out the Intro to SQL and Spatial SQL readers.
 
-#### Relationship keys
+### Transactions are ACID
 
-### NoSQL
+In relational databases, all transactions must adhere to a given set of rules. 
+These rules are abbreviated as ACID.
+
+**Atomic** - Transactions cannot be broken down into sub-steps. They are all or
+nothing. If one part of the transaction fails, the whole transaction is
+canceled. This ensures that the data is always valid.
+
+**Consistent** - All of the structural rules of the database must be obeyed
+before and after each transaction. If a column in a table has a particular type,
+every element in that column must have the same type at the end of each
+transaction.
+
+**Isolated** - Transactions only happen simultaneously if they do not interact.
+Otherwise the database executes transactions on a first come first serve basis.
+This means if two users want to modify the same table, the user who submitted
+their transaction first will modify the original table, and the user who
+submitted their transaction second will modify the modified table. If the if
+second transaction doesn't work with the modified table, it will fail and the
+user will have to resubmit the transaction to reflect the new information in
+the table.
+
+**Durable** - Changes to the database are permanent and will stay in place
+even after a system failure. There is no dialog box asking if you are sure you 
+want to overwrite your data, so BE CAREFUL.
+
+### Relationship keys
+
+A relationship key is a column or pair of columns that links two tables. There
+are two types of relationship keys: primary keys and foreign keys.
+A primary key is a column that uniquely identifies each row in a particular
+table. It is generally the first column in the table and is often named "ID". 
+A foreign key is a column in one table whose values correspond to a primary key
+in another table. 
+
+### Entity Relationship Diagrams
+
+Since relational databases are not human readable, it can be helpful to have a 
+an visual summary of the database without actually needing to look at the data.
+That is where Entity Relationship Diagrams (ERDs) come in. ERDs are a 
+standardized way to depict the structure of a relational database. Each box in 
+the diagram is a table, with the table title at the top and the column names 
+listed below it. The column type appears next to each column name. The
+
+Primary/foreign key pairs are linked in entity relationship diagrams
+using connector lines. These lines specify which tables can be joined, and
+which keys should be used to join them. They also can specify what type of 
+relationship the two tables have.
+
+The most common type of table relationship in relational databases is the 
+one-to-many relationship. In this case, one row in table A may be linked to
+many rows in table B. This is the case for the relationship between the ____
+and ____ tables in the UC Davis Library Database. One-to-one relationships are
+also fairly common in relational databases. Two tables are one-to-one when one
+observation in table A only corresponds to one observation in table B. This is
+the relationship between ____ and ____ in the UC Davis Library Database.
+
+As you might guess, there is a third type of relationship: many-to-many. 
+Many-to-many relationships are the sleeping giant of database relationships. 
+They can be very useful, but if you are not careful, they can multiply the size
+of your data several times over.
+
+
+### Pros and Cons of RDBMS
+
+| Pros                                            | Cons                                   |
+|-------------------------------------------------|----------------------------------------|
+| Supports ACID Transactions                      | Only vertical scaling                  |
+| Supports normalization and joins                | Joins mean loss of speed               |
+| Captures relationships with defined constraints | Requires an administrator of some sort |
+| Data integrity through normalization and types  | Data is not human readable             |
+| Unlimited indexing                              | Pre-defined data model                 |
+| Robust query language (SQL)                     |                                        |
+| Lots of software options (some free)            |                                        |
+
+
+### Examples
+
+-   Microsoft SQL Server
+-   PostgreSQL
+-   MySQL
+-   SQLite
+-   Amazon Redshift
+
+
+## NoSQL
+
+### Transactions are BASE
