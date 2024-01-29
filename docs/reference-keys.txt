@@ -9,6 +9,7 @@ picking-a-data-structure
 data-stores
 principles-of-data-storage
 data-store-vocabulary
+transaction
 normalization
 join
 scaling
@@ -18,9 +19,13 @@ types-of-data-stores
 spreadsheets
 examples
 relational-database-management-system
-erds
+transactions-are-acid
 relationship-keys
+entity-relationship-diagrams
+pros-and-cons-of-rdbms
+examples-1
 nosql
+transactions-are-base
 choosing-the-right-data-store
 cap-theorem
 polyglot-persistance
