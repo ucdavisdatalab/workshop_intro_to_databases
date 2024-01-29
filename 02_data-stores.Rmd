@@ -95,7 +95,7 @@ have to learn a new application to do basic statistics and data visualization.
 However, spreadsheets suffer from some severe limitations. They offer limited
 storage capacity, don't have normalization capabilities, so your data takes up
 even more space than it would otherwise. The lack of normalization means it is
-easy to compromise data integrity and end up with \_\_\_\_ (ex. yes, Yes, and
+easy to compromise data integrity and end up with ____ (ex. yes, Yes, and
 YES coded as different responses). There is also no way to independently scale
 up computing resources for a spreadsheet application.
 
