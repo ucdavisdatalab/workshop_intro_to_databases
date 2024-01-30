@@ -95,7 +95,7 @@ have to learn a new application to do basic statistics and data visualization.
 However, spreadsheets suffer from some severe limitations. They offer limited
 storage capacity, don't have normalization capabilities, so your data takes up
 even more space than it would otherwise. The lack of normalization means it is
-easy to compromise data integrity and end up with ____ (ex. yes, Yes, and
+easy to compromise data integrity and end up with \_\_\_\_ (ex. yes, Yes, and
 YES coded as different responses). There is also no way to independently scale
 up computing resources for a spreadsheet application.
 
@@ -126,13 +126,13 @@ called indexes or keys.
 
 Users interact with an RDBMS through SQL, which stands for structured query
 language. SQL allows you to standardize your interactions with a database. It
-gives you a log of the transactions to ___, and makes it easy to ensure everyone
-is working with the same set of data. To learn more about using SQL in practice,
-check out the Intro to SQL and Spatial SQL readers.
+gives you a log of the transactions to \_\_\_, and makes it easy to ensure
+everyone is working with the same set of data. To learn more about using SQL in
+practice, check out the Intro to SQL and Spatial SQL readers.
 
 ### Transactions are ACID
 
-In relational databases, all transactions must adhere to a given set of rules. 
+In relational databases, all transactions must adhere to a given set of rules.
 These rules are abbreviated as ACID.
 
 **Atomic** - Transactions cannot be broken down into sub-steps. They are all or
@@ -140,8 +140,8 @@ nothing. If one part of the transaction fails, the whole transaction is
 canceled. This ensures that the data is always valid.
 
 **Consistent** - All of the structural rules of the database must be obeyed
-before and after each transaction. If a column in a table has a particular type,
-every element in that column must have the same type at the end of each
+before and after each transaction. If a column in a table has a particular
+type, every element in that column must have the same type at the end of each
 transaction.
 
 **Isolated** - Transactions only happen simultaneously if they do not interact.
@@ -153,51 +153,51 @@ second transaction doesn't work with the modified table, it will fail and the
 user will have to resubmit the transaction to reflect the new information in
 the table.
 
-**Durable** - Changes to the database are permanent and will stay in place
-even after a system failure. There is no dialog box asking if you are sure you 
-want to overwrite your data, so BE CAREFUL.
+**Durable** - Changes to the database are permanent and will stay in place even
+after a system failure. There is no dialog box asking if you are sure you want
+to overwrite your data, so BE CAREFUL.
 
 ### Relationship keys
 
 A relationship key is a column or pair of columns that links two tables. There
-are two types of relationship keys: primary keys and foreign keys.
-A primary key is a column that uniquely identifies each row in a particular
-table. It is generally the first column in the table and is often named "ID". 
-A foreign key is a column in one table whose values correspond to a primary key
-in another table. 
+are two types of relationship keys: primary keys and foreign keys. A primary
+key is a column that uniquely identifies each row in a particular table. It is
+generally the first column in the table and is often named "ID". A foreign key
+is a column in one table whose values correspond to a primary key in another
+table.
 
 ### Entity Relationship Diagrams
 
-Since relational databases are not human readable, it can be helpful to have a 
+Since relational databases are not human readable, it can be helpful to have a
 an visual summary of the database without actually needing to look at the data.
-That is where Entity Relationship Diagrams (ERDs) come in. ERDs are a 
-standardized way to depict the structure of a relational database. Each box in 
-the diagram is a table, with the table title at the top and the column names 
+That is where Entity Relationship Diagrams (ERDs) come in. ERDs are a
+standardized way to depict the structure of a relational database. Each box in
+the diagram is a table, with the table title at the top and the column names
 listed below it. The column type appears next to each column name. The
 
-Primary/foreign key pairs are linked in entity relationship diagrams
-using connector lines. These lines specify which tables can be joined, and
-which keys should be used to join them. They also can specify what type of 
-relationship the two tables have.
+Primary/foreign key pairs are linked in entity relationship diagrams using
+connector lines. These lines specify which tables can be joined, and which keys
+should be used to join them. They also can specify what type of relationship
+the two tables have.
 
-The most common type of table relationship in relational databases is the 
+The most common type of table relationship in relational databases is the
 one-to-many relationship. In this case, one row in table A may be linked to
-many rows in table B. This is the case for the relationship between the ____
-and ____ tables in the UC Davis Library Database. One-to-one relationships are
-also fairly common in relational databases. Two tables are one-to-one when one
-observation in table A only corresponds to one observation in table B. This is
-the relationship between ____ and ____ in the UC Davis Library Database.
+many rows in table B. This is the case for the relationship between the
+\_\_\_\_ and \_\_\_\_ tables in the UC Davis Library Database. One-to-one
+relationships are also fairly common in relational databases. Two tables are
+one-to-one when one observation in table A only corresponds to one observation
+in table B. This is the relationship between \_\_\_\_ and \_\_\_\_ in the UC
+Davis Library Database.
 
-As you might guess, there is a third type of relationship: many-to-many. 
-Many-to-many relationships are the sleeping giant of database relationships. 
+As you might guess, there is a third type of relationship: many-to-many.
+Many-to-many relationships are the sleeping giant of database relationships.
 They can be very useful, but if you are not careful, they can multiply the size
 of your data several times over.
-
 
 ### Pros and Cons of RDBMS
 
 | Pros                                            | Cons                                   |
-|-------------------------------------------------|----------------------------------------|
+|-------------------------------------------|------------------------------------|
 | Supports ACID Transactions                      | Only vertical scaling                  |
 | Supports normalization and joins                | Joins mean loss of speed               |
 | Captures relationships with defined constraints | Requires an administrator of some sort |
@@ -205,7 +205,6 @@ of your data several times over.
 | Unlimited indexing                              | Pre-defined data model                 |
 | Robust query language (SQL)                     |                                        |
 | Lots of software options (some free)            |                                        |
-
 
 ### Examples
 
@@ -215,7 +214,62 @@ of your data several times over.
 -   SQLite
 -   Amazon Redshift
 
+## NoSQL Databases
 
-## NoSQL
+Not Only SQL, or NoSQL, databases are another type of database. They are
+primarily defined by what they do not do, namely store data in relational
+tables, as a RDBMSs would. Instead, NoSQL databases do not necessarily impose 
+external structure on the data they contain. In fact, NoSQL databases can contain data
+from multiple structures, including
+
+  * documents
+  * key-value pairs
+  * graphs
+  * trees
+  * wide column tables
+
+Because of this, NoSQL databases are much better at storing tree and graph data,
+as those data structures do not fit well into relational tables. 
 
 ### Transactions are BASE
+
+The NoSQL databases do not have built-in assumptions about structure, they
+cannot guarantee strictly ACID transactions. However, unlike spreadsheets, they
+do follow a less rigorous set of rules abbreviated as BASE. This less stringent
+set of rules requires much less computing overhead and makes scaling easier.
+
+**Basically Available** - Users can interact with the database concurrently.
+transactions are not isolated like in relational databases, so you will not be
+locked out part of the database.
+
+**Soft state** - Transactions do not have to maintain consistency. There can be
+intermediate steps that are not compliant. Additionally, internal replicates of
+the data may not always be identical.
+
+**Eventually consistent** - While the database may not always be consistent, it
+will get there eventually.
+
+### Pros and Cons
+
+| Pros                                   | Cons                                   |
+|----------------------------------------|----------------------------------------|
+| Works with semi- and unstructured data | BASE (not ACID)                        |
+| Horizontal scaling                     | Data is not normalized                 |
+| Data structure is not predetermined    | Limited support for joins and indexing |
+| Very fast                              | Slow indexing                          |
+| Supports different kinds of fields     | Weak SQL                               |
+| High availability                      | No built in data integrity support     |
+
+### Examples
+
+  * MongoDB
+  * DocumentDB
+  * Cassandra
+  * Coachbase
+  * HBase
+  * Redis
+  * Neo4J
+  * Lucene
+  * ArangoDB
+
+
