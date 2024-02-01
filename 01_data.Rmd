@@ -6,13 +6,20 @@
 >
 > \- Oxford English Dictionary
 
-Over the centuries, nay millennia, humans have stored information in a 
-startlingly diverse set of mediums, from oral narratives and pictographs, to 
-printed text and now 1s and 0s. While in current times data is generally 
-digital, people collected data long before the existence of the computer. They
-just had to store it differently. In general, data (singular datum) is
-information about the real world that has been translated into a form that can
-be easily shared and stored for later use.
+If you are doing research, chances are you are going to be working with data
+in some form or another. Even if you do not use the traditional rows and
+columns people most often associate with "data", you certainly working with
+information that has been translated into a form that is more easily shared
+or stored for later use, aka data. 
+
+One of the challenges of working with data is figuring out the best way, or at
+least a good way, to store it. Thankfully, we have mostly left the 20th
+century's favorite way of storing data: paper in filing cabinets. Our new
+methods are definitely less flammable but but also can have a higher barrier to
+entry. There are also a greater variety in types of data stores, which means you
+need to make a decision on which one to use. Ultimately, the best way to store
+your data will depend on the data you want to store, specifically the data type
+and structure.
 
 ## Data Types
 
