@@ -23,11 +23,11 @@ and structure.
 
 ## Data Types
 
-A datum's type tells the computer what types of operations a user will do with
-the given data. Common data types include integers, decimal or floating point
+Your data's type tells the computer what sorts of operations make sense to do
+with it. Common data types include integers, decimal or floating point
 numbers, characters (text), Boolean values (TRUE and FALSE) and date/times. Data
 type also influences how data is stored. Unlike other characteristics we will
-discuss later, an individual datum can have a type.
+discuss later, an individual data point can have a type.
 
 Data type is not necessarily inherent to a piece of information, though it is
 often strongly suggested. For example, you can store the value of 1 as the
@@ -35,8 +35,7 @@ integer 1, the decimal 1.0, the text "1", the Boolean TRUE, or the date
 1900-01-01 00:00:00. The underlying information is the same (1), but the
 computer will treat each of these pieces of data differently. It will not allow
 you to add "1" to another number, and it may have issues combining the integer
-or decimal 1.0 with text. Text itself can only be stored as characters, and
-decimal numbers can only be stored as floats and characters.
+or decimal 1.0 with text. Text itself can only be stored as characters.
 
 ## Data Structures
 
@@ -45,12 +44,12 @@ decimal numbers can only be stored as floats and characters.
 >
 > Wikipedia
 
-Unlike with data types, a single datum cannot have a data structure. This is
-because data structure is about capturing relationships between data points,
-there isn't any meaningful information to be gained from the relationship of a
-data point with itself. There are four basic data structures: tabular/columnar,
-graph, tree, and categorical/relational data. In practice, data often traits
-from multiple data structures.
+Unlike with data types, a single piece of data cannot have a data structure.
+This is because data structure is about capturing relationships between data
+points, there isn't any meaningful information to be gained from the
+relationship of a data point with itself. There are four basic data structures:
+tabular/columnar, graph, tree, and categorical/relational data. In practice,
+data often exhibits traits from multiple data structures.
 
 ### Columnar/Tabular
 
@@ -65,7 +64,7 @@ relationships are defined by position and distance. *relationships are direction
 
 ### Tree 
 
-Tree data is very similar to graph data in many ways trees also explicitly
+Tree data is very similar to graph data in many ways. Trees also explicitly
 capture relationships between entities. However, in trees the relationships
 are hierarchical. The number of nodes separating an entity from a common root
 defines that entity's place in the hierarchy.
@@ -96,4 +95,7 @@ actually a combination of tabular data and categorical - relational data, which
 captures information about the relationships between observations. Phylogenetic
 trees, the data structure most commonly used in the study of evolution, is a
 combination of the graph and tree data structures.
+
+
+
 
