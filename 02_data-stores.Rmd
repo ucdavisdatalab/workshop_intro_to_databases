@@ -11,7 +11,7 @@ digitally. Though you could argue that a things like a filing cabinet or a
 library qualify as analog data stores. Data stores have two primary functions.
 First, they need to facilitate people accessing data from the data store
 (reading) and making changes to the data in the data store (writing). Second,
-they need to facilitate this access over a period of time.
+they need to preserve this access over a period of time.
 
 It is important to note, not all data stores are databases. A pile of papers on
 a desk is definitely not a database, but it could be considered a data store,
