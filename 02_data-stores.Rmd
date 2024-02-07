@@ -130,6 +130,16 @@ gives you a log of the transactions to \_\_\_, and makes it easy to ensure
 everyone is working with the same set of data. To learn more about using SQL in
 practice, check out the Intro to SQL and Spatial SQL readers.
 
+There are three primary purposes to using RDBMSs as a data store:
+
+  1. Reduce data duplication
+  
+  2. Speed up accessing and updating the database
+  
+  3. Ensure data integrity
+
+
+
 ### Transactions are ACID
 
 In relational databases, all transactions must adhere to a given set of rules.
