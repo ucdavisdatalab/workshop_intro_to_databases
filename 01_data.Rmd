@@ -24,10 +24,9 @@ and structure.
 ## Data Types
 
 Your data's type tells the computer what sorts of operations make sense to do
-with it. Common data types include integers, decimal or floating point
-numbers, characters (text), Boolean values (TRUE and FALSE) and date/times. Data
-type also influences how data is stored. Unlike other characteristics we will
-discuss later, an individual data point can have a type.
+with it. Common data types include integers, decimal or floating point numbers,
+characters (text), Boolean values (TRUE and FALSE) and date/times. Data type
+also influences how data is stored. Unlike other characteristics we will discuss later, an individual data point can have a type.
 
 Data type is not necessarily inherent to a piece of information, though it is
 often strongly suggested. For example, you can store the value of 1 as the
@@ -53,21 +52,53 @@ data often exhibits traits from multiple data structures.
 
 ### Columnar/Tabular
 
+```{r format_cars, echo=FALSE}
+
+library(data.table)
+library(stringr)
+
+makers = c('chevrolet', 'honda', 'toyota', 'volkswagen', 'volvo')
+
+car_origin = data.frame(origin=1:3, origin_region=c('USA', 'Europe', 'Japan'))
+
+mpg_all = fread('data/autos_mpg.csv')
+
+mpg = merge(mpg_all, car_origin, by='origin')
+
+mpg$make = str_split_i(mpg$car_name, ' ' , i = 1)
+mpg$model = str_split_fixed(mpg$car_name, ' ', 2)[, 2]
+
+mpg = mpg[model_year==78 & make %in% makers, ]
+
+coi = c('make', 'model', 'mpg', 'cylinders', 'horsepower', 'weight',
+        'origin_region')
+
+mpg = mpg[, ..coi]
+
+setnames(mpg, 'origin_region', 'origin')
+
+
+```
+
+
 Tabular or columnar data is made up of rows and columns, collectively referred
 to as a table. Each row represents an observation, and each column a measurement
-from that observation. There are no explicit relationships between observations.
+from that observation. We 
+
+
 
 ### Graph
 
 Graph data structure explicitly captures between entities. In graphs, 
-relationships are defined by position and distance. *relationships are directional*
+relationships are defined by position and distance. Relationships can be 
+directional 
 
 ### Tree 
 
 Tree data is very similar to graph data in many ways. Trees also explicitly
 capture relationships between entities. However, in trees the relationships
 are hierarchical. The number of nodes separating an entity from a common root
-defines that entity's place in the hierarchy.
+defines that entity's place in the hierarchy. This is also 
 
 ### Categorical - Relational 
 
