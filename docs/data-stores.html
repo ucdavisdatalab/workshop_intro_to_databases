@@ -23,7 +23,7 @@
 <meta name="author" content="Elise Hellwig" />
 
 
-<meta name="date" content="2024-01-29" />
+<meta name="date" content="2024-02-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -80,6 +80,7 @@
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a>
 <ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#you-might-need-a-database-if"><i class="fa fa-check"></i>You might need a database if…</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#learning-goals"><i class="fa fa-check"></i>Learning Goals</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>1</b> Data</a>
@@ -91,6 +92,7 @@
 <li class="chapter" data-level="1.2.2" data-path="data.html"><a href="data.html#graph"><i class="fa fa-check"></i><b>1.2.2</b> Graph</a></li>
 <li class="chapter" data-level="1.2.3" data-path="data.html"><a href="data.html#tree"><i class="fa fa-check"></i><b>1.2.3</b> Tree</a></li>
 <li class="chapter" data-level="1.2.4" data-path="data.html"><a href="data.html#categorical---relational"><i class="fa fa-check"></i><b>1.2.4</b> Categorical - Relational</a></li>
+<li class="chapter" data-level="1.2.5" data-path="data.html"><a href="data.html#spatial"><i class="fa fa-check"></i><b>1.2.5</b> Spatial</a></li>
 </ul></li>
 <li class="chapter" data-level="1.3" data-path="data.html"><a href="data.html#picking-a-data-structure"><i class="fa fa-check"></i><b>1.3</b> Picking a Data Structure</a></li>
 </ul></li>
@@ -117,9 +119,11 @@
 <li class="chapter" data-level="2.5.4" data-path="data-stores.html"><a href="data-stores.html#pros-and-cons-of-rdbms"><i class="fa fa-check"></i><b>2.5.4</b> Pros and Cons of RDBMS</a></li>
 <li class="chapter" data-level="2.5.5" data-path="data-stores.html"><a href="data-stores.html#examples-1"><i class="fa fa-check"></i><b>2.5.5</b> Examples</a></li>
 </ul></li>
-<li class="chapter" data-level="2.6" data-path="data-stores.html"><a href="data-stores.html#nosql"><i class="fa fa-check"></i><b>2.6</b> NoSQL</a>
+<li class="chapter" data-level="2.6" data-path="data-stores.html"><a href="data-stores.html#nosql-databases"><i class="fa fa-check"></i><b>2.6</b> NoSQL Databases</a>
 <ul>
 <li class="chapter" data-level="2.6.1" data-path="data-stores.html"><a href="data-stores.html#transactions-are-base"><i class="fa fa-check"></i><b>2.6.1</b> Transactions are BASE</a></li>
+<li class="chapter" data-level="2.6.2" data-path="data-stores.html"><a href="data-stores.html#pros-and-cons"><i class="fa fa-check"></i><b>2.6.2</b> Pros and Cons</a></li>
+<li class="chapter" data-level="2.6.3" data-path="data-stores.html"><a href="data-stores.html#examples-2"><i class="fa fa-check"></i><b>2.6.3</b> Examples</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html"><i class="fa fa-check"></i><b>3</b> Choosing the Right Data Store</a>
@@ -163,7 +167,7 @@ digitally. Though you could argue that a things like a filing cabinet or a
 library qualify as analog data stores. Data stores have two primary functions.
 First, they need to facilitate people accessing data from the data store
 (reading) and making changes to the data in the data store (writing). Second,
-they need to facilitate this access over a period of time.</p>
+they need to preserve this access over a period of time.</p>
 <p>It is important to note, not all data stores are databases. A pile of papers on
 a desk is definitely not a database, but it could be considered a data store,
 albeit a bad one.</p>
@@ -274,9 +278,15 @@ databases are made up of tables that are connected through shared columns,
 called indexes or keys.</p>
 <p>Users interact with an RDBMS through SQL, which stands for structured query
 language. SQL allows you to standardize your interactions with a database. It
-gives you a log of the transactions to ___, and makes it easy to ensure everyone
-is working with the same set of data. To learn more about using SQL in practice,
-check out the Intro to SQL and Spatial SQL readers.</p>
+gives you a log of the transactions to ___, and makes it easy to ensure
+everyone is working with the same set of data. To learn more about using SQL in
+practice, check out the Intro to SQL and Spatial SQL readers.</p>
+<p>There are three primary purposes to using RDBMSs as a data store:</p>
+<ol style="list-style-type: decimal">
+<li><p>Reduce data duplication</p></li>
+<li><p>Speed up accessing and updating the database</p></li>
+<li><p>Ensure data integrity</p></li>
+</ol>
 <div id="transactions-are-acid" class="section level3 hasAnchor" number="2.5.1">
 <h3><span class="header-section-number">2.5.1</span> Transactions are ACID<a href="data-stores.html#transactions-are-acid" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In relational databases, all transactions must adhere to a given set of rules.
@@ -285,8 +295,8 @@ These rules are abbreviated as ACID.</p>
 nothing. If one part of the transaction fails, the whole transaction is
 canceled. This ensures that the data is always valid.</p>
 <p><strong>Consistent</strong> - All of the structural rules of the database must be obeyed
-before and after each transaction. If a column in a table has a particular type,
-every element in that column must have the same type at the end of each
+before and after each transaction. If a column in a table has a particular
+type, every element in that column must have the same type at the end of each
 transaction.</p>
 <p><strong>Isolated</strong> - Transactions only happen simultaneously if they do not interact.
 Otherwise the database executes transactions on a first come first serve basis.
@@ -296,18 +306,18 @@ submitted their transaction second will modify the modified table. If the if
 second transaction doesn’t work with the modified table, it will fail and the
 user will have to resubmit the transaction to reflect the new information in
 the table.</p>
-<p><strong>Durable</strong> - Changes to the database are permanent and will stay in place
-even after a system failure. There is no dialog box asking if you are sure you
-want to overwrite your data, so BE CAREFUL.</p>
+<p><strong>Durable</strong> - Changes to the database are permanent and will stay in place even
+after a system failure. There is no dialog box asking if you are sure you want
+to overwrite your data, so BE CAREFUL.</p>
 </div>
 <div id="relationship-keys" class="section level3 hasAnchor" number="2.5.2">
 <h3><span class="header-section-number">2.5.2</span> Relationship keys<a href="data-stores.html#relationship-keys" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A relationship key is a column or pair of columns that links two tables. There
-are two types of relationship keys: primary keys and foreign keys.
-A primary key is a column that uniquely identifies each row in a particular
-table. It is generally the first column in the table and is often named “ID”.
-A foreign key is a column in one table whose values correspond to a primary key
-in another table.</p>
+are two types of relationship keys: primary keys and foreign keys. A primary
+key is a column that uniquely identifies each row in a particular table. It is
+generally the first column in the table and is often named “ID”. A foreign key
+is a column in one table whose values correspond to a primary key in another
+table.</p>
 </div>
 <div id="entity-relationship-diagrams" class="section level3 hasAnchor" number="2.5.3">
 <h3><span class="header-section-number">2.5.3</span> Entity Relationship Diagrams<a href="data-stores.html#entity-relationship-diagrams" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -317,17 +327,18 @@ That is where Entity Relationship Diagrams (ERDs) come in. ERDs are a
 standardized way to depict the structure of a relational database. Each box in
 the diagram is a table, with the table title at the top and the column names
 listed below it. The column type appears next to each column name. The</p>
-<p>Primary/foreign key pairs are linked in entity relationship diagrams
-using connector lines. These lines specify which tables can be joined, and
-which keys should be used to join them. They also can specify what type of
-relationship the two tables have.</p>
+<p>Primary/foreign key pairs are linked in entity relationship diagrams using
+connector lines. These lines specify which tables can be joined, and which keys
+should be used to join them. They also can specify what type of relationship
+the two tables have.</p>
 <p>The most common type of table relationship in relational databases is the
 one-to-many relationship. In this case, one row in table A may be linked to
-many rows in table B. This is the case for the relationship between the ____
-and ____ tables in the UC Davis Library Database. One-to-one relationships are
-also fairly common in relational databases. Two tables are one-to-one when one
-observation in table A only corresponds to one observation in table B. This is
-the relationship between ____ and ____ in the UC Davis Library Database.</p>
+many rows in table B. This is the case for the relationship between the
+____ and ____ tables in the UC Davis Library Database. One-to-one
+relationships are also fairly common in relational databases. Two tables are
+one-to-one when one observation in table A only corresponds to one observation
+in table B. This is the relationship between ____ and ____ in the UC
+Davis Library Database.</p>
 <p>As you might guess, there is a third type of relationship: many-to-many.
 Many-to-many relationships are the sleeping giant of database relationships.
 They can be very useful, but if you are not careful, they can multiply the size
@@ -337,8 +348,8 @@ of your data several times over.</p>
 <h3><span class="header-section-number">2.5.4</span> Pros and Cons of RDBMS<a href="data-stores.html#pros-and-cons-of-rdbms" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <table>
 <colgroup>
-<col width="55%" />
-<col width="44%" />
+<col width="54%" />
+<col width="45%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -389,10 +400,91 @@ of your data several times over.</p>
 </ul>
 </div>
 </div>
-<div id="nosql" class="section level2 hasAnchor" number="2.6">
-<h2><span class="header-section-number">2.6</span> NoSQL<a href="data-stores.html#nosql" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="nosql-databases" class="section level2 hasAnchor" number="2.6">
+<h2><span class="header-section-number">2.6</span> NoSQL Databases<a href="data-stores.html#nosql-databases" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Not Only SQL, or NoSQL, databases are another type of database. They are
+primarily defined by what they do not do, namely store data in relational
+tables, as a RDBMSs would. Instead, NoSQL databases do not necessarily impose
+external structure on the data they contain. In fact, NoSQL databases can contain data
+from multiple structures, including</p>
+<ul>
+<li>documents</li>
+<li>key-value pairs</li>
+<li>graphs</li>
+<li>trees</li>
+<li>wide column tables</li>
+</ul>
+<p>Because of this, NoSQL databases are much better at storing tree and graph data,
+as those data structures do not fit well into relational tables.</p>
 <div id="transactions-are-base" class="section level3 hasAnchor" number="2.6.1">
 <h3><span class="header-section-number">2.6.1</span> Transactions are BASE<a href="data-stores.html#transactions-are-base" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The NoSQL databases do not have built-in assumptions about structure, they
+cannot guarantee strictly ACID transactions. However, unlike spreadsheets, they
+do follow a less rigorous set of rules abbreviated as BASE. This less stringent
+set of rules requires much less computing overhead and makes scaling easier.</p>
+<p><strong>Basically Available</strong> - Users can interact with the database concurrently.
+transactions are not isolated like in relational databases, so you will not be
+locked out part of the database.</p>
+<p><strong>Soft state</strong> - Transactions do not have to maintain consistency. There can be
+intermediate steps that are not compliant. Additionally, internal replicates of
+the data may not always be identical.</p>
+<p><strong>Eventually consistent</strong> - While the database may not always be consistent, it
+will get there eventually.</p>
+</div>
+<div id="pros-and-cons" class="section level3 hasAnchor" number="2.6.2">
+<h3><span class="header-section-number">2.6.2</span> Pros and Cons<a href="data-stores.html#pros-and-cons" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Works with semi- and unstructured data</td>
+<td>BASE (not ACID)</td>
+</tr>
+<tr class="even">
+<td>Horizontal scaling</td>
+<td>Data is not normalized</td>
+</tr>
+<tr class="odd">
+<td>Data structure is not predetermined</td>
+<td>Limited support for joins and indexing</td>
+</tr>
+<tr class="even">
+<td>Very fast</td>
+<td>Slow indexing</td>
+</tr>
+<tr class="odd">
+<td>Supports different kinds of fields</td>
+<td>Weak SQL</td>
+</tr>
+<tr class="even">
+<td>High availability</td>
+<td>No built in data integrity support</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="examples-2" class="section level3 hasAnchor" number="2.6.3">
+<h3><span class="header-section-number">2.6.3</span> Examples<a href="data-stores.html#examples-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>MongoDB</li>
+<li>DocumentDB</li>
+<li>Cassandra</li>
+<li>Coachbase</li>
+<li>HBase</li>
+<li>Redis</li>
+<li>Neo4J</li>
+<li>Lucene</li>
+<li>ArangoDB</li>
+</ul>
 
 </div>
 </div>

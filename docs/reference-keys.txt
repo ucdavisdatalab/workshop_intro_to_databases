@@ -5,6 +5,7 @@ columnartabular
 graph
 tree
 categorical---relational
+spatial
 picking-a-data-structure
 data-stores
 principles-of-data-storage
@@ -24,8 +25,10 @@ relationship-keys
 entity-relationship-diagrams
 pros-and-cons-of-rdbms
 examples-1
-nosql
+nosql-databases
 transactions-are-base
+pros-and-cons
+examples-2
 choosing-the-right-data-store
 cap-theorem
 polyglot-persistance
