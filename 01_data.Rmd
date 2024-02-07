@@ -47,15 +47,27 @@ or decimal 1.0 with text. Text itself can only be stored as characters.
 Unlike with data types, a single piece of data cannot have a data structure.
 This is because data structure is about capturing relationships between data
 points, there isn't any meaningful information to be gained from the
-relationship of a data point with itself. There are four basic data structures:
-tabular/columnar, graph, tree, and categorical/relational data. In practice,
-data often exhibits traits from multiple data structures.
+relationship of a data point with itself. There are five basic data structures:
+tabular/columnar, graph, tree, categorical/relational, and spatial data. In
+practice, data often exhibits traits from multiple data structures.
+
+As mentioned previously, data is information translated into a form to store
+for later use. The structure that you use to represent your data is not 
+necessarily 
+
+When trying to decide what data structure to use to represent information from
+your research, the key is to focus on what sorts of questions you would like
+to ask. Each data structure will make some types of questions easier to ask
+and others harder. If you want to ask disparate types of questions, you
+may need to represent your data using multiple structures.
 
 ### Columnar/Tabular
 
 Tabular or columnar data is made up of rows and columns, collectively referred
 to as a table. Each row represents an observation, and each column a measurement
-from that observation. There are no explicit relationships between observations.
+or aspect of that observation. 
+
+
 
 ### Graph
 
