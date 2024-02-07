@@ -50,15 +50,15 @@ relationship of a data point with itself. There are five basic data structures:
 tabular/columnar, graph, tree, categorical/relational, and spatial data. In
 practice, data often exhibits traits from multiple data structures.
 
-As mentioned previously, data is information translated into a form to store
-for later use. The structure that you use to represent your data is not 
-necessarily 
-
-When trying to decide what data structure to use to represent information from
-your research, the key is to focus on what sorts of questions you would like
-to ask. Each data structure will make some types of questions easier to ask
-and others harder. If you want to ask disparate types of questions, you
-may need to represent your data using multiple structures.
+As mentioned previously, data is information translated into a form to store for
+later use. The data structure that you use to represent your information is not
+necessarily inherent in that information. However, some types of information
+lend themselves to particular data structures over others. When trying to decide
+what data structure to use to represent information from your research, the key
+is to focus on what sorts of questions you would like to ask. Each data
+structure will make some types of questions easier to ask and others harder. If
+you want to ask disparate types of questions, you may need to represent your
+data using multiple structures.
 
 ### Columnar/Tabular
 
@@ -93,8 +93,14 @@ setnames(mpg, 'origin_region', 'origin')
 
 Tabular or columnar data is made up of rows and columns, collectively referred
 to as a table. Each row represents an observation, and each column a measurement
-or aspect of that observation. 
+or aspect of that observation. In the table below, each row is an observation of
+a car model released in 1978. 
 
+```{r display_mpg, echo=FALSE}
+
+head(mpg, 10)
+
+```
 
 
 ### Graph
@@ -117,6 +123,12 @@ data structure. Entities can have membership in multiple categories, and
 relationships are defined between categories instead of the entities themselves.
 As such, relationships tend to represent complex processes rather than
 individual entities.
+
+### Spatial
+
+In spatial data, the organizing principle is location. This can be geographic 
+location (ex latitude/longitude) or relative location on an arbitrary grid
+(ex. [2, 4])  
 
 ## Picking a Data Structure
 
