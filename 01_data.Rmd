@@ -75,8 +75,8 @@ mpg_all = fread('data/autos_mpg.csv')
 
 mpg = merge(mpg_all, car_origin, by='origin')
 
-mpg$make = str_split_i(mpg$car_name, ' ' , i = 1)
-mpg$model = str_split_fixed(mpg$car_name, ' ', 2)[, 2]
+mpg$make = str_split_i(mpg$`car name`, ' ' , i = 1)
+mpg$model = str_split_fixed(mpg$`car name`, ' ', 2)[, 2]
 
 mpg = mpg[`model year`==78 & make %in% makers, ]
 
@@ -98,7 +98,7 @@ a car model released in 1978.
 
 ```{r display_mpg, echo=FALSE}
 
-head(mpg, 10)
+mpg
 
 ```
 
