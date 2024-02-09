@@ -6,11 +6,39 @@
 >
 > \- Oxford English Dictionary
 
+
+<!--
+Information becomes data when it takes on a structure.
+
+some data has a structure that is inherent to the information
+Data is actionable, either by humans or by computers by putting it in some sort 
+of structure (including natural language: syntax and grammar), text isn't 
+unstructured it just hasn't been restructured to make it actionable
+
+two structures; inherent structure and structure we impose on the data
+The process of (re)structuring data is at least as important as the analysis 
+we do afterward.
+
+Things inform your data structure: inherent structure in data, and the question
+you want to ask?
+
+Ex you might throw the structure away ex with a lot of LLMs through the grammatical
+structure away.
+
+You will almost always have multiple versions of data in different structures
+so you can ask different questions
+
+Note: there are other definitions of data structure from other disciplines
+(ex. in comp sci), we will not be using those definitions
+-->
+
 If you are doing research, chances are you are going to be working with data
 in some form or another. Even if you do not use the traditional rows and
 columns people most often associate with "data", you certainly working with
 information that has been translated into a form that is more easily shared
-or stored for later use, aka data. 
+or stored for later use, aka data. Information becomes data when we give it some
+sort of structure. That could be the previously mentioned rows and columns, or 
+something more human readable, like the grammar and syntax of natural language.
 
 One of the challenges of working with data is figuring out the best way, or at
 least a good way, to store it. Thankfully, we have mostly left the 20th
