@@ -60,28 +60,6 @@ require you to work with data in a non-normalized form. A data join reverses
 the normalization process. It takes multiple groups of data and combines them
 into one.
 
-### Scaling
-
-As you add data to a data store, you may need to add computing resources to the
-data store to maintain your data store's performance.
-
-#### Horizontal Scaling
-
-Horizontal scaling is like urban sprawl. It involves adding more individual
-computers, servers, or nodes to the database. Because you don't have to muck
-around with upgrading already existing computers, it is easier to implement.
-Additionally, there is no theoretical limit on the number of servers you could
-add to your database. However, having multiple servers running the same
-database does increase complexity and ongoing support costs.
-
-#### Vertical Scaling
-
-Vertical scaling is like building a high rise apartment. It involves adding
-computing resources (memory, storage) to a single computer or server. It tends
-to be more difficult and expensive than horizontal scaling at the outset, but
-system complexity and ongoing costs stay relatively constant. Additionally,
-there is a limit to how much you can upgrade a single machine, so at a certain
-point you may need to replace the hardware all together.
 
 ## Types of Data Stores
 
