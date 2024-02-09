@@ -74,21 +74,40 @@ or decimal 1.0 with text. Text itself can only be stored as characters.
 Unlike with data types, a single piece of data cannot have a data structure.
 This is because data structure is about capturing relationships between data
 points, there isn't any meaningful information to be gained from the
-relationship of a data point with itself. There are five basic data structures:
-tabular/columnar, graph, tree, categorical/relational, and spatial data. In
-practice, data often exhibits traits from multiple data structures.
+relationship of a data point with itself. We will discuss five of the most
+common data: tabular/columnar, graph, tree, categorical/relational, and spatial
+data. In practice, data often exhibits traits from multiple data structures. 
 
 As mentioned previously, data is information translated into a form to store for
-later use. The data structure that you use to represent your information is not
-necessarily inherent in that information. However, some types of information
+later use. The type of information you work with does not dictate the type of
+data structure you must use. However, some types of information
 lend themselves to particular data structures over others. When trying to decide
 what data structure to use to represent information from your research, the key
 is to focus on what sorts of questions you would like to ask. Each data
 structure will make some types of questions easier to ask and others harder. If
 you want to ask disparate types of questions, you may need to represent your
-data using multiple structures.
+data using multiple structures. Because data structure has such
+a large impact on how you interact with your data, the structure you choose is
+just as important as the analysis you do afterward.
 
 ### Columnar/Tabular
+
+<!--
+Convention is rows are observations and columns are your variables,
+value associated with a given variable for a given observation lives in that
+cell
+
+Discrete (brief) observations of a particular thing, 
+dealing with a class of object where every observation of one of those objects
+can be described using the same set of variables
+
+sorting is easy
+
+better at working across the entire data structure
+
+location and scale aka spread
+-->
+
 
 ```{r format_cars, echo=FALSE}
 
