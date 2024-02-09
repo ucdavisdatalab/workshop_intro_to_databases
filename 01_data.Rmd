@@ -120,6 +120,8 @@ car_origin = data.frame(origin=1:3, origin_region=c('USA', 'Europe', 'Japan'))
 
 mpg_all = fread('data/autos_mpg.csv')
 
+mpg_all[, horsepower:=as.numeric(horsepower)]
+
 mpg = merge(mpg_all, car_origin, by='origin')
 
 mpg$make = str_split_i(mpg$`car name`, ' ' , i = 1)
@@ -139,9 +141,19 @@ setnames(mpg, 'origin_region', 'origin')
 
 
 Tabular or columnar data is made up of rows and columns, collectively referred
-to as a table. Each row represents an observation, and each column a measurement
-or aspect of that observation. In the table below, each row is an observation of
-a car model released in 1978. 
+to as a table. Tables work well when you are working with a class of object
+where you can summarize the information for each example of that object with the
+same set of characteristics. By convention, each row represents an observation,
+and each column a measurement or aspect of that observation. Data scientists
+refer to the columns of a table by many names, including fields, variables,
+covariates, measurements, and features. Tabular data is incredibly common in the
+sciences and many researchers will store at least some of their data in tabular
+form.
+
+In the table below, each row is an observation of a car model released in 1978.
+Mechanics recorded the make, model and origin of each car and measured the car's
+fuel efficiency (mpg), horsepower, weight, and number of cylinders in the
+engine.
 
 ```{r display_mpg, echo=FALSE}
 
@@ -149,21 +161,101 @@ mpg
 
 ```
 
+Other examples of data sets that lend themselves to a tabular data structure
+include California almond yields (lb/acre) for farms around the state, climate
+data over the past 50 years, snow accumulation (inches) for Lake Tahoe, and
+biomarkers for people participating in a study on a chronic illness.
 
-### Graph
-
-Graph data structure explicitly captures between entities. In graphs, 
-relationships are defined by position and distance. Relationships can be 
-directional 
+Tabular data lends itself to answering questions about the average value or
+spread of a particular field over the entire dataset. It can also help
+investigate trends in a particular variable, or how two covariates relate to
+each other. In the case of the car fuel efficiency data, we could ask about the
+relative fuel efficiency of cars from different parts of the world or if there
+is any relationship between a car's weight and its horsepower. The tabular data
+structure also makes sorting observations very easy.
 
 ### Tree 
 
-Tree data is very similar to graph data in many ways. Trees also explicitly
-capture relationships between entities. However, in trees the relationships
-are hierarchical. The number of nodes separating an entity from a common root
-defines that entity's place in the hierarchy. This is also 
+<!--
+tree like structure of inheritance from a root
+we could express tree data as a data frame but you end up with a lot of empty or
+missing data because not every mother node will have the same number of daughter
+nodes 
+
+better working within groups and knowing what groups
+
+set up emails as a tree -> threads = trees
+
+xml is for trees, nested data = tree data
+-->
+
+Trees are another commonly used data structure. Tree structured data explicitly
+capture hierarchical relationships between entities. Trees are made of up nodes
+(or vertices)
+which represent entities in the data, and edges which represent relationships
+between those entities. The number of edges separating an entity from a common
+root node defines that entity's place in the hierarchy. When viewing tree 
+structured data on a computer, it often looks very "nested", like files in a
+file directory on your computer. In fact, tree data is sometimes referred to as 
+document structured data because of this. 
+
+
+In general, tree data facilitates asking questions about particular subsets of 
+the data. For example, you might want to know how closely two entities are
+related, which branches of the tree have the most nodes, or all of the
+observations that fall under a particular subtree.
+
+Family trees are a common example of tree structured data. In family
+trees, the nodes represent people in the family. In the
+family tree of the Tutor Dynasty in England below, it is easy to determine
+things like who had the most wives (Henry VIII), which people shared a
+generation and who was the last member of the dynasty (James I of England).
+Questions like the what was the average age at death for the Tudors would be
+harder to answer.
+
+We can also represent the car fuel efficiency data with a tree data structure.
+This makes it much harder to answer some of the questions mentioned in the
+previous section. On the other hand, the tree structure makes it very easy to
+see which car manufacturer produced the greatest number of models in 1978 and
+how many different models came out of Japan that year.
+
+
+### Graph
+
+<!--
+graphs are rysomatic
+
+they have no root, they only have a node that you care about this at the moment
+following relationships
+vertex or node
+
+airplanes!
+-->
+
+Graph data is similar to tree data in many ways. It also explicitly captures
+information about relationships between entities using nodes and edges. However,
+unlike trees, graph datasets have no inherent center or root node, and there
+is no implicit sense that part of the graph is "nested" inside another part.
+Also, the relationships between the vertices can be directional, and the 
+direction does not have to be consistent throughout the graph.
+
+Graph structured data tends to be more common in the social sciences and
+humanities. One of the most ubiquitous examples of a graph is the social
+network. Transportation data, like roads and flight paths, also lend themselves
+to the graph structure. In the digital world, we can use graphs to map out the
+link connections between Wikipedia pages, as seen below with Abraham Lincoln.
+
+Graphs make it easy to ask questions about connectivity. For example we might
+want to know how many flight connections we will need to make between Honolulu, 
+Hawaii and Cairo, Egypt, or how many degrees of separation there are between 
+Abraham Lincoln and Hitler on Wikipedia. We can also ask about which parts of 
+the graph are the most connected and which are the least connected.
 
 ### Categorical - Relational 
+
+<!--
+Do I need this?
+-->
 
 In categorical data, category membership is the organizing principle of the 
 data structure. Entities can have membership in multiple categories, and
@@ -173,29 +265,13 @@ individual entities.
 
 ### Spatial
 
-In spatial data, the organizing principle is location. This can be geographic 
-location (ex latitude/longitude) or relative location on an arbitrary grid
-(ex. [2, 4])  
-
-## Picking a Data Structure
-
-As mentioned previously, data represents information from the real world. And
-all information in the real world can be thought of in a larger context, like
-zooming out with a camera lens. You can use this context to identify the best
-structure to use for your data. If you view your data as observation of some
-larger phenomenon, tabular data could be a good fit. If you are more concerned
-about how various entities relate to each other in the context of your research,
-a graph may be more appropriate.
-
-Additionally, many research questions are complex enough that one data structure
-on its own may not be sufficient to capture all the information necessary to
-answer the question. It it is very common to combine data structures to capture
-more information that one could on its own. Most observation based data sets are
-actually a combination of tabular data and categorical - relational data, which
-captures information about the relationships between observations. Phylogenetic
-trees, the data structure most commonly used in the study of evolution, is a
-combination of the graph and tree data structures.
-
+In spatial data, the organizing principle is location. This can be geographic
+location (ex latitude/longitude) or relative location on an arbitrary grid (ex.
+[2, 4]). Data can either be continuous, like a sheet over a landscape, or
+discrete in space like points on a map. In fact, map making is one of the most
+common uses of spatial data. However we can alks as questions like  de whether
+points are clustered more closely than we would expect, and whether we can use
+nearby information to predict values for places where we don't have data.
 
 
 
