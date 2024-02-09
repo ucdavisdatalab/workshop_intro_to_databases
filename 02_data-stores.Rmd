@@ -87,6 +87,14 @@ point you may need to replace the hardware all together.
 
 ## Spreadsheets
 
+<!--
+why not excel:
+Excel file is proprietary (owned by a company)
+also can have csv file, aka ASCII delimited file (not sure I will go into this)
+
+file is the data store?
+-->
+
 Spreadsheets are one of the most, if not the most, ubiquitous form of (digital)
 data store. If you have used Microsoft Excel or Google Sheets, you have used a
 a spreadsheet. In fact spreadsheet applications transformed the use of the
@@ -119,6 +127,20 @@ storage capacity, resource scaling, and data integrity.
 -   Open Science Framework
 
 ## Relational Database Management System
+
+<!--
+designed for very fast querying for large datasets (ex price on an amazon 
+website)
+
+Linked connections of tables in a structured/specific way
+
+join table (put two tables together), 
+
+nothing should ever appear twice, numbers are always faster than text
+
+ex student changes their address, you only have to change it in one place
+
+-->
 
 Relational Database Management Systems (RDBMSs), or relational databases
 informally, are one type of database. When people use the word "database", nine
