@@ -70,6 +70,8 @@ why not excel:
 Excel file is proprietary (owned by a company)
 also can have csv file, aka ASCII delimited file (not sure I will go into this)
 
+Differentiate between the file and the software
+
 file is the data store?
 -->
 
@@ -82,18 +84,35 @@ software have graphical user interfaces, making the barrier to entry very low.
 Spreadsheet applications also offer some built in analysis tools, so you don't
 have to learn a new application to do basic statistics and data visualization.
 
-However, spreadsheets suffer from some severe limitations. They offer limited
-storage capacity, don't have normalization capabilities, so your data takes up
-even more space than it would otherwise. The lack of normalization means it is
-easy to compromise data integrity and end up with \_\_\_\_ (ex. yes, Yes, and
-YES coded as different responses). There is also no way to independently scale
-up computing resources for a spreadsheet application.
+Spreadsheet software also suffers from some drawbacks. They offer limited
+storage capacity, making it difficult to work with large data sets. Excel and
+LibreOffice have a maximum row number of a little over 1 million and Google
+Sheets limits you to 10 million cells. Software operations will also slow 
+down if you get close to their data capacity. This means analyzing large
+data sets is much more tedious analyzing small ones.
+
+Spreadsheets also store data in ways that
+cause a lot of data duplication and make data entry susceptible to typos. In 
+the spreadsheet visualized below, we have data on the Die Hard franchise. 
+Specifically, we have information about the actors that starred in the series 
+and the movies in which they appeared. 
+
+As you can see, there is a lot of data duplication, meaning our data set takes
+up much more space on our hard drive than it needs to. Additionally, if we had 
+to change the information about a single movie or actor, we would have to make 
+that change in many different places, and potentially miss one or make a mistake.
+If we accidentally got Bruce Willis's birth date wrong, we would have to modify
+five cells to fix our data, instead of just one. 
+
+<!--Put something in here about different text versions of the same information,
+ex. yes, Yes, Y, and YES
+-->
 
 Finally, most spreadsheet applications store their data locally, so unless you
 are militant about version control outside of the application, it is easy to
 end up with people working on multiple versions of the data. Google Sheets
 offers shared access and some version control, but still fails to deliver on
-storage capacity, resource scaling, and data integrity.
+storage capacity, and data integrity.
 
 ### Examples
 
