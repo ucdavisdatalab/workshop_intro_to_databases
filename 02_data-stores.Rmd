@@ -161,35 +161,6 @@ There are three primary purposes to using RDBMSs as a data store:
   
   3. Ensure data integrity
 
-
-
-### Transactions are ACID
-
-In relational databases, all transactions must adhere to a given set of rules.
-These rules are abbreviated as ACID.
-
-**Atomic** - Transactions cannot be broken down into sub-steps. They are all or
-nothing. If one part of the transaction fails, the whole transaction is
-canceled. This ensures that the data is always valid.
-
-**Consistent** - All of the structural rules of the database must be obeyed
-before and after each transaction. If a column in a table has a particular
-type, every element in that column must have the same type at the end of each
-transaction.
-
-**Isolated** - Transactions only happen simultaneously if they do not interact.
-Otherwise the database executes transactions on a first come first serve basis.
-This means if two users want to modify the same table, the user who submitted
-their transaction first will modify the original table, and the user who
-submitted their transaction second will modify the modified table. If the if
-second transaction doesn't work with the modified table, it will fail and the
-user will have to resubmit the transaction to reflect the new information in
-the table.
-
-**Durable** - Changes to the database are permanent and will stay in place even
-after a system failure. There is no dialog box asking if you are sure you want
-to overwrite your data, so BE CAREFUL.
-
 ### Relationship keys
 
 A relationship key is a column or pair of columns that links two tables. There
