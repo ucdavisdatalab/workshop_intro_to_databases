@@ -6,23 +6,27 @@
 >
 > Wikipedia
 
-A data store is a repository for storing and managing data, generally speaking
-digitally. Though you could argue that a things like a filing cabinet or a
-library qualify as analog data stores. Data stores have two primary functions.
-First, they need to facilitate people accessing data from the data store
-(reading) and making changes to the data in the data store (writing). Second,
-they need to preserve this access over a period of time.
+A data store is a repository for storing and managing data. While this workshop
+covers exclusively digital data stores, for most of human history, data stores
+were analog. Even today, we still use analog data stores like libraries,
+museums, and filing cabinets. Data stores have two primary functions. First,
+they need to facilitate people accessing data (reading) and making changes to
+the data (writing). Second, they need to preserve this access over a period of
+time.
 
-It is important to note, not all data stores are databases. A pile of papers on
-a desk is definitely not a database, but it could be considered a data store,
-albeit a bad one.
+It is important to remember that not all data stores, even digital ones, are
+databases. A pile of papers on a desk is definitely not a database, but it could
+be considered a data store, albeit a bad one.
 
 ## Principles of Data Storage
 
 When you are trying to decide what type of data storage to use, consider these
 ideas:
 
-1.  All data has an inherent structure.
+<!--
+1. All data has an inherent structure-->
+
+1.  When we convert information to data, we encode it in a structure.
 
 2.  Different data structures facilitate different research questions.
 
