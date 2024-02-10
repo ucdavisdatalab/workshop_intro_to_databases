@@ -142,24 +142,17 @@ ex student changes their address, you only have to change it in one place
 Relational Database Management Systems (RDBMSs), or relational databases
 informally, are one type of database. When people use the word "database", nine
 times out of ten they are referring to a relational database. Like
-spreadsheets, RDBMSs impose a structure on the data they contain. Unlike
-spreadsheets the structure of that data can be fairly complicated. Relational
+spreadsheets, RDBMSs impose a tabular structure on the data they contain. Unlike
+spreadsheets the structure of that data can be fairly complex. Relational
 databases are made up of tables that are connected through shared columns,
 called indexes or keys.
 
-Users interact with an RDBMS through SQL, which stands for structured query
-language. SQL allows you to standardize your interactions with a database. It
+Users interact with an RDBMS through SQL[^1] instead of a graphical user interface. SQL 
+allows you to standardize your interactions with a database. It
 gives you a log of the transactions to \_\_\_, and makes it easy to ensure
-everyone is working with the same set of data. To learn more about using SQL in
-practice, check out the Intro to SQL and Spatial SQL readers.
-
-There are three primary purposes to using RDBMSs as a data store:
-
-  1. Reduce data duplication
-  
-  2. Speed up accessing and updating the database
-  
-  3. Ensure data integrity
+everyone is working with the same set of data. However, it has a higher barrier
+to entry than a graphical user interface like Excel.To learn more about using SQL in
+practice, check out the Intro to SQL and Spatial SQL readers. 
 
 ### Relationship keys
 
@@ -197,6 +190,57 @@ As you might guess, there is a third type of relationship: many-to-many.
 Many-to-many relationships are the sleeping giant of database relationships.
 They can be very useful, but if you are not careful, they can multiply the size
 of your data several times over.
+
+[^1]: SQL stands for structured query language.
+
+### Why Use Relational Databases?
+
+There are three primary purposes to using RDBMSs as a data store:
+
+  1. Reduce data duplication
+  
+  2. Speed up accessing and updating the database
+  
+  3. Ensure data integrity
+
+In our Die Hard spreadsheet example, we had 260 cells. However, if we used a
+relational database to store the data, it only uses 156 cells. That is a 40% 
+reduction in data size. For a multi-gigabyte data set, 40% makes a huge
+difference. Additionally, we were able to select only some of the columns from
+each table, meaning we didn't need to work with ALL of the data just because 
+we wanted to work with some of it. This subsetting is much harder in traditional
+spreadsheet software.
+
+The IMDB database the Die Hard data comes from is massive relative to what you
+could load in a traditional spreadsheet application. The titles table alone has
+10 million observations, and the crew table has over 60 million. Despite this,
+extracting the Die Hard movie franchise information took about half a second.
+
+Store in non-duplicated form, analyze with the duplicates in place. 
+
+With an RDBMS, even though that data you analyze may have duplicates, you don't
+need to modify those duplicate values. All changes to the data can be made to
+the singleton values in their original tables. For example, if we accidentally
+left out the second "L" in Bruce Willis's name when entering the data, we would
+only need to modify his name once in the "people" table. Then, any time we
+extract data from the people table, that change will be automatically propagated
+to our new data. While it may be easy to successfully fix 5 errors, it will be
+much harder to fix 50, or 5,000. This is especially true if they are scattered
+throughout your data set and not just in a single column.
+
+<!--
+In the imdb database the titles table alone had 10 million rows and querying it
+took 0.026 seconds
+
+die hard sheet = 260
+die hard rdb = 5 + 80 + 56 + 15 = 156
+ 0.5 seconds
+ 
+titles = 10M rows
+people = 13M rows
+crew = 60M rows
+ratings = 1M rows
+-->
 
 ### Pros and Cons of RDBMS
 
