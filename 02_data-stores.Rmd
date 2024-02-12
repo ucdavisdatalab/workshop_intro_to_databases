@@ -243,19 +243,6 @@ to our new data. While it may be easy to successfully fix 5 errors, it will be
 much harder to fix 50, or 5,000. This is especially true if they are scattered
 throughout your data set and not just in a single column.
 
-
-### Pros and Cons of RDBMS
-
-| Pros                                            | Cons                                   |
-|-------------------------------------------|------------------------------------|
-| Supports ACID Transactions                      | Only vertical scaling                  |
-| Supports normalization and joins                | Joins mean loss of speed               |
-| Captures relationships with defined constraints | Requires an administrator of some sort |
-| Data integrity through normalization and types  | Data is not human readable             |
-| Unlimited indexing                              | Pre-defined data model                 |
-| Robust query language (SQL)                     |                                        |
-| Lots of software options (some free)            |                                        |
-
 ### Examples
 
 -   Microsoft SQL Server
