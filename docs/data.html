@@ -23,7 +23,7 @@
 <meta name="author" content="Elise Hellwig" />
 
 
-<meta name="date" content="2024-02-07" />
+<meta name="date" content="2024-02-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,6 +54,70 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
   
@@ -89,41 +153,30 @@
 <li class="chapter" data-level="1.2" data-path="data.html"><a href="data.html#data-structures"><i class="fa fa-check"></i><b>1.2</b> Data Structures</a>
 <ul>
 <li class="chapter" data-level="1.2.1" data-path="data.html"><a href="data.html#columnartabular"><i class="fa fa-check"></i><b>1.2.1</b> Columnar/Tabular</a></li>
-<li class="chapter" data-level="1.2.2" data-path="data.html"><a href="data.html#graph"><i class="fa fa-check"></i><b>1.2.2</b> Graph</a></li>
-<li class="chapter" data-level="1.2.3" data-path="data.html"><a href="data.html#tree"><i class="fa fa-check"></i><b>1.2.3</b> Tree</a></li>
+<li class="chapter" data-level="1.2.2" data-path="data.html"><a href="data.html#tree"><i class="fa fa-check"></i><b>1.2.2</b> Tree</a></li>
+<li class="chapter" data-level="1.2.3" data-path="data.html"><a href="data.html#graph"><i class="fa fa-check"></i><b>1.2.3</b> Graph</a></li>
 <li class="chapter" data-level="1.2.4" data-path="data.html"><a href="data.html#categorical---relational"><i class="fa fa-check"></i><b>1.2.4</b> Categorical - Relational</a></li>
 <li class="chapter" data-level="1.2.5" data-path="data.html"><a href="data.html#spatial"><i class="fa fa-check"></i><b>1.2.5</b> Spatial</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="data.html"><a href="data.html#picking-a-data-structure"><i class="fa fa-check"></i><b>1.3</b> Picking a Data Structure</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="data-stores.html"><a href="data-stores.html"><i class="fa fa-check"></i><b>2</b> Data Stores</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="data-stores.html"><a href="data-stores.html#principles-of-data-storage"><i class="fa fa-check"></i><b>2.1</b> Principles of Data Storage</a></li>
-<li class="chapter" data-level="2.2" data-path="data-stores.html"><a href="data-stores.html#data-store-vocabulary"><i class="fa fa-check"></i><b>2.2</b> Data Store Vocabulary</a>
+<li class="chapter" data-level="2.2" data-path="data-stores.html"><a href="data-stores.html#spreadsheets"><i class="fa fa-check"></i><b>2.2</b> Spreadsheets</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="data-stores.html"><a href="data-stores.html#transaction"><i class="fa fa-check"></i><b>2.2.1</b> Transaction</a></li>
-<li class="chapter" data-level="2.2.2" data-path="data-stores.html"><a href="data-stores.html#normalization"><i class="fa fa-check"></i><b>2.2.2</b> Normalization</a></li>
-<li class="chapter" data-level="2.2.3" data-path="data-stores.html"><a href="data-stores.html#join"><i class="fa fa-check"></i><b>2.2.3</b> Join</a></li>
-<li class="chapter" data-level="2.2.4" data-path="data-stores.html"><a href="data-stores.html#scaling"><i class="fa fa-check"></i><b>2.2.4</b> Scaling</a></li>
+<li class="chapter" data-level="2.2.1" data-path="data-stores.html"><a href="data-stores.html#examples"><i class="fa fa-check"></i><b>2.2.1</b> Examples</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="data-stores.html"><a href="data-stores.html#types-of-data-stores"><i class="fa fa-check"></i><b>2.3</b> Types of Data Stores</a></li>
-<li class="chapter" data-level="2.4" data-path="data-stores.html"><a href="data-stores.html#spreadsheets"><i class="fa fa-check"></i><b>2.4</b> Spreadsheets</a>
+<li class="chapter" data-level="2.3" data-path="data-stores.html"><a href="data-stores.html#relational-database-management-system"><i class="fa fa-check"></i><b>2.3</b> Relational Database Management System</a>
 <ul>
-<li class="chapter" data-level="2.4.1" data-path="data-stores.html"><a href="data-stores.html#examples"><i class="fa fa-check"></i><b>2.4.1</b> Examples</a></li>
+<li class="chapter" data-level="2.3.1" data-path="data-stores.html"><a href="data-stores.html#relationship-keys"><i class="fa fa-check"></i><b>2.3.1</b> Relationship keys</a></li>
+<li class="chapter" data-level="2.3.2" data-path="data-stores.html"><a href="data-stores.html#entity-relationship-diagrams"><i class="fa fa-check"></i><b>2.3.2</b> Entity Relationship Diagrams</a></li>
+<li class="chapter" data-level="2.3.3" data-path="data-stores.html"><a href="data-stores.html#why-use-relational-databases"><i class="fa fa-check"></i><b>2.3.3</b> Why Use Relational Databases?</a></li>
+<li class="chapter" data-level="2.3.4" data-path="data-stores.html"><a href="data-stores.html#rdbms-software"><i class="fa fa-check"></i><b>2.3.4</b> RDBMS Software</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="data-stores.html"><a href="data-stores.html#relational-database-management-system"><i class="fa fa-check"></i><b>2.5</b> Relational Database Management System</a>
+<li class="chapter" data-level="2.4" data-path="data-stores.html"><a href="data-stores.html#nosql-databases"><i class="fa fa-check"></i><b>2.4</b> NoSQL Databases</a>
 <ul>
-<li class="chapter" data-level="2.5.1" data-path="data-stores.html"><a href="data-stores.html#transactions-are-acid"><i class="fa fa-check"></i><b>2.5.1</b> Transactions are ACID</a></li>
-<li class="chapter" data-level="2.5.2" data-path="data-stores.html"><a href="data-stores.html#relationship-keys"><i class="fa fa-check"></i><b>2.5.2</b> Relationship keys</a></li>
-<li class="chapter" data-level="2.5.3" data-path="data-stores.html"><a href="data-stores.html#entity-relationship-diagrams"><i class="fa fa-check"></i><b>2.5.3</b> Entity Relationship Diagrams</a></li>
-<li class="chapter" data-level="2.5.4" data-path="data-stores.html"><a href="data-stores.html#pros-and-cons-of-rdbms"><i class="fa fa-check"></i><b>2.5.4</b> Pros and Cons of RDBMS</a></li>
-<li class="chapter" data-level="2.5.5" data-path="data-stores.html"><a href="data-stores.html#examples-1"><i class="fa fa-check"></i><b>2.5.5</b> Examples</a></li>
-</ul></li>
-<li class="chapter" data-level="2.6" data-path="data-stores.html"><a href="data-stores.html#nosql-databases"><i class="fa fa-check"></i><b>2.6</b> NoSQL Databases</a>
-<ul>
-<li class="chapter" data-level="2.6.1" data-path="data-stores.html"><a href="data-stores.html#transactions-are-base"><i class="fa fa-check"></i><b>2.6.1</b> Transactions are BASE</a></li>
-<li class="chapter" data-level="2.6.2" data-path="data-stores.html"><a href="data-stores.html#pros-and-cons"><i class="fa fa-check"></i><b>2.6.2</b> Pros and Cons</a></li>
-<li class="chapter" data-level="2.6.3" data-path="data-stores.html"><a href="data-stores.html#examples-2"><i class="fa fa-check"></i><b>2.6.3</b> Examples</a></li>
+<li class="chapter" data-level="2.4.1" data-path="data-stores.html"><a href="data-stores.html#why-use-nosql-databases"><i class="fa fa-check"></i><b>2.4.1</b> Why Use NoSQL Databases?</a></li>
+<li class="chapter" data-level="2.4.2" data-path="data-stores.html"><a href="data-stores.html#example-software"><i class="fa fa-check"></i><b>2.4.2</b> Example Software</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html"><i class="fa fa-check"></i><b>3</b> Choosing the Right Data Store</a>
@@ -162,11 +215,37 @@ computer, considered collectively. Also (in non-technical contexts):
 information in digital form.</p>
 <p>- Oxford English Dictionary</p>
 </blockquote>
+<!--
+Information becomes data when it takes on a structure.
+
+some data has a structure that is inherent to the information
+Data is actionable, either by humans or by computers by putting it in some sort 
+of structure (including natural language: syntax and grammar), text isn't 
+unstructured it just hasn't been restructured to make it actionable
+
+two structures; inherent structure and structure we impose on the data
+The process of (re)structuring data is at least as important as the analysis 
+we do afterward.
+
+Things inform your data structure: inherent structure in data, and the question
+you want to ask?
+
+Ex you might throw the structure away ex with a lot of LLMs through the grammatical
+structure away.
+
+You will almost always have multiple versions of data in different structures
+so you can ask different questions
+
+Note: there are other definitions of data structure from other disciplines
+(ex. in comp sci), we will not be using those definitions
+-->
 <p>If you are doing research, chances are you are going to be working with data
 in some form or another. Even if you do not use the traditional rows and
 columns people most often associate with “data”, you certainly working with
 information that has been translated into a form that is more easily shared
-or stored for later use, aka data.</p>
+or stored for later use, aka data. Information becomes data when we give it some
+sort of structure. That could be the previously mentioned rows and columns, or
+something more human readable, like the grammar and syntax of natural language.</p>
 <p>One of the challenges of working with data is figuring out the best way, or at
 least a good way, to store it. Thankfully, we have mostly left the 20th
 century’s favorite way of storing data: paper in filing cabinets. Our new
@@ -199,24 +278,51 @@ and the functions or operations that can be applied to the data.</p>
 <p>Unlike with data types, a single piece of data cannot have a data structure.
 This is because data structure is about capturing relationships between data
 points, there isn’t any meaningful information to be gained from the
-relationship of a data point with itself. There are five basic data structures:
-tabular/columnar, graph, tree, categorical/relational, and spatial data. In
-practice, data often exhibits traits from multiple data structures.</p>
+relationship of a data point with itself. We will discuss five of the most
+common data: tabular/columnar, graph, tree, categorical/relational, and spatial
+data. In practice, data often exhibits traits from multiple data structures.</p>
 <p>As mentioned previously, data is information translated into a form to store for
-later use. The data structure that you use to represent your information is not
-necessarily inherent in that information. However, some types of information
+later use. The type of information you work with does not dictate the type of
+data structure you must use. However, some types of information
 lend themselves to particular data structures over others. When trying to decide
 what data structure to use to represent information from your research, the key
 is to focus on what sorts of questions you would like to ask. Each data
 structure will make some types of questions easier to ask and others harder. If
 you want to ask disparate types of questions, you may need to represent your
-data using multiple structures.</p>
+data using multiple structures. Because data structure has such
+a large impact on how you interact with your data, the structure you choose is
+just as important as the analysis you do afterward.</p>
 <div id="columnartabular" class="section level3 hasAnchor" number="1.2.1">
 <h3><span class="header-section-number">1.2.1</span> Columnar/Tabular<a href="data.html#columnartabular" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<!--
+Convention is rows are observations and columns are your variables,
+value associated with a given variable for a given observation lives in that
+cell
+
+Discrete (brief) observations of a particular thing, 
+dealing with a class of object where every observation of one of those objects
+can be described using the same set of variables
+
+sorting is easy
+
+better at working across the entire data structure
+
+location and scale aka spread
+-->
+<pre><code>## Warning in eval(jsub, SDenv, parent.frame()): NAs introduced by coercion</code></pre>
 <p>Tabular or columnar data is made up of rows and columns, collectively referred
-to as a table. Each row represents an observation, and each column a measurement
-or aspect of that observation. In the table below, each row is an observation of
-a car model released in 1978.</p>
+to as a table. Tables work well when you are working with a class of object
+where you can summarize the information for each example of that object with the
+same set of characteristics. By convention, each row represents an observation,
+and each column a measurement or aspect of that observation. Data scientists
+refer to the columns of a table by many names, including fields, variables,
+covariates, measurements, and features. Tabular data is incredibly common in the
+sciences and many researchers will store at least some of their data in tabular
+form.</p>
+<p>In the table below, each row is an observation of a car model released in 1978.
+Mechanics recorded the make, model and origin of each car and measured the car’s
+fuel efficiency (mpg), horsepower, weight, and number of cylinders in the
+engine.</p>
 <pre><code>##           make                model  mpg cylinders horsepower weight origin
 ##  1:  chevrolet               malibu 20.5         6         95   3155    USA
 ##  2:  chevrolet   monte carlo landau 19.2         8        145   3425    USA
@@ -228,22 +334,90 @@ a car model released in 1978.</p>
 ##  8:     toyota               corona 27.5         4         95   2560  Japan
 ##  9:     toyota   celica gt liftback 21.1         4         95   2515  Japan
 ## 10:      honda            accord lx 29.5         4         68   2135  Japan</code></pre>
+<p>Other examples of data sets that lend themselves to a tabular data structure
+include California almond yields (lb/acre) for farms around the state, climate
+data over the past 50 years, snow accumulation (inches) for Lake Tahoe, and
+biomarkers for people participating in a study on a chronic illness.</p>
+<p>Tabular data lends itself to answering questions about the average value or
+spread of a particular field over the entire dataset. It can also help
+investigate trends in a particular variable, or how two covariates relate to
+each other. In the case of the car fuel efficiency data, we could ask about the
+relative fuel efficiency of cars from different parts of the world or if there
+is any relationship between a car’s weight and its horsepower. The tabular data
+structure also makes sorting observations very easy.</p>
 </div>
-<div id="graph" class="section level3 hasAnchor" number="1.2.2">
-<h3><span class="header-section-number">1.2.2</span> Graph<a href="data.html#graph" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Graph data structure explicitly captures between entities. In graphs,
-relationships are defined by position and distance. Relationships can be
-directional</p>
+<div id="tree" class="section level3 hasAnchor" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> Tree<a href="data.html#tree" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<!--
+tree like structure of inheritance from a root
+we could express tree data as a data frame but you end up with a lot of empty or
+missing data because not every mother node will have the same number of daughter
+nodes 
+
+better working within groups and knowing what groups
+
+set up emails as a tree -> threads = trees
+
+xml is for trees, nested data = tree data
+-->
+<p>Trees are another commonly used data structure. Tree structured data explicitly
+capture hierarchical relationships between entities. Trees are made of up nodes
+(or vertices) which represent entities in the data, and edges which represent
+relationships between those entities. The number of edges separating an entity
+from a common root node defines that entity’s place in the hierarchy. When
+viewing tree structured data on a computer, it often looks very “nested”, like
+sections and subsections of a document. In fact, tree data is sometimes
+referred to as document structured data because of this.</p>
+<p>In general, tree data facilitates asking questions about particular subsets of
+the data. For example, you might want to know how closely two entities are
+related, which branches of the tree have the most nodes, or all of the
+observations that fall under a particular subtree.</p>
+<p>Family trees are a common example of tree structured data. In family
+trees, the nodes represent people in the family. In the
+family tree of the Tutor Dynasty in England below, it is easy to determine
+things like who had the most wives (Henry VIII), which people shared a
+generation and who was the last member of the dynasty (James I of England).
+Questions like the what was the average age at death for the Tudors would be
+harder to answer.</p>
+<p>We can also represent the car fuel efficiency data with a tree data structure.
+This makes it much harder to answer some of the questions mentioned in the
+previous section. On the other hand, the tree structure makes it very easy to
+see which car manufacturer produced the greatest number of models in 1978 and
+how many different models came out of Japan that year.</p>
 </div>
-<div id="tree" class="section level3 hasAnchor" number="1.2.3">
-<h3><span class="header-section-number">1.2.3</span> Tree<a href="data.html#tree" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Tree data is very similar to graph data in many ways. Trees also explicitly
-capture relationships between entities. However, in trees the relationships
-are hierarchical. The number of nodes separating an entity from a common root
-defines that entity’s place in the hierarchy. This is also</p>
+<div id="graph" class="section level3 hasAnchor" number="1.2.3">
+<h3><span class="header-section-number">1.2.3</span> Graph<a href="data.html#graph" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<!--
+graphs are rysomatic
+
+they have no root, they only have a node that you care about this at the moment
+following relationships
+vertex or node
+
+airplanes!
+-->
+<p>Graph data is similar to tree data in many ways. It also explicitly captures
+information about relationships between entities using nodes and edges. However,
+unlike trees, graph datasets have no inherent center or root node, and there
+is no implicit sense that part of the graph is “nested” inside another part.
+Also, the relationships between the vertices can be directional, and the
+direction does not have to be consistent throughout the graph.</p>
+<p>Graph structured data tends to be more common in the social sciences and
+humanities. One of the most ubiquitous examples of a graph is the social
+network. Transportation data, like roads and flight paths, also lend themselves
+to the graph structure. In the digital world, we can use graphs to map out the
+link connections between Wikipedia pages, as seen below with Abraham Lincoln.</p>
+<p>Graphs make it easy to ask questions about connectivity. For example we might
+want to know how many flight connections we will need to make between Honolulu,
+Hawaii and Cairo, Egypt, or how many degrees of separation there are between
+Abraham Lincoln and Hitler on Wikipedia. We can also ask about which parts of
+the graph are the most connected and which are the least connected.</p>
 </div>
 <div id="categorical---relational" class="section level3 hasAnchor" number="1.2.4">
 <h3><span class="header-section-number">1.2.4</span> Categorical - Relational<a href="data.html#categorical---relational" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<!--
+Do I need this?
+-->
 <p>In categorical data, category membership is the organizing principle of the
 data structure. Entities can have membership in multiple categories, and
 relationships are defined between categories instead of the entities themselves.
@@ -253,28 +427,14 @@ individual entities.</p>
 <div id="spatial" class="section level3 hasAnchor" number="1.2.5">
 <h3><span class="header-section-number">1.2.5</span> Spatial<a href="data.html#spatial" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In spatial data, the organizing principle is location. This can be geographic
-location (ex latitude/longitude) or relative location on an arbitrary grid
-(ex. [2, 4])</p>
-</div>
-</div>
-<div id="picking-a-data-structure" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> Picking a Data Structure<a href="data.html#picking-a-data-structure" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>As mentioned previously, data represents information from the real world. And
-all information in the real world can be thought of in a larger context, like
-zooming out with a camera lens. You can use this context to identify the best
-structure to use for your data. If you view your data as observation of some
-larger phenomenon, tabular data could be a good fit. If you are more concerned
-about how various entities relate to each other in the context of your research,
-a graph may be more appropriate.</p>
-<p>Additionally, many research questions are complex enough that one data structure
-on its own may not be sufficient to capture all the information necessary to
-answer the question. It it is very common to combine data structures to capture
-more information that one could on its own. Most observation based data sets are
-actually a combination of tabular data and categorical - relational data, which
-captures information about the relationships between observations. Phylogenetic
-trees, the data structure most commonly used in the study of evolution, is a
-combination of the graph and tree data structures.</p>
+location (ex latitude/longitude) or relative location on an arbitrary grid (ex.
+[2, 4]). Data can either be continuous, like a sheet over a landscape, or
+discrete in space like points on a map. In fact, map making is one of the most
+common uses of spatial data. However we can alks as questions like de whether
+points are clustered more closely than we would expect, and whether we can use
+nearby information to predict values for places where we don’t have data.</p>
 
+</div>
 </div>
 </div>
             </section>

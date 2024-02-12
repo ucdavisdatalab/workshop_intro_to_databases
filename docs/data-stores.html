@@ -23,7 +23,7 @@
 <meta name="author" content="Elise Hellwig" />
 
 
-<meta name="date" content="2024-02-07" />
+<meta name="date" content="2024-02-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,6 +54,70 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
   
@@ -89,41 +153,30 @@
 <li class="chapter" data-level="1.2" data-path="data.html"><a href="data.html#data-structures"><i class="fa fa-check"></i><b>1.2</b> Data Structures</a>
 <ul>
 <li class="chapter" data-level="1.2.1" data-path="data.html"><a href="data.html#columnartabular"><i class="fa fa-check"></i><b>1.2.1</b> Columnar/Tabular</a></li>
-<li class="chapter" data-level="1.2.2" data-path="data.html"><a href="data.html#graph"><i class="fa fa-check"></i><b>1.2.2</b> Graph</a></li>
-<li class="chapter" data-level="1.2.3" data-path="data.html"><a href="data.html#tree"><i class="fa fa-check"></i><b>1.2.3</b> Tree</a></li>
+<li class="chapter" data-level="1.2.2" data-path="data.html"><a href="data.html#tree"><i class="fa fa-check"></i><b>1.2.2</b> Tree</a></li>
+<li class="chapter" data-level="1.2.3" data-path="data.html"><a href="data.html#graph"><i class="fa fa-check"></i><b>1.2.3</b> Graph</a></li>
 <li class="chapter" data-level="1.2.4" data-path="data.html"><a href="data.html#categorical---relational"><i class="fa fa-check"></i><b>1.2.4</b> Categorical - Relational</a></li>
 <li class="chapter" data-level="1.2.5" data-path="data.html"><a href="data.html#spatial"><i class="fa fa-check"></i><b>1.2.5</b> Spatial</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="data.html"><a href="data.html#picking-a-data-structure"><i class="fa fa-check"></i><b>1.3</b> Picking a Data Structure</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="data-stores.html"><a href="data-stores.html"><i class="fa fa-check"></i><b>2</b> Data Stores</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="data-stores.html"><a href="data-stores.html#principles-of-data-storage"><i class="fa fa-check"></i><b>2.1</b> Principles of Data Storage</a></li>
-<li class="chapter" data-level="2.2" data-path="data-stores.html"><a href="data-stores.html#data-store-vocabulary"><i class="fa fa-check"></i><b>2.2</b> Data Store Vocabulary</a>
+<li class="chapter" data-level="2.2" data-path="data-stores.html"><a href="data-stores.html#spreadsheets"><i class="fa fa-check"></i><b>2.2</b> Spreadsheets</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="data-stores.html"><a href="data-stores.html#transaction"><i class="fa fa-check"></i><b>2.2.1</b> Transaction</a></li>
-<li class="chapter" data-level="2.2.2" data-path="data-stores.html"><a href="data-stores.html#normalization"><i class="fa fa-check"></i><b>2.2.2</b> Normalization</a></li>
-<li class="chapter" data-level="2.2.3" data-path="data-stores.html"><a href="data-stores.html#join"><i class="fa fa-check"></i><b>2.2.3</b> Join</a></li>
-<li class="chapter" data-level="2.2.4" data-path="data-stores.html"><a href="data-stores.html#scaling"><i class="fa fa-check"></i><b>2.2.4</b> Scaling</a></li>
+<li class="chapter" data-level="2.2.1" data-path="data-stores.html"><a href="data-stores.html#examples"><i class="fa fa-check"></i><b>2.2.1</b> Examples</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="data-stores.html"><a href="data-stores.html#types-of-data-stores"><i class="fa fa-check"></i><b>2.3</b> Types of Data Stores</a></li>
-<li class="chapter" data-level="2.4" data-path="data-stores.html"><a href="data-stores.html#spreadsheets"><i class="fa fa-check"></i><b>2.4</b> Spreadsheets</a>
+<li class="chapter" data-level="2.3" data-path="data-stores.html"><a href="data-stores.html#relational-database-management-system"><i class="fa fa-check"></i><b>2.3</b> Relational Database Management System</a>
 <ul>
-<li class="chapter" data-level="2.4.1" data-path="data-stores.html"><a href="data-stores.html#examples"><i class="fa fa-check"></i><b>2.4.1</b> Examples</a></li>
+<li class="chapter" data-level="2.3.1" data-path="data-stores.html"><a href="data-stores.html#relationship-keys"><i class="fa fa-check"></i><b>2.3.1</b> Relationship keys</a></li>
+<li class="chapter" data-level="2.3.2" data-path="data-stores.html"><a href="data-stores.html#entity-relationship-diagrams"><i class="fa fa-check"></i><b>2.3.2</b> Entity Relationship Diagrams</a></li>
+<li class="chapter" data-level="2.3.3" data-path="data-stores.html"><a href="data-stores.html#why-use-relational-databases"><i class="fa fa-check"></i><b>2.3.3</b> Why Use Relational Databases?</a></li>
+<li class="chapter" data-level="2.3.4" data-path="data-stores.html"><a href="data-stores.html#rdbms-software"><i class="fa fa-check"></i><b>2.3.4</b> RDBMS Software</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="data-stores.html"><a href="data-stores.html#relational-database-management-system"><i class="fa fa-check"></i><b>2.5</b> Relational Database Management System</a>
+<li class="chapter" data-level="2.4" data-path="data-stores.html"><a href="data-stores.html#nosql-databases"><i class="fa fa-check"></i><b>2.4</b> NoSQL Databases</a>
 <ul>
-<li class="chapter" data-level="2.5.1" data-path="data-stores.html"><a href="data-stores.html#transactions-are-acid"><i class="fa fa-check"></i><b>2.5.1</b> Transactions are ACID</a></li>
-<li class="chapter" data-level="2.5.2" data-path="data-stores.html"><a href="data-stores.html#relationship-keys"><i class="fa fa-check"></i><b>2.5.2</b> Relationship keys</a></li>
-<li class="chapter" data-level="2.5.3" data-path="data-stores.html"><a href="data-stores.html#entity-relationship-diagrams"><i class="fa fa-check"></i><b>2.5.3</b> Entity Relationship Diagrams</a></li>
-<li class="chapter" data-level="2.5.4" data-path="data-stores.html"><a href="data-stores.html#pros-and-cons-of-rdbms"><i class="fa fa-check"></i><b>2.5.4</b> Pros and Cons of RDBMS</a></li>
-<li class="chapter" data-level="2.5.5" data-path="data-stores.html"><a href="data-stores.html#examples-1"><i class="fa fa-check"></i><b>2.5.5</b> Examples</a></li>
-</ul></li>
-<li class="chapter" data-level="2.6" data-path="data-stores.html"><a href="data-stores.html#nosql-databases"><i class="fa fa-check"></i><b>2.6</b> NoSQL Databases</a>
-<ul>
-<li class="chapter" data-level="2.6.1" data-path="data-stores.html"><a href="data-stores.html#transactions-are-base"><i class="fa fa-check"></i><b>2.6.1</b> Transactions are BASE</a></li>
-<li class="chapter" data-level="2.6.2" data-path="data-stores.html"><a href="data-stores.html#pros-and-cons"><i class="fa fa-check"></i><b>2.6.2</b> Pros and Cons</a></li>
-<li class="chapter" data-level="2.6.3" data-path="data-stores.html"><a href="data-stores.html#examples-2"><i class="fa fa-check"></i><b>2.6.3</b> Examples</a></li>
+<li class="chapter" data-level="2.4.1" data-path="data-stores.html"><a href="data-stores.html#why-use-nosql-databases"><i class="fa fa-check"></i><b>2.4.1</b> Why Use NoSQL Databases?</a></li>
+<li class="chapter" data-level="2.4.2" data-path="data-stores.html"><a href="data-stores.html#example-software"><i class="fa fa-check"></i><b>2.4.2</b> Example Software</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html"><i class="fa fa-check"></i><b>3</b> Choosing the Right Data Store</a>
@@ -162,80 +215,41 @@ of data which include not just repositories like databases, but also simpler
 store types such as simple files, emails etc.</p>
 <p>Wikipedia</p>
 </blockquote>
-<p>A data store is a repository for storing and managing data, generally speaking
-digitally. Though you could argue that a things like a filing cabinet or a
-library qualify as analog data stores. Data stores have two primary functions.
-First, they need to facilitate people accessing data from the data store
-(reading) and making changes to the data in the data store (writing). Second,
-they need to preserve this access over a period of time.</p>
-<p>It is important to note, not all data stores are databases. A pile of papers on
-a desk is definitely not a database, but it could be considered a data store,
-albeit a bad one.</p>
+<p>A data store is a repository for storing and managing data. While this workshop
+covers exclusively digital data stores, for most of human history, data stores
+were analog. Even today, we still use analog data stores like libraries,
+museums, and filing cabinets. Data stores have two primary functions. First,
+they need to facilitate people accessing data (reading) and making changes to
+the data (writing). Second, they need to preserve this access over a period of
+time.</p>
+<p>It is important to remember that not all data stores, even digital ones, are
+databases. A pile of papers on a desk is definitely not a database, but it
+could be considered a data store, albeit a bad one.</p>
 <div id="principles-of-data-storage" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Principles of Data Storage<a href="data-stores.html#principles-of-data-storage" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>When you are trying to decide what type of data storage to use, consider these
 ideas:</p>
+<!--
+1. All data has an inherent structure-->
 <ol style="list-style-type: decimal">
-<li><p>All data has an inherent structure.</p></li>
+<li><p>When we convert information to data, we encode it in a structure.</p></li>
 <li><p>Different data structures facilitate different research questions.</p></li>
 <li><p>All data stores impose an underlying data structure.</p></li>
 <li><p>The best data storage technology for any research question matches the
 structure of the data with the structure of the data store.</p></li>
 </ol>
 </div>
-<div id="data-store-vocabulary" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Data Store Vocabulary<a href="data-stores.html#data-store-vocabulary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>There are a few concepts that will be useful when describing types of data
-stores and comparing their functionality.</p>
-<div id="transaction" class="section level3 hasAnchor" number="2.2.1">
-<h3><span class="header-section-number">2.2.1</span> Transaction<a href="data-stores.html#transaction" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A transaction is a unit of work within a database. Any time you change a
-database, either by adding, removing or modifiying data, you are completing a
-transaction. Extracting data from a database is also a transaction.</p>
-</div>
-<div id="normalization" class="section level3 hasAnchor" number="2.2.2">
-<h3><span class="header-section-number">2.2.2</span> Normalization<a href="data-stores.html#normalization" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Data normalization is the process of organizing data in a database in a way
-that reduces the database’s size. It the organization structure also protects
-against typos and other data quality issues from sneaking in. In general, data
-normalization will break one group of data into multiple groups.</p>
-</div>
-<div id="join" class="section level3 hasAnchor" number="2.2.3">
-<h3><span class="header-section-number">2.2.3</span> Join<a href="data-stores.html#join" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>While it is much easier to store normalized data, most data analysis will
-require you to work with data in a non-normalized form. A data join reverses
-the normalization process. It takes multiple groups of data and combines them
-into one.</p>
-</div>
-<div id="scaling" class="section level3 hasAnchor" number="2.2.4">
-<h3><span class="header-section-number">2.2.4</span> Scaling<a href="data-stores.html#scaling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>As you add data to a data store, you may need to add computing resources to the
-data store to maintain your data store’s performance.</p>
-<div id="horizontal-scaling" class="section level4 hasAnchor" number="2.2.4.1">
-<h4><span class="header-section-number">2.2.4.1</span> Horizontal Scaling<a href="data-stores.html#horizontal-scaling" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Horizontal scaling is like urban sprawl. It involves adding more individual
-computers, servers, or nodes to the database. Because you don’t have to muck
-around with upgrading already existing computers, it is easier to implement.
-Additionally, there is no theoretical limit on the number of servers you could
-add to your database. However, having multiple servers running the same
-database does increase complexity and ongoing support costs.</p>
-</div>
-<div id="vertical-scaling" class="section level4 hasAnchor" number="2.2.4.2">
-<h4><span class="header-section-number">2.2.4.2</span> Vertical Scaling<a href="data-stores.html#vertical-scaling" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Vertical scaling is like building a high rise apartment. It involves adding
-computing resources (memory, storage) to a single computer or server. It tends
-to be more difficult and expensive than horizontal scaling at the outset, but
-system complexity and ongoing costs stay relatively constant. Additionally,
-there is a limit to how much you can upgrade a single machine, so at a certain
-point you may need to replace the hardware all together.</p>
-</div>
-</div>
-</div>
-<div id="types-of-data-stores" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> Types of Data Stores<a href="data-stores.html#types-of-data-stores" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-</div>
-<div id="spreadsheets" class="section level2 hasAnchor" number="2.4">
-<h2><span class="header-section-number">2.4</span> Spreadsheets<a href="data-stores.html#spreadsheets" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="spreadsheets" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Spreadsheets<a href="data-stores.html#spreadsheets" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<!--
+why not excel:
+Excel file is proprietary (owned by a company)
+also can have csv file, aka ASCII delimited file (not sure I will go into this)
+
+Differentiate between the file and the software
+
+file is the data store?
+-->
 <p>Spreadsheets are one of the most, if not the most, ubiquitous form of (digital)
 data store. If you have used Microsoft Excel or Google Sheets, you have used a
 a spreadsheet. In fact spreadsheet applications transformed the use of the
@@ -244,19 +258,101 @@ spreadsheet is not a database. Like most modern applications, spreadsheet
 software have graphical user interfaces, making the barrier to entry very low.
 Spreadsheet applications also offer some built in analysis tools, so you don’t
 have to learn a new application to do basic statistics and data visualization.</p>
-<p>However, spreadsheets suffer from some severe limitations. They offer limited
-storage capacity, don’t have normalization capabilities, so your data takes up
-even more space than it would otherwise. The lack of normalization means it is
-easy to compromise data integrity and end up with ____ (ex. yes, Yes, and
-YES coded as different responses). There is also no way to independently scale
-up computing resources for a spreadsheet application.</p>
+<p>Spreadsheet software also suffers from some drawbacks. They offer limited
+storage capacity, making it difficult to work with large data sets. Excel and
+LibreOffice have a maximum row number of a little over 1 million and Google
+Sheets limits you to 10 million cells. Software operations will also slow down
+if you get close to their data capacity. This means analyzing large data sets
+is much more tedious analyzing small ones.</p>
+<p>Spreadsheets also store data in ways that cause a lot of data duplication and
+make data entry susceptible to typos. In the spreadsheet visualized below, we
+have data on the Die Hard franchise. Specifically, we have information about
+the actors that starred in the series and the movies in which they appeared.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="data-stores.html#cb3-1" tabindex="-1"></a>dh <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">&#39;data/die_hard.csv&#39;</span>, <span class="at">header=</span><span class="cn">FALSE</span>)</span>
+<span id="cb3-2"><a href="data-stores.html#cb3-2" tabindex="-1"></a><span class="fu">names</span>(dh) <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&#39;title_id&#39;</span>, <span class="st">&#39;person_id&#39;</span>, <span class="st">&#39;primary_title&#39;</span>, <span class="st">&#39;premiered&#39;</span>, </span>
+<span id="cb3-3"><a href="data-stores.html#cb3-3" tabindex="-1"></a>              <span class="st">&#39;runtime_minutes&#39;</span>, <span class="st">&#39;genres&#39;</span>, <span class="st">&#39;rating&#39;</span>, <span class="st">&#39;votes&#39;</span>, <span class="st">&#39;name&#39;</span>, <span class="st">&#39;birth&#39;</span>,</span>
+<span id="cb3-4"><a href="data-stores.html#cb3-4" tabindex="-1"></a>              <span class="st">&#39;death&#39;</span>, <span class="st">&#39;role&#39;</span>, <span class="st">&#39;characters&#39;</span>)</span>
+<span id="cb3-5"><a href="data-stores.html#cb3-5" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="data-stores.html#cb3-6" tabindex="-1"></a>dh</span></code></pre></div>
+<pre><code>##     title_id person_id             primary_title premiered runtime_minutes
+## 1  tt0095016 nm0000246                  Die Hard      1988             132
+## 2  tt0095016 nm0000614                  Die Hard      1988             132
+## 3  tt0095016 nm0000889                  Die Hard      1988             132
+## 4  tt0095016 nm0001817                  Die Hard      1988             132
+## 5  tt0099423 nm0000246                Die Hard 2      1990             124
+## 6  tt0099423 nm0040472                Die Hard 2      1990             124
+## 7  tt0099423 nm0000889                Die Hard 2      1990             124
+## 8  tt0099423 nm0001817                Die Hard 2      1990             124
+## 9  tt0112864 nm0000246 Die Hard with a Vengeance      1995             128
+## 10 tt0112864 nm0000460 Die Hard with a Vengeance      1995             128
+## 11 tt0112864 nm0000168 Die Hard with a Vengeance      1995             128
+## 12 tt0112864 nm0001295 Die Hard with a Vengeance      1995             128
+## 13 tt0337978 nm0000246     Live Free or Die Hard      2007             128
+## 14 tt0337978 nm0519043     Live Free or Die Hard      2007             128
+## 15 tt0337978 nm0648249     Live Free or Die Hard      2007             128
+## 16 tt0337978 nm0702572     Live Free or Die Hard      2007             128
+## 17 tt1606378 nm0000246    A Good Day to Die Hard      2013              98
+## 18 tt1606378 nm2541974    A Good Day to Die Hard      2013              98
+## 19 tt1606378 nm0462407    A Good Day to Die Hard      2013              98
+## 20 tt1606378 nm0935541    A Good Day to Die Hard      2013              98
+##                       genres rating  votes                    name birth death
+## 1            Action,Thriller    8.2 936512            Bruce Willis  1955    NA
+## 2            Action,Thriller    8.2 936512            Alan Rickman  1946  2016
+## 3            Action,Thriller    8.2 936512          Bonnie Bedelia  1948    NA
+## 4            Action,Thriller    8.2 936512     Reginald VelJohnson  1952    NA
+## 5            Action,Thriller    7.1 380561            Bruce Willis  1955    NA
+## 6            Action,Thriller    7.1 380561        William Atherton    NA    NA
+## 7            Action,Thriller    7.1 380561          Bonnie Bedelia  1948    NA
+## 8            Action,Thriller    7.1 380561     Reginald VelJohnson  1952    NA
+## 9  Action,Adventure,Thriller    7.6 405383            Bruce Willis  1955    NA
+## 10 Action,Adventure,Thriller    7.6 405383            Jeremy Irons  1948    NA
+## 11 Action,Adventure,Thriller    7.6 405383       Samuel L. Jackson  1948    NA
+## 12 Action,Adventure,Thriller    7.6 405383           Graham Greene  1952    NA
+## 13           Action,Thriller    7.1 418910            Bruce Willis  1955    NA
+## 14           Action,Thriller    7.1 418910             Justin Long  1978    NA
+## 15           Action,Thriller    7.1 418910        Timothy Olyphant  1968    NA
+## 16           Action,Thriller    7.1 418910                Maggie Q  1979    NA
+## 17           Action,Thriller    5.2 214179            Bruce Willis  1955    NA
+## 18           Action,Thriller    5.2 214179            Jai Courtney  1986    NA
+## 19           Action,Thriller    5.2 214179          Sebastian Koch  1962    NA
+## 20           Action,Thriller    5.2 214179 Mary Elizabeth Winstead  1984    NA
+##       role                characters
+## 1    actor          [&quot;John McClane&quot;]
+## 2    actor           [&quot;Hans Gruber&quot;]
+## 3  actress [&quot;Holly Gennaro McClane&quot;]
+## 4    actor        [&quot;Sgt. Al Powell&quot;]
+## 5    actor          [&quot;John McClane&quot;]
+## 6    actor             [&quot;Thornberg&quot;]
+## 7  actress         [&quot;Holly McClane&quot;]
+## 8    actor             [&quot;Al Powell&quot;]
+## 9    actor          [&quot;John McClane&quot;]
+## 10   actor                 [&quot;Simon&quot;]
+## 11   actor                  [&quot;Zeus&quot;]
+## 12   actor           [&quot;Joe Lambert&quot;]
+## 13   actor          [&quot;John McClane&quot;]
+## 14   actor          [&quot;Matt Farrell&quot;]
+## 15   actor        [&quot;Thomas Gabriel&quot;]
+## 16 actress                   [&quot;Mai&quot;]
+## 17   actor          [&quot;John McClane&quot;]
+## 18   actor          [&quot;Jack McClane&quot;]
+## 19   actor               [&quot;Komarov&quot;]
+## 20 actress                  [&quot;Lucy&quot;]</code></pre>
+<p>As you can see, there is a lot of data duplication, meaning our data set takes
+up much more space on our hard drive than it needs to. Additionally, if we had
+to change the information about a single movie or actor, we would have to make
+that change in many different places, and potentially miss one or make a
+mistake. If we accidentally got Bruce Willis’s birth date wrong, we would have
+to modify five cells to fix our data, instead of just one.</p>
+<!--Put something in here about different text versions of the same information,
+ex. yes, Yes, Y, and YES
+-->
 <p>Finally, most spreadsheet applications store their data locally, so unless you
 are militant about version control outside of the application, it is easy to
 end up with people working on multiple versions of the data. Google Sheets
 offers shared access and some version control, but still fails to deliver on
-storage capacity, resource scaling, and data integrity.</p>
-<div id="examples" class="section level3 hasAnchor" number="2.4.1">
-<h3><span class="header-section-number">2.4.1</span> Examples<a href="data-stores.html#examples" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+storage capacity, and data integrity.</p>
+<div id="examples" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Examples<a href="data-stores.html#examples" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li>Microsoft Excel</li>
 <li>Google Sheets</li>
@@ -267,51 +363,41 @@ storage capacity, resource scaling, and data integrity.</p>
 </ul>
 </div>
 </div>
-<div id="relational-database-management-system" class="section level2 hasAnchor" number="2.5">
-<h2><span class="header-section-number">2.5</span> Relational Database Management System<a href="data-stores.html#relational-database-management-system" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="relational-database-management-system" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Relational Database Management System<a href="data-stores.html#relational-database-management-system" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<!--
+designed for very fast querying for large datasets (ex price on an amazon 
+website)
+
+Linked connections of tables in a structured/specific way
+
+join table (put two tables together), 
+
+nothing should ever appear twice, numbers are always faster than text
+
+ex student changes their address, you only have to change it in one place
+
+-->
 <p>Relational Database Management Systems (RDBMSs), or relational databases
 informally, are one type of database. When people use the word “database”, nine
 times out of ten they are referring to a relational database. Like
-spreadsheets, RDBMSs impose a structure on the data they contain. Unlike
-spreadsheets the structure of that data can be fairly complicated. Relational
-databases are made up of tables that are connected through shared columns,
-called indexes or keys.</p>
-<p>Users interact with an RDBMS through SQL, which stands for structured query
-language. SQL allows you to standardize your interactions with a database. It
-gives you a log of the transactions to ___, and makes it easy to ensure
-everyone is working with the same set of data. To learn more about using SQL in
-practice, check out the Intro to SQL and Spatial SQL readers.</p>
-<p>There are three primary purposes to using RDBMSs as a data store:</p>
-<ol style="list-style-type: decimal">
-<li><p>Reduce data duplication</p></li>
-<li><p>Speed up accessing and updating the database</p></li>
-<li><p>Ensure data integrity</p></li>
-</ol>
-<div id="transactions-are-acid" class="section level3 hasAnchor" number="2.5.1">
-<h3><span class="header-section-number">2.5.1</span> Transactions are ACID<a href="data-stores.html#transactions-are-acid" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>In relational databases, all transactions must adhere to a given set of rules.
-These rules are abbreviated as ACID.</p>
-<p><strong>Atomic</strong> - Transactions cannot be broken down into sub-steps. They are all or
-nothing. If one part of the transaction fails, the whole transaction is
-canceled. This ensures that the data is always valid.</p>
-<p><strong>Consistent</strong> - All of the structural rules of the database must be obeyed
-before and after each transaction. If a column in a table has a particular
-type, every element in that column must have the same type at the end of each
-transaction.</p>
-<p><strong>Isolated</strong> - Transactions only happen simultaneously if they do not interact.
-Otherwise the database executes transactions on a first come first serve basis.
-This means if two users want to modify the same table, the user who submitted
-their transaction first will modify the original table, and the user who
-submitted their transaction second will modify the modified table. If the if
-second transaction doesn’t work with the modified table, it will fail and the
-user will have to resubmit the transaction to reflect the new information in
-the table.</p>
-<p><strong>Durable</strong> - Changes to the database are permanent and will stay in place even
-after a system failure. There is no dialog box asking if you are sure you want
-to overwrite your data, so BE CAREFUL.</p>
-</div>
-<div id="relationship-keys" class="section level3 hasAnchor" number="2.5.2">
-<h3><span class="header-section-number">2.5.2</span> Relationship keys<a href="data-stores.html#relationship-keys" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+spreadsheets, RDBMSs impose a tabular structure on the data they contain.
+Unlike spreadsheets the structure of that data can be fairly complex.
+Relational databases are made up of tables that are connected through shared
+columns, called indexes or keys.</p>
+<p>Users interact with an RDBMS through the Standardized Query Language (SQL)
+instead of a graphical user interface. Like python or R, SQL is a programming
+language, but it is one specifically designed for interacting with relational
+databases. SQL allows you to standardize your interactions with a database. It
+allows you to keep a log of the transactions, and makes it easy to ensure
+everyone is working with the same set of data. However, it has a higher barrier
+to entry than a graphical user interface like Excel.</p>
+<p>To learn more about using SQL in practice, check out the Intro to SQL
+(<a href="https://ucdavisdatalab.github.io/workshop_intro_to_sql/">reader</a>, workshop)
+and Spatial SQL (<a href="https://github.com/ucdavisdatalab/Spatial_SQL">reader</a>,
+workshop) resources.</p>
+<div id="relationship-keys" class="section level3 hasAnchor" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Relationship keys<a href="data-stores.html#relationship-keys" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A relationship key is a column or pair of columns that links two tables. There
 are two types of relationship keys: primary keys and foreign keys. A primary
 key is a column that uniquely identifies each row in a particular table. It is
@@ -319,8 +405,8 @@ generally the first column in the table and is often named “ID”. A foreign k
 is a column in one table whose values correspond to a primary key in another
 table.</p>
 </div>
-<div id="entity-relationship-diagrams" class="section level3 hasAnchor" number="2.5.3">
-<h3><span class="header-section-number">2.5.3</span> Entity Relationship Diagrams<a href="data-stores.html#entity-relationship-diagrams" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="entity-relationship-diagrams" class="section level3 hasAnchor" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Entity Relationship Diagrams<a href="data-stores.html#entity-relationship-diagrams" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Since relational databases are not human readable, it can be helpful to have a
 an visual summary of the database without actually needing to look at the data.
 That is where Entity Relationship Diagrams (ERDs) come in. ERDs are a
@@ -333,80 +419,157 @@ should be used to join them. They also can specify what type of relationship
 the two tables have.</p>
 <p>The most common type of table relationship in relational databases is the
 one-to-many relationship. In this case, one row in table A may be linked to
-many rows in table B. This is the case for the relationship between the
-____ and ____ tables in the UC Davis Library Database. One-to-one
-relationships are also fairly common in relational databases. Two tables are
-one-to-one when one observation in table A only corresponds to one observation
-in table B. This is the relationship between ____ and ____ in the UC
-Davis Library Database.</p>
+many rows in table B. This is the case for the relationship between the people
+and crew tables in the IMDB. One-to-one relationships are also fairly common in
+relational databases. Two tables are one-to-one when one observation in table A
+only corresponds to one observation in table B. This is the relationship
+between titles and ratings tables in the IMDB database.</p>
 <p>As you might guess, there is a third type of relationship: many-to-many.
 Many-to-many relationships are the sleeping giant of database relationships.
 They can be very useful, but if you are not careful, they can multiply the size
 of your data several times over.</p>
 </div>
-<div id="pros-and-cons-of-rdbms" class="section level3 hasAnchor" number="2.5.4">
-<h3><span class="header-section-number">2.5.4</span> Pros and Cons of RDBMS<a href="data-stores.html#pros-and-cons-of-rdbms" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<table>
+<div id="why-use-relational-databases" class="section level3 hasAnchor" number="2.3.3">
+<h3><span class="header-section-number">2.3.3</span> Why Use Relational Databases?<a href="data-stores.html#why-use-relational-databases" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>There are three primary purposes to using RDBMSs as a data store:</p>
+<ol style="list-style-type: decimal">
+<li><p>Reduce data duplication</p></li>
+<li><p>Speed up and standardize accessing and updating the database</p></li>
+<li><p>Ensure data integrity</p></li>
+</ol>
+<p>In our Die Hard spreadsheet example, we had 260 cells. However, if we used a
+relational database to store the data, it only uses 156 cells. That is a 40%
+reduction in data size. For a multi-gigabyte data set, 40% makes a huge
+difference. Additionally, we were able to select only some of the columns from
+each table, meaning we didn’t need to work with ALL of the data just because we
+wanted to work with some of it. This subsetting is much harder in traditional
+spreadsheet software.</p>
+<p>The IMDB database the Die Hard data comes from is massive relative to what you
+could load in a traditional spreadsheet application. The titles table alone has
+10 million observations, and the crew table has over 60 million. Despite this,
+extracting the Die Hard movie franchise information using an SQL query took
+about half a second.</p>
+<p>The SQL query I used is also reproducible. If I want to collaborate on my
+analysis of Die Hard a colleague, I don’t have to send the Die Hard data set
+over to my collaborator. Instead I can provide them access to to the IMDB
+database and my SQL query. If I find problems in the data at a later time, I
+don’t need to send a whole new data set, and potentially introduce confusion
+over what data people should be using. All I need to do is update the database,
+and tell my colleague to rerun their SQL query. No additional computer storage
+necessary.</p>
+<p>Store in non-duplicated form, analyze with the duplicates in place.</p>
+<p>With an RDBMS, even though that data you analyze may have duplicates, you don’t
+need to modify those duplicate values. All changes to the data can be made to
+the singleton values in their original tables. For example, if we accidentally
+left out the second “L” in Bruce Willis’s name when entering the data, we would
+only need to modify his name once in the “people” table. Then, any time we
+extract data from the people table, that change will be automatically
+propagated to our new data. While it may be easy to successfully fix 5 errors,
+it will be much harder to fix 50, or 5,000. This is especially true if they are
+scattered throughout your data set and not just in a single column.</p>
+</div>
+<div id="rdbms-software" class="section level3 hasAnchor" number="2.3.4">
+<h3><span class="header-section-number">2.3.4</span> RDBMS Software<a href="data-stores.html#rdbms-software" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Because of relational databases’ widespread utility, there are many software
+options to choose from when creating a database. While all of them work off the
+same basic SQL, each one puts its own particular spin on the language in terms
+of additional functionality. All of the SQL database software options in the
+table below have wide community and/or professional support. There are many
+more RDBMS applications available for more specific use cases (ex. for use with
+Amazon AWS), but these are the most common and widely supported.</p>
+<table style="width:96%;">
 <colgroup>
-<col width="54%" />
-<col width="45%" />
+<col width="18%" />
+<col width="18%" />
+<col width="21%" />
+<col width="18%" />
+<col width="18%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th>Pros</th>
-<th>Cons</th>
+<th>Software</th>
+<th>Ease of Use</th>
+<th><p>D
+ocumentation/</p>
+<p>Support</p></th>
+<th>Cost</th>
+<th>License</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Supports ACID Transactions</td>
-<td>Only vertical scaling</td>
+<td>SQLite</td>
+<td>Easier</td>
+<td>Extensive
+documentation
+and community
+support</td>
+<td>$0</td>
+<td>Public
+Domain</td>
 </tr>
 <tr class="even">
-<td>Supports normalization and joins</td>
-<td>Joins mean loss of speed</td>
+<td>PostgreSQL</td>
+<td>Harder</td>
+<td>Spotty
+d
+ocumentation,
+but with
+robust
+community
+support</td>
+<td>$0 + cost
+of hosting</td>
+<td>Open Source</td>
 </tr>
 <tr class="odd">
-<td>Captures relationships with defined constraints</td>
-<td>Requires an administrator of some sort</td>
+<td>MySQL</td>
+<td>Easier</td>
+<td>Large
+community
+base, No
+professional
+support
+without paid
+subscription</td>
+<td>$0 - Low
+Cost</td>
+<td>Partially
+Open Source</td>
 </tr>
 <tr class="even">
-<td>Data integrity through normalization and types</td>
-<td>Data is not human readable</td>
+<td>Microsoft
+SQL Server</td>
+<td>Easier</td>
+<td>Robust
+professional
+and community
+support</td>
+<td>High Cost</td>
+<td>Proprietary</td>
 </tr>
 <tr class="odd">
-<td>Unlimited indexing</td>
-<td>Pre-defined data model</td>
-</tr>
-<tr class="even">
-<td>Robust query language (SQL)</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Lots of software options (some free)</td>
-<td></td>
+<td>Oracle</td>
+<td>Harder</td>
+<td>Robust
+professional
+and some
+community
+support</td>
+<td>High Cost</td>
+<td>Proprietary</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="examples-1" class="section level3 hasAnchor" number="2.5.5">
-<h3><span class="header-section-number">2.5.5</span> Examples<a href="data-stores.html#examples-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>Microsoft SQL Server</li>
-<li>PostgreSQL</li>
-<li>MySQL</li>
-<li>SQLite</li>
-<li>Amazon Redshift</li>
-</ul>
 </div>
-</div>
-<div id="nosql-databases" class="section level2 hasAnchor" number="2.6">
-<h2><span class="header-section-number">2.6</span> NoSQL Databases<a href="data-stores.html#nosql-databases" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="nosql-databases" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> NoSQL Databases<a href="data-stores.html#nosql-databases" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Not Only SQL, or NoSQL, databases are another type of database. They are
 primarily defined by what they do not do, namely store data in relational
 tables, as a RDBMSs would. Instead, NoSQL databases do not necessarily impose
-external structure on the data they contain. In fact, NoSQL databases can contain data
-from multiple structures, including</p>
+external structure on the data they contain. In fact, NoSQL databases can
+contain data from multiple structures, including</p>
 <ul>
 <li>documents</li>
 <li>key-value pairs</li>
@@ -414,77 +577,70 @@ from multiple structures, including</p>
 <li>trees</li>
 <li>wide column tables</li>
 </ul>
-<p>Because of this, NoSQL databases are much better at storing tree and graph data,
-as those data structures do not fit well into relational tables.</p>
-<div id="transactions-are-base" class="section level3 hasAnchor" number="2.6.1">
-<h3><span class="header-section-number">2.6.1</span> Transactions are BASE<a href="data-stores.html#transactions-are-base" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The NoSQL databases do not have built-in assumptions about structure, they
-cannot guarantee strictly ACID transactions. However, unlike spreadsheets, they
-do follow a less rigorous set of rules abbreviated as BASE. This less stringent
-set of rules requires much less computing overhead and makes scaling easier.</p>
-<p><strong>Basically Available</strong> - Users can interact with the database concurrently.
-transactions are not isolated like in relational databases, so you will not be
-locked out part of the database.</p>
-<p><strong>Soft state</strong> - Transactions do not have to maintain consistency. There can be
-intermediate steps that are not compliant. Additionally, internal replicates of
-the data may not always be identical.</p>
-<p><strong>Eventually consistent</strong> - While the database may not always be consistent, it
-will get there eventually.</p>
+<p>Because of this, NoSQL databases are much better at storing tree and graph
+data, as those data structures do not fit well into relational tables.</p>
+<div id="why-use-nosql-databases" class="section level3 hasAnchor" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Why Use NoSQL Databases?<a href="data-stores.html#why-use-nosql-databases" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p>Compatible with multiple data structures</p></li>
+<li><p>Capable of storing vast amounts of data with impressive speed</p></li>
+</ol>
+<p>Because NoSQL databases do not have to adhere to the more rigid structure of
+relational databases, they can store more data and access and modify it more
+quickly than relational databases. This is particularly important when working
+with textual data, which can easily take up many terabytes of storage.</p>
 </div>
-<div id="pros-and-cons" class="section level3 hasAnchor" number="2.6.2">
-<h3><span class="header-section-number">2.6.2</span> Pros and Cons<a href="data-stores.html#pros-and-cons" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<table>
+<div id="example-software" class="section level3 hasAnchor" number="2.4.2">
+<h3><span class="header-section-number">2.4.2</span> Example Software<a href="data-stores.html#example-software" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Not every NoSQL database supports every data structure. Some support multiple
+structures while others specialize in one.</p>
+<table style="width:99%;">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="30%" />
+<col width="37%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th>Pros</th>
-<th>Cons</th>
+<th>Software</th>
+<th>Data Structure</th>
+<th>Cost</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Works with semi- and unstructured data</td>
-<td>BASE (not ACID)</td>
+<td>MongoDB</td>
+<td>Tree/Document</td>
+<td></td>
 </tr>
 <tr class="even">
-<td>Horizontal scaling</td>
-<td>Data is not normalized</td>
+<td>Couchbase</td>
+<td>Tree/Document</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td>Data structure is not predetermined</td>
-<td>Limited support for joins and indexing</td>
+<td>Cassandra</td>
+<td>Column family</td>
+<td></td>
 </tr>
 <tr class="even">
-<td>Very fast</td>
-<td>Slow indexing</td>
+<td>Redis</td>
+<td>key-value</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td>Supports different kinds of fields</td>
-<td>Weak SQL</td>
+<td>Neo4J</td>
+<td>Graph</td>
+<td></td>
 </tr>
 <tr class="even">
-<td>High availability</td>
-<td>No built in data integrity support</td>
+<td>ArangoDB</td>
+<td>Tree/Document, graph,
+key-value</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div id="examples-2" class="section level3 hasAnchor" number="2.6.3">
-<h3><span class="header-section-number">2.6.3</span> Examples<a href="data-stores.html#examples-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>MongoDB</li>
-<li>DocumentDB</li>
-<li>Cassandra</li>
-<li>Coachbase</li>
-<li>HBase</li>
-<li>Redis</li>
-<li>Neo4J</li>
-<li>Lucene</li>
-<li>ArangoDB</li>
-</ul>
 
 </div>
 </div>
