@@ -26,6 +26,7 @@ ideas:
 
 <!--
 1. All data has an inherent structure-->
+
 1.  When we convert information to data, we encode it in a structure.
 
 2.  Different data structures facilitate different research questions.
@@ -35,35 +36,8 @@ ideas:
 4.  The best data storage technology for any research question matches the
     structure of the data with the structure of the data store.
 
-## Data Store Vocabulary
-
-There are a few concepts that will be useful when describing types of data
-stores and comparing their functionality.
-
-### Transaction
-
-A transaction is a unit of work within a database. Any time you change a
-database, either by adding, removing or modifiying data, you are completing a
-transaction. Extracting data from a database is also a transaction.
-
-### Normalization
-
-Data normalization is the process of organizing data in a database in a way
-that reduces the database's size. It the organization structure also protects
-against typos and other data quality issues from sneaking in. In general, data
-normalization will break one group of data into multiple groups.
-
-### Join
-
-While it is much easier to store normalized data, most data analysis will
-require you to work with data in a non-normalized form. A data join reverses
-the normalization process. It takes multiple groups of data and combines them
-into one.
-
-## Types of Data Stores
 
 ## Spreadsheets
-
 
 <!--
 why not excel:
