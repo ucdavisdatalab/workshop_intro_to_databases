@@ -191,13 +191,12 @@ xml is for trees, nested data = tree data
 
 Trees are another commonly used data structure. Tree structured data explicitly
 capture hierarchical relationships between entities. Trees are made of up nodes
-(or vertices)
-which represent entities in the data, and edges which represent relationships
-between those entities. The number of edges separating an entity from a common
-root node defines that entity's place in the hierarchy. When viewing tree 
-structured data on a computer, it often looks very "nested", like files in a
-file directory on your computer. In fact, tree data is sometimes referred to as 
-document structured data because of this. 
+(or vertices) which represent entities in the data, and edges which represent
+relationships between those entities. The number of edges separating an entity
+from a common root node defines that entity's place in the hierarchy. When
+viewing tree structured data on a computer, it often looks very "nested", like
+sections and subsections of a document. In fact, tree data is sometimes
+referred to as document structured data because of this.
 
 
 In general, tree data facilitates asking questions about particular subsets of 
