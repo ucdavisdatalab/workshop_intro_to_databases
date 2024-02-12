@@ -70,6 +70,18 @@ make data entry susceptible to typos. In the spreadsheet visualized below, we
 have data on the Die Hard franchise. Specifically, we have information about
 the actors that starred in the series and the movies in which they appeared.
 
+```{r}
+
+dh = read.csv('data/die_hard.csv', header=FALSE)
+names(dh) = c('title_id', 'person_id', 'primary_title', 'premiered', 
+              'runtime_minutes', 'genres', 'rating', 'votes', 'name', 'birth',
+              'death', 'role', 'characters')
+
+dh
+
+```
+
+
 As you can see, there is a lot of data duplication, meaning our data set takes
 up much more space on our hard drive than it needs to. Additionally, if we had
 to change the information about a single movie or actor, we would have to make
