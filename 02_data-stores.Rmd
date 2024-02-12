@@ -65,7 +65,7 @@ into one.
 
 ## Spreadsheets
 
-```{=html}
+
 <!--
 why not excel:
 Excel file is proprietary (owned by a company)
@@ -75,7 +75,7 @@ Differentiate between the file and the software
 
 file is the data store?
 -->
-```
+
 Spreadsheets are one of the most, if not the most, ubiquitous form of (digital)
 data store. If you have used Microsoft Excel or Google Sheets, you have used a
 a spreadsheet. In fact spreadsheet applications transformed the use of the
@@ -104,11 +104,11 @@ that change in many different places, and potentially miss one or make a
 mistake. If we accidentally got Bruce Willis's birth date wrong, we would have
 to modify five cells to fix our data, instead of just one.
 
-```{=html}
 <!--Put something in here about different text versions of the same information,
 ex. yes, Yes, Y, and YES
 -->
-```
+
+
 Finally, most spreadsheet applications store their data locally, so unless you
 are militant about version control outside of the application, it is easy to
 end up with people working on multiple versions of the data. Google Sheets
@@ -126,7 +126,7 @@ storage capacity, and data integrity.
 
 ## Relational Database Management System
 
-```{=html}
+
 <!--
 designed for very fast querying for large datasets (ex price on an amazon 
 website)
@@ -140,7 +140,7 @@ nothing should ever appear twice, numbers are always faster than text
 ex student changes their address, you only have to change it in one place
 
 -->
-```
+
 Relational Database Management Systems (RDBMSs), or relational databases
 informally, are one type of database. When people use the word "database", nine
 times out of ten they are referring to a relational database. Like
@@ -363,14 +363,3 @@ structures while others specialize in one.
 | High availability                    | No built in data integrity support   |
 +--------------------------------------+--------------------------------------+
 
-### Examples
-
--   MongoDB
--   DocumentDB
--   Cassandra
--   Coachbase
--   HBase
--   Redis
--   Neo4J
--   Lucene
--   ArangoDB
