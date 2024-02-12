@@ -23,10 +23,9 @@ could be considered a data store, albeit a bad one.
 When you are trying to decide what type of data storage to use, consider these
 ideas:
 
-```{=html}
+
 <!--
 1. All data has an inherent structure-->
-```
 1.  When we convert information to data, we encode it in a structure.
 
 2.  Different data structures facilitate different research questions.
@@ -319,6 +318,8 @@ Because NoSQL databases do not have to adhere to the more rigid structure of
 relational databases, they can store more data and access and modify it more
 quickly than relational databases. This is particularly important when working
 with textual data, which can easily take up many terabytes of storage.
+
+
 
 ### Example Software
 
