@@ -238,6 +238,23 @@ ideas:</p>
 <li><p>The best data storage technology for any research question matches the
 structure of the data with the structure of the data store.</p></li>
 </ol>
+<style type="text/css">
+pre {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+pre[class] {
+  max-height: 100px;
+}
+</style>
+<style type="text/css">
+.scroll-100 {
+  max-height: 100px;
+  overflow-y: auto;
+  background-color: inherit;
+}
+</style>
 </div>
 <div id="spreadsheets" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Spreadsheets<a href="data-stores.html#spreadsheets" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -268,75 +285,78 @@ is much more tedious analyzing small ones.</p>
 make data entry susceptible to typos. In the spreadsheet visualized below, we
 have data on the Die Hard franchise. Specifically, we have information about
 the actors that starred in the series and the movies in which they appeared.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="data-stores.html#cb3-1" tabindex="-1"></a>dh <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">&#39;data/die_hard.csv&#39;</span>, <span class="at">header=</span><span class="cn">FALSE</span>)</span>
-<span id="cb3-2"><a href="data-stores.html#cb3-2" tabindex="-1"></a><span class="fu">names</span>(dh) <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&#39;title_id&#39;</span>, <span class="st">&#39;person_id&#39;</span>, <span class="st">&#39;primary_title&#39;</span>, <span class="st">&#39;premiered&#39;</span>, </span>
-<span id="cb3-3"><a href="data-stores.html#cb3-3" tabindex="-1"></a>              <span class="st">&#39;runtime_minutes&#39;</span>, <span class="st">&#39;genres&#39;</span>, <span class="st">&#39;rating&#39;</span>, <span class="st">&#39;votes&#39;</span>, <span class="st">&#39;name&#39;</span>, <span class="st">&#39;birth&#39;</span>,</span>
-<span id="cb3-4"><a href="data-stores.html#cb3-4" tabindex="-1"></a>              <span class="st">&#39;death&#39;</span>, <span class="st">&#39;role&#39;</span>, <span class="st">&#39;characters&#39;</span>)</span>
-<span id="cb3-5"><a href="data-stores.html#cb3-5" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="data-stores.html#cb3-6" tabindex="-1"></a>dh</span></code></pre></div>
-<pre><code>##     title_id person_id             primary_title premiered runtime_minutes
-## 1  tt0095016 nm0000246                  Die Hard      1988             132
-## 2  tt0095016 nm0000614                  Die Hard      1988             132
-## 3  tt0095016 nm0000889                  Die Hard      1988             132
-## 4  tt0095016 nm0001817                  Die Hard      1988             132
-## 5  tt0099423 nm0000246                Die Hard 2      1990             124
-## 6  tt0099423 nm0040472                Die Hard 2      1990             124
-## 7  tt0099423 nm0000889                Die Hard 2      1990             124
-## 8  tt0099423 nm0001817                Die Hard 2      1990             124
-## 9  tt0112864 nm0000246 Die Hard with a Vengeance      1995             128
-## 10 tt0112864 nm0000460 Die Hard with a Vengeance      1995             128
-## 11 tt0112864 nm0000168 Die Hard with a Vengeance      1995             128
-## 12 tt0112864 nm0001295 Die Hard with a Vengeance      1995             128
-## 13 tt0337978 nm0000246     Live Free or Die Hard      2007             128
-## 14 tt0337978 nm0519043     Live Free or Die Hard      2007             128
-## 15 tt0337978 nm0648249     Live Free or Die Hard      2007             128
-## 16 tt0337978 nm0702572     Live Free or Die Hard      2007             128
-## 17 tt1606378 nm0000246    A Good Day to Die Hard      2013              98
-## 18 tt1606378 nm2541974    A Good Day to Die Hard      2013              98
-## 19 tt1606378 nm0462407    A Good Day to Die Hard      2013              98
-## 20 tt1606378 nm0935541    A Good Day to Die Hard      2013              98
-##                       genres rating  votes                    name birth death
-## 1            Action,Thriller    8.2 936512            Bruce Willis  1955    NA
-## 2            Action,Thriller    8.2 936512            Alan Rickman  1946  2016
-## 3            Action,Thriller    8.2 936512          Bonnie Bedelia  1948    NA
-## 4            Action,Thriller    8.2 936512     Reginald VelJohnson  1952    NA
-## 5            Action,Thriller    7.1 380561            Bruce Willis  1955    NA
-## 6            Action,Thriller    7.1 380561        William Atherton    NA    NA
-## 7            Action,Thriller    7.1 380561          Bonnie Bedelia  1948    NA
-## 8            Action,Thriller    7.1 380561     Reginald VelJohnson  1952    NA
-## 9  Action,Adventure,Thriller    7.6 405383            Bruce Willis  1955    NA
-## 10 Action,Adventure,Thriller    7.6 405383            Jeremy Irons  1948    NA
-## 11 Action,Adventure,Thriller    7.6 405383       Samuel L. Jackson  1948    NA
-## 12 Action,Adventure,Thriller    7.6 405383           Graham Greene  1952    NA
-## 13           Action,Thriller    7.1 418910            Bruce Willis  1955    NA
-## 14           Action,Thriller    7.1 418910             Justin Long  1978    NA
-## 15           Action,Thriller    7.1 418910        Timothy Olyphant  1968    NA
-## 16           Action,Thriller    7.1 418910                Maggie Q  1979    NA
-## 17           Action,Thriller    5.2 214179            Bruce Willis  1955    NA
-## 18           Action,Thriller    5.2 214179            Jai Courtney  1986    NA
-## 19           Action,Thriller    5.2 214179          Sebastian Koch  1962    NA
-## 20           Action,Thriller    5.2 214179 Mary Elizabeth Winstead  1984    NA
-##       role                characters
-## 1    actor          [&quot;John McClane&quot;]
-## 2    actor           [&quot;Hans Gruber&quot;]
-## 3  actress [&quot;Holly Gennaro McClane&quot;]
-## 4    actor        [&quot;Sgt. Al Powell&quot;]
-## 5    actor          [&quot;John McClane&quot;]
-## 6    actor             [&quot;Thornberg&quot;]
-## 7  actress         [&quot;Holly McClane&quot;]
-## 8    actor             [&quot;Al Powell&quot;]
-## 9    actor          [&quot;John McClane&quot;]
-## 10   actor                 [&quot;Simon&quot;]
-## 11   actor                  [&quot;Zeus&quot;]
-## 12   actor           [&quot;Joe Lambert&quot;]
-## 13   actor          [&quot;John McClane&quot;]
-## 14   actor          [&quot;Matt Farrell&quot;]
-## 15   actor        [&quot;Thomas Gabriel&quot;]
-## 16 actress                   [&quot;Mai&quot;]
-## 17   actor          [&quot;John McClane&quot;]
-## 18   actor          [&quot;Jack McClane&quot;]
-## 19   actor               [&quot;Komarov&quot;]
-## 20 actress                  [&quot;Lucy&quot;]</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="data-stores.html#cb2-1" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
+<span id="cb2-2"><a href="data-stores.html#cb2-2" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="data-stores.html#cb2-3" tabindex="-1"></a>dh <span class="ot">=</span> <span class="fu">fread</span>(<span class="st">&#39;data/die_hard.csv&#39;</span>, <span class="at">header=</span><span class="cn">FALSE</span>)</span>
+<span id="cb2-4"><a href="data-stores.html#cb2-4" tabindex="-1"></a><span class="fu">setnames</span>(dh, <span class="fu">names</span>(dh),</span>
+<span id="cb2-5"><a href="data-stores.html#cb2-5" tabindex="-1"></a>         <span class="fu">c</span>(<span class="st">&#39;title_id&#39;</span>, <span class="st">&#39;person_id&#39;</span>, <span class="st">&#39;primary_title&#39;</span>, <span class="st">&#39;premiered&#39;</span>, </span>
+<span id="cb2-6"><a href="data-stores.html#cb2-6" tabindex="-1"></a>           <span class="st">&#39;runtime_minutes&#39;</span>, <span class="st">&#39;genres&#39;</span>, <span class="st">&#39;rating&#39;</span>, <span class="st">&#39;votes&#39;</span>, <span class="st">&#39;name&#39;</span>, <span class="st">&#39;birth&#39;</span>,</span>
+<span id="cb2-7"><a href="data-stores.html#cb2-7" tabindex="-1"></a>            <span class="st">&#39;death&#39;</span>, <span class="st">&#39;role&#39;</span>, <span class="st">&#39;characters&#39;</span>))</span>
+<span id="cb2-8"><a href="data-stores.html#cb2-8" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="data-stores.html#cb2-9" tabindex="-1"></a>dh</span></code></pre></div>
+<pre class="scroll-100"><code>##      title_id person_id             primary_title premiered runtime_minutes
+##  1: tt0095016 nm0000246                  Die Hard      1988             132
+##  2: tt0095016 nm0000614                  Die Hard      1988             132
+##  3: tt0095016 nm0000889                  Die Hard      1988             132
+##  4: tt0095016 nm0001817                  Die Hard      1988             132
+##  5: tt0099423 nm0000246                Die Hard 2      1990             124
+##  6: tt0099423 nm0040472                Die Hard 2      1990             124
+##  7: tt0099423 nm0000889                Die Hard 2      1990             124
+##  8: tt0099423 nm0001817                Die Hard 2      1990             124
+##  9: tt0112864 nm0000246 Die Hard with a Vengeance      1995             128
+## 10: tt0112864 nm0000460 Die Hard with a Vengeance      1995             128
+## 11: tt0112864 nm0000168 Die Hard with a Vengeance      1995             128
+## 12: tt0112864 nm0001295 Die Hard with a Vengeance      1995             128
+## 13: tt0337978 nm0000246     Live Free or Die Hard      2007             128
+## 14: tt0337978 nm0519043     Live Free or Die Hard      2007             128
+## 15: tt0337978 nm0648249     Live Free or Die Hard      2007             128
+## 16: tt0337978 nm0702572     Live Free or Die Hard      2007             128
+## 17: tt1606378 nm0000246    A Good Day to Die Hard      2013              98
+## 18: tt1606378 nm2541974    A Good Day to Die Hard      2013              98
+## 19: tt1606378 nm0462407    A Good Day to Die Hard      2013              98
+## 20: tt1606378 nm0935541    A Good Day to Die Hard      2013              98
+##                        genres rating  votes                    name birth death
+##  1:           Action,Thriller    8.2 936512            Bruce Willis  1955    NA
+##  2:           Action,Thriller    8.2 936512            Alan Rickman  1946  2016
+##  3:           Action,Thriller    8.2 936512          Bonnie Bedelia  1948    NA
+##  4:           Action,Thriller    8.2 936512     Reginald VelJohnson  1952    NA
+##  5:           Action,Thriller    7.1 380561            Bruce Willis  1955    NA
+##  6:           Action,Thriller    7.1 380561        William Atherton    NA    NA
+##  7:           Action,Thriller    7.1 380561          Bonnie Bedelia  1948    NA
+##  8:           Action,Thriller    7.1 380561     Reginald VelJohnson  1952    NA
+##  9: Action,Adventure,Thriller    7.6 405383            Bruce Willis  1955    NA
+## 10: Action,Adventure,Thriller    7.6 405383            Jeremy Irons  1948    NA
+## 11: Action,Adventure,Thriller    7.6 405383       Samuel L. Jackson  1948    NA
+## 12: Action,Adventure,Thriller    7.6 405383           Graham Greene  1952    NA
+## 13:           Action,Thriller    7.1 418910            Bruce Willis  1955    NA
+## 14:           Action,Thriller    7.1 418910             Justin Long  1978    NA
+## 15:           Action,Thriller    7.1 418910        Timothy Olyphant  1968    NA
+## 16:           Action,Thriller    7.1 418910                Maggie Q  1979    NA
+## 17:           Action,Thriller    5.2 214179            Bruce Willis  1955    NA
+## 18:           Action,Thriller    5.2 214179            Jai Courtney  1986    NA
+## 19:           Action,Thriller    5.2 214179          Sebastian Koch  1962    NA
+## 20:           Action,Thriller    5.2 214179 Mary Elizabeth Winstead  1984    NA
+##        role                  characters
+##  1:   actor          [&quot;&quot;John McClane&quot;&quot;]
+##  2:   actor           [&quot;&quot;Hans Gruber&quot;&quot;]
+##  3: actress [&quot;&quot;Holly Gennaro McClane&quot;&quot;]
+##  4:   actor        [&quot;&quot;Sgt. Al Powell&quot;&quot;]
+##  5:   actor          [&quot;&quot;John McClane&quot;&quot;]
+##  6:   actor             [&quot;&quot;Thornberg&quot;&quot;]
+##  7: actress         [&quot;&quot;Holly McClane&quot;&quot;]
+##  8:   actor             [&quot;&quot;Al Powell&quot;&quot;]
+##  9:   actor          [&quot;&quot;John McClane&quot;&quot;]
+## 10:   actor                 [&quot;&quot;Simon&quot;&quot;]
+## 11:   actor                  [&quot;&quot;Zeus&quot;&quot;]
+## 12:   actor           [&quot;&quot;Joe Lambert&quot;&quot;]
+## 13:   actor          [&quot;&quot;John McClane&quot;&quot;]
+## 14:   actor          [&quot;&quot;Matt Farrell&quot;&quot;]
+## 15:   actor        [&quot;&quot;Thomas Gabriel&quot;&quot;]
+## 16: actress                   [&quot;&quot;Mai&quot;&quot;]
+## 17:   actor          [&quot;&quot;John McClane&quot;&quot;]
+## 18:   actor          [&quot;&quot;Jack McClane&quot;&quot;]
+## 19:   actor               [&quot;&quot;Komarov&quot;&quot;]
+## 20: actress                  [&quot;&quot;Lucy&quot;&quot;]</code></pre>
 <p>As you can see, there is a lot of data duplication, meaning our data set takes
 up much more space on our hard drive than it needs to. Additionally, if we had
 to change the information about a single movie or actor, we would have to make
