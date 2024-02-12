@@ -15,17 +15,18 @@ the data (writing). Second, they need to preserve this access over a period of
 time.
 
 It is important to remember that not all data stores, even digital ones, are
-databases. A pile of papers on a desk is definitely not a database, but it could
-be considered a data store, albeit a bad one.
+databases. A pile of papers on a desk is definitely not a database, but it
+could be considered a data store, albeit a bad one.
 
 ## Principles of Data Storage
 
 When you are trying to decide what type of data storage to use, consider these
 ideas:
 
+```{=html}
 <!--
 1. All data has an inherent structure-->
-
+```
 1.  When we convert information to data, we encode it in a structure.
 
 2.  Different data structures facilitate different research questions.
@@ -60,11 +61,11 @@ require you to work with data in a non-normalized form. A data join reverses
 the normalization process. It takes multiple groups of data and combines them
 into one.
 
-
 ## Types of Data Stores
 
 ## Spreadsheets
 
+```{=html}
 <!--
 why not excel:
 Excel file is proprietary (owned by a company)
@@ -74,7 +75,7 @@ Differentiate between the file and the software
 
 file is the data store?
 -->
-
+```
 Spreadsheets are one of the most, if not the most, ubiquitous form of (digital)
 data store. If you have used Microsoft Excel or Google Sheets, you have used a
 a spreadsheet. In fact spreadsheet applications transformed the use of the
@@ -87,27 +88,27 @@ have to learn a new application to do basic statistics and data visualization.
 Spreadsheet software also suffers from some drawbacks. They offer limited
 storage capacity, making it difficult to work with large data sets. Excel and
 LibreOffice have a maximum row number of a little over 1 million and Google
-Sheets limits you to 10 million cells. Software operations will also slow 
-down if you get close to their data capacity. This means analyzing large
-data sets is much more tedious analyzing small ones.
+Sheets limits you to 10 million cells. Software operations will also slow down
+if you get close to their data capacity. This means analyzing large data sets
+is much more tedious analyzing small ones.
 
-Spreadsheets also store data in ways that
-cause a lot of data duplication and make data entry susceptible to typos. In 
-the spreadsheet visualized below, we have data on the Die Hard franchise. 
-Specifically, we have information about the actors that starred in the series 
-and the movies in which they appeared. 
+Spreadsheets also store data in ways that cause a lot of data duplication and
+make data entry susceptible to typos. In the spreadsheet visualized below, we
+have data on the Die Hard franchise. Specifically, we have information about
+the actors that starred in the series and the movies in which they appeared.
 
 As you can see, there is a lot of data duplication, meaning our data set takes
-up much more space on our hard drive than it needs to. Additionally, if we had 
-to change the information about a single movie or actor, we would have to make 
-that change in many different places, and potentially miss one or make a mistake.
-If we accidentally got Bruce Willis's birth date wrong, we would have to modify
-five cells to fix our data, instead of just one. 
+up much more space on our hard drive than it needs to. Additionally, if we had
+to change the information about a single movie or actor, we would have to make
+that change in many different places, and potentially miss one or make a
+mistake. If we accidentally got Bruce Willis's birth date wrong, we would have
+to modify five cells to fix our data, instead of just one.
 
+```{=html}
 <!--Put something in here about different text versions of the same information,
 ex. yes, Yes, Y, and YES
 -->
-
+```
 Finally, most spreadsheet applications store their data locally, so unless you
 are militant about version control outside of the application, it is easy to
 end up with people working on multiple versions of the data. Google Sheets
@@ -125,6 +126,7 @@ storage capacity, and data integrity.
 
 ## Relational Database Management System
 
+```{=html}
 <!--
 designed for very fast querying for large datasets (ex price on an amazon 
 website)
@@ -138,14 +140,14 @@ nothing should ever appear twice, numbers are always faster than text
 ex student changes their address, you only have to change it in one place
 
 -->
-
+```
 Relational Database Management Systems (RDBMSs), or relational databases
 informally, are one type of database. When people use the word "database", nine
 times out of ten they are referring to a relational database. Like
-spreadsheets, RDBMSs impose a tabular structure on the data they contain. Unlike
-spreadsheets the structure of that data can be fairly complex. Relational
-databases are made up of tables that are connected through shared columns,
-called indexes or keys.
+spreadsheets, RDBMSs impose a tabular structure on the data they contain.
+Unlike spreadsheets the structure of that data can be fairly complex.
+Relational databases are made up of tables that are connected through shared
+columns, called indexes or keys.
 
 Users interact with an RDBMS through the Standardized Query Language (SQL)
 instead of a graphical user interface. Like python or R, SQL is a programming
@@ -155,12 +157,10 @@ allows you to keep a log of the transactions, and makes it easy to ensure
 everyone is working with the same set of data. However, it has a higher barrier
 to entry than a graphical user interface like Excel.
 
-To learn more about using SQL in practice, check out the Intro to SQL 
-([reader][sql_reader], workshop) and Spatial SQL ([reader][spat_reader], 
-workshop) resources. 
-
-[sql_reader]: https://ucdavisdatalab.github.io/workshop_intro_to_sql/
-[spat_reader]: https://github.com/ucdavisdatalab/Spatial_SQL
+To learn more about using SQL in practice, check out the Intro to SQL
+([reader](https://ucdavisdatalab.github.io/workshop_intro_to_sql/), workshop)
+and Spatial SQL ([reader](https://github.com/ucdavisdatalab/Spatial_SQL),
+workshop) resources.
 
 ### Relationship keys
 
@@ -186,12 +186,12 @@ should be used to join them. They also can specify what type of relationship
 the two tables have.
 
 The most common type of table relationship in relational databases is the
-one-to-many relationship. In this case, one row in table A may be linked to many
-rows in table B. This is the case for the relationship between the people and
-crew tables in the IMDB. One-to-one relationships are also fairly common in
+one-to-many relationship. In this case, one row in table A may be linked to
+many rows in table B. This is the case for the relationship between the people
+and crew tables in the IMDB. One-to-one relationships are also fairly common in
 relational databases. Two tables are one-to-one when one observation in table A
-only corresponds to one observation in table B. This is the relationship between
-titles and ratings tables in the IMDB database.
+only corresponds to one observation in table B. This is the relationship
+between titles and ratings tables in the IMDB database.
 
 As you might guess, there is a third type of relationship: many-to-many.
 Many-to-many relationships are the sleeping giant of database relationships.
@@ -202,18 +202,18 @@ of your data several times over.
 
 There are three primary purposes to using RDBMSs as a data store:
 
-  1. Reduce data duplication
-  
-  2. Speed up and standardize accessing and updating the database
-  
-  3. Ensure data integrity
+1.  Reduce data duplication
+
+2.  Speed up and standardize accessing and updating the database
+
+3.  Ensure data integrity
 
 In our Die Hard spreadsheet example, we had 260 cells. However, if we used a
-relational database to store the data, it only uses 156 cells. That is a 40% 
+relational database to store the data, it only uses 156 cells. That is a 40%
 reduction in data size. For a multi-gigabyte data set, 40% makes a huge
 difference. Additionally, we were able to select only some of the columns from
-each table, meaning we didn't need to work with ALL of the data just because 
-we wanted to work with some of it. This subsetting is much harder in traditional
+each table, meaning we didn't need to work with ALL of the data just because we
+wanted to work with some of it. This subsetting is much harder in traditional
 spreadsheet software.
 
 The IMDB database the Die Hard data comes from is massive relative to what you
@@ -223,50 +223,124 @@ extracting the Die Hard movie franchise information using an SQL query took
 about half a second.
 
 The SQL query I used is also reproducible. If I want to collaborate on my
-analysis of Die Hard a colleague, I don't have to send the Die Hard data set 
-over to my collaborator. Instead I can provide them access to to the IMDB 
-database and my SQL query. If I find problems in the data at a later
-time, I don't need to send a whole new data set, and potentially introduce 
-confusion over what data people should be using. All I need to do is update the
-database, and tell my colleague to rerun their SQL query. No additional computer
-storage necessary.
+analysis of Die Hard a colleague, I don't have to send the Die Hard data set
+over to my collaborator. Instead I can provide them access to to the IMDB
+database and my SQL query. If I find problems in the data at a later time, I
+don't need to send a whole new data set, and potentially introduce confusion
+over what data people should be using. All I need to do is update the database,
+and tell my colleague to rerun their SQL query. No additional computer storage
+necessary.
 
-Store in non-duplicated form, analyze with the duplicates in place. 
+Store in non-duplicated form, analyze with the duplicates in place.
 
 With an RDBMS, even though that data you analyze may have duplicates, you don't
 need to modify those duplicate values. All changes to the data can be made to
 the singleton values in their original tables. For example, if we accidentally
 left out the second "L" in Bruce Willis's name when entering the data, we would
 only need to modify his name once in the "people" table. Then, any time we
-extract data from the people table, that change will be automatically propagated
-to our new data. While it may be easy to successfully fix 5 errors, it will be
-much harder to fix 50, or 5,000. This is especially true if they are scattered
-throughout your data set and not just in a single column.
+extract data from the people table, that change will be automatically
+propagated to our new data. While it may be easy to successfully fix 5 errors,
+it will be much harder to fix 50, or 5,000. This is especially true if they are
+scattered throughout your data set and not just in a single column.
 
-### Examples
+### RDBMS Software
 
--   Microsoft SQL Server
--   PostgreSQL
--   MySQL
--   SQLite
--   Amazon Redshift
+Because of relational databases' widespread utility, there are many software
+options to choose from when creating a database. While all of them work off the
+same basic SQL, each one puts its own particular spin on the language in terms
+of additional functionality. All of the SQL database software options in the
+table below have wide community and/or professional support. There are many
+more RDBMS applications available for more specific use cases (ex. for use with
+Amazon AWS), but these are the most common and widely supported.
+
++-------------+-------------+---------------+-------------+-------------+
+| Software    | Ease of Use | D             | Cost        | License     |
+|             |             | ocumentation/ |             |             |
+|             |             |               |             |             |
+|             |             | Support       |             |             |
++=============+=============+===============+=============+=============+
+| SQLite      | Easier      | Extensive     | \$0         | Public      |
+|             |             | documentation |             | Domain      |
+|             |             | and community |             |             |
+|             |             | support       |             |             |
++-------------+-------------+---------------+-------------+-------------+
+| PostgreSQL  | Harder      | Spotty        | \$0 + cost  | Open Source |
+|             |             | d             | of hosting  |             |
+|             |             | ocumentation, |             |             |
+|             |             | but with      |             |             |
+|             |             | robust        |             |             |
+|             |             | community     |             |             |
+|             |             | support       |             |             |
++-------------+-------------+---------------+-------------+-------------+
+| MySQL       | Easier      | Large         | \$0 - Low   | Partially   |
+|             |             | community     | Cost        | Open Source |
+|             |             | base, No      |             |             |
+|             |             | professional  |             |             |
+|             |             | support       |             |             |
+|             |             | without paid  |             |             |
+|             |             | subscription  |             |             |
++-------------+-------------+---------------+-------------+-------------+
+| Microsoft   | Easier      | Robust        | High Cost   | Proprietary |
+| SQL Server  |             | professional  |             |             |
+|             |             | and community |             |             |
+|             |             | support       |             |             |
++-------------+-------------+---------------+-------------+-------------+
+| Oracle      | Harder      | Robust        | High Cost   | Proprietary |
+|             |             | professional  |             |             |
+|             |             | and some      |             |             |
+|             |             | community     |             |             |
+|             |             | support       |             |             |
++-------------+-------------+---------------+-------------+-------------+
 
 ## NoSQL Databases
 
 Not Only SQL, or NoSQL, databases are another type of database. They are
 primarily defined by what they do not do, namely store data in relational
-tables, as a RDBMSs would. Instead, NoSQL databases do not necessarily impose 
-external structure on the data they contain. In fact, NoSQL databases can contain data
-from multiple structures, including
+tables, as a RDBMSs would. Instead, NoSQL databases do not necessarily impose
+external structure on the data they contain. In fact, NoSQL databases can
+contain data from multiple structures, including
 
-  * documents
-  * key-value pairs
-  * graphs
-  * trees
-  * wide column tables
+-   documents
+-   key-value pairs
+-   graphs
+-   trees
+-   wide column tables
 
-Because of this, NoSQL databases are much better at storing tree and graph data,
-as those data structures do not fit well into relational tables. 
+Because of this, NoSQL databases are much better at storing tree and graph
+data, as those data structures do not fit well into relational tables.
+
+### Why Use NoSQL Databases?
+
+1.  Compatible with multiple data structures
+
+2.  Capable of storing vast amounts of data with impressive speed
+
+Because NoSQL databases do not have to adhere to the more rigid structure of
+relational databases, they can store more data and access and modify it more
+quickly than relational databases. This is particularly important when working
+with textual data, which can easily take up many terabytes of storage.
+
+### Example Software
+
+Not every NoSQL database supports every data structure. Some support multiple
+structures while others specialize in one.
+
++-----------------------+-----------------------------+-----------------------+
+| Software              | Data Structure              | Cost                  |
++=======================+=============================+=======================+
+| MongoDB               | Tree/Document               |                       |
++-----------------------+-----------------------------+-----------------------+
+| Couchbase             | Tree/Document               |                       |
++-----------------------+-----------------------------+-----------------------+
+| Cassandra             | Column family               |                       |
++-----------------------+-----------------------------+-----------------------+
+| Redis                 | key-value                   |                       |
++-----------------------+-----------------------------+-----------------------+
+| Neo4J                 | Graph                       |                       |
++-----------------------+-----------------------------+-----------------------+
+| ArangoDB              | Tree/Document, graph,       |                       |
+|                       | key-value                   |                       |
++-----------------------+-----------------------------+-----------------------+
 
 ### Transactions are BASE
 
@@ -288,25 +362,32 @@ will get there eventually.
 
 ### Pros and Cons
 
-| Pros                                   | Cons                                   |
-|----------------------------------------|----------------------------------------|
-| Works with semi- and unstructured data | BASE (not ACID)                        |
-| Horizontal scaling                     | Data is not normalized                 |
-| Data structure is not predetermined    | Limited support for joins and indexing |
-| Very fast                              | Slow indexing                          |
-| Supports different kinds of fields     | Weak SQL                               |
-| High availability                      | No built in data integrity support     |
++--------------------------------------+--------------------------------------+
+| Pros                                 | Cons                                 |
++======================================+======================================+
+| Works with semi- and unstructured    | BASE (not ACID)                      |
+| data                                 |                                      |
++--------------------------------------+--------------------------------------+
+| Horizontal scaling                   | Data is not normalized               |
++--------------------------------------+--------------------------------------+
+| Data structure is not predetermined  | Limited support for joins and        |
+|                                      | indexing                             |
++--------------------------------------+--------------------------------------+
+| Very fast                            | Slow indexing                        |
++--------------------------------------+--------------------------------------+
+| Supports different kinds of fields   | Weak SQL                             |
++--------------------------------------+--------------------------------------+
+| High availability                    | No built in data integrity support   |
++--------------------------------------+--------------------------------------+
 
 ### Examples
 
-  * MongoDB
-  * DocumentDB
-  * Cassandra
-  * Coachbase
-  * HBase
-  * Redis
-  * Neo4J
-  * Lucene
-  * ArangoDB
-
-
+-   MongoDB
+-   DocumentDB
+-   Cassandra
+-   Coachbase
+-   HBase
+-   Redis
+-   Neo4J
+-   Lucene
+-   ArangoDB
