@@ -37,6 +37,27 @@ ideas:
     structure of the data with the structure of the data store.
 
 
+```{css, echo=FALSE}
+pre {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+pre[class] {
+  max-height: 100px;
+}
+```
+
+
+```{css, echo=FALSE}
+.scroll-100 {
+  max-height: 100px;
+  overflow-y: auto;
+  background-color: inherit;
+}
+```
+
+
 ## Spreadsheets
 
 <!--
@@ -70,12 +91,14 @@ make data entry susceptible to typos. In the spreadsheet visualized below, we
 have data on the Die Hard franchise. Specifically, we have information about
 the actors that starred in the series and the movies in which they appeared.
 
-```{r}
+```{r, class.output="scroll-100"}
+library(data.table)
 
-dh = read.csv('data/die_hard.csv', header=FALSE)
-names(dh) = c('title_id', 'person_id', 'primary_title', 'premiered', 
-              'runtime_minutes', 'genres', 'rating', 'votes', 'name', 'birth',
-              'death', 'role', 'characters')
+dh = fread('data/die_hard.csv', header=FALSE)
+setnames(dh, names(dh),
+         c('title_id', 'person_id', 'primary_title', 'premiered', 
+           'runtime_minutes', 'genres', 'rating', 'votes', 'name', 'birth',
+            'death', 'role', 'characters'))
 
 dh
 
@@ -92,7 +115,6 @@ to modify five cells to fix our data, instead of just one.
 <!--Put something in here about different text versions of the same information,
 ex. yes, Yes, Y, and YES
 -->
-
 
 Finally, most spreadsheet applications store their data locally, so unless you
 are militant about version control outside of the application, it is easy to
