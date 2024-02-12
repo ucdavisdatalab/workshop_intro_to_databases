@@ -120,7 +120,7 @@ car_origin = data.frame(origin=1:3, origin_region=c('USA', 'Europe', 'Japan'))
 
 mpg_all = fread('data/autos_mpg.csv')
 
-mpg_all[, horsepower:=as.numeric(horsepower)]
+suppressWarnings(mpg_all[, horsepower:=as.numeric(horsepower)])
 
 mpg = merge(mpg_all, car_origin, by='origin')
 
