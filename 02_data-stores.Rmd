@@ -342,23 +342,6 @@ structures while others specialize in one.
 |                       | key-value                   |                       |
 +-----------------------+-----------------------------+-----------------------+
 
-### Transactions are BASE
-
-The NoSQL databases do not have built-in assumptions about structure, they
-cannot guarantee strictly ACID transactions. However, unlike spreadsheets, they
-do follow a less rigorous set of rules abbreviated as BASE. This less stringent
-set of rules requires much less computing overhead and makes scaling easier.
-
-**Basically Available** - Users can interact with the database concurrently.
-transactions are not isolated like in relational databases, so you will not be
-locked out part of the database.
-
-**Soft state** - Transactions do not have to maintain consistency. There can be
-intermediate steps that are not compliant. Additionally, internal replicates of
-the data may not always be identical.
-
-**Eventually consistent** - While the database may not always be consistent, it
-will get there eventually.
 
 ### Pros and Cons
 
