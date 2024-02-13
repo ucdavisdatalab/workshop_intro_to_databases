@@ -275,9 +275,19 @@ In spatial data, the organizing principle is location. This can be geographic
 location (ex latitude/longitude) or relative location on an arbitrary grid (ex.
 [2, 4]). Data can either be continuous, like a sheet over a landscape, or
 discrete in space like points on a map. In fact, map making is one of the most
-common uses of spatial data. However we can alks as questions like  de whether
+common uses of spatial data. However we can ask as questions like whether
 points are clustered more closely than we would expect, and whether we can use
 nearby information to predict values for places where we don't have data.
 
+```{r, echo=FALSE}
+suppressMessages(library(sf))
+
+#read in North Carolina data
+nc = st_read(system.file("shape/nc.shp", package="sf"), quiet = TRUE)
+
+plot_title = 'Live Births in North Carolina from 1974-1978'
+
+plot(nc['BIR74'], key.pos=1, main=plot_title)
+```
 
 
