@@ -195,6 +195,8 @@ viewing tree structured data on a computer, it often looks very "nested", like
 sections and subsections of a document. In fact, tree data is sometimes
 referred to as document structured data because of this.
 
+![](img/tree_data.png){width=50%}
+
 
 In general, tree data facilitates asking questions about particular subsets of 
 the data. For example, you might want to know how closely two entities are
@@ -209,11 +211,15 @@ generation and who was the last member of the dynasty (James I of England).
 Questions like the what was the average age at death for the Tudors would be
 harder to answer.
 
+![](img/House_of_Tudor.png)
+
 We can also represent the car fuel efficiency data with a tree data structure.
 This makes it much harder to answer some of the questions mentioned in the
 previous section. On the other hand, the tree structure makes it very easy to
 see which car manufacturer produced the greatest number of models in 1978 and
 how many different models came out of Japan that year.
+
+![](img/mpg_tree_data.png)
 
 
 ### Graph
@@ -235,11 +241,15 @@ is no implicit sense that part of the graph is "nested" inside another part.
 Also, the relationships between the vertices can be directional, and the 
 direction does not have to be consistent throughout the graph.
 
+![](img/graph_data.png){width=75%}
+
 Graph structured data tends to be more common in the social sciences and
 humanities. One of the most ubiquitous examples of a graph is the social
 network. Transportation data, like roads and flight paths, also lend themselves
 to the graph structure. In the digital world, we can use graphs to map out the
 link connections between Wikipedia pages, as seen below with Abraham Lincoln.
+
+![](img/abraham_lincoln.png)
 
 Graphs make it easy to ask questions about connectivity. For example we might
 want to know how many flight connections we will need to make between Honolulu, 
