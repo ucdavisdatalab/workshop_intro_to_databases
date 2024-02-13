@@ -7,7 +7,6 @@ graph
 categorical---relational
 spatial
 data-stores
-principles-of-data-storage
 spreadsheets
 examples
 relational-database-management-system
@@ -19,6 +18,7 @@ nosql-databases
 why-use-nosql-databases
 example-software
 choosing-the-right-data-store
+principles-of-data-storage
 cap-theorem
 polyglot-persistance
 assessment
