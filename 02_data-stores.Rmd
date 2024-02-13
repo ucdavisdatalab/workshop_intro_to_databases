@@ -192,10 +192,12 @@ standardized way to depict the structure of a relational database. Each box in
 the diagram is a table, with the table title at the top and the column names
 listed below it. The column type appears next to each column name. The
 
-Primary/foreign key pairs are linked in entity relationship diagrams using
+Primary/foreign key pairs aare linked in entity relationship diagrams using
 connector lines. These lines specify which tables can be joined, and which keys
 should be used to join them. They also can specify what type of relationship
 the two tables have.
+
+![](img/imdb_ERD.png)
 
 The most common type of table relationship in relational databases is the
 one-to-many relationship. In this case, one row in table A may be linked to
