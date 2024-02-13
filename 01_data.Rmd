@@ -52,9 +52,17 @@ and structure.
 ## Data Types
 
 Your data's type tells the computer what sorts of operations make sense to do
-with it. Common data types include integers, decimal or floating point numbers,
-characters (text), Boolean values (TRUE and FALSE) and date/times. Data type
-also influences how data is stored. Unlike other characteristics we will discuss later, an individual data point can have a type.
+with it. Common data types include
+
+  * integers
+  * decimal
+  * floating point numbers
+  * characters (text)
+  * Boolean values (TRUE and FALSE)
+  * Dates and times
+
+Data type also influences how data is stored. Unlike other characteristics we
+will discuss later, an individual data point can have a type.
 
 Data type is not necessarily inherent to a piece of information, though it is
 often strongly suggested. For example, you can store the value of 1 as the
