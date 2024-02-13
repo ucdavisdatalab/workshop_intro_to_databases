@@ -1,5 +1,26 @@
 # Choosing the Right Data Store
 
+
+## Principles of Data Storage
+
+When you are trying to decide what type of data storage to use, consider these
+ideas:
+
+
+<!--
+1. All data has an inherent structure-->
+
+1.  When we convert information to data, we encode it in a structure.
+
+2.  Different data structures facilitate different research questions.
+
+3.  All data stores impose an underlying data structure.
+
+4.  The best data storage technology for any research question matches the
+    structure of the data with the structure of the data store.
+
+
+
 ## CAP Theorem
 
 ## Polyglot Persistance
