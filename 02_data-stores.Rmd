@@ -16,25 +16,31 @@ time.
 
 It is important to remember that not all data stores, even digital ones, are
 databases. A pile of papers on a desk is definitely not a database, but it
-could be considered a data store, albeit a bad one.
-
-## Principles of Data Storage
-
-When you are trying to decide what type of data storage to use, consider these
-ideas:
-
+could be considered a data store, albeit a bad one. Databases have several 
+key characteristics that differentiate them from other data stores.
 
 <!--
-1. All data has an inherent structure-->
+Should I include something about speed?
+Should I discuss lack of GUI
+-->
 
-1.  When we convert information to data, we encode it in a structure.
 
-2.  Different data structures facilitate different research questions.
+  1. **Structure** - Databases store data with much more complicated structures
+  than other stores can handle. 
 
-3.  All data stores impose an underlying data structure.
+  1. **Scalability** -  Any database software will store much more data than
+  other digital data stores from day one. Additionally, databases do not have
+  preset size limitations. Adding more computing resources to the machine
+  running your database will increase its capabilities.
+  
+  2. **Access** - Databases support concurrent access and have sophisticated
+  methods for managing simultaneous transactions. THey also provide fine-grained
+  controls on who can access, modify, and delete data.
 
-4.  The best data storage technology for any research question matches the
-    structure of the data with the structure of the data store.
+Specific types of databases have other differentiating features, like data
+integrity constraints, flexible data structure support, and a lack of a 
+graphical user interface.
+
 
 
 ```{css, echo=FALSE}
@@ -44,14 +50,14 @@ pre {
 }
 
 pre[class] {
-  max-height: 100px;
+  max-height: 300px;
 }
 ```
 
 
 ```{css, echo=FALSE}
-.scroll-100 {
-  max-height: 100px;
+.scroll-300 {
+  max-height: 300px;
   overflow-y: auto;
   background-color: inherit;
 }
