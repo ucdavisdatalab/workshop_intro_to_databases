@@ -115,7 +115,7 @@ As you can see, there is a lot of data duplication, meaning our data set takes
 up much more space on our hard drive than it needs to. Additionally, if we had
 to change the information about a single movie or actor, we would have to make
 that change in many different places, and potentially miss one or make a
-mistake. If we accidentally got Bruce Willis's birth date wrong, we would have
+mistake. If we accidentally got Bruce Willis's birth year wrong, we would have
 to modify five cells to fix our data, instead of just one.
 
 <!--Put something in here about different text versions of the same information,
@@ -154,8 +154,7 @@ ex student changes their address, you only have to change it in one place
 
 -->
 
-Relational Database Management Systems (RDBMSs), or relational databases
-informally, are one type of database. When people use the word "database", nine
+Relational Database Management Systems (RDBMSs), or relational databases, are one type of database. When people use the word "database", nine
 times out of ten they are referring to a relational database. Like
 spreadsheets, RDBMSs impose a tabular structure on the data they contain.
 Unlike spreadsheets the structure of that data can be fairly complex.
@@ -163,12 +162,12 @@ Relational databases are made up of tables that are connected through shared
 columns, called indexes or keys.
 
 Users interact with an RDBMS through the Standardized Query Language (SQL)
-instead of a graphical user interface. Like python or R, SQL is a programming
-language, but it is one specifically designed for interacting with relational
-databases. SQL allows you to standardize your interactions with a database. It
-allows you to keep a log of the transactions, and makes it easy to ensure
-everyone is working with the same set of data. However, it has a higher barrier
-to entry than a graphical user interface like Excel.
+instead of a graphical user interface. SQL is a programming language, but it is
+one specifically designed for interacting with relational databases. SQL allows
+you to standardize your interactions with a database. It allows you to keep a
+log of the transactions, and makes it easy to ensure everyone is working with
+the same set of data. However, it has a higher barrier to entry than a graphical
+user interface like Excel.
 
 To learn more about using SQL in practice, check out the Intro to SQL
 ([reader](https://ucdavisdatalab.github.io/workshop_intro_to_sql/), workshop)
