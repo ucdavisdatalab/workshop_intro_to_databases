@@ -236,26 +236,25 @@ could load in a traditional spreadsheet application. The titles table alone has
 extracting the Die Hard movie franchise information using an SQL query took
 about half a second.
 
-The SQL query I used is also reproducible. If I want to collaborate on my
-analysis of Die Hard a colleague, I don't have to send the Die Hard data set
-over to my collaborator. Instead I can provide them access to to the IMDB
-database and my SQL query. If I find problems in the data at a later time, I
-don't need to send a whole new data set, and potentially introduce confusion
-over what data people should be using. All I need to do is update the database,
-and tell my colleague to rerun their SQL query. No additional computer storage
-necessary.
+The SQL query I used to extract the Die Hard datais also reproducible. If I want
+to collaborate on my analysis of Die Hard a colleague, I don't have to send the
+Die Hard data set over to my collaborator. Instead I can provide them access to
+to the IMDB database and my SQL query. If I find problems in the data at a later
+time, I don't need to send a whole new data set, and potentially introduce
+confusion over what data people should be using. All I need to do is update the
+database, and tell my colleague to rerun their SQL query. No additional computer
+storage necessary.
 
-Store in non-duplicated form, analyze with the duplicates in place.
-
-With an RDBMS, even though that data you analyze may have duplicates, you don't
-need to modify those duplicate values. All changes to the data can be made to
-the singleton values in their original tables. For example, if we accidentally
-left out the second "L" in Bruce Willis's name when entering the data, we would
-only need to modify his name once in the "people" table. Then, any time we
-extract data from the people table, that change will be automatically
-propagated to our new data. While it may be easy to successfully fix 5 errors,
-it will be much harder to fix 50, or 5,000. This is especially true if they are
-scattered throughout your data set and not just in a single column.
+With an RDBMS, even though the data you analyze may have duplicates, you don't
+need to modify each duplicate value, in the case that one requires a correction.
+All changes to the data can be made to the singleton values in their original
+tables. For example, if you accidentally left out the second "L" in Bruce
+Willis's name when entering the data, you would only need to modify his name
+once in the "people" table. Then, any time you extract data from the people
+table, that change will be automatically propagated to our new data. While it
+may be easy to successfully fix 5 errors, it will be much harder to fix 50, or
+5,000. This is especially true if they are scattered throughout your data set
+and not just in a single column.
 
 ### RDBMS Software
 
