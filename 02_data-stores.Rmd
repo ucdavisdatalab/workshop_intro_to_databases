@@ -97,7 +97,7 @@ make data entry susceptible to typos. In the spreadsheet visualized below, we
 have data on the Die Hard franchise. Specifically, we have information about
 the actors that starred in the series and the movies in which they appeared.
 
-```{r, class.output="scroll-100"}
+```{r, class.output="scroll-300", echo=FALSE}
 library(data.table)
 
 dh = fread('data/die_hard.csv', header=FALSE)
