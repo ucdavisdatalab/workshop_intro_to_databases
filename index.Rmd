@@ -40,6 +40,22 @@ lecture with case studies and Q&A (no laptops necessary). This workshop is a
 prerequisite for DataLab's [Intro to SQL for Querying Databases][sql] workshop
 and part of the [Research Computing micro-credential][micro_cred]
 
+## Learning Objectives
+
+After completing this workshop, you will be able to answer the following
+questions:
+
+  * What is the difference between information and data?
+  
+  * What are the most common data structures people use?
+  
+  * Which data structures lend themselves to answering different types of
+  research questions?
+  
+  * What is a database?
+  
+  * When would a database aid in answering a research question?
+
 ## You might need a database if... {-}
 
   * Your data set has many repeated values in its columns
