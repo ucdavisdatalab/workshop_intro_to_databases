@@ -32,27 +32,30 @@ Note: there are other definitions of data structure from other disciplines
 (ex. in comp sci), we will not be using those definitions
 -->
 
-If you are doing research, chances are you are going to be working with data
-in some form or another. Even if you do not use the traditional rows and
-columns people most often associate with "data", you certainly working with
-information that has been translated into a form that is more easily shared
-or stored for later use, aka data. Information becomes data when we give it some
-sort of structure. That could be the previously mentioned rows and columns, or 
-something more human readable, like the grammar and syntax of natural language.
+If you are doing research, chances are you are going to be working with data in
+some form or another. Even if you do not use traditional rows and columns, you
+are certainly working with some form of information. And if you have translated
+information into a form that is more easily shared or stored for later use, you
+are working with data. Information becomes data when we give it some sort of
+structure. That could be the previously mentioned rows and columns, or something
+more human readable, like the grammar and syntax of natural language.
 
 One of the challenges of working with data is figuring out the best way, or at
-least a good way, to store it. Thankfully, we have mostly left the 20th
+least a good way, to store it. Thankfully, we have mostly left behind the 20th
 century's favorite way of storing data: paper in filing cabinets. Our new
-methods are definitely less flammable but but also can have a higher barrier to
-entry. There are also a greater variety in types of data stores, which means you
-need to make a decision on which one to use. Ultimately, the best way to store
-your data will depend on the data you want to store, specifically the data type
-and structure.
+methods are definitely less flammable but also have a higher barrier to entry.
+There are many more types of data stores available now as well. This means you
+will need to make a decision on which one to use. Ultimately, the best way to
+store your data will depend on the data you want to store and the questions you 
+want to ask with it.
+
+When describing data we generally talk about two main characteristics: data 
+type and data structure.
 
 ## Data Types
 
-Your data's type tells the computer what sorts of operations make sense to do
-with it. Common data types include
+Your data's type tells the computer what sorts of operations make sense. Common
+data types include:
 
   * integers
   * decimal
@@ -67,7 +70,7 @@ will discuss later, an individual data point can have a type.
 Data type is not necessarily inherent to a piece of information, though it is
 often strongly suggested. For example, you can store the value of 1 as the
 integer 1, the decimal 1.0, the text "1", the Boolean TRUE, or the date
-1900-01-01 00:00:00. The underlying information is the same (1), but the
+1900-01-02. The underlying information is the same (1), but the
 computer will treat each of these pieces of data differently. It will not allow
 you to add "1" to another number, and it may have issues combining the integer
 or decimal 1.0 with text. Text itself can only be stored as characters.
@@ -89,13 +92,14 @@ data. In practice, data often exhibits traits from multiple data structures.
 As mentioned previously, data is information translated into a form to store for
 later use. The type of information you work with does not dictate the type of
 data structure you must use. However, some types of information
-lend themselves to particular data structures over others. When trying to decide
-what data structure to use to represent information from your research, the key
-is to focus on what sorts of questions you would like to ask. Each data
-structure will make some types of questions easier to ask and others harder. If
-you want to ask disparate types of questions, you may need to represent your
-data using multiple structures. Because data structure has such
-a large impact on how you interact with your data, the structure you choose is
+lend themselves to particular data structures over others.
+
+When trying to decide what data structure to use to represent information from
+your research, the key is to focus on what sorts of questions you would like to
+ask. Each data structure will make some types of questions easier to ask and
+others harder. If you want to ask disparate types of questions, you may need to
+represent your data using multiple structures. Because data structure has such a
+large impact on how you interact with your data, the structure you choose is
 just as important as the analysis you do afterward.
 
 ### Columnar/Tabular
@@ -138,19 +142,17 @@ names(mpg) = c('mpg', 'cylinders', 'horsepower', 'weight', 'manual', 'origin')
 
 
 Tabular or columnar data is made up of rows and columns, collectively referred
-to as a table. Tables work well when you are working with a class of object
-where you can summarize the information for each example of that object with the
-same set of characteristics. By convention, each row represents an observation,
-and each column a measurement or aspect of that observation. Data scientists
-refer to the columns of a table by many names, including fields, variables,
-covariates, measurements, and features. Tabular data is incredibly common in the
-sciences and many researchers will store at least some of their data in tabular
-form.
+to as a table.  By convention, each row represents an observation, and each
+column a measurement or aspect of that observation. Tabular data is incredibly
+common, especially in the sciences. Many researchers, regardless of field store
+at least some of their data in tabular form. Tables work well when all of the
+objects in your study can be summarized with the same set of characteristics.
 
-In the table below, each row is an observation of a car model released in 1978.
-Mechanics recorded the make, model and origin of each car and measured the car's
-fuel efficiency (mpg), horsepower, weight, and number of cylinders in the
-engine.
+The table below contains data from the US magazine *Motor Trend* in 1974. In the
+table below, each row is an observation of a car model released between 1973 and
+1974. The magazine recorded the make, model and origin of each car and measured
+the car's fuel efficiency (mpg), horsepower, weight, and number of cylinders in
+the engine.
 
 ```{r display_mpg, echo=FALSE}
 
@@ -164,14 +166,14 @@ data over the past 50 years, snow accumulation (inches) for Lake Tahoe, and
 biomarkers for people participating in a study on a chronic illness.
 
 Tabular data lends itself to answering questions about the average value or
-spread of a particular field over the entire dataset. It can also help
-investigate trends in a particular variable, or how two covariates relate to
+spread of a particular measurement over the entire dataset. It can also help
+investigate trends in a particular variable, or how two variables relate to
 each other. In the case of the car fuel efficiency data, we could ask about the
 relative fuel efficiency of cars from different parts of the world or if there
 is any relationship between a car's weight and its horsepower. The tabular data
 structure also makes sorting observations very easy.
 
-### Tree 
+### Trees
 
 <!--
 tree like structure of inheritance from a root
@@ -195,7 +197,11 @@ viewing tree structured data on a computer, it often looks very "nested", like
 sections and subsections of a document. In fact, tree data is sometimes
 referred to as document structured data because of this.
 
+<center>
+
 ![](img/tree_data.png){width=50%}
+
+</center>
 
 
 In general, tree data facilitates asking questions about particular subsets of 
@@ -204,25 +210,27 @@ related, which branches of the tree have the most nodes, or all of the
 observations that fall under a particular subtree.
 
 Family trees are a common example of tree structured data. In family
-trees, the nodes represent people in the family. In the
-family tree of the Tutor Dynasty in England below, it is easy to determine
-things like who had the most wives (Henry VIII), which people shared a
-generation and who was the last member of the dynasty (James I of England).
-Questions like the what was the average age at death for the Tudors would be
-harder to answer.
+trees, the nodes represent people in the family. Horizontal lines represent
+marriages or couplings, and vertical lines represent a connection to
+offspring. In the family tree of the Tutor Dynasty in England below, it is easy
+to determine things like who had the most wives (Henry VIII), which people
+shared a generation and who was the last member of the dynasty (James I of
+England). Questions like the what was the average age at death for the Tudors
+would be harder to answer.
 
 ![](img/House_of_Tudor.png)
 
 We can also represent the car fuel efficiency data with a tree data structure.
 This makes it much harder to answer some of the questions mentioned in the
 previous section. On the other hand, the tree structure makes it very easy to
-see which car manufacturer produced the greatest number of models in 1978 and
-how many different models came out of Japan that year.
+see which car manufacturer produced the greatest number of models in 1973-74 and 
+how many different models came out of Japan during that time period.
 
 ![](img/mpg_tree_data.png)
 
 
-### Graph
+
+### Graphs
 
 <!--
 graphs are rysomatic
@@ -236,10 +244,10 @@ airplanes!
 
 Graph data is similar to tree data in many ways. It also explicitly captures
 information about relationships between entities using nodes and edges. However,
-unlike trees, graph datasets have no inherent center or root node, and there
-is no implicit sense that part of the graph is "nested" inside another part.
-Also, the relationships between the vertices can be directional, and the 
-direction does not have to be consistent throughout the graph.
+unlike trees, graph data sets have no inherent center or root node, and there is
+no implicit hierarchy or nesting. Additionally, the relationships between the
+vertices can be directional, and that direction does not have to be consistent
+throughout the graph.
 
 ![](img/graph_data.png){width=75%}
 
@@ -274,10 +282,10 @@ individual entities.
 In spatial data, the organizing principle is location. This can be geographic
 location (ex latitude/longitude) or relative location on an arbitrary grid (ex.
 [2, 4]). Data can either be continuous, like a sheet over a landscape, or
-discrete in space like points on a map. In fact, map making is one of the most
-common uses of spatial data. However we can ask as questions like whether
+discrete like points on a map. In fact, map making is one of the most
+common uses of spatial data. However, we can also ask as questions like whether
 points are clustered more closely than we would expect, and whether we can use
-nearby information to predict values for places where we don't have data.
+nearby data to predict values for places where we don't any.
 
 ```{r, echo=FALSE}
 suppressMessages(library(sf))
