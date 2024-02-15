@@ -333,15 +333,18 @@ data, as those data structures do not fit well into relational tables.
 
 ### Why Use NoSQL Databases?
 
-1.  Compatible with multiple data structures
+1.  Compatible with multiple data non-tabular structures
 
 2.  Capable of storing vast amounts of data with impressive speed
+
+3.  Adding more computing power is easier
 
 Because NoSQL databases do not have to adhere to the more rigid structure of
 relational databases, they can store more data and access and modify it more
 quickly than relational databases. This is particularly important when working
-with textual data, which can easily take up many terabytes of storage.
-
+with textual data, which can easily take up many terabytes of storage. It is
+also generally easier to upgrade NoSQL databases, which is important when you
+are working on the edge of what is possible data storage-wise.
 
 
 ### Example Software
