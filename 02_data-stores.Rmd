@@ -18,39 +18,38 @@ It is important to remember that not all data stores, even digital ones, are
 databases. A pile of papers on a desk is definitely not a database, but it
 could be considered a data store, albeit a bad one. Probably the most commonly
 used type of data store is a flat file, a stand alone file on your computer
-that is not linked to data elsewhere. Sometimes these files have specific 
-software that is designed to interact with them, like in the case of .xlsx files
-and Microsoft Excel. However, a flat file can also be as simple as a text file,
-like a .csv or .json.
+that is not linked to data elsewhere. Sometimes these files have specific
+software that is designed to interact with them, like in the case of .xlsx
+files and Microsoft Excel. However, a flat file can also be as simple as a text
+file, like a .csv or .json.
 
 Compared to flat files, databases increase the level of complexity the data is
 capable of capturing. A database is an organized collection of data that users
 can interact with through specialized software called a database management
-system, often abbreviated DBMS. Databases have several key characteristics that differentiate them from other data stores.
+system, often abbreviated DBMS. Databases have several key characteristics that
+differentiate them from other data stores.
 
+```{=html}
 <!--
 Should I include something about speed?
 Should I discuss lack of GUI
 -->
+```
+1.  **Structure** - Databases store data with much more complicated structures
+    than other stores can handle.
 
+2.  **Scalability** - Any database software will store much more data than
+    other digital data stores from day one. Additionally, databases do not have
+    preset size limitations. Adding more computing resources to the machine
+    running your database will increase its capabilities.
 
-  1. **Structure** - Databases store data with much more complicated structures
-  than other stores can handle. 
-
-  1. **Scalability** -  Any database software will store much more data than
-  other digital data stores from day one. Additionally, databases do not have
-  preset size limitations. Adding more computing resources to the machine
-  running your database will increase its capabilities.
-  
-  2. **Access** - Databases support concurrent access and have sophisticated
-  methods for managing simultaneous transactions. They also provide fine-grained
-  controls on who can access, modify, and delete data.
+3.  **Access** - Databases support concurrent access and have sophisticated
+    methods for managing simultaneous transactions. They also provide
+    fine-grained controls on who can access, modify, and delete data.
 
 Specific types of databases have other differentiating features, like data
-integrity constraints, flexible data structure support, and a lack of a 
+integrity constraints, flexible data structure support, and a lack of a
 graphical user interface.
-
-
 
 ```{css, echo=FALSE}
 pre {
@@ -63,7 +62,6 @@ pre[class] {
 }
 ```
 
-
 ```{css, echo=FALSE}
 .scroll-300 {
   max-height: 300px;
@@ -72,8 +70,8 @@ pre[class] {
 }
 ```
 
-
 ## Spreadsheets
+
 
 <!--
 why not excel:
@@ -119,7 +117,6 @@ dh
 
 ```
 
-
 As you can see, there is a lot of data duplication, meaning our data set takes
 up much more space on our hard drive than it needs to. Additionally, if we had
 to change the information about a single movie or actor, we would have to make
@@ -127,8 +124,9 @@ that change in many different places, and potentially miss one or make a
 mistake. If we accidentally got Bruce Willis's birth year wrong, we would have
 to modify five cells to fix our data, instead of just one.
 
-<!--Put something in here about different text versions of the same information,
-ex. yes, Yes, Y, and YES
+
+<!--maybe put something in here about different text versions of the same
+information, ex. yes, Yes, Y, and YES
 -->
 
 Finally, most spreadsheet applications store their data locally, so unless you
@@ -148,7 +146,6 @@ storage capacity, and data integrity.
 
 ## Relational Database Management System
 
-
 <!--
 designed for very fast querying for large datasets (ex price on an amazon 
 website)
@@ -163,20 +160,20 @@ ex student changes their address, you only have to change it in one place
 
 -->
 
-Relational Database Management Systems (RDBMSs), or relational databases, are one type of database. When people use the word "database", nine
-times out of ten they are referring to a relational database. Like
-spreadsheets, RDBMSs impose a tabular structure on the data they contain.
-Unlike spreadsheets the structure of that data can be fairly complex.
-Relational databases are made up of tables that are connected through shared
-columns, called indexes or keys.
+Relational Database Management Systems (RDBMSs), or relational databases, are
+one type of database. When people use the word "database", nine times out of
+ten they are referring to a relational database. Like spreadsheets, RDBMSs
+impose a tabular structure on the data they contain. Unlike spreadsheets the
+structure of that data can be fairly complex. Relational databases are made up
+of tables that are connected through shared columns, called indexes or keys.
 
 Users interact with an RDBMS through the Standardized Query Language (SQL)
 instead of a graphical user interface. SQL is a programming language, but it is
 one specifically designed for interacting with relational databases. SQL allows
 you to standardize your interactions with a database. It allows you to keep a
 log of the transactions, and makes it easy to ensure everyone is working with
-the same set of data. However, it has a higher barrier to entry than a graphical
-user interface like Excel.
+the same set of data. However, it has a higher barrier to entry than a
+graphical user interface like Excel.
 
 To learn more about using SQL in practice, check out the Intro to SQL
 ([reader](https://ucdavisdatalab.github.io/workshop_intro_to_sql/), workshop)
@@ -245,25 +242,25 @@ could load in a traditional spreadsheet application. The titles table alone has
 extracting the Die Hard movie franchise information using an SQL query took
 about half a second.
 
-The SQL query I used to extract the Die Hard datais also reproducible. If I want
-to collaborate on my analysis of Die Hard a colleague, I don't have to send the
-Die Hard data set over to my collaborator. Instead I can provide them access to
-to the IMDB database and my SQL query. If I find problems in the data at a later
-time, I don't need to send a whole new data set, and potentially introduce
-confusion over what data people should be using. All I need to do is update the
-database, and tell my colleague to rerun their SQL query. No additional computer
-storage necessary.
+The SQL query I used to extract the Die Hard datais also reproducible. If I
+want to collaborate on my analysis of Die Hard a colleague, I don't have to
+send the Die Hard data set over to my collaborator. Instead I can provide them
+access to to the IMDB database and my SQL query. If I find problems in the data
+at a later time, I don't need to send a whole new data set, and potentially
+introduce confusion over what data people should be using. All I need to do is
+update the database, and tell my colleague to rerun their SQL query. No
+additional computer storage necessary.
 
 With an RDBMS, even though the data you analyze may have duplicates, you don't
-need to modify each duplicate value, in the case that one requires a correction.
-All changes to the data can be made to the singleton values in their original
-tables. For example, if you accidentally left out the second "L" in Bruce
-Willis's name when entering the data, you would only need to modify his name
-once in the "people" table. Then, any time you extract data from the people
-table, that change will be automatically propagated to our new data. While it
-may be easy to successfully fix 5 errors, it will be much harder to fix 50, or
-5,000. This is especially true if they are scattered throughout your data set
-and not just in a single column.
+need to modify each duplicate value, in the case that one requires a
+correction. All changes to the data can be made to the singleton values in
+their original tables. For example, if you accidentally left out the second "L"
+in Bruce Willis's name when entering the data, you would only need to modify
+his name once in the "people" table. Then, any time you extract data from the
+people table, that change will be automatically propagated to our new data.
+While it may be easy to successfully fix 5 errors, it will be much harder to
+fix 50, or 5,000. This is especially true if they are scattered throughout your
+data set and not just in a single column.
 
 ### RDBMS Software
 
@@ -273,46 +270,44 @@ same basic SQL, each one puts its own particular spin on the language in terms
 of additional functionality. All of the SQL database software options in the
 table below have wide community and/or professional support. There are many
 more RDBMS applications available for more specific use cases (ex. for use with
-Amazon AWS), but these are the most common and widely supported.
+Amazon AWS), but these are the most common and widely supported. All of them
+provide some level of support for spatial data. However, that level of support
+varies, so if you have specific requirements, it's best to do additional
+research before making a decision.
 
-+-------------+-------------+---------------+-------------+-------------+
-| Software    | Ease of Use | D             | Cost        | License     |
-|             |             | ocumentation/ |             |             |
-|             |             |               |             |             |
-|             |             | Support       |             |             |
-+=============+=============+===============+=============+=============+
-| SQLite      | Easier      | Extensive     | \$0         | Public      |
-|             |             | documentation |             | Domain      |
-|             |             | and community |             |             |
-|             |             | support       |             |             |
-+-------------+-------------+---------------+-------------+-------------+
-| PostgreSQL  | Harder      | Spotty        | \$0 + cost  | Open Source |
-|             |             | d             | of hosting  |             |
-|             |             | ocumentation, |             |             |
-|             |             | but with      |             |             |
-|             |             | robust        |             |             |
-|             |             | community     |             |             |
-|             |             | support       |             |             |
-+-------------+-------------+---------------+-------------+-------------+
-| MySQL       | Easier      | Large         | \$0 - Low   | Partially   |
-|             |             | community     | Cost        | Open Source |
-|             |             | base, No      |             |             |
-|             |             | professional  |             |             |
-|             |             | support       |             |             |
-|             |             | without paid  |             |             |
-|             |             | subscription  |             |             |
-+-------------+-------------+---------------+-------------+-------------+
-| Microsoft   | Easier      | Robust        | High Cost   | Proprietary |
-| SQL Server  |             | professional  |             |             |
-|             |             | and community |             |             |
-|             |             | support       |             |             |
-+-------------+-------------+---------------+-------------+-------------+
-| Oracle      | Harder      | Robust        | High Cost   | Proprietary |
-|             |             | professional  |             |             |
-|             |             | and some      |             |             |
-|             |             | community     |             |             |
-|             |             | support       |             |             |
-+-------------+-------------+---------------+-------------+-------------+
++----------+----------+------------------+-----------+----------+----------+
+| Software | Ease of  | Documentation/   | Cost      | License  | Spatial  |
+|          | Use      |                  |           |          | Support  |
+|          |          | Support          |           |          |          |
++==========+==========+==================+===========+==========+==========+
+| SQLite   | Easier   | Extensive        | \$0       | Public   | raster,  |
+|          |          | documentation    |           | Domain   | vector   |
+|          |          | and community    |           |          |          |
+|          |          | support          |           |          |          |
++----------+----------+------------------+-----------+----------+----------+
+| Po       | Harder   | Spotty           | \$0 +     | Open     | raster,  |
+| stgreSQL |          | documentation,   | cost of   | Source   | vector   |
+|          |          | but with robust  | hosting   |          |          |
+|          |          | community        |           |          |          |
+|          |          | support          |           |          |          |
++----------+----------+------------------+-----------+----------+----------+
+| MySQL    | Easier   | Large community  | \$0 - Low | P        | vector   |
+|          |          | base, No         | Cost      | artially |          |
+|          |          | professional     |           | Open     |          |
+|          |          | support without  |           | Source   |          |
+|          |          | paid             |           |          |          |
+|          |          | subscription     |           |          |          |
++----------+----------+------------------+-----------+----------+----------+
+| M        | Easier   | Robust           | High Cost | Pro      | vector   |
+| icrosoft |          | professional and |           | prietary |          |
+| SQL      |          | community        |           |          |          |
+| Server   |          | support          |           |          |          |
++----------+----------+------------------+-----------+----------+----------+
+| Oracle   | Harder   | Robust           | High Cost | Pro      | raster,  |
+|          |          | professional and |           | prietary | vector   |
+|          |          | some community   |           |          |          |
+|          |          | support          |           |          |          |
++----------+----------+------------------+-----------+----------+----------+
 
 ## NoSQL Databases
 
@@ -346,27 +341,32 @@ with textual data, which can easily take up many terabytes of storage. It is
 also generally easier to upgrade NoSQL databases, which is important when you
 are working on the edge of what is possible data storage-wise.
 
-
 ### Example Software
 
 Not every NoSQL database supports every data structure. Some support multiple
-structures while others specialize in one.
+structures while others specialize in one. Unlike RDBMSs, all of the most
+common NoSQL software is open source, though the MongoDB license is slightly
+more restrictive than most open source licenses. Because of this they are also
+low cost to implement, though you can always pay for additional features and
+support. Similar to RDBMSs, all the most common NoSQL database software
+provides some support of spatial data. However, that support is limited to
+vector data and the functionality available varies fairly widely.
 
-+-----------------------+-----------------------------+-----------------------+
-| Software              | Data Structure              | Cost                  |
-+=======================+=============================+=======================+
-| MongoDB               | Tree/Document               |                       |
-+-----------------------+-----------------------------+-----------------------+
-| Couchbase             | Tree/Document               |                       |
-+-----------------------+-----------------------------+-----------------------+
-| Cassandra             | Column family               |                       |
-+-----------------------+-----------------------------+-----------------------+
-| Redis                 | key-value                   |                       |
-+-----------------------+-----------------------------+-----------------------+
-| Neo4J                 | Graph                       |                       |
-+-----------------------+-----------------------------+-----------------------+
-| ArangoDB              | Tree/Document, graph,       |                       |
-|                       | key-value                   |                       |
-+-----------------------+-----------------------------+-----------------------+
-
-
++-------------+----------------------------+----------------+
+| Software    | Data Structure             | Spatial        |
+|             |                            | Support        |
++=============+============================+================+
+| MongoDB     | Tree/Document              | vector         |
++-------------+----------------------------+----------------+
+| Couchbase   | Tree/Document              | vector         |
++-------------+----------------------------+----------------+
+| Cassandra   | Column family              | vector         |
+|             |                            | (DataStax)     |
++-------------+----------------------------+----------------+
+| Redis       | key-value                  | point only     |
++-------------+----------------------------+----------------+
+| Neo4J       | Graph                      | vector         |
++-------------+----------------------------+----------------+
+| ArangoDB    | Tree/Document, graph,      | vector         |
+|             | key-value                  |                |
++-------------+----------------------------+----------------+
