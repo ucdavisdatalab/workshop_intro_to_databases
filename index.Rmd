@@ -37,10 +37,11 @@ and organizing different collections of data. We will discuss how data structure
 and data types impact your storage options, when you should use a database, and
 which platforms you might consider for your research. This workshop is a general
 lecture with case studies and Q&A (no laptops necessary). This workshop is a
-prerequisite for DataLab's [Intro to SQL for Querying Databases][sql] workshop
-and part of the [Research Computing micro-credential][micro_cred]
+prerequisite for DataLab's [Intro to SQL for Querying Databases][sql] 
+and [Spatial SQL with SpatiaLite][spat_sql] workshops as well as being part of 
+the [Research Computing micro-credential][micro_cred]
 
-## Learning Objectives
+## Learning Goals
 
 After completing this workshop, you will be able to answer the following
 questions:
@@ -54,26 +55,12 @@ questions:
   
   * What is a database?
   
+  * What are the differences between relational and noSQL databases?
+  
   * When would a database aid in answering a research question?
 
 
-## Learning Goals {-}
-
-By the end of this workshop, learners should be able to:
-
--   Describe different data set structures
-
--   Compare and contrast different data storage platforms
-
--   Explain the differences between SQL and noSQL databases
-
--   Explain the components of an Entity Relationship Diagram (ERD)
-
--   Define relational keys
-
--   Identify appropriate data storage solutions based on the structure
-    of a research data set
-
 [sql]: https://ucdavisdatalab.github.io/workshop_intro_to_sql/
+[spat_sql]: https://github.com/ucdavisdatalab/Spatial_SQL
 [micro_cred]: https://gradpathways.ucdavis.edu/research-computing-pathway
 
