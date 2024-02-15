@@ -16,8 +16,17 @@ time.
 
 It is important to remember that not all data stores, even digital ones, are
 databases. A pile of papers on a desk is definitely not a database, but it
-could be considered a data store, albeit a bad one. Databases have several 
-key characteristics that differentiate them from other data stores.
+could be considered a data store, albeit a bad one. Probably the most commonly
+used type of data store is a flat file, a stand alone file on your computer
+that is not linked to data elsewhere. Sometimes these files have specific 
+software that is designed to interact with them, like in the case of .xlsx files
+and Microsoft Excel. However, a flat file can also be as simple as a text file,
+like a .csv or .json.
+
+Compared to flat files, databases increase the level of complexity the data is
+capable of capturing. A database is an organized collection of data that users
+can interact with through specialized software called a database management
+system, often abbreviated DBMS. Databases have several key characteristics that differentiate them from other data stores.
 
 <!--
 Should I include something about speed?
@@ -76,7 +85,7 @@ Differentiate between the file and the software
 file is the data store?
 -->
 
-Spreadsheets are one of the most, if not the most, ubiquitous form of (digital)
+Spreadsheets, a type of flat file, are the most ubiquitous form of (digital)
 data store. If you have used Microsoft Excel or Google Sheets, you have used a
 a spreadsheet. In fact spreadsheet applications transformed the use of the
 personal computer, particularly in business circles. Despite this, a
