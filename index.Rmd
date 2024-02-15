@@ -56,30 +56,6 @@ questions:
   
   * When would a database aid in answering a research question?
 
-## You might need a database if... {-}
-
-  * Your data set has many repeated values in its columns
-  
-  * Your data set contains information about many unrelated or loosely related
-  studies
-  
-  * You are sharing data with multiple people and everyone seems to have a
-  different version
-  
-  * Your data set is so large, your computer freezes when trying to view it
-  
-  * You have to keep making the same corrections to your data over and over
-  again
-  
-  * Excel keeps converting your columns to the wrong data type
-  
-  * You have so many pivot tables
-  
-  * You have hundreds (or thousands) of data files you need to share with your
-  collaborators
-  
-  * You think PowerQuery is neat but wish people would stop changing the
-  underlying data while you are using it.
 
 ## Learning Goals {-}
 

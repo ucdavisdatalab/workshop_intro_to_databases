@@ -73,6 +73,37 @@ But they also do have some drawbacks:
   charge of adding data to the database, determining who has access to what,
   and fixing things when they break.
   
+If you are running into any of the following issues, a database is probably 
+the solution to your problems.
+
+  * Your data set has many repeated values 
+  
+  * Your data set contains information about many unrelated or loosely related
+  studies
+  
+  * You are sharing data with multiple people and everyone seems to have a
+  different version
+  
+  * Your data set is so large, your computer slows down or freezes when trying 
+  to view it
+  
+  * You have to keep making the same corrections to your data over and over
+  again
+  
+  * Excel keeps converting your columns to the wrong data type
+  
+  * You have so many pivot tables
+  
+  * You have hundreds (or thousands) of data files you need to share with your
+  collaborators
+  
+  * You think PowerQuery is neat but wish people would stop changing the
+  underlying data while you are using it.
+  
+  * You have a hard time finding and extracting the information you need to
+  answer a particular research question
 
   
 ## Polyglot Persistance
+
+Whenever you undertake a research project
