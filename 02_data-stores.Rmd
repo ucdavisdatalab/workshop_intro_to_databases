@@ -34,7 +34,7 @@ Should I discuss lack of GUI
   running your database will increase its capabilities.
   
   2. **Access** - Databases support concurrent access and have sophisticated
-  methods for managing simultaneous transactions. THey also provide fine-grained
+  methods for managing simultaneous transactions. They also provide fine-grained
   controls on who can access, modify, and delete data.
 
 Specific types of databases have other differentiating features, like data
