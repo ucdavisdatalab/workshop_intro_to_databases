@@ -16,9 +16,14 @@ you are trying to decide what type of data storage to use, consider these ideas:
 All information needs to be encoded in a data structure in order for it to be
 useful in research. When you have identified your research question, you can use
 that to determine what data structures will make it easiest for you to carry
-out your research.
+out your research. Finally you can match the structure, size, and use case
+of your data to the data store(s) that best fit your needs.
 
-  
-## Polyglot Persistance
+It is important to remember that as you ask different questions of your data,
+you may need to change how you structure and store your data. Reproducibility
+experts will sometimes require that you only store one "definitive" version of
+your data. However, that plan rarely survives first contact with a research
+project. If you want understand a subject deeply, you need to ask many different
+types of questions about it. And this necessitates storing your data in multiple
+forms.
 
-Whenever you undertake a research project
