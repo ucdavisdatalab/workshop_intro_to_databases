@@ -41,7 +41,7 @@ prerequisite for DataLab's [Intro to SQL for Querying Databases][sql]
 and [Spatial SQL with SpatiaLite][spat_sql] workshops as well as being part of 
 the [Research Computing micro-credential][micro_cred]
 
-## Learning Goals
+## Learning Goals {.unnumbered}
 
 After completing this workshop, you will be able to answer the following
 questions:
@@ -57,7 +57,7 @@ questions:
   
   * What are the differences between relational and noSQL databases?
   
-  * When would a database aid in answering a research question?
+  * When would a database help answer a research question?
 
 
 [sql]: https://ucdavisdatalab.github.io/workshop_intro_to_sql/
