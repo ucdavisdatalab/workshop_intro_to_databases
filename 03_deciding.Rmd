@@ -4,7 +4,7 @@ You've just learned a bunch of information about data structures and data
 stores. Now the challenge is applying that information to your own data. When
 you are trying to decide what type of data storage to use, consider these ideas:
 
-2.  Different data structures facilitate different research questions.
+1.  Different data structures facilitate different research questions.
 
 1.  When we convert information to data, we encode it in a structure.
 
