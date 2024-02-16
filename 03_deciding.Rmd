@@ -20,7 +20,7 @@ out your research. Finally you can match the structure, size, and use case
 of your data to the data store(s) that best fit your needs.
 
 It is important to remember that as you ask different questions of your data,
-you may need to change how you structure and store your data. Reproducibility
+you may need to change how you structure and store that data. Reproducibility
 experts will sometimes require that you only store one "definitive" version of
 your data. However, that plan rarely survives first contact with a research
 project. If you want understand a subject deeply, you need to ask many different
