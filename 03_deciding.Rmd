@@ -1,107 +1,22 @@
 # Choosing the Right Data Store
 
-When you are trying to decide what type of data storage to use, consider these
-ideas:
-
-1.  When we convert information to data, we encode it in a structure.
+You've just learned a bunch of information about data structures and data
+stores. Now the challenge is applying that information to your own data. When
+you are trying to decide what type of data storage to use, consider these ideas:
 
 2.  Different data structures facilitate different research questions.
 
-3.  All data stores impose an underlying data structure.
+1.  When we convert information to data, we encode it in a structure.
+
+3.  All data stores impose structure on your data.
 
 4.  The best data storage technology for any research question matches the
     structure of the data with the structure of the data store.
     
 All information needs to be encoded in a data structure in order for it to be
 useful in research. When you have identified your research question, you can use
-that to determine what data structures will make it easiest for you to answer 
-that question.
-
-  * Tabular Data
-    * Question type 1
-    * Question type 2
-  * Tree Data
-    * Question type 1
-    * Question type 2
-  * Graph Data
-    * Question type 1
-    * Question type 2
-  * Spatial Data
-    * Question type 1
-    * Question type 2
-
-## Do You Need A Database?
-
-Once you have decided on a data structure, the next decision to make is how to
-store your data. Regardless of your data structure you have two general options
-for how to store your data digitally. First you can store it in flat files on
-your computer and interact with them through an application designed for that
-purpose. For example, you can store tabular data in .xlsx and .csv files, tree
-data in .xml and .json files, graph data in .GML and .DOT, and spatial data in
-.GeoJSON and .GeoTIFF files. All of these file types have applications you can
-use to interact with them, or you can load the data into a programming
-environment like R or python.
-
-Your second option is to store the data in a database. Databases provide the 
-following benefits:
-
-  1. **Structure** - Databases store data with much more complicated structures
-  than other flat files can handle. 
-
-  1. **Scalability** -  Any database software will store much more data than
-  other digital data stores from day one. Additionally, databases do not have
-  preset size limitations. Adding more computing resources to the machine
-  running your database will increase its capabilities.
-  
-  2. **Access** - Databases support concurrent access and have sophisticated
-  methods for managing simultaneous transactions. They also provide fine-grained
-  controls on who can access, modify, and delete data.
-
-But they also do have some drawbacks:
-
-  * Data in databases is not human readable, unlike many file types including 
-  csv, xml, DOT, and GML, which are human readable
-  
-  * Database software generally has a steeper learning curve than other 
-  software. You may need to learn a specialized language to interact with the
-  data in your database.
-  
-  * There may be cost associated, either for the database software or for
-  hardware needed to run the software. 
-  
-  * Databases require some level of administration. Someone will need to be in
-  charge of adding data to the database, determining who has access to what,
-  and fixing things when they break.
-  
-If you are running into any of the following issues, a database is probably 
-the solution to your problems.
-
-  * Your data set has many repeated values 
-  
-  * Your data set contains information about many unrelated or loosely related
-  studies
-  
-  * You are sharing data with multiple people and everyone seems to have a
-  different version
-  
-  * Your data set is so large, your computer slows down or freezes when trying 
-  to view it
-  
-  * You have to keep making the same corrections to your data over and over
-  again
-  
-  * Excel keeps converting your columns to the wrong data type
-  
-  * You have so many pivot tables
-  
-  * You have hundreds (or thousands) of data files you need to share with your
-  collaborators
-  
-  * You think PowerQuery is neat but wish people would stop changing the
-  underlying data while you are using it.
-  
-  * You have a hard time finding and extracting the information you need to
-  answer a particular research question
+that to determine what data structures will make it easiest for you to carry
+out your research.
 
   
 ## Polyglot Persistance
