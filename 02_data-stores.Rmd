@@ -167,11 +167,10 @@ that change in many different places, and potentially miss one or make a
 mistake. If we accidentally left out an "l" in Bruce Willis's last name, we
 would have to modify five cells to fix our data.
 
-```{=html}
 <!--maybe put something in here about different text versions of the same
 information, ex. yes, Yes, Y, and YES
 -->
-```
+
 Finally, most spreadsheet applications store their data locally, so unless you
 are militant about version control outside the application, it is easy to end
 up with people working on different versions of the data. Google Sheets offers
@@ -189,7 +188,6 @@ capacity, and data integrity.
 
 ## Relational Database Management System
 
-```{=html}
 <!--
 designed for very fast querying for large datasets (ex price on an amazon 
 website)
@@ -203,7 +201,6 @@ nothing should ever appear twice, numbers are always faster than text
 ex student changes their address, you only have to change it in one place
 
 -->
-```
 Relational Database Management Systems (RDBMSs), or relational databases, are
 one type of database. When people use the word "database", nine times out of
 ten they are referring to a relational database. Like spreadsheets, RDBMSs
