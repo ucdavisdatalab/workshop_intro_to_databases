@@ -1,9 +1,10 @@
+learning-goals
 data
 data-types
 data-structures
 columnartabular
-tree
-graph
+trees
+graphs
 categorical---relational
 spatial
 data-stores
@@ -18,7 +19,4 @@ nosql-databases
 why-use-nosql-databases
 example-software
 choosing-the-right-data-store
-principles-of-data-storage
-cap-theorem
-polyglot-persistance
 assessment

@@ -23,7 +23,7 @@
 <meta name="author" content="Elise Hellwig" />
 
 
-<meta name="date" content="2024-02-13" />
+<meta name="date" content="2024-02-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -80,8 +80,7 @@
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#you-might-need-a-database-if"><i class="fa fa-check"></i>You might need a database if…</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#learning-goals"><i class="fa fa-check"></i>Learning Goals</a></li>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#learning-goals"><i class="fa fa-check"></i><b>0.1</b> Learning Goals</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>1</b> Data</a>
 <ul>
@@ -89,8 +88,8 @@
 <li class="chapter" data-level="1.2" data-path="data.html"><a href="data.html#data-structures"><i class="fa fa-check"></i><b>1.2</b> Data Structures</a>
 <ul>
 <li class="chapter" data-level="1.2.1" data-path="data.html"><a href="data.html#columnartabular"><i class="fa fa-check"></i><b>1.2.1</b> Columnar/Tabular</a></li>
-<li class="chapter" data-level="1.2.2" data-path="data.html"><a href="data.html#tree"><i class="fa fa-check"></i><b>1.2.2</b> Tree</a></li>
-<li class="chapter" data-level="1.2.3" data-path="data.html"><a href="data.html#graph"><i class="fa fa-check"></i><b>1.2.3</b> Graph</a></li>
+<li class="chapter" data-level="1.2.2" data-path="data.html"><a href="data.html#trees"><i class="fa fa-check"></i><b>1.2.2</b> Trees</a></li>
+<li class="chapter" data-level="1.2.3" data-path="data.html"><a href="data.html#graphs"><i class="fa fa-check"></i><b>1.2.3</b> Graphs</a></li>
 <li class="chapter" data-level="1.2.4" data-path="data.html"><a href="data.html#categorical---relational"><i class="fa fa-check"></i><b>1.2.4</b> Categorical - Relational</a></li>
 <li class="chapter" data-level="1.2.5" data-path="data.html"><a href="data.html#spatial"><i class="fa fa-check"></i><b>1.2.5</b> Spatial</a></li>
 </ul></li>
@@ -114,12 +113,7 @@
 <li class="chapter" data-level="2.3.2" data-path="data-stores.html"><a href="data-stores.html#example-software"><i class="fa fa-check"></i><b>2.3.2</b> Example Software</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html"><i class="fa fa-check"></i><b>3</b> Choosing the Right Data Store</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html#principles-of-data-storage"><i class="fa fa-check"></i><b>3.1</b> Principles of Data Storage</a></li>
-<li class="chapter" data-level="3.2" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html#cap-theorem"><i class="fa fa-check"></i><b>3.2</b> CAP Theorem</a></li>
-<li class="chapter" data-level="3.3" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html#polyglot-persistance"><i class="fa fa-check"></i><b>3.3</b> Polyglot Persistance</a></li>
-</ul></li>
+<li class="chapter" data-level="3" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html"><i class="fa fa-check"></i><b>3</b> Choosing the Right Data Store</a></li>
 <li class="chapter" data-level="4" data-path="assessment.html"><a href="assessment.html"><i class="fa fa-check"></i><b>4</b> Assessment</a></li>
 <li class="divider"></li>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
@@ -146,7 +140,7 @@
 <div id="header">
 <h1 class="title">An Overview of Databases and Data Storage Technologies</h1>
 <p class="author"><em>Elise Hellwig</em></p>
-<p class="date"><em>2024-02-13</em></p>
+<p class="date"><em>2024-02-15</em></p>
 </div>
 <div id="overview" class="section level1 unnumbered hasAnchor">
 <h1>Overview<a href="index.html#overview" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -155,38 +149,21 @@ and organizing different collections of data. We will discuss how data structure
 and data types impact your storage options, when you should use a database, and
 which platforms you might consider for your research. This workshop is a general
 lecture with case studies and Q&amp;A (no laptops necessary). This workshop is a
-prerequisite for DataLab’s <a href="https://ucdavisdatalab.github.io/workshop_intro_to_sql/">Intro to SQL for Querying Databases</a> workshop
-and part of the <a href="https://gradpathways.ucdavis.edu/research-computing-pathway">Research Computing micro-credential</a></p>
-<div id="you-might-need-a-database-if" class="section level2 unnumbered hasAnchor">
-<h2>You might need a database if…<a href="index.html#you-might-need-a-database-if" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+prerequisite for DataLab’s <a href="https://ucdavisdatalab.github.io/workshop_intro_to_sql/">Intro to SQL for Querying Databases</a>
+and <a href="https://github.com/ucdavisdatalab/Spatial_SQL">Spatial SQL with SpatiaLite</a> workshops as well as being part of
+the <a href="https://gradpathways.ucdavis.edu/research-computing-pathway">Research Computing micro-credential</a></p>
+<div id="learning-goals" class="section level2 hasAnchor" number="0.1">
+<h2><span class="header-section-number">0.1</span> Learning Goals<a href="index.html#learning-goals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>After completing this workshop, you will be able to answer the following
+questions:</p>
 <ul>
-<li><p>Your data set has many repeated values in its columns</p></li>
-<li><p>Your data set contains information about many unrelated or loosely related
-studies</p></li>
-<li><p>You are sharing data with multiple people and everyone seems to have a
-different version</p></li>
-<li><p>Your data set is so large, your computer freezes when trying to view it</p></li>
-<li><p>You have to keep making the same corrections to your data over and over
-again</p></li>
-<li><p>Excel keeps converting your columns to the wrong data type</p></li>
-<li><p>You have so many pivot tables</p></li>
-<li><p>You have hundreds (or thousands) of data files you need to share with your
-collaborators</p></li>
-<li><p>You think PowerQuery is neat but wish people would stop changing the
-underlying data while you are using it.</p></li>
-</ul>
-</div>
-<div id="learning-goals" class="section level2 unnumbered hasAnchor">
-<h2>Learning Goals<a href="index.html#learning-goals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>By the end of this workshop, learners should be able to:</p>
-<ul>
-<li><p>Describe different data set structures</p></li>
-<li><p>Compare and contrast different data storage platforms</p></li>
-<li><p>Explain the differences between SQL and noSQL databases</p></li>
-<li><p>Explain the components of an Entity Relationship Diagram (ERD)</p></li>
-<li><p>Define relational keys</p></li>
-<li><p>Identify appropriate data storage solutions based on the structure
-of a research data set</p></li>
+<li><p>What is the difference between information and data?</p></li>
+<li><p>What are the most common data structures people use?</p></li>
+<li><p>Which data structures lend themselves to answering different types of
+research questions?</p></li>
+<li><p>What is a database?</p></li>
+<li><p>What are the differences between relational and noSQL databases?</p></li>
+<li><p>When would a database aid in answering a research question?</p></li>
 </ul>
 
 </div>

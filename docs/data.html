@@ -23,7 +23,7 @@
 <meta name="author" content="Elise Hellwig" />
 
 
-<meta name="date" content="2024-02-13" />
+<meta name="date" content="2024-02-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -80,8 +80,7 @@
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#you-might-need-a-database-if"><i class="fa fa-check"></i>You might need a database if…</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#learning-goals"><i class="fa fa-check"></i>Learning Goals</a></li>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#learning-goals"><i class="fa fa-check"></i><b>0.1</b> Learning Goals</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>1</b> Data</a>
 <ul>
@@ -89,8 +88,8 @@
 <li class="chapter" data-level="1.2" data-path="data.html"><a href="data.html#data-structures"><i class="fa fa-check"></i><b>1.2</b> Data Structures</a>
 <ul>
 <li class="chapter" data-level="1.2.1" data-path="data.html"><a href="data.html#columnartabular"><i class="fa fa-check"></i><b>1.2.1</b> Columnar/Tabular</a></li>
-<li class="chapter" data-level="1.2.2" data-path="data.html"><a href="data.html#tree"><i class="fa fa-check"></i><b>1.2.2</b> Tree</a></li>
-<li class="chapter" data-level="1.2.3" data-path="data.html"><a href="data.html#graph"><i class="fa fa-check"></i><b>1.2.3</b> Graph</a></li>
+<li class="chapter" data-level="1.2.2" data-path="data.html"><a href="data.html#trees"><i class="fa fa-check"></i><b>1.2.2</b> Trees</a></li>
+<li class="chapter" data-level="1.2.3" data-path="data.html"><a href="data.html#graphs"><i class="fa fa-check"></i><b>1.2.3</b> Graphs</a></li>
 <li class="chapter" data-level="1.2.4" data-path="data.html"><a href="data.html#categorical---relational"><i class="fa fa-check"></i><b>1.2.4</b> Categorical - Relational</a></li>
 <li class="chapter" data-level="1.2.5" data-path="data.html"><a href="data.html#spatial"><i class="fa fa-check"></i><b>1.2.5</b> Spatial</a></li>
 </ul></li>
@@ -114,12 +113,7 @@
 <li class="chapter" data-level="2.3.2" data-path="data-stores.html"><a href="data-stores.html#example-software"><i class="fa fa-check"></i><b>2.3.2</b> Example Software</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html"><i class="fa fa-check"></i><b>3</b> Choosing the Right Data Store</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html#principles-of-data-storage"><i class="fa fa-check"></i><b>3.1</b> Principles of Data Storage</a></li>
-<li class="chapter" data-level="3.2" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html#cap-theorem"><i class="fa fa-check"></i><b>3.2</b> CAP Theorem</a></li>
-<li class="chapter" data-level="3.3" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html#polyglot-persistance"><i class="fa fa-check"></i><b>3.3</b> Polyglot Persistance</a></li>
-</ul></li>
+<li class="chapter" data-level="3" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html"><i class="fa fa-check"></i><b>3</b> Choosing the Right Data Store</a></li>
 <li class="chapter" data-level="4" data-path="assessment.html"><a href="assessment.html"><i class="fa fa-check"></i><b>4</b> Assessment</a></li>
 <li class="divider"></li>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
@@ -175,25 +169,27 @@ so you can ask different questions
 Note: there are other definitions of data structure from other disciplines
 (ex. in comp sci), we will not be using those definitions
 -->
-<p>If you are doing research, chances are you are going to be working with data
-in some form or another. Even if you do not use the traditional rows and
-columns people most often associate with “data”, you certainly working with
-information that has been translated into a form that is more easily shared
-or stored for later use, aka data. Information becomes data when we give it some
-sort of structure. That could be the previously mentioned rows and columns, or
-something more human readable, like the grammar and syntax of natural language.</p>
+<p>If you are doing research, chances are you are going to be working with data in
+some form or another. Even if you do not use traditional rows and columns, you
+are certainly working with some form of information. And if you have translated
+information into a form that is more easily shared or stored for later use, you
+are working with data. Information becomes data when we give it some sort of
+structure. That could be the previously mentioned rows and columns, or something
+more human readable, like the grammar and syntax of natural language.</p>
 <p>One of the challenges of working with data is figuring out the best way, or at
-least a good way, to store it. Thankfully, we have mostly left the 20th
+least a good way, to store it. Thankfully, we have mostly left behind the 20th
 century’s favorite way of storing data: paper in filing cabinets. Our new
-methods are definitely less flammable but but also can have a higher barrier to
-entry. There are also a greater variety in types of data stores, which means you
-need to make a decision on which one to use. Ultimately, the best way to store
-your data will depend on the data you want to store, specifically the data type
-and structure.</p>
+methods are definitely less flammable but also have a higher barrier to entry.
+There are many more types of data stores available now as well. This means you
+will need to make a decision on which one to use. Ultimately, the best way to
+store your data will depend on the data you want to store and the questions you
+want to ask with it.</p>
+<p>When describing data we generally talk about two main characteristics: data
+type and data structure.</p>
 <div id="data-types" class="section level2 hasAnchor" number="1.1">
 <h2><span class="header-section-number">1.1</span> Data Types<a href="data.html#data-types" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Your data’s type tells the computer what sorts of operations make sense to do
-with it. Common data types include</p>
+<p>Your data’s type tells the computer what sorts of operations make sense. Common
+data types include:</p>
 <ul>
 <li>integers</li>
 <li>decimal</li>
@@ -207,7 +203,7 @@ will discuss later, an individual data point can have a type.</p>
 <p>Data type is not necessarily inherent to a piece of information, though it is
 often strongly suggested. For example, you can store the value of 1 as the
 integer 1, the decimal 1.0, the text “1”, the Boolean TRUE, or the date
-1900-01-01 00:00:00. The underlying information is the same (1), but the
+1900-01-02. The underlying information is the same (1), but the
 computer will treat each of these pieces of data differently. It will not allow
 you to add “1” to another number, and it may have issues combining the integer
 or decimal 1.0 with text. Text itself can only be stored as characters.</p>
@@ -228,13 +224,13 @@ data. In practice, data often exhibits traits from multiple data structures.</p>
 <p>As mentioned previously, data is information translated into a form to store for
 later use. The type of information you work with does not dictate the type of
 data structure you must use. However, some types of information
-lend themselves to particular data structures over others. When trying to decide
-what data structure to use to represent information from your research, the key
-is to focus on what sorts of questions you would like to ask. Each data
-structure will make some types of questions easier to ask and others harder. If
-you want to ask disparate types of questions, you may need to represent your
-data using multiple structures. Because data structure has such
-a large impact on how you interact with your data, the structure you choose is
+lend themselves to particular data structures over others.</p>
+<p>When trying to decide what data structure to use to represent information from
+your research, the key is to focus on what sorts of questions you would like to
+ask. Each data structure will make some types of questions easier to ask and
+others harder. If you want to ask disparate types of questions, you may need to
+represent your data using multiple structures. Because data structure has such a
+large impact on how you interact with your data, the structure you choose is
 just as important as the analysis you do afterward.</p>
 <div id="columnartabular" class="section level3 hasAnchor" number="1.2.1">
 <h3><span class="header-section-number">1.2.1</span> Columnar/Tabular<a href="data.html#columnartabular" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -254,18 +250,16 @@ better at working across the entire data structure
 location and scale aka spread
 -->
 <p>Tabular or columnar data is made up of rows and columns, collectively referred
-to as a table. Tables work well when you are working with a class of object
-where you can summarize the information for each example of that object with the
-same set of characteristics. By convention, each row represents an observation,
-and each column a measurement or aspect of that observation. Data scientists
-refer to the columns of a table by many names, including fields, variables,
-covariates, measurements, and features. Tabular data is incredibly common in the
-sciences and many researchers will store at least some of their data in tabular
-form.</p>
-<p>In the table below, each row is an observation of a car model released in 1978.
-Mechanics recorded the make, model and origin of each car and measured the car’s
-fuel efficiency (mpg), horsepower, weight, and number of cylinders in the
-engine.</p>
+to as a table. By convention, each row represents an observation, and each
+column a measurement or aspect of that observation. Tabular data is incredibly
+common, especially in the sciences. Many researchers, regardless of field store
+at least some of their data in tabular form. Tables work well when all of the
+objects in your study can be summarized with the same set of characteristics.</p>
+<p>The table below contains data from the US magazine <em>Motor Trend</em> in 1974. In the
+table below, each row is an observation of a car model released between 1973 and
+1974. The magazine recorded the make, model and origin of each car and measured
+the car’s fuel efficiency (mpg), horsepower, weight, and number of cylinders in
+the engine.</p>
 <pre><code>##                       mpg cylinders horsepower weight manual origin
 ## Mazda RX4            21.0         6        110  2.620      1  Japan
 ## Mazda RX4 Wag        21.0         6        110  2.875      1  Japan
@@ -286,15 +280,15 @@ include California almond yields (lb/acre) for farms around the state, climate
 data over the past 50 years, snow accumulation (inches) for Lake Tahoe, and
 biomarkers for people participating in a study on a chronic illness.</p>
 <p>Tabular data lends itself to answering questions about the average value or
-spread of a particular field over the entire dataset. It can also help
-investigate trends in a particular variable, or how two covariates relate to
+spread of a particular measurement over the entire dataset. It can also help
+investigate trends in a particular variable, or how two variables relate to
 each other. In the case of the car fuel efficiency data, we could ask about the
 relative fuel efficiency of cars from different parts of the world or if there
 is any relationship between a car’s weight and its horsepower. The tabular data
 structure also makes sorting observations very easy.</p>
 </div>
-<div id="tree" class="section level3 hasAnchor" number="1.2.2">
-<h3><span class="header-section-number">1.2.2</span> Tree<a href="data.html#tree" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="trees" class="section level3 hasAnchor" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> Trees<a href="data.html#trees" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <!--
 tree like structure of inheritance from a root
 we could express tree data as a data frame but you end up with a lot of empty or
@@ -315,28 +309,31 @@ from a common root node defines that entity’s place in the hierarchy. When
 viewing tree structured data on a computer, it often looks very “nested”, like
 sections and subsections of a document. In fact, tree data is sometimes
 referred to as document structured data because of this.</p>
+<center>
 <p><img src="img/tree_data.png" style="width:50.0%" /></p>
+</center>
 <p>In general, tree data facilitates asking questions about particular subsets of
 the data. For example, you might want to know how closely two entities are
 related, which branches of the tree have the most nodes, or all of the
 observations that fall under a particular subtree.</p>
 <p>Family trees are a common example of tree structured data. In family
-trees, the nodes represent people in the family. In the
-family tree of the Tutor Dynasty in England below, it is easy to determine
-things like who had the most wives (Henry VIII), which people shared a
-generation and who was the last member of the dynasty (James I of England).
-Questions like the what was the average age at death for the Tudors would be
-harder to answer.</p>
+trees, the nodes represent people in the family. Horizontal lines represent
+marriages or couplings, and vertical lines represent a connection to
+offspring. In the family tree of the Tutor Dynasty in England below, it is easy
+to determine things like who had the most wives (Henry VIII), which people
+shared a generation and who was the last member of the dynasty (James I of
+England). Questions like the what was the average age at death for the Tudors
+would be harder to answer.</p>
 <p><img src="img/House_of_Tudor.png" /></p>
 <p>We can also represent the car fuel efficiency data with a tree data structure.
 This makes it much harder to answer some of the questions mentioned in the
 previous section. On the other hand, the tree structure makes it very easy to
-see which car manufacturer produced the greatest number of models in 1978 and
-how many different models came out of Japan that year.</p>
+see which car manufacturer produced the greatest number of models in 1973-74 and
+how many different models came out of Japan during that time period.</p>
 <p><img src="img/mpg_tree_data.png" /></p>
 </div>
-<div id="graph" class="section level3 hasAnchor" number="1.2.3">
-<h3><span class="header-section-number">1.2.3</span> Graph<a href="data.html#graph" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="graphs" class="section level3 hasAnchor" number="1.2.3">
+<h3><span class="header-section-number">1.2.3</span> Graphs<a href="data.html#graphs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <!--
 graphs are rysomatic
 
@@ -348,10 +345,10 @@ airplanes!
 -->
 <p>Graph data is similar to tree data in many ways. It also explicitly captures
 information about relationships between entities using nodes and edges. However,
-unlike trees, graph datasets have no inherent center or root node, and there
-is no implicit sense that part of the graph is “nested” inside another part.
-Also, the relationships between the vertices can be directional, and the
-direction does not have to be consistent throughout the graph.</p>
+unlike trees, graph data sets have no inherent center or root node, and there is
+no implicit hierarchy or nesting. Additionally, the relationships between the
+vertices can be directional, and that direction does not have to be consistent
+throughout the graph.</p>
 <p><img src="img/graph_data.png" style="width:75.0%" /></p>
 <p>Graph structured data tends to be more common in the social sciences and
 humanities. One of the most ubiquitous examples of a graph is the social
@@ -381,10 +378,10 @@ individual entities.</p>
 <p>In spatial data, the organizing principle is location. This can be geographic
 location (ex latitude/longitude) or relative location on an arbitrary grid (ex.
 [2, 4]). Data can either be continuous, like a sheet over a landscape, or
-discrete in space like points on a map. In fact, map making is one of the most
-common uses of spatial data. However we can ask as questions like whether
+discrete like points on a map. In fact, map making is one of the most
+common uses of spatial data. However, we can also ask as questions like whether
 points are clustered more closely than we would expect, and whether we can use
-nearby information to predict values for places where we don’t have data.</p>
+nearby data to predict values for places where we don’t any.</p>
 <p><img src="01_data_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 
 </div>
