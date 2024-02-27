@@ -28,8 +28,7 @@ output:
       sharing: no
       view: https://github.com/ucdavisdatalab/workshop_intro_to_databases/blob/main/%s
       edit: https://github.com/ucdavisdatalab/workshop_intro_to_databases/edit/main/%s
-      download: 'An-Overview-of-Databases-and-Data-Storage-Technologies.pdf'
-  download: ["pdf"]
+      download: ['book.pdf']
 
 ---
 
