@@ -28,4 +28,5 @@ Temporary Items
 # Bookdown intermediate files
 docs/*.md
 .Rproj.user
-
+*_files/
+_main*
