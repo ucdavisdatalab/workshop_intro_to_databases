@@ -2,4 +2,7 @@
 
 # Settings for bookdown are in `_bookdown.yml` and settings for pandoc are in
 # `index.Rmd`.
+bookdown::render_book("index.Rmd", 
+                      output_format = 'pdf_document', 
+                      output_file='docs/Intro-to-Databases')
 bookdown::render_book("index.Rmd")
