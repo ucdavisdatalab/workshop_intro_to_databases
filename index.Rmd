@@ -12,7 +12,7 @@ site: "bookdown::bookdown_site"
 knit: "bookdown::render_book"
 ---
 
-# Overview {.unnumbered}
+# Workshop Description 
 
 This workshop provides a broad overview of the various technologies for storing
 and organizing different collections of data. We will discuss how data structure
@@ -23,7 +23,7 @@ prerequisite for DataLab's [Intro to SQL for Querying Databases][sql]
 and [Spatial SQL with SpatiaLite][spat_sql] workshops as well as being part of 
 the [Research Computing micro-credential][micro_cred]
 
-## Learning Goals {.unnumbered}
+## Learning Objectives
 
 After completing this workshop, you will be able to answer the following
 questions:
@@ -46,3 +46,13 @@ questions:
 [spat_sql]: https://github.com/ucdavisdatalab/Spatial_SQL
 [micro_cred]: https://gradpathways.ucdavis.edu/research-computing-pathway
 
+## Prerequisites
+
+No prerequisites or software required. This workshop is designed for researchers
+with active or planned data collection and storage. 
+
+<!-- Add something about bringing data with them? -->
+
+## Image Credits
+
+All images were created by Elise Hellwig unless otherwise noted.
