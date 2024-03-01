@@ -138,9 +138,8 @@ names(mpg) = c('mpg', 'cylinders', 'horsepower', 'weight', 'manual', 'origin')
 
 ```
 
-
 Tabular or columnar data is made up of rows and columns, collectively referred
-to as a table.  By convention, each row represents an observation, and each
+to as a table. By convention, each row represents an observation, and each
 column a measurement or aspect of that observation. Tabular data is incredibly
 common, especially in the sciences. Many researchers, regardless of field store
 at least some of their data in tabular form. Tables work well when all of the
@@ -148,15 +147,22 @@ objects in your study can be summarized with the same set of characteristics.
 Many study designs require this, which is one of the reasons why tabular data
 is so common.
 
-The table below contains data from the US magazine *Motor Trend* in 1974. In the
-table below, each row is an observation of a car model released between 1973 and
-1974. The magazine recorded the make, model and origin of each car and measured
-the car's fuel efficiency (mpg), horsepower, weight, and number of cylinders in
-the engine.
+The table below contains data from the US magazine *Motor Trend* in 1974. In
+the table below, each row is an observation of a car model released between
+1973 and 1974. The magazine recorded the make, model and origin of each car and
+measured the car's fuel efficiency (mpg), horsepower, weight, and number of
+cylinders in the engine.
 
-```{r display_mpg, echo=FALSE}
+-------------------------------------------------------------------------------
 
-mpg
+```{r, echo=FALSE}
+
+library(kableExtra)
+
+mpg_cap = paste("A subset of the `mtcars` data set, containing information",
+                "about 32 cars from the 1974 *Motor Trend* Magazine.")
+
+kbl(mpg, caption = mpg_cap) 
 
 ```
 
@@ -175,19 +181,6 @@ structure also makes sorting observations very easy.
 
 ### Trees
 
-<!--
-tree like structure of inheritance from a root
-we could express tree data as a data frame but you end up with a lot of empty or
-missing data because not every mother node will have the same number of daughter
-nodes 
-
-better working within groups and knowing what groups
-
-set up emails as a tree -> threads = trees
-
-xml is for trees, nested data = tree data
--->
-
 Trees are another commonly used data structure. Tree structured data explicitly
 capture hierarchical relationships between entities. Trees are made of up nodes
 (or vertices) which represent entities in the data, and edges which represent
@@ -197,59 +190,58 @@ viewing tree structured data on a computer, it often looks very "nested", like
 sections and subsections of a document. In fact, tree data is sometimes
 referred to as document structured data because of this.
 
-<center>
+*Figure 2.1. An generic example of tree structured data. Intersections are
+labeled as nodes and the nodes are connected with edges.*
 
-![](img/tree_data.png){width=50%}
+<center>![](img/tree_data.png){width="50%"}</center>
 
-</center>
-
-
-In general, tree data facilitates asking questions about particular subsets of 
+In general, tree data facilitates asking questions about particular subsets of
 the data. For example, you might want to know how closely two entities are
 related, which branches of the tree have the most nodes, or all of the
 observations that fall under a particular subtree.
 
-Family trees are a common example of tree structured data. In family
-trees, the nodes represent people in the family. Horizontal lines represent
-marriages or couplings, and vertical lines represent a connection to
-offspring. In the family tree of the Tutor Dynasty in England below, it is easy
-to determine things like who had the most wives (Henry VIII), which people
-shared a generation, and who was the last member of the dynasty (James I of
-England). Questions like what was the average age at death for the Tudors
-would be harder to answer.
+Family trees are a common example of tree structured data. In family trees, the
+nodes represent people in the family. Horizontal lines represent marriages or
+couplings, and vertical lines represent a connection to offspring. In the
+family tree of the Tutor Dynasty in England below, it is easy to determine
+things like who had the most wives (Henry VIII), which people shared a
+generation, and who was the last member of the dynasty (James I of England).
+Questions like what was the average age at death for the Tudors would be harder
+to answer.
+
+*Figure 2.2. Family tree of the principal members of the house of Tudor in 
+England. Red indicates monarch of England. Blue indicates monarch of Scotland.*
 
 ![](img/House_of_Tudor.png)
 
 We can also represent the car fuel efficiency data with a tree data structure.
 This makes it much harder to answer some of the questions mentioned in the
 previous section. On the other hand, the tree structure makes it very easy to
-see which car manufacturer produced the greatest number of models in 1973-74 and 
-how many different models came out of Japan during that time period.
+see which car manufacturer produced the greatest number of models in 1973-74
+and how many different models came out of Japan during that time period.
 
+
+*Figure 2.3. A tree representation of the subset of the `mtcars` data set
+displayed in Table 2.1.* 
 ![](img/mpg_tree_data.png)
-
-
 
 ### Graphs
 
-<!--
-graphs are rysomatic
-
-they have no root, they only have a node that you care about this at the moment
-following relationships
-vertex or node
-
-airplanes!
--->
-
 Graph data is similar to tree data in many ways. It also explicitly captures
-information about relationships between entities using nodes and edges. However,
-unlike trees, graph data sets have no inherent center or root node, and there is
-no implicit hierarchy or nesting. Additionally, the relationships between the
-vertices can be directional, and that direction does not have to be consistent
-throughout the graph.
+information about relationships between entities using nodes and edges.
+However, unlike trees, graph data sets have no inherent center or root node,
+and there is no implicit hierarchy or nesting. Additionally, the relationships
+between the vertices can be directional, and that direction does not have to be
+consistent throughout the graph.
 
-![](img/graph_data.png){width=75%}
+*Figure 2.4. Two examples of generic graph data, one a directed graph and one
+and undirected graph. The directed graph has arrows connecting the nodes, while
+the undirected graph simply has lines.*
+
+<center>
+![](img/graph_data.png){width="75%"}
+</center>
+
 
 Graph structured data tends to be more common in the social sciences and
 humanities. One of the most ubiquitous examples of a graph is the social
@@ -257,45 +249,51 @@ network. Transportation data, like roads and flight paths, also lend themselves
 to the graph structure. In the digital world, we can use graphs to map out the
 link connections between Wikipedia pages, as seen below with Abraham Lincoln.
 
+*Figure 2.5. A graph of relationships between Abraham Lincoln's Wikipedia page
+and other pages linked to it. Each linkage contains a label describing the 
+relationship between the two pages*
+
 ![](img/abraham_lincoln.png)
 
 Graphs make it easy to ask questions about connectivity. For example we might
-want to know how many flight connections we will need to make between Honolulu, 
-Hawaii and Cairo, Egypt, or how many degrees of separation there are between 
-Abraham Lincoln and Kevin Bacon on Wikipedia. We can also ask about which parts of 
-the graph are the most connected and which are the least connected.
+want to know how many flight connections we will need to make between Honolulu,
+Hawaii and Cairo, Egypt, or how many degrees of separation there are between
+Abraham Lincoln and Kevin Bacon on Wikipedia. We can also ask about which parts
+of the graph are the most connected and which are the least connected.
 
-### Categorical - Relational 
+### Membership
 
-<!--
-Do I need this?
--->
+In membership data, group membership is the organizing principle of the data
+structure. Entities can have membership in multiple groups, and relationships
+are defined between groups instead of the entities themselves. As such,
+relationships tend to represent complex processes rather than individual
+entities.
 
-In categorical data, category membership is the organizing principle of the 
-data structure. Entities can have membership in multiple categories, and
-relationships are defined between categories instead of the entities themselves.
-As such, relationships tend to represent complex processes rather than
-individual entities.
-
-One example of this type of data is student organization membership at UC Davis.
-One student may belong to many clubs or none at all. Environmental themed clubs
-may collaborate on given event like the Earth Day Celebration. Student groups
-themselves may also be a part of a higher level organization, like fraternities
-and sororities being a part of the Professional Sorority and Fraternity Council.
+One example of this type of data is student organization membership at UC
+Davis. One student may belong to many clubs or none at all. Environmental
+themed clubs may collaborate on given event like the Earth Day Celebration.
+Student groups themselves may also be a part of a higher level organization,
+like fraternities and sororities being a part of the Professional Sorority and
+Fraternity Council.
 
 ### Spatial
+
 Depending on the context, spatial data can be thought of as either a data type,
-or a data structure. This workshop focuses on how data structures enable us
-to ask different types of questions. Since spatial data allows us to ask novel
+or a data structure. This workshop focuses on how data structures enable us to
+ask different types of questions. Since spatial data allows us to ask novel
 questions, we will discuss spatial data as a data structure.
 
 In spatial data, the organizing principle is location. This can be geographic
 location (ex latitude/longitude) or relative location on an arbitrary grid (ex.
 [2, 4]). Data can either be continuous, like a sheet over a landscape, or
-discrete like points on a map. In fact, map making is one of the most
-common uses of spatial data. However, we can also ask as questions like whether
-points are clustered more closely than we would expect, and whether we can use
-nearby data to predict values for places where we don't any.
+discrete like points on a map. In fact, map making is one of the most common
+uses of spatial data. However, we can also ask as questions like whether points
+are clustered more closely than we would expect, and whether we can use nearby
+data to predict values for places where we don't any.
+
+*Figure 2.6. A map of the counties of North Carolina, with the county areas
+shaded to correspond to the number of live births in the county from 1974 to
+1978.*
 
 ```{r, echo=FALSE}
 suppressMessages(library(sf))

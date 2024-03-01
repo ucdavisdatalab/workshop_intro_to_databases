@@ -167,10 +167,13 @@ setnames(dh, names(dh),
            'runtime', 'genres', 'rating', 'votes', 'name', 'birth',
             'death', 'role', 'characters'))
 
+dh_cap = paste("Information from IMDB about the Die Hard movie franchise and",
+               "the people who acted in those films.")
+
 dh = dh[,.(title_id, person_id, title, name, characters, premiered,
            runtime, genres, rating, votes, birth, death, role)]
 
-kbl(dh) |>
+kbl(dh, caption=dh_cap) |>
   scroll_box(width = "100%", height = "400px")
 
 ```
@@ -242,33 +245,35 @@ workshop) resources.
 A relationship key is a column or pair of columns that links two tables. One
 example of a relationship key you may use is a student or employee ID number.
 You can use that number to link information about you in one part of the
-University to another part of the University. This is what allows you to pay for
-meal plans via the Student Accounting department and you can use your meal plan
-through Dining Services. The student ID number ensures that the money you spend
-gets credited to the correct account.
+University to another part of the University. This is what allows you to pay
+for meal plans via the Student Accounting department and you can use your meal
+plan through Dining Services. The student ID number ensures that the money you
+spend gets credited to the correct account.
 
 There are two types of relationship keys: primary keys and foreign keys. A
 primary key, sometimes called an index, is a column that uniquely identifies
-each row in a particular table. It is generally the first column in the table. A
-foreign key is a column in one table whose values correspond to a primary key in
-another table. Student ID would be a primary key in a table that lists all of
-the students at the university with some basic information about them.  It would
-be a foreign key in a table that lists all food and beverage sales at a
+each row in a particular table. It is generally the first column in the table.
+A foreign key is a column in one table whose values correspond to a primary key
+in another table. Student ID would be a primary key in a table that lists all
+of the students at the university with some basic information about them. It
+would be a foreign key in a table that lists all food and beverage sales at a
 particular on campus eatery.
 
 ### Entity Relationship Diagrams
 
-Since relational databases may not have a graphical interface, it can be helpful
-to have a visual summary of a database before interacting with it. That
+Since relational databases may not have a graphical interface, it can be
+helpful to have a visual summary of a database before interacting with it. That
 is where the Entity Relationship Diagram (ERD) comes in. ERDs are a
 standardized way to depict the structure of a relational database. Each box in
 the diagram represents a table, with the table title at the top and the column
 names listed below it. The column data type appears next to each column name.
 
-
 Connector lines link primary/foreign key pairs. These lines specify which
 tables can be combined, and which keys should be used to combine them. The
 connector lines also specify what type of relationship between the two tables.
+
+*Figure 3.1. A partial Entity Relationship Diagram for the IMDB non-commercial
+database.*
 
 ![](img/imdb_ERD.png)
 
@@ -344,30 +349,16 @@ provide some level of support for spatial data. However, that level of support
 varies, so if you have specific requirements, it's best to do additional
 research before making a decision.
 
-+------------+----------+-----------------------+------------+--------------+
-| Software   | Ease of  | Documentation/        | Cost       | License      |
-|            | Use      | Support               |            |              |
-+============+==========+=======================+============+==============+
-| SQLite     | Easier   | Extensive             | \$0        | Public       |
-|            |          | documentation and     |            | Domain       |
-|            |          | community support     |            |              |
-+------------+----------+-----------------------+------------+--------------+
-| PostgreSQL | Harder   | Spotty documentation, | \$0 + cost | Open Source  |
-|            |          | but with robust       | of hosting |              |
-|            |          | community support     |            |              |
-+------------+----------+-----------------------+------------+--------------+
-| MySQL      | Easier   | Large community base, | \$0 - Low  | Partially    |
-|            |          | No professional       | Cost       | Open Source  |
-|            |          | support without paid  |            |              |
-|            |          | subscription          |            |              |
-+------------+----------+-----------------------+------------+--------------+
-| Microsoft  | Easier   | Robust professional   | High Cost  | Proprietary  |
-| SQL Server |          | and community support |            |              |
-+------------+----------+-----------------------+------------+--------------+
-| Oracle     | Harder   | Robust professional   | High Cost  | Proprietary  |
-|            |          | and some community    |            |              |
-|            |          | support               |            |              |
-+------------+----------+-----------------------+------------+--------------+
+| Software             | Complexity   | Support                                                                   | Cost | License               |
+|---------------|-------------|--------------------------|--------|---------------|
+| SQLite               | Less complex | Extensive documentation and community support                             | Free | Public Domain         |
+| PostgreSQL           | More complex | Spotty documentation but with robust community support                    | Free | Open Source           |
+| MySQL                | Less complex | Large community base, No professional support without a paid subscription | Free | Partially Open Source |
+| Microsoft SQL Server | Less complex | Robust professional and community support                                 | Paid | Proprietary           |
+| Oracle               | More complex | Robust professional and some community support                            | Paid | Proprietary           |
+
+: Table 2.2. A comparison of some of the more common software implementations
+of SQL databases.
 
 ## NoSQL Databases
 
@@ -404,27 +395,19 @@ are working on the edge of what is possible data storage-wise.
 ### Example Software
 
 Not every NoSQL database supports every data structure. Some support multiple
-structures while others specialize in one. Unlike RDBMSs, all of the most
-common NoSQL software is open source, though the MongoDB license is slightly
-more restrictive than most open source licenses. Because of this they are also
-low cost to implement, though you can always pay for additional features and
-support. Similar to RDBMSs, all the most common NoSQL database software
-provides some support of spatial data. However, that support is limited to
-vector data and the functionality available varies fairly widely.
+structures while others specialize in one. They generally also low cost to
+implement, though you can always pay for additional features and support.
+Similar to RDBMSs, all the most common NoSQL database software provides some
+support of spatial data. However, that support is limited to vector data and
+the functionality available varies fairly widely.
 
-+-------------------+-------------------------------+-------------------+
-| Software          | Data Structure                | Spatial Support   |
-+===================+===============================+===================+
-| MongoDB           | Tree/Document                 | vector            |
-+-------------------+-------------------------------+-------------------+
-| Couchbase         | Tree/Document                 | vector            |
-+-------------------+-------------------------------+-------------------+
-| Cassandra         | Column family                 | vector (DataStax) |
-+-------------------+-------------------------------+-------------------+
-| Redis             | key-value                     | point only        |
-+-------------------+-------------------------------+-------------------+
-| Neo4J             | Graph                         | vector            |
-+-------------------+-------------------------------+-------------------+
-| ArangoDB          | Tree/Document, graph,         | vector            |
-|                   | key-value                     |                   |
-+-------------------+-------------------------------+-------------------+
+| Software  | Data Structure                  | Spatial Support   |
+|-----------|---------------------------------|-------------------|
+| MongoDB   | Tree/Document                   | vector            |
+| Couchbase | Tree/Document                   | vector            |
+| Cassandra | Column family                   | vector (DataStax) |
+| Redis     | key-value                       | point only        |
+| Neo4J     | Graph                           | vector            |
+| ArangoDB  | Tree/Document, graph, key-value | vector            |
+
+: Table 3.3. A comparison of some of the more common software implementations 
