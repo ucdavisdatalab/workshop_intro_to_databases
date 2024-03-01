@@ -1,12 +1,11 @@
 # Data
 
-> Data (noun):
-> Quantities, characters, or symbols on which operations are performed by a 
-> computer, considered collectively.
+> Data (noun): Quantities, characters, or symbols on which operations are
+> performed by a computer, considered collectively.
 >
 > \- Oxford English Dictionary
 
-
+```{=html}
 <!--
 Information becomes data when it takes on a structure.
 
@@ -31,26 +30,25 @@ so you can ask different questions
 Note: there are other definitions of data structure from other disciplines
 (ex. in comp sci), we will not be using those definitions
 -->
-
+```
 If you are doing research, chances are you are going to be working with data in
 some form or another. Even if you do not use traditional rows and columns, you
 are certainly working with some form of information. And if you have translated
 information into a form that is more easily shared or stored for later use, you
 are working with data. Information becomes data when we give it some sort of
-structure. That could be the rows and columns of a table, or something
-more human readable, like the grammar and syntax of natural language in text 
-form.
+structure. That could be the rows and columns of a table, or something more
+human readable, like the grammar and syntax of natural language in text form.
 
 One of the challenges of working with data is figuring out a useful way, to
-store it. Thankfully, we have mostly left behind the 20th century's favorite way
-of storing data: paper in filing cabinets. Modern digital methods definitely
-take up less space but also have a higher barrier to entry. There are many more
-types of data stores available now as well. This means you will need to make a
-decision on which one to use. **Ultimately, the best way to store your data**
-**will depend on the data you want to store and the questions you want to ask**
-**with it.**
+store it. Thankfully, we have mostly left behind the 20th century's favorite
+way of storing data: paper in filing cabinets. Modern digital methods
+definitely take up less space but also have a higher barrier to entry. There
+are many more types of data stores available now as well. This means you will
+need to make a decision on which one to use. **Ultimately, the best way to
+store your data** **will depend on the data you want to store and the questions
+you want to ask** **with it.**
 
-When describing data, we generally talk about two main characteristics: data 
+When describing data, we generally talk about two main characteristics: data
 type and data structure.
 
 ## Data Types
@@ -58,12 +56,12 @@ type and data structure.
 Your data's type tells the computer what sorts of operations make sense. Common
 data types include:
 
-  * integers
-  * decimal
-  * floating point numbers
-  * characters (text)
-  * Boolean values (TRUE and FALSE)
-  * Dates and times
+-   integers
+-   decimal
+-   floating point numbers
+-   characters (text)
+-   Boolean values (TRUE and FALSE)
+-   Dates and times
 
 All data, including individual data points, have a type. However, a given piece
 of information can be stored using multiple data types. For example, you can
@@ -76,32 +74,33 @@ as characters.
 
 ## Data Structures
 
-> A data structure is a collection of data values, the relationships among them,
-> and the functions or operations that can be applied to the data.
+> A data structure is a collection of data values, the relationships among
+> them, and the functions or operations that can be applied to the data.
 >
 > Wikipedia
 
 Unlike with data types, a single piece of data cannot have a data structure.
 This is because data structure is about capturing relationships between data
 points. We will discuss five of the most common data: tabular/columnar, graph,
-tree, categorical/relational, and spatial data. In practice, data often exhibits
-traits from multiple data structures.
+tree, categorical/relational, and spatial data. In practice, data often
+exhibits traits from multiple data structures.
 
-Data is information translated into a form to store for
-later use. The type of information you work with does not dictate the type of
-data structure you must use. However, some types of information lend themselves
-to particular data structures over others.
+Data is information translated into a form to store for later use. The type of
+information you work with does not dictate the type of data structure you must
+use. However, some types of information lend themselves to particular data
+structures over others.
 
 When trying to decide what data structure to use to represent information from
 your research, the key is to focus on what sorts of questions you would like to
-ask. Each data structure will make answering some types of questions easier or harder. If you want to ask disparate types of questions, you may need to
-represent your data using multiple structures. Because data structure has such a
-large impact on how you interact with your data, the structure you choose is
+ask. Each data structure will make answering some types of questions easier or
+harder. If you want to ask disparate types of questions, you may need to
+represent your data using multiple structures. Because data structure has such
+a large impact on how you interact with your data, the structure you choose is
 just as important as the analysis you do afterward.
-
 
 ### Columnar/Tabular
 
+```{=html}
 <!--
 Convention is rows are observations and columns are your variables,
 value associated with a given variable for a given observation lives in that
@@ -117,8 +116,7 @@ better at working across the entire data structure
 
 location and scale aka spread
 -->
-
-
+```
 ```{r format_cars, echo=FALSE}
 
 makers = c('Mazda', 'Merc', 'Toyota', 'Ferarri', 'Lincoln', 'Chrysler', 'Dodge')
@@ -305,5 +303,3 @@ plot_title = 'Live Births in North Carolina from 1974-1978'
 
 plot(nc['BIR74'], key.pos=1, main=plot_title)
 ```
-
-
