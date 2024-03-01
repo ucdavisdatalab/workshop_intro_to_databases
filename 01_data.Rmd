@@ -277,7 +277,11 @@ relationships are defined between categories instead of the entities themselves.
 As such, relationships tend to represent complex processes rather than
 individual entities.
 
-One example of this type of data is student club membership at UC Davis. 
+One example of this type of data is student organization membership at UC Davis.
+One student may belong to many clubs or none at all. Environmental themed clubs
+may collaborate on given event like the Earth Day Celebration. Student groups
+themselves may also be a part of a higher level organization, like fraternities
+and sororities being a part of the Professional Sorority and Fraternity Council.
 
 ### Spatial
 Depending on the context, spatial data can be thought of as either a data type,
