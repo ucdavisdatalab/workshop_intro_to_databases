@@ -1,7 +1,7 @@
 workshop-description
 learning-objectives
 prerequisites
-image-credits
+credits
 data
 data-types
 data-structures

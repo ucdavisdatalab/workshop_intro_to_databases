@@ -23,7 +23,7 @@
 <meta name="author" content="Elise Hellwig" />
 
 
-<meta name="date" content="2024-02-29" />
+<meta name="date" content="2024-03-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,6 +52,8 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
@@ -82,7 +84,7 @@
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#learning-objectives"><i class="fa fa-check"></i><b>1.1</b> Learning Objectives</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#prerequisites"><i class="fa fa-check"></i><b>1.2</b> Prerequisites</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#image-credits"><i class="fa fa-check"></i><b>1.3</b> Image Credits</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#credits"><i class="fa fa-check"></i><b>1.3</b> Credits</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Data</a>
 <ul>
@@ -156,38 +158,43 @@ have two primary functions. First, they need to facilitate people accessing the
 data (reading) and making changes to it (writing). Second, they need to preserve
 this access over a period of time.</p>
 <p>Regardless of your data’s structure you have two general options for how to
-store your data digitally: in flat files or in a database. Probably the most
-common type of data store is a flat file. A flat file is stand alone file on
-your computer that is not linked to data elsewhere. You can store tabular data
-in .xlsx and .csv files, tree data in .xml and .json files, graph data in .GML
-and .DOT, and spatial data in .GeoJSON and .GeoTIFF files. All of these file
-types have applications you can use to access and modify your, or you can load
-the data into a programming environment like R or python. In addition, many
-of thse file types, like csvs and jsons are human readable, meaning you do
-<em>not</em> need special software to access or modify the data they contain.</p>
-<p>In comparison, a database is an organized collection of data that users can
-interact with through specialized software called a database management system,
-often abbreviated DBMS, but that is not human readable. Databases have several
+store your data digitally: in flat files or in a database.</p>
+<p>Probably the most common type of data store is a flat file. A <em>flat file</em> is
+stand alone file on your computer that is not linked to data elsewhere. You can
+store tabular data in .xlsx and .csv files, tree data in .xml and .json files,
+graph data in .GML and .DOT, and spatial data in .GeoJSON and .GeoTIFF files.
+All of these file types have applications you can use to access and modify your
+data, or you can load the data into a programming environment like R or python.
+In addition, many of these file types, like csvs and jsons are human readable,
+meaning you do <em>not</em> need special software to access or modify the data they
+contain.</p>
+<p>In comparison, a <em>database</em> is an organized collection of data that is linked or
+related in some way. Users can interact with a database through specialized
+software called a database management system, often abbreviated DBMS.
+Databases are not ge, human readable. Databases have several
 key characteristics that differentiate them from other data stores like flat
 files.</p>
 <ol style="list-style-type: decimal">
-<li><p><strong>Structure</strong> - Databases can store data with very complicated structures.</p></li>
-<li><p><strong>Scalability</strong> - Databases can store vastly information more than other
-digital data stores without modification. Additionally, databases support
-substantial computing upgrades, which means you can maintain performance as
-your data set grows.</p></li>
-<li><p><strong>Access</strong> - Databases support concurrent access and have sophisticated
-methods for managing simultaneous user requests. They also provide
-fine-grained controls on who can access, modify, and delete data.</p></li>
+<li><p><strong>Structure</strong> - Databases can store data with structures ranging from low to
+high complexity.</p></li>
+<li><p><strong>Scalability</strong> - Databases can store vastly more information more than flat
+files. Additionally, databases support substantial computing upgrades, which
+means you can maintain performance as your data set grows. Even if you
+upgrade your computer, you still can’t have more than 1 million rows in
+Excel.</p></li>
+<li><p><strong>Access</strong> - Databases allow multiple people to interact with data at the
+same time without locking people out or introducing conflicts. They also
+provide fine-grained controls on who can access, modify, and delete data.</p></li>
 </ol>
 <p>Specific types of databases have other differentiating features, like data
 integrity constraints, flexible data structure support. Databases also have
 several drawbacks:</p>
 <ul>
-<li><p>Data in databases is not human readable, unlike many file types including
-csv, xml, DOT, and GML, which are human readable</p></li>
-<li><p>Database software generally has a steeper learning curve than other
-software. You may need to learn a specialized language to interact with the
+<li><p>Data in databases is not human readable without specialized software. This
+is different from some file types including csv, xml, DOT, and GML. However,
+binary files, like xlsx and docx, require specialized software as well.</p></li>
+<li><p>Database software generally has a steeper learning curve than graphical user
+interfaces. You may need to learn a specialized language to interact with the
 data in your database.</p></li>
 <li><p>There may be cost associated, either for the database software or for
 hardware needed to run the software.</p></li>
@@ -215,6 +222,8 @@ collaborators</p></li>
 underlying data while you are using it.</p></li>
 <li><p>You have a hard time finding and extracting the information you need to
 answer a particular research question</p></li>
+<li><p>Processing your data requires you to spend a lot of time moving data between
+spreadsheets by hand.</p></li>
 </ul>
 <style type="text/css">
 pre {
@@ -244,16 +253,14 @@ Differentiate between the file and the software
 
 file is the data store?
 -->
-<p>Spreadsheets, a type of flat file, are the most ubiquitous form of digital data
-store. If you have used Microsoft Excel or Google Sheets, you have used a
-spreadsheet. In fact, spreadsheet applications transformed the use of the
-personal computer, particularly in business circles. Like some databases,
-spreadsheets impose a tabular data structure on the data they store. Despite
-this, a spreadsheet is not a database. Like most modern software, spreadsheet
-applications have graphical user interfaces, making the barrier to entry very
-low. Spreadsheet software also offers some built in analysis tools, so you
-don’t have to learn a new application to do basic statistics and data
-visualization.</p>
+<p>Spreadsheets, a type of flat file, are a common form of digital data store. If
+you have used Microsoft Excel or Google Sheets, you have used a spreadsheet.
+Like some databases, spreadsheets impose a tabular data structure on the data
+they store. Despite this, a spreadsheet is not a database. Like most modern
+software, spreadsheet applications have graphical user interfaces, making the
+barrier to entry very low. Spreadsheet software also offers some built in
+analysis tools, so you don’t have to learn a new application to do basic
+statistics and data visualization.</p>
 <p>Spreadsheet software also suffers from some drawbacks. They offer limited
 storage capacity, making it difficult to work with large data sets. Excel and
 LibreOffice have a maximum row number of a little over 1 million and Google
@@ -264,83 +271,889 @@ is much more tedious than analyzing small ones.</p>
 make data entry susceptible to typos. In the spreadsheet visualized below, we
 have data on the Die Hard franchise. Specifically, we have information about
 the actors that starred in the series and the movies in which they appeared.</p>
-<pre class="scroll-300"><code>##      title_id person_id             primary_title premiered runtime_minutes
-##  1: tt0095016 nm0000246                  Die Hard      1988             132
-##  2: tt0095016 nm0000614                  Die Hard      1988             132
-##  3: tt0095016 nm0000889                  Die Hard      1988             132
-##  4: tt0095016 nm0001817                  Die Hard      1988             132
-##  5: tt0099423 nm0000246                Die Hard 2      1990             124
-##  6: tt0099423 nm0040472                Die Hard 2      1990             124
-##  7: tt0099423 nm0000889                Die Hard 2      1990             124
-##  8: tt0099423 nm0001817                Die Hard 2      1990             124
-##  9: tt0112864 nm0000246 Die Hard with a Vengeance      1995             128
-## 10: tt0112864 nm0000460 Die Hard with a Vengeance      1995             128
-## 11: tt0112864 nm0000168 Die Hard with a Vengeance      1995             128
-## 12: tt0112864 nm0001295 Die Hard with a Vengeance      1995             128
-## 13: tt0337978 nm0000246     Live Free or Die Hard      2007             128
-## 14: tt0337978 nm0519043     Live Free or Die Hard      2007             128
-## 15: tt0337978 nm0648249     Live Free or Die Hard      2007             128
-## 16: tt0337978 nm0702572     Live Free or Die Hard      2007             128
-## 17: tt1606378 nm0000246    A Good Day to Die Hard      2013              98
-## 18: tt1606378 nm2541974    A Good Day to Die Hard      2013              98
-## 19: tt1606378 nm0462407    A Good Day to Die Hard      2013              98
-## 20: tt1606378 nm0935541    A Good Day to Die Hard      2013              98
-##                        genres rating  votes                    name birth death
-##  1:           Action,Thriller    8.2 936512            Bruce Willis  1955    NA
-##  2:           Action,Thriller    8.2 936512            Alan Rickman  1946  2016
-##  3:           Action,Thriller    8.2 936512          Bonnie Bedelia  1948    NA
-##  4:           Action,Thriller    8.2 936512     Reginald VelJohnson  1952    NA
-##  5:           Action,Thriller    7.1 380561            Bruce Willis  1955    NA
-##  6:           Action,Thriller    7.1 380561        William Atherton    NA    NA
-##  7:           Action,Thriller    7.1 380561          Bonnie Bedelia  1948    NA
-##  8:           Action,Thriller    7.1 380561     Reginald VelJohnson  1952    NA
-##  9: Action,Adventure,Thriller    7.6 405383            Bruce Willis  1955    NA
-## 10: Action,Adventure,Thriller    7.6 405383            Jeremy Irons  1948    NA
-## 11: Action,Adventure,Thriller    7.6 405383       Samuel L. Jackson  1948    NA
-## 12: Action,Adventure,Thriller    7.6 405383           Graham Greene  1952    NA
-## 13:           Action,Thriller    7.1 418910            Bruce Willis  1955    NA
-## 14:           Action,Thriller    7.1 418910             Justin Long  1978    NA
-## 15:           Action,Thriller    7.1 418910        Timothy Olyphant  1968    NA
-## 16:           Action,Thriller    7.1 418910                Maggie Q  1979    NA
-## 17:           Action,Thriller    5.2 214179            Bruce Willis  1955    NA
-## 18:           Action,Thriller    5.2 214179            Jai Courtney  1986    NA
-## 19:           Action,Thriller    5.2 214179          Sebastian Koch  1962    NA
-## 20:           Action,Thriller    5.2 214179 Mary Elizabeth Winstead  1984    NA
-##        role                  characters
-##  1:   actor          [&quot;&quot;John McClane&quot;&quot;]
-##  2:   actor           [&quot;&quot;Hans Gruber&quot;&quot;]
-##  3: actress [&quot;&quot;Holly Gennaro McClane&quot;&quot;]
-##  4:   actor        [&quot;&quot;Sgt. Al Powell&quot;&quot;]
-##  5:   actor          [&quot;&quot;John McClane&quot;&quot;]
-##  6:   actor             [&quot;&quot;Thornberg&quot;&quot;]
-##  7: actress         [&quot;&quot;Holly McClane&quot;&quot;]
-##  8:   actor             [&quot;&quot;Al Powell&quot;&quot;]
-##  9:   actor          [&quot;&quot;John McClane&quot;&quot;]
-## 10:   actor                 [&quot;&quot;Simon&quot;&quot;]
-## 11:   actor                  [&quot;&quot;Zeus&quot;&quot;]
-## 12:   actor           [&quot;&quot;Joe Lambert&quot;&quot;]
-## 13:   actor          [&quot;&quot;John McClane&quot;&quot;]
-## 14:   actor          [&quot;&quot;Matt Farrell&quot;&quot;]
-## 15:   actor        [&quot;&quot;Thomas Gabriel&quot;&quot;]
-## 16: actress                   [&quot;&quot;Mai&quot;&quot;]
-## 17:   actor          [&quot;&quot;John McClane&quot;&quot;]
-## 18:   actor          [&quot;&quot;Jack McClane&quot;&quot;]
-## 19:   actor               [&quot;&quot;Komarov&quot;&quot;]
-## 20: actress                  [&quot;&quot;Lucy&quot;&quot;]</code></pre>
-<p>As you can see, there is a lot of data duplication, meaning our data set takes
-up more space on our hard drive than it needs to. Additionally, if we have to
-change the information about a single movie or actor, we would have to make
-that change in many different places, and potentially miss one or make a
-mistake. If we accidentally left out an “l” in Bruce Willis’s last name, we
-would have to modify five cells to fix our data.</p>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:100%; ">
+<table>
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+title_id
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+person_id
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+title
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+name
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+characters
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+premiered
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+runtime
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+genres
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+rating
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+votes
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+birth
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+death
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+role
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+tt0095016
+</td>
+<td style="text-align:left;">
+nm0000246
+</td>
+<td style="text-align:left;">
+Die Hard
+</td>
+<td style="text-align:left;">
+Bruce Willis
+</td>
+<td style="text-align:left;">
+[““John McClane””]
+</td>
+<td style="text-align:right;">
+1988
+</td>
+<td style="text-align:right;">
+132
+</td>
+<td style="text-align:left;">
+Action,Thriller
+</td>
+<td style="text-align:right;">
+8.2
+</td>
+<td style="text-align:right;">
+936512
+</td>
+<td style="text-align:right;">
+1955
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+actor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+tt0095016
+</td>
+<td style="text-align:left;">
+nm0000614
+</td>
+<td style="text-align:left;">
+Die Hard
+</td>
+<td style="text-align:left;">
+Alan Rickman
+</td>
+<td style="text-align:left;">
+[““Hans Gruber””]
+</td>
+<td style="text-align:right;">
+1988
+</td>
+<td style="text-align:right;">
+132
+</td>
+<td style="text-align:left;">
+Action,Thriller
+</td>
+<td style="text-align:right;">
+8.2
+</td>
+<td style="text-align:right;">
+936512
+</td>
+<td style="text-align:right;">
+1946
+</td>
+<td style="text-align:right;">
+2016
+</td>
+<td style="text-align:left;">
+actor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+tt0095016
+</td>
+<td style="text-align:left;">
+nm0000889
+</td>
+<td style="text-align:left;">
+Die Hard
+</td>
+<td style="text-align:left;">
+Bonnie Bedelia
+</td>
+<td style="text-align:left;">
+[““Holly Gennaro McClane””]
+</td>
+<td style="text-align:right;">
+1988
+</td>
+<td style="text-align:right;">
+132
+</td>
+<td style="text-align:left;">
+Action,Thriller
+</td>
+<td style="text-align:right;">
+8.2
+</td>
+<td style="text-align:right;">
+936512
+</td>
+<td style="text-align:right;">
+1948
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+actress
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+tt0095016
+</td>
+<td style="text-align:left;">
+nm0001817
+</td>
+<td style="text-align:left;">
+Die Hard
+</td>
+<td style="text-align:left;">
+Reginald VelJohnson
+</td>
+<td style="text-align:left;">
+[““Sgt. Al Powell””]
+</td>
+<td style="text-align:right;">
+1988
+</td>
+<td style="text-align:right;">
+132
+</td>
+<td style="text-align:left;">
+Action,Thriller
+</td>
+<td style="text-align:right;">
+8.2
+</td>
+<td style="text-align:right;">
+936512
+</td>
+<td style="text-align:right;">
+1952
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+actor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+tt0099423
+</td>
+<td style="text-align:left;">
+nm0000246
+</td>
+<td style="text-align:left;">
+Die Hard 2
+</td>
+<td style="text-align:left;">
+Bruce Willis
+</td>
+<td style="text-align:left;">
+[““John McClane””]
+</td>
+<td style="text-align:right;">
+1990
+</td>
+<td style="text-align:right;">
+124
+</td>
+<td style="text-align:left;">
+Action,Thriller
+</td>
+<td style="text-align:right;">
+7.1
+</td>
+<td style="text-align:right;">
+380561
+</td>
+<td style="text-align:right;">
+1955
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+actor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+tt0099423
+</td>
+<td style="text-align:left;">
+nm0040472
+</td>
+<td style="text-align:left;">
+Die Hard 2
+</td>
+<td style="text-align:left;">
+William Atherton
+</td>
+<td style="text-align:left;">
+[““Thornberg””]
+</td>
+<td style="text-align:right;">
+1990
+</td>
+<td style="text-align:right;">
+124
+</td>
+<td style="text-align:left;">
+Action,Thriller
+</td>
+<td style="text-align:right;">
+7.1
+</td>
+<td style="text-align:right;">
+380561
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+actor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+tt0099423
+</td>
+<td style="text-align:left;">
+nm0000889
+</td>
+<td style="text-align:left;">
+Die Hard 2
+</td>
+<td style="text-align:left;">
+Bonnie Bedelia
+</td>
+<td style="text-align:left;">
+[““Holly McClane””]
+</td>
+<td style="text-align:right;">
+1990
+</td>
+<td style="text-align:right;">
+124
+</td>
+<td style="text-align:left;">
+Action,Thriller
+</td>
+<td style="text-align:right;">
+7.1
+</td>
+<td style="text-align:right;">
+380561
+</td>
+<td style="text-align:right;">
+1948
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+actress
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+tt0099423
+</td>
+<td style="text-align:left;">
+nm0001817
+</td>
+<td style="text-align:left;">
+Die Hard 2
+</td>
+<td style="text-align:left;">
+Reginald VelJohnson
+</td>
+<td style="text-align:left;">
+[““Al Powell””]
+</td>
+<td style="text-align:right;">
+1990
+</td>
+<td style="text-align:right;">
+124
+</td>
+<td style="text-align:left;">
+Action,Thriller
+</td>
+<td style="text-align:right;">
+7.1
+</td>
+<td style="text-align:right;">
+380561
+</td>
+<td style="text-align:right;">
+1952
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+actor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+tt0112864
+</td>
+<td style="text-align:left;">
+nm0000246
+</td>
+<td style="text-align:left;">
+Die Hard with a Vengeance
+</td>
+<td style="text-align:left;">
+Bruce Willis
+</td>
+<td style="text-align:left;">
+[““John McClane””]
+</td>
+<td style="text-align:right;">
+1995
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:left;">
+Action,Adventure,Thriller
+</td>
+<td style="text-align:right;">
+7.6
+</td>
+<td style="text-align:right;">
+405383
+</td>
+<td style="text-align:right;">
+1955
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+actor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+tt0112864
+</td>
+<td style="text-align:left;">
+nm0000460
+</td>
+<td style="text-align:left;">
+Die Hard with a Vengeance
+</td>
+<td style="text-align:left;">
+Jeremy Irons
+</td>
+<td style="text-align:left;">
+[““Simon””]
+</td>
+<td style="text-align:right;">
+1995
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:left;">
+Action,Adventure,Thriller
+</td>
+<td style="text-align:right;">
+7.6
+</td>
+<td style="text-align:right;">
+405383
+</td>
+<td style="text-align:right;">
+1948
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+actor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+tt0112864
+</td>
+<td style="text-align:left;">
+nm0000168
+</td>
+<td style="text-align:left;">
+Die Hard with a Vengeance
+</td>
+<td style="text-align:left;">
+Samuel L. Jackson
+</td>
+<td style="text-align:left;">
+[““Zeus””]
+</td>
+<td style="text-align:right;">
+1995
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:left;">
+Action,Adventure,Thriller
+</td>
+<td style="text-align:right;">
+7.6
+</td>
+<td style="text-align:right;">
+405383
+</td>
+<td style="text-align:right;">
+1948
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+actor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+tt0112864
+</td>
+<td style="text-align:left;">
+nm0001295
+</td>
+<td style="text-align:left;">
+Die Hard with a Vengeance
+</td>
+<td style="text-align:left;">
+Graham Greene
+</td>
+<td style="text-align:left;">
+[““Joe Lambert””]
+</td>
+<td style="text-align:right;">
+1995
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:left;">
+Action,Adventure,Thriller
+</td>
+<td style="text-align:right;">
+7.6
+</td>
+<td style="text-align:right;">
+405383
+</td>
+<td style="text-align:right;">
+1952
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+actor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+tt0337978
+</td>
+<td style="text-align:left;">
+nm0000246
+</td>
+<td style="text-align:left;">
+Live Free or Die Hard
+</td>
+<td style="text-align:left;">
+Bruce Willis
+</td>
+<td style="text-align:left;">
+[““John McClane””]
+</td>
+<td style="text-align:right;">
+2007
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:left;">
+Action,Thriller
+</td>
+<td style="text-align:right;">
+7.1
+</td>
+<td style="text-align:right;">
+418910
+</td>
+<td style="text-align:right;">
+1955
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+actor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+tt0337978
+</td>
+<td style="text-align:left;">
+nm0519043
+</td>
+<td style="text-align:left;">
+Live Free or Die Hard
+</td>
+<td style="text-align:left;">
+Justin Long
+</td>
+<td style="text-align:left;">
+[““Matt Farrell””]
+</td>
+<td style="text-align:right;">
+2007
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:left;">
+Action,Thriller
+</td>
+<td style="text-align:right;">
+7.1
+</td>
+<td style="text-align:right;">
+418910
+</td>
+<td style="text-align:right;">
+1978
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+actor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+tt0337978
+</td>
+<td style="text-align:left;">
+nm0648249
+</td>
+<td style="text-align:left;">
+Live Free or Die Hard
+</td>
+<td style="text-align:left;">
+Timothy Olyphant
+</td>
+<td style="text-align:left;">
+[““Thomas Gabriel””]
+</td>
+<td style="text-align:right;">
+2007
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:left;">
+Action,Thriller
+</td>
+<td style="text-align:right;">
+7.1
+</td>
+<td style="text-align:right;">
+418910
+</td>
+<td style="text-align:right;">
+1968
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+actor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+tt0337978
+</td>
+<td style="text-align:left;">
+nm0702572
+</td>
+<td style="text-align:left;">
+Live Free or Die Hard
+</td>
+<td style="text-align:left;">
+Maggie Q
+</td>
+<td style="text-align:left;">
+[““Mai””]
+</td>
+<td style="text-align:right;">
+2007
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:left;">
+Action,Thriller
+</td>
+<td style="text-align:right;">
+7.1
+</td>
+<td style="text-align:right;">
+418910
+</td>
+<td style="text-align:right;">
+1979
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+actress
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+tt1606378
+</td>
+<td style="text-align:left;">
+nm0000246
+</td>
+<td style="text-align:left;">
+A Good Day to Die Hard
+</td>
+<td style="text-align:left;">
+Bruce Willis
+</td>
+<td style="text-align:left;">
+[““John McClane””]
+</td>
+<td style="text-align:right;">
+2013
+</td>
+<td style="text-align:right;">
+98
+</td>
+<td style="text-align:left;">
+Action,Thriller
+</td>
+<td style="text-align:right;">
+5.2
+</td>
+<td style="text-align:right;">
+214179
+</td>
+<td style="text-align:right;">
+1955
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+actor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+tt1606378
+</td>
+<td style="text-align:left;">
+nm2541974
+</td>
+<td style="text-align:left;">
+A Good Day to Die Hard
+</td>
+<td style="text-align:left;">
+Jai Courtney
+</td>
+<td style="text-align:left;">
+[““Jack McClane””]
+</td>
+<td style="text-align:right;">
+2013
+</td>
+<td style="text-align:right;">
+98
+</td>
+<td style="text-align:left;">
+Action,Thriller
+</td>
+<td style="text-align:right;">
+5.2
+</td>
+<td style="text-align:right;">
+214179
+</td>
+<td style="text-align:right;">
+1986
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+actor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+tt1606378
+</td>
+<td style="text-align:left;">
+nm0462407
+</td>
+<td style="text-align:left;">
+A Good Day to Die Hard
+</td>
+<td style="text-align:left;">
+Sebastian Koch
+</td>
+<td style="text-align:left;">
+[““Komarov””]
+</td>
+<td style="text-align:right;">
+2013
+</td>
+<td style="text-align:right;">
+98
+</td>
+<td style="text-align:left;">
+Action,Thriller
+</td>
+<td style="text-align:right;">
+5.2
+</td>
+<td style="text-align:right;">
+214179
+</td>
+<td style="text-align:right;">
+1962
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+actor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+tt1606378
+</td>
+<td style="text-align:left;">
+nm0935541
+</td>
+<td style="text-align:left;">
+A Good Day to Die Hard
+</td>
+<td style="text-align:left;">
+Mary Elizabeth Winstead
+</td>
+<td style="text-align:left;">
+[““Lucy””]
+</td>
+<td style="text-align:right;">
+2013
+</td>
+<td style="text-align:right;">
+98
+</td>
+<td style="text-align:left;">
+Action,Thriller
+</td>
+<td style="text-align:right;">
+5.2
+</td>
+<td style="text-align:right;">
+214179
+</td>
+<td style="text-align:right;">
+1984
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+actress
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Looking at the last three columns, there is a lot of data duplication, meaning
+our data set takes up more space on our hard drive than it needs to.
+Additionally, if we have to change the information about a single movie or
+actor, we would have to make that change in many different places, and
+potentially miss one or make a mistake. If we accidentally left out an “l” in
+Bruce Willis’s last name, we would have to modify five cells to fix our data.</p>
 <!--maybe put something in here about different text versions of the same
 information, ex. yes, Yes, Y, and YES
 -->
 <p>Finally, most spreadsheet applications store their data locally, so unless you
-are militant about version control outside the application, it is easy to end
-up with people working on different versions of the data. Google Sheets offers
-shared access and some version control, but still fails to deliver on storage
-capacity, and data integrity.</p>
+are very careful about version control outside the application, it is easy to
+end up with people working on different versions of the data. Google Sheets
+offers shared access and some version control, but still fails to deliver on
+storage capacity, and data integrity.</p>
 <div id="examples" class="section level3 hasAnchor" number="3.1.1">
 <h3><span class="header-section-number">3.1.1</span> Examples<a href="data-stores.html#examples" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
@@ -374,35 +1187,43 @@ ten they are referring to a relational database. Like spreadsheets, RDBMSs
 impose a tabular structure on the data they contain. Unlike spreadsheets the
 structure of that data can be fairly complex. Relational databases are made up
 of multiple tables connected by shared columns, called keys.</p>
-<p>Users interact with an RDBMS through the Standardized Query Language (SQL)
-instead of a graphical user interface. SQL is a programming language, but it is
-one specifically designed for interacting with relational databases. SQL
-standardizes your interactions with a database, and makes them reproducible.
-This means it is much easier to ensure everyone is working with the same set of
-data. However, SQL has a higher barrier to entry than a graphical user
-interface like Excel.</p>
-<p>To learn more about using SQL in practice, check out the Intro to SQL
+<p>Users often interact with an RDBMS through the Structured Query Language (SQL)
+instead of a graphical user interface, though there are exceptions. SQL is a
+programming language, but it is one specifically designed for interacting with
+relational databases. SQL standardizes your interactions with a database, and
+makes them reproducible. This means it is much easier to ensure everyone is
+working with the same set of data. However, SQL has a higher barrier to entry
+than a graphical user interface like Excel.</p>
+<p>To learn more about using SQL in practice, check out DataLab’s Intro to SQL
 (<a href="https://ucdavisdatalab.github.io/workshop_intro_to_sql/">reader</a>, workshop)
 and Spatial SQL (<a href="https://github.com/ucdavisdatalab/Spatial_SQL">reader</a>,
 workshop) resources.</p>
 <div id="relationship-keys" class="section level3 hasAnchor" number="3.2.1">
 <h3><span class="header-section-number">3.2.1</span> Relationship keys<a href="data-stores.html#relationship-keys" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A relationship key is a column or pair of columns that links two tables. There
-are two types of relationship keys: primary keys and foreign keys. A primary
-key, sometimes called an index, is a column that uniquely identifies each row
-in a particular table. It is generally the first column in the table and its
-name often contains the letters “ID”. A foreign key is a column in one table
-whose values correspond to a primary key in another table.</p>
+<p>A relationship key is a column or pair of columns that links two tables. One
+example of a relationship key you may use is a student or employee ID number.
+You can use that number to link information about you in one part of the
+University to another part of the University. This is what allows you to pay for
+meal plans via the Student Accounting department and you can use your meal plan
+through Dining Services. The student ID number ensures that the money you spend
+gets credited to the correct account.</p>
+<p>There are two types of relationship keys: primary keys and foreign keys. A
+primary key, sometimes called an index, is a column that uniquely identifies
+each row in a particular table. It is generally the first column in the table. A
+student ID would be a primary key in a table that lists all of the students at
+the university with some basic information about them. A foreign key is a column
+in one table whose values correspond to a primary key in another table. A
+student ID would be a foreign key in a table that lists all food and beverage
+sales at a particular on campus eatery.</p>
 </div>
 <div id="entity-relationship-diagrams" class="section level3 hasAnchor" number="3.2.2">
 <h3><span class="header-section-number">3.2.2</span> Entity Relationship Diagrams<a href="data-stores.html#entity-relationship-diagrams" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Since relational databases are not human readable, it can be helpful to have a
-visual summary of a database without actually needing to interact with it. That
+<p>Since relational databases may not have a graphical interface, it can be helpful
+to have a visual summary of a database before interacting with it. That
 is where the Entity Relationship Diagram (ERD) comes in. ERDs are a
 standardized way to depict the structure of a relational database. Each box in
 the diagram represents a table, with the table title at the top and the column
-names listed below it. The column data type appears next to each column name.
-The</p>
+names listed below it. The column data type appears next to each column name.</p>
 <p>Connector lines link primary/foreign key pairs. These lines specify which
 tables can be combined, and which keys should be used to combine them. The
 connector lines also specify what type of relationship between the two tables.</p>
