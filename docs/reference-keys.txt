@@ -23,3 +23,6 @@ why-use-nosql-databases
 example-software
 choosing-the-right-data-store
 assessment
+membership
+tab:unnamed-chunk-1
+tab:unnamed-chunk-3

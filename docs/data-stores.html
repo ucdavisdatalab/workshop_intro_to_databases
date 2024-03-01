@@ -94,7 +94,7 @@
 <li class="chapter" data-level="2.2.1" data-path="data.html"><a href="data.html#columnartabular"><i class="fa fa-check"></i><b>2.2.1</b> Columnar/Tabular</a></li>
 <li class="chapter" data-level="2.2.2" data-path="data.html"><a href="data.html#trees"><i class="fa fa-check"></i><b>2.2.2</b> Trees</a></li>
 <li class="chapter" data-level="2.2.3" data-path="data.html"><a href="data.html#graphs"><i class="fa fa-check"></i><b>2.2.3</b> Graphs</a></li>
-<li class="chapter" data-level="2.2.4" data-path="data.html"><a href="data.html#categorical---relational"><i class="fa fa-check"></i><b>2.2.4</b> Categorical - Relational</a></li>
+<li class="chapter" data-level="2.2.4" data-path="data.html"><a href="data.html#membership"><i class="fa fa-check"></i><b>2.2.4</b> Membership</a></li>
 <li class="chapter" data-level="2.2.5" data-path="data.html"><a href="data.html#spatial"><i class="fa fa-check"></i><b>2.2.5</b> Spatial</a></li>
 </ul></li>
 </ul></li>
@@ -152,11 +152,11 @@ store types such as simple files, emails etc.</p>
 <p>Once you have decided on a data structure, the next decision to make is what
 type of data store to use for data storage. A data store is a repository for
 storing and managing data. While this workshop covers exclusively digital data
-stores, for most of human history, data stores were analog. Even today, we still
-use analog data stores like libraries, museums, and filing cabinets. Data stores
-have two primary functions. First, they need to facilitate people accessing the
-data (reading) and making changes to it (writing). Second, they need to preserve
-this access over a period of time.</p>
+stores, for most of human history, data stores were analog. Even today, we
+still use analog data stores like libraries, museums, and filing cabinets. Data
+stores have two primary functions. First, they need to facilitate people
+accessing the data (reading) and making changes to it (writing). Second, they
+need to preserve this access over a period of time.</p>
 <p>Regardless of your data’s structure you have two general options for how to
 store your data digitally: in flat files or in a database.</p>
 <p>Probably the most common type of data store is a flat file. A <em>flat file</em> is
@@ -168,19 +168,18 @@ data, or you can load the data into a programming environment like R or python.
 In addition, many of these file types, like csvs and jsons are human readable,
 meaning you do <em>not</em> need special software to access or modify the data they
 contain.</p>
-<p>In comparison, a <em>database</em> is an organized collection of data that is linked or
-related in some way. Users can interact with a database through specialized
-software called a database management system, often abbreviated DBMS.
-Databases are not ge, human readable. Databases have several
-key characteristics that differentiate them from other data stores like flat
-files.</p>
+<p>In comparison, a <em>database</em> is an organized collection of data that is linked
+or related in some way. Users can interact with a database through specialized
+software called a database management system, often abbreviated DBMS. Databases
+are not ge, human readable. Databases have several key characteristics that
+differentiate them from other data stores like flat files.</p>
 <ol style="list-style-type: decimal">
-<li><p><strong>Structure</strong> - Databases can store data with structures ranging from low to
-high complexity.</p></li>
-<li><p><strong>Scalability</strong> - Databases can store vastly more information more than flat
-files. Additionally, databases support substantial computing upgrades, which
-means you can maintain performance as your data set grows. Even if you
-upgrade your computer, you still can’t have more than 1 million rows in
+<li><p><strong>Structure</strong> - Databases can store data with structures ranging from low
+to high complexity.</p></li>
+<li><p><strong>Scalability</strong> - Databases can store vastly more information more than
+flat files. Additionally, databases support substantial computing upgrades,
+which means you can maintain performance as your data set grows. Even if
+you upgrade your computer, you still can’t have more than 1 million rows in
 Excel.</p></li>
 <li><p><strong>Access</strong> - Databases allow multiple people to interact with data at the
 same time without locking people out or introducing conflicts. They also
@@ -191,19 +190,20 @@ integrity constraints, flexible data structure support. Databases also have
 several drawbacks:</p>
 <ul>
 <li><p>Data in databases is not human readable without specialized software. This
-is different from some file types including csv, xml, DOT, and GML. However,
-binary files, like xlsx and docx, require specialized software as well.</p></li>
-<li><p>Database software generally has a steeper learning curve than graphical user
-interfaces. You may need to learn a specialized language to interact with the
-data in your database.</p></li>
+is different from some file types including csv, xml, DOT, and GML.
+However, binary files, like xlsx and docx, require specialized software as
+well.</p></li>
+<li><p>Database software generally has a steeper learning curve than graphical
+user interfaces. You may need to learn a specialized language to interact
+with the data in your database.</p></li>
 <li><p>There may be cost associated, either for the database software or for
 hardware needed to run the software.</p></li>
 <li><p>Databases require some level of administration. Someone will need to be in
 charge of adding data to the database, determining who has access to what,
 and fixing things when they break.</p></li>
 </ul>
-<p>If you are running into any of the following issues, a database may be
-the solution to your problems.</p>
+<p>If you are running into any of the following issues, a database may be the
+solution to your problems.</p>
 <ul>
 <li><p>Your data set has many repeated values</p></li>
 <li><p>Your data set contains information about many unrelated or loosely related
@@ -222,8 +222,8 @@ collaborators</p></li>
 underlying data while you are using it.</p></li>
 <li><p>You have a hard time finding and extracting the information you need to
 answer a particular research question</p></li>
-<li><p>Processing your data requires you to spend a lot of time moving data between
-spreadsheets by hand.</p></li>
+<li><p>Processing your data requires you to spend a lot of time moving data
+between spreadsheets by hand.</p></li>
 </ul>
 <style type="text/css">
 pre {
@@ -244,15 +244,6 @@ pre[class] {
 </style>
 <div id="spreadsheets" class="section level2 hasAnchor" number="3.1">
 <h2><span class="header-section-number">3.1</span> Spreadsheets<a href="data-stores.html#spreadsheets" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<!--
-why not excel:
-Excel file is proprietary (owned by a company)
-also can have csv file, aka ASCII delimited file (not sure I will go into this)
-
-Differentiate between the file and the software
-
-file is the data store?
--->
 <p>Spreadsheets, a type of flat file, are a common form of digital data store. If
 you have used Microsoft Excel or Google Sheets, you have used a spreadsheet.
 Like some databases, spreadsheets impose a tabular data structure on the data
@@ -269,10 +260,14 @@ if you get close to their data capacity. This means analyzing large data sets
 is much more tedious than analyzing small ones.</p>
 <p>Spreadsheets also store data in ways that cause a lot of data duplication and
 make data entry susceptible to typos. In the spreadsheet visualized below, we
-have data on the Die Hard franchise. Specifically, we have information about
-the actors that starred in the series and the movies in which they appeared.</p>
+have data on the Die Hard movie franchise. Specifically, we have information
+about the actors that starred in the series and the movies in which they
+appeared.</p>
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:100%; ">
 <table>
+<caption>
+<span id="tab:unnamed-chunk-3">Table 3.1: </span>Information from IMDB about the Die Hard movie franchise and the people who acted in those films.
+</caption>
 <thead>
 <tr>
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
@@ -1146,9 +1141,6 @@ Additionally, if we have to change the information about a single movie or
 actor, we would have to make that change in many different places, and
 potentially miss one or make a mistake. If we accidentally left out an “l” in
 Bruce Willis’s last name, we would have to modify five cells to fix our data.</p>
-<!--maybe put something in here about different text versions of the same
-information, ex. yes, Yes, Y, and YES
--->
 <p>Finally, most spreadsheet applications store their data locally, so unless you
 are very careful about version control outside the application, it is easy to
 end up with people working on different versions of the data. Google Sheets
@@ -1168,33 +1160,21 @@ storage capacity, and data integrity.</p>
 </div>
 <div id="relational-database-management-system" class="section level2 hasAnchor" number="3.2">
 <h2><span class="header-section-number">3.2</span> Relational Database Management System<a href="data-stores.html#relational-database-management-system" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<!--
-designed for very fast querying for large datasets (ex price on an amazon 
-website)
-
-Linked connections of tables in a structured/specific way
-
-join table (put two tables together), 
-
-nothing should ever appear twice, numbers are always faster than text
-
-ex student changes their address, you only have to change it in one place
-
--->
 <p>Relational Database Management Systems (RDBMSs), or relational databases, are
 one type of database. When people use the word “database”, nine times out of
 ten they are referring to a relational database. Like spreadsheets, RDBMSs
-impose a tabular structure on the data they contain. Unlike spreadsheets the
-structure of that data can be fairly complex. Relational databases are made up
-of multiple tables connected by shared columns, called keys.</p>
+impose a tabular structure on the data they contain. A basic relational
+database is a collection of connected tables. However, they can be more
+complex. The tables in the database are linked by shared columns, called keys.</p>
 <p>Users often interact with an RDBMS through the Structured Query Language (SQL)
 instead of a graphical user interface, though there are exceptions. SQL is a
 programming language, but it is one specifically designed for interacting with
 relational databases. SQL standardizes your interactions with a database, and
 makes them reproducible. This means it is much easier to ensure everyone is
-working with the same set of data. However, SQL has a higher barrier to entry
-than a graphical user interface like Excel.</p>
-<p>To learn more about using SQL in practice, check out DataLab’s Intro to SQL
+working with the same set of data. Working with SQL is a skill, and will take
+some time to acquire. However, because of SQL’s narrow scope, is easier to
+learn than a more complex programming language like python or R.</p>
+<p>To learn about using SQL in practice, check out DataLab’s Intro to SQL
 (<a href="https://ucdavisdatalab.github.io/workshop_intro_to_sql/">reader</a>, workshop)
 and Spatial SQL (<a href="https://github.com/ucdavisdatalab/Spatial_SQL">reader</a>,
 workshop) resources.</p>
@@ -1203,23 +1183,23 @@ workshop) resources.</p>
 <p>A relationship key is a column or pair of columns that links two tables. One
 example of a relationship key you may use is a student or employee ID number.
 You can use that number to link information about you in one part of the
-University to another part of the University. This is what allows you to pay for
-meal plans via the Student Accounting department and you can use your meal plan
-through Dining Services. The student ID number ensures that the money you spend
-gets credited to the correct account.</p>
+University to another part of the University. This is what allows you to pay
+for meal plans via the Student Accounting department and you can use your meal
+plan through Dining Services. The student ID number ensures that the money you
+spend gets credited to the correct account.</p>
 <p>There are two types of relationship keys: primary keys and foreign keys. A
 primary key, sometimes called an index, is a column that uniquely identifies
-each row in a particular table. It is generally the first column in the table. A
-student ID would be a primary key in a table that lists all of the students at
-the university with some basic information about them. A foreign key is a column
-in one table whose values correspond to a primary key in another table. A
-student ID would be a foreign key in a table that lists all food and beverage
-sales at a particular on campus eatery.</p>
+each row in a particular table. It is generally the first column in the table.
+A foreign key is a column in one table whose values correspond to a primary key
+in another table. Student ID would be a primary key in a table that lists all
+of the students at the university with some basic information about them. It
+would be a foreign key in a table that lists all food and beverage sales at a
+particular on campus eatery.</p>
 </div>
 <div id="entity-relationship-diagrams" class="section level3 hasAnchor" number="3.2.2">
 <h3><span class="header-section-number">3.2.2</span> Entity Relationship Diagrams<a href="data-stores.html#entity-relationship-diagrams" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Since relational databases may not have a graphical interface, it can be helpful
-to have a visual summary of a database before interacting with it. That
+<p>Since relational databases may not have a graphical interface, it can be
+helpful to have a visual summary of a database before interacting with it. That
 is where the Entity Relationship Diagram (ERD) comes in. ERDs are a
 standardized way to depict the structure of a relational database. Each box in
 the diagram represents a table, with the table title at the top and the column
@@ -1227,6 +1207,8 @@ names listed below it. The column data type appears next to each column name.</p
 <p>Connector lines link primary/foreign key pairs. These lines specify which
 tables can be combined, and which keys should be used to combine them. The
 connector lines also specify what type of relationship between the two tables.</p>
+<p><em>Figure 3.1. A partial Entity Relationship Diagram for the IMDB non-commercial
+database.</em></p>
 <p><img src="img/imdb_ERD.png" /></p>
 <p>The most common type of table relationship in relational databases is the
 one-to-many relationship. In this case, one row in table A may be linked to
@@ -1293,21 +1275,21 @@ Amazon AWS), but these are the most common and widely supported. All of them
 provide some level of support for spatial data. However, that level of support
 varies, so if you have specific requirements, it’s best to do additional
 research before making a decision.</p>
-<table style="width:96%;">
+<table>
+<caption>Table 2.2. A comparison of some of the more common software implementations
+of SQL databases.</caption>
 <colgroup>
+<col width="19%" />
 <col width="16%" />
-<col width="13%" />
-<col width="30%" />
-<col width="16%" />
-<col width="18%" />
+<col width="33%" />
+<col width="10%" />
+<col width="19%" />
 </colgroup>
 <thead>
 <tr class="header">
 <th>Software</th>
-<th>Ease of
-Use</th>
-<th>Documentation/
-Support</th>
+<th>Complexity</th>
+<th>Support</th>
 <th>Cost</th>
 <th>License</th>
 </tr>
@@ -1315,52 +1297,37 @@ Support</th>
 <tbody>
 <tr class="odd">
 <td>SQLite</td>
-<td>Easier</td>
-<td>Extensive
-documentation and
-community support</td>
-<td>$0</td>
-<td>Public
-Domain</td>
+<td>Less complex</td>
+<td>Extensive documentation and community support</td>
+<td>Free</td>
+<td>Public Domain</td>
 </tr>
 <tr class="even">
 <td>PostgreSQL</td>
-<td>Harder</td>
-<td>Spotty documentation,
-but with robust
-community support</td>
-<td>$0 + cost
-of hosting</td>
+<td>More complex</td>
+<td>Spotty documentation but with robust community support</td>
+<td>Free</td>
 <td>Open Source</td>
 </tr>
 <tr class="odd">
 <td>MySQL</td>
-<td>Easier</td>
-<td>Large community base,
-No professional
-support without paid
-subscription</td>
-<td>$0 - Low
-Cost</td>
-<td>Partially
-Open Source</td>
+<td>Less complex</td>
+<td>Large community base, No professional support without a paid subscription</td>
+<td>Free</td>
+<td>Partially Open Source</td>
 </tr>
 <tr class="even">
-<td>Microsoft
-SQL Server</td>
-<td>Easier</td>
-<td>Robust professional
-and community support</td>
-<td>High Cost</td>
+<td>Microsoft SQL Server</td>
+<td>Less complex</td>
+<td>Robust professional and community support</td>
+<td>Paid</td>
 <td>Proprietary</td>
 </tr>
 <tr class="odd">
 <td>Oracle</td>
-<td>Harder</td>
-<td>Robust professional
-and some community
-support</td>
-<td>High Cost</td>
+<td>More complex</td>
+<td>Robust professional and some community support</td>
+<td>Paid</td>
 <td>Proprietary</td>
 </tr>
 </tbody>
@@ -1400,19 +1367,14 @@ are working on the edge of what is possible data storage-wise.</p>
 <div id="example-software" class="section level3 hasAnchor" number="3.3.2">
 <h3><span class="header-section-number">3.3.2</span> Example Software<a href="data-stores.html#example-software" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Not every NoSQL database supports every data structure. Some support multiple
-structures while others specialize in one. Unlike RDBMSs, all of the most
-common NoSQL software is open source, though the MongoDB license is slightly
-more restrictive than most open source licenses. Because of this they are also
-low cost to implement, though you can always pay for additional features and
-support. Similar to RDBMSs, all the most common NoSQL database software
-provides some support of spatial data. However, that support is limited to
-vector data and the functionality available varies fairly widely.</p>
-<table style="width:99%;">
-<colgroup>
-<col width="27%" />
-<col width="43%" />
-<col width="27%" />
-</colgroup>
+structures while others specialize in one. They generally also low cost to
+implement, though you can always pay for additional features and support.
+Similar to RDBMSs, all the most common NoSQL database software provides some
+support of spatial data. However, that support is limited to vector data and
+the functionality available varies fairly widely.</p>
+<table>
+<caption>Table 3.3. A comparison of some of the more common software implementations
+of NoSQL databases.</caption>
 <thead>
 <tr class="header">
 <th>Software</th>
@@ -1448,8 +1410,7 @@ vector data and the functionality available varies fairly widely.</p>
 </tr>
 <tr class="even">
 <td>ArangoDB</td>
-<td>Tree/Document, graph,
-key-value</td>
+<td>Tree/Document, graph, key-value</td>
 <td>vector</td>
 </tr>
 </tbody>
