@@ -259,6 +259,18 @@ Hawaii and Cairo, Egypt, or how many degrees of separation there are between
 Abraham Lincoln and Kevin Bacon on Wikipedia. We can also ask about which parts
 of the graph are the most connected and which are the least connected.
 
+ <!--
+ https://ucdavisdatalab.github.io/workshop_network_viz/index.html
+ - Characteristics of the nodes 
+ - questions you can ask about the edges
+ - network as a whole
+    - structure of the network
+    - exogenous (questions about additional data)
+    - Liza's ggraph presentation (one or two modes)
+
+multiple networks of the same data/situation
+-->
+
 ### Membership
 
 In membership data, group membership is the organizing principle of the data
