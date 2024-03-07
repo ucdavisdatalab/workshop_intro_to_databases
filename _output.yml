@@ -1,8 +1,7 @@
 bookdown::gitbook:
   fig_caption: false
   config:
-    download: 
-      - ["Intro-to-Databases.pdf", "PDF File"]
+    download: null
     toc:
       before: |
         <li><a href="https://datalab.ucdavis.edu/">
