@@ -225,12 +225,12 @@ displayed in Table 2.1.*
 
 ### Graphs
 
-Graph data is similar to tree data in many ways. It also explicitly captures
-information about relationships between entities using nodes and edges.
-However, unlike trees, graph data sets have no inherent center or root node,
-and there is no implicit hierarchy or nesting. Additionally, the relationships
-between the vertices can be directional, and that direction does not have to be
-consistent throughout the graph.
+Graph data, also called network data, is similar to tree data in many ways. It
+also explicitly captures information about relationships between entities using
+nodes and edges. However, unlike trees, graph data sets have no inherent center
+or root node, and there is no implicit hierarchy or nesting. Additionally, the
+relationships between the vertices can be directional, and that direction does
+not have to be consistent throughout the graph.
 
 *Figure 2.4. Two examples of generic graph data, one a directed graph and one
 and undirected graph. The directed graph has arrows connecting the nodes, while
