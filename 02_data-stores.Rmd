@@ -24,14 +24,14 @@ store tabular data in .xlsx and .csv files, tree data in .xml and .json files,
 graph data in .GML and .DOT, and spatial data in .GeoJSON and .GeoTIFF files.
 All of these file types have applications you can use to access and modify your
 data, or you can load the data into a programming environment like R or python.
-In addition, many of these file types, like csvs and jsons are human readable,
+In addition, some of these file types, like csvs and jsons are human readable,
 meaning you do *not* need special software to access or modify the data they
 contain.
 
 In comparison, a *database* is an organized collection of data that is linked
 or related in some way. Users can interact with a database through specialized
 software called a database management system, often abbreviated DBMS. Databases
-are not ge, human readable. Databases have several key characteristics that
+are not generally human readable. Databases have several key characteristics that
 differentiate them from other data stores like flat files.
 
 1.  **Structure** - Databases can store data with structures ranging from low
@@ -248,20 +248,18 @@ database.*
 
 ![](img/imdb_ERD.png)
 
-The most common type of table relationship in relational databases is the
-one-to-many relationship. In this case, one row in table A may be linked to
-many rows in table B. This is the case for the relationship between the people
-and crew tables in the IMDB. One-to-one relationships are also fairly common in
-relational databases. Two tables are one-to-one when one observation in table A
-only corresponds to one observation in table B. This is the relationship
-between titles and ratings tables in the IMDB database.
+The first type of relationship is a one-to-one relationship. Two tables are
+one-to-one when one observation in table A only corresponds to one observation
+in table B. This is the relationship between the titles and ratings tables in
+the IMDB database. The next type of relationship is a one-to-many relationship.
+In this case, one row in table A may be linked to many rows in table B. This is
+the relationship between the title and crew tables in the IMDB database. 
 
-As you might guess, there is a third type of relationship: many-to-many.
-Many-to-many relationships are the sleeping giant of database relationships.
-They can be very useful, but if you are not careful, they can multiply the size
-of your data several times over. Library book checkout transactions are one
-example of a many to many relationship. A single patron can check out multiple
-books in a single transaction, and multiple patrons can check out a book.
+Finally, there is the many-to-many relationship. In this case more one row in 
+table A can correspond to multiple rows in table B AND one row in table B can 
+correspond to multiple rows in table A. The classic example of this is cities 
+and zip codes. Many cities contain more than one zip code, but some zip codes 
+also span multiple cities.
 
 ### Why Use Relational Databases?
 
@@ -271,16 +269,18 @@ There are three primary reasons to use a RDBMS as a data store:
 
 2.  Speed up and standardize accessing and updating the database
 
-3.  Ensure data integrity
+3.  Ease of reformatting data
 
-In our Die Hard spreadsheet example, we had 260 cells. However, in a relational
-database, storing that same data only requires 156 cells. That is a 40%
-reduction in data size. For a multi-gigabyte data set, 40% makes a huge
-difference. Additionally, much of that information was stored as numbers
-instead of text, which makes its size on your hard drive even smaller. Finally,
-we selected a subset of columns from each table, which means we didn't need to
-work with ALL of the data just because we wanted to work with some of it.
-Subsetting like this is much harder in traditional spreadsheet software.
+4.  Ensure data integrity
+
+In our Die Hard movie spreadsheet example, we had 260 cells. However, in a
+relational database, storing that same data only requires 156 cells. That is a
+40% reduction in data size. For a multi-gigabyte data set, 40% makes a huge
+difference. Additionally, much of that information was stored as numbers instead
+of text, which makes its size on even smaller. Finally, we
+selected a subset of columns from each table, which means we didn't need to work
+with ALL of the data just because we wanted to work with some of it. Subsetting
+like this is much harder in traditional spreadsheet software.
 
 The source database of our Die Hard data, IMDB, is massive relative to
 spreadsheet software capabilities. The titles table alone has 10 million
@@ -334,10 +334,10 @@ of SQL databases.
 ## NoSQL Databases
 
 Not Only SQL, or NoSQL, databases are another type of database. They are
-primarily defined by what they do not do, namely store data in relational
-tables, as a RDBMSs would. Instead, NoSQL databases do not necessarily impose
-external structure on the data they contain. In fact, NoSQL databases can
-contain data from multiple structures, including
+primarily defined by what they do not do, namely they do not store data in
+relational tables, as a RDBMSs would. Instead, NoSQL databases do not
+necessarily impose external structure on the data they contain. In fact, NoSQL
+databases can contain data from multiple structures, including
 
 -   documents
 -   key-value pairs
