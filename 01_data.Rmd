@@ -242,7 +242,7 @@ the undirected graph simply has lines.*
 
 
 Graph structured data tends to be more common in the social sciences and
-humanities. One of the most ubiquitous examples of a graph is the social
+humanities. A common example of a graph in popular culture is a social
 network. Transportation data, like roads and flight paths, also lend themselves
 to the graph structure. In the digital world, we can use graphs to map out the
 link connections between Wikipedia pages, as seen below with Abraham Lincoln.
