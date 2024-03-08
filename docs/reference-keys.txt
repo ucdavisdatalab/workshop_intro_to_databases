@@ -1,3 +1,5 @@
+tab:unnamed-chunk-1
+tab:unnamed-chunk-3
 workshop-description
 learning-objectives
 prerequisites
@@ -8,7 +10,6 @@ data-structures
 columnartabular
 trees
 graphs
-categorical---relational
 spatial
 data-stores
 spreadsheets
@@ -23,6 +24,3 @@ why-use-nosql-databases
 example-software
 choosing-the-right-data-store
 assessment
-membership
-tab:unnamed-chunk-1
-tab:unnamed-chunk-3

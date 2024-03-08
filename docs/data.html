@@ -23,7 +23,7 @@
 <meta name="author" content="Elise Hellwig" />
 
 
-<meta name="date" content="2024-03-01" />
+<meta name="date" content="2024-03-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -94,8 +94,7 @@
 <li class="chapter" data-level="2.2.1" data-path="data.html"><a href="data.html#columnartabular"><i class="fa fa-check"></i><b>2.2.1</b> Columnar/Tabular</a></li>
 <li class="chapter" data-level="2.2.2" data-path="data.html"><a href="data.html#trees"><i class="fa fa-check"></i><b>2.2.2</b> Trees</a></li>
 <li class="chapter" data-level="2.2.3" data-path="data.html"><a href="data.html#graphs"><i class="fa fa-check"></i><b>2.2.3</b> Graphs</a></li>
-<li class="chapter" data-level="2.2.4" data-path="data.html"><a href="data.html#membership"><i class="fa fa-check"></i><b>2.2.4</b> Membership</a></li>
-<li class="chapter" data-level="2.2.5" data-path="data.html"><a href="data.html#spatial"><i class="fa fa-check"></i><b>2.2.5</b> Spatial</a></li>
+<li class="chapter" data-level="2.2.4" data-path="data.html"><a href="data.html#spatial"><i class="fa fa-check"></i><b>2.2.4</b> Spatial</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="data-stores.html"><a href="data-stores.html"><i class="fa fa-check"></i><b>3</b> Data Stores</a>
@@ -144,8 +143,7 @@
 <div id="data" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">2</span> Data<a href="data.html#data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <blockquote>
-<p>Data (noun): Quantities, characters, or symbols on which operations are
-performed by a computer, considered collectively.</p>
+<p>Data (noun): Quantities, characters, or symbols…considered collectively.</p>
 <p>- Oxford English Dictionary</p>
 </blockquote>
 <!--
@@ -179,14 +177,14 @@ information into a form that is more easily shared or stored for later use, you
 are working with data. Information becomes data when we give it some sort of
 structure. That could be the rows and columns of a table, or something more
 human readable, like the grammar and syntax of natural language in text form.</p>
-<p>One of the challenges of working with data is figuring out a useful way, to
-store it. Thankfully, we have mostly left behind the 20th century’s favorite
-way of storing data: paper in filing cabinets. Modern digital methods
-definitely take up less space but also have a higher barrier to entry. There
-are many more types of data stores available now as well. This means you will
-need to make a decision on which one to use. <strong>Ultimately, the best way to
-store your data</strong> <strong>will depend on the data you want to store and the questions
-you want to ask</strong> <strong>with it.</strong></p>
+<p>One of the challenges of working with data is figuring out a useful way to store
+it. Thankfully, we have mostly left behind the 20th century’s favorite way of
+storing data: paper in filing cabinets. Modern digital methods definitely take
+up less space but also have a higher barrier to entry. There are many more types
+of data stores available now as well. This means you will need to make a
+decision on which one to use. <strong>Ultimately, the best way to store your data</strong>
+<strong>will depend on the data you want to store and the questions you want to ask</strong>
+<strong>with it.</strong></p>
 <p>When describing data, we generally talk about two main characteristics: data
 type and data structure.</p>
 <div id="data-types" class="section level2 hasAnchor" number="2.1">
@@ -219,8 +217,8 @@ them, and the functions or operations that can be applied to the data.</p>
 </blockquote>
 <p>Unlike with data types, a single piece of data cannot have a data structure.
 This is because data structure is about capturing relationships between data
-points. We will discuss five of the most common data: tabular/columnar, graph,
-tree, categorical/relational, and spatial data. In practice, data often
+points. We will discuss four of the most common data structures:
+tabular/columnar, graph, tree, and spatial data. In practice, data often
 exhibits traits from multiple data structures.</p>
 <p>Data is information translated into a form to store for later use. The type of
 information you work with does not dictate the type of data structure you must
@@ -235,21 +233,6 @@ a large impact on how you interact with your data, the structure you choose is
 just as important as the analysis you do afterward.</p>
 <div id="columnartabular" class="section level3 hasAnchor" number="2.2.1">
 <h3><span class="header-section-number">2.2.1</span> Columnar/Tabular<a href="data.html#columnartabular" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<!--
-Convention is rows are observations and columns are your variables,
-value associated with a given variable for a given observation lives in that
-cell
-
-Discrete (brief) observations of a particular thing, 
-dealing with a class of object where every observation of one of those objects
-can be described using the same set of variables
-
-sorting is easy
-
-better at working across the entire data structure
-
-location and scale aka spread
--->
 <p>Tabular or columnar data is made up of rows and columns, collectively referred
 to as a table. By convention, each row represents an observation, and each
 column a measurement or aspect of that observation. Tabular data is incredibly
@@ -670,12 +653,12 @@ displayed in Table 2.1.</em>
 </div>
 <div id="graphs" class="section level3 hasAnchor" number="2.2.3">
 <h3><span class="header-section-number">2.2.3</span> Graphs<a href="data.html#graphs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Graph data is similar to tree data in many ways. It also explicitly captures
-information about relationships between entities using nodes and edges.
-However, unlike trees, graph data sets have no inherent center or root node,
-and there is no implicit hierarchy or nesting. Additionally, the relationships
-between the vertices can be directional, and that direction does not have to be
-consistent throughout the graph.</p>
+<p>Graph data, also called network data, is similar to tree data in many ways. It
+also explicitly captures information about relationships between entities using
+nodes and edges. However, unlike trees, graph data sets have no inherent center
+or root node, and there is no implicit hierarchy or nesting. Additionally, the
+relationships between the vertices can be directional, and that direction does
+not have to be consistent throughout the graph.</p>
 <p><em>Figure 2.4. Two examples of generic graph data, one a directed graph and one
 and undirected graph. The directed graph has arrows connecting the nodes, while
 the undirected graph simply has lines.</em></p>
@@ -683,7 +666,7 @@ the undirected graph simply has lines.</em></p>
 <img src="img/graph_data.png" style="width:75.0%" />
 </center>
 <p>Graph structured data tends to be more common in the social sciences and
-humanities. One of the most ubiquitous examples of a graph is the social
+humanities. A common example of a graph in popular culture is a social
 network. Transportation data, like roads and flight paths, also lend themselves
 to the graph structure. In the digital world, we can use graphs to map out the
 link connections between Wikipedia pages, as seen below with Abraham Lincoln.</p>
@@ -696,23 +679,20 @@ want to know how many flight connections we will need to make between Honolulu,
 Hawaii and Cairo, Egypt, or how many degrees of separation there are between
 Abraham Lincoln and Kevin Bacon on Wikipedia. We can also ask about which parts
 of the graph are the most connected and which are the least connected.</p>
+<p><!--
+ https://ucdavisdatalab.github.io/workshop_network_viz/index.html
+ - Characteristics of the nodes 
+ - questions you can ask about the edges
+ - network as a whole
+    - structure of the network
+    - exogenous (questions about additional data)
+    - Liza's ggraph presentation (one or two modes)
+
+multiple networks of the same data/situation
+--></p>
 </div>
-<div id="membership" class="section level3 hasAnchor" number="2.2.4">
-<h3><span class="header-section-number">2.2.4</span> Membership<a href="data.html#membership" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>In membership data, group membership is the organizing principle of the data
-structure. Entities can have membership in multiple groups, and relationships
-are defined between groups instead of the entities themselves. As such,
-relationships tend to represent complex processes rather than individual
-entities.</p>
-<p>One example of this type of data is student organization membership at UC
-Davis. One student may belong to many clubs or none at all. Environmental
-themed clubs may collaborate on given event like the Earth Day Celebration.
-Student groups themselves may also be a part of a higher level organization,
-like fraternities and sororities being a part of the Professional Sorority and
-Fraternity Council.</p>
-</div>
-<div id="spatial" class="section level3 hasAnchor" number="2.2.5">
-<h3><span class="header-section-number">2.2.5</span> Spatial<a href="data.html#spatial" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="spatial" class="section level3 hasAnchor" number="2.2.4">
+<h3><span class="header-section-number">2.2.4</span> Spatial<a href="data.html#spatial" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Depending on the context, spatial data can be thought of as either a data type,
 or a data structure. This workshop focuses on how data structures enable us to
 ask different types of questions. Since spatial data allows us to ask novel
@@ -770,7 +750,7 @@ gitbook.start({
 "link": "https://github.com/ucdavisdatalab/workshop_intro_to_databases/blob/main/01_data.Rmd",
 "text": null
 },
-"download": [["Intro-to-Databases.pdf", "PDF File"]],
+"download": ["_main.pdf"],
 "search": {
 "engine": "fuse",
 "options": null
