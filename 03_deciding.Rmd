@@ -27,3 +27,14 @@ project. If you want understand a subject deeply, you need to ask many different
 types of questions about it. And this necessitates storing your data in multiple
 forms.
 
+Some important questions to consider when you are deciding on a data store are:
+
+ * What is the structure of the data to be stored?
+ * How much data needs to be stored?
+ * How many people will be accessing the data store?
+ * How frequently will people be interacting with the data?
+ * Will the data be updated by humans or by a computer?
+ * How will people be accessing the data?
+
+<!-- Have a research project or question what is a good structure and 
+and database option, what would be a good second option, what would not work -->
