@@ -325,7 +325,7 @@ provide some level of support for spatial data. However, that level of support
 varies, so if you have specific requirements, it's best to do additional
 research before making a decision.
 
-| Software             | Support                                                                   | Cost | License               | Spatial Support                               |
+| Software             | Support                                                                   | Cost | License               | Spatial Data                                  |
 |-------------|--------------------------|-------|-------------|---------------------|
 | SQLite               | Extensive documentation and community support                             | Free | Public Domain         | vector support with SpatiaLite                |
 | PostgreSQL           | Technical documentation, with robust community support                    | Free | Open Source           | raster and vector support with PostGIS        |
