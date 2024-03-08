@@ -357,9 +357,9 @@ those data structures do not fit well into relational tables.
 
 1.  Compatible with multiple, non-tabular, data structures
 
-2.  Data requests are much faster
+2.  Data transactions are much faster than other data stores
 
-3.  Adding storage capacity is easier
+3.  Adding storage capacity is easier than for other data stores
 
 One of the strengths of relational databases is that we can easily combine data
 from different parts of the database using joins. However, functionality does
