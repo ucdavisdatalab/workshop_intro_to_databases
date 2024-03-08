@@ -31,8 +31,8 @@ contain.
 In comparison, a *database* is an organized collection of data that is linked
 or related in some way. Users can interact with a database through specialized
 software called a database management system, often abbreviated DBMS. Databases
-are not generally human readable. Databases have several key characteristics that
-differentiate them from other data stores like flat files.
+are not generally human readable. Databases have several key characteristics
+that differentiate them from other data stores like flat files.
 
 1.  **Structure** - Databases can store data with structures ranging from low
     to high complexity.
@@ -232,9 +232,8 @@ particular on campus eatery.
 
 ### Entity Relationship Diagrams
 
-Since relational databases may not have a graphical interface, it can be
-helpful to have a visual summary of a database before interacting with it. That
-is where the Entity Relationship Diagram (ERD) comes in. ERDs are a
+An Entity Relationship Diagram (ERD) provides a visual summary of of the
+information in a database without needing to interact with it. ERDs are a
 standardized way to depict the structure of a relational database. Each box in
 the diagram represents a table, with the table title at the top and the column
 names listed below it. The column data type appears next to each column name.
@@ -253,12 +252,12 @@ one-to-one when one observation in table A only corresponds to one observation
 in table B. This is the relationship between the titles and ratings tables in
 the IMDB database. The next type of relationship is a one-to-many relationship.
 In this case, one row in table A may be linked to many rows in table B. This is
-the relationship between the title and crew tables in the IMDB database. 
+the relationship between the title and crew tables in the IMDB database.
 
-Finally, there is the many-to-many relationship. In this case more one row in 
-table A can correspond to multiple rows in table B AND one row in table B can 
-correspond to multiple rows in table A. The classic example of this is cities 
-and zip codes. Many cities contain more than one zip code, but some zip codes 
+Finally, there is the many-to-many relationship. In this case more one row in
+table A can correspond to multiple rows in table B AND one row in table B can
+correspond to multiple rows in table A. The classic example of this is cities
+and zip codes. Many cities contain more than one zip code, but some zip codes
 also span multiple cities.
 
 ### Why Use Relational Databases?
@@ -276,11 +275,11 @@ There are three primary reasons to use a RDBMS as a data store:
 In our Die Hard movie spreadsheet example, we had 260 cells. However, in a
 relational database, storing that same data only requires 156 cells. That is a
 40% reduction in data size. For a multi-gigabyte data set, 40% makes a huge
-difference. Additionally, much of that information was stored as numbers instead
-of text, which makes its size on even smaller. Finally, we
-selected a subset of columns from each table, which means we didn't need to work
-with ALL of the data just because we wanted to work with some of it. Subsetting
-like this is much harder in traditional spreadsheet software.
+difference. Additionally, much of that information was stored as numbers
+instead of text, which makes its size on even smaller. Finally, we selected a
+subset of columns from each table, which means we didn't need to work with ALL
+of the data just because we wanted to work with some of it. Subsetting like
+this is much harder in traditional spreadsheet software.
 
 The source database of our Die Hard data, IMDB, is massive relative to
 spreadsheet software capabilities. The titles table alone has 10 million
