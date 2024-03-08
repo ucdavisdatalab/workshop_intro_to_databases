@@ -320,13 +320,13 @@ provide some level of support for spatial data. However, that level of support
 varies, so if you have specific requirements, it's best to do additional
 research before making a decision.
 
-| Software             | Complexity   | Support                                                                   | Cost | License               |
-|---------------|-------------|--------------------------|--------|---------------|
-| SQLite               | Less complex | Extensive documentation and community support                             | Free | Public Domain         |
-| PostgreSQL           | More complex | Spotty documentation but with robust community support                    | Free | Open Source           |
-| MySQL                | Less complex | Large community base, No professional support without a paid subscription | Free | Partially Open Source |
-| Microsoft SQL Server | Less complex | Robust professional and community support                                 | Paid | Proprietary           |
-| Oracle               | More complex | Robust professional and some community support                            | Paid | Proprietary           |
+| Software             | Support                                                                   | Cost | License               | Spatial Support                               |
+|-------------|--------------------------|-------|-------------|---------------------|
+| SQLite               | Extensive documentation and community support                             | Free | Public Domain         | vector support with SpatiaLite                |
+| PostgreSQL           | Technical documentation, with robust community support                    | Free | Open Source           | raster and vector support with PostGIS        |
+| MySQL                | Large community base, No professional support without a paid subscription | Free | Partially Open Source | built-in vector support                       |
+| Microsoft SQL Server | Robust professional and community support                                 | Paid | Proprietary           | built-in vector support                       |
+| Oracle               | Robust professional and some community support                            | Paid | Proprietary           | raster and vector support with Spatial Studio |
 
 : Table 2.2. A comparison of some of the more common software implementations
 of SQL databases.
