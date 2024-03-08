@@ -8,23 +8,26 @@ What data structure and data store combination would be the best option for
 storing your data? What would be a good second option? What option would a 
 a bad option? Explain your reasoning in each case.
 
+-------------------------------------------------------------------------------
 
-Research Question 1: You want to investigate the potential effects of climate
-change on agriculture in the state of California. You are collecting almond
-flowering data from almond farms across the state and combining that with
+
+**Research Question 1:** You want to investigate the potential effects of
+climate change on agriculture in the state of California. You are collecting
+almond flowering data from almond farms across the state and combining that with
 weather station data to see how changes in winter and spring temperatures affect
 the almond flowering dates. You collect digital flowering records via email, but
 some are only in hard copy and will be sent through the mail.
 
-Research Question 2: You are interested in how the structure of peoples' social
-circles impacts how a disease spreads through a population. You have created 
-1000 digital populations of 5000 people with different levels of connectivity
-between individuals and groups. You are the only one in your lab comfortable 
-working on computer simulations, so this is likely to be a solo project.
+**Research Question 2:** You are interested in how the structure of peoples'
+social circles impacts the way a disease spreads through a population. You have
+created 1000 digital populations of 5000 people with different levels of
+connectivity between individuals and groups. You are the only one in your lab
+comfortable working on computer simulations, so this is likely to be a solo
+project.
 
-Research Question 3: You are investigating how the meaning of the word footprint
-has expanded with the advent of the environmental movement and the internet.
-You are text mining the most prominent journals over the past 50 years to 
-see how the context in authors use the world "footprint" has changed in that 
+**Research Question 3:** You are investigating how the meaning of the word
+footprint has expanded with the advent of the environmental movement and the
+internet. You are text mining the most prominent journals over the past 50 years
+to see how the context in authors use the world "footprint" has changed in that
 time. You are working with several collaborators to curate the list of journals
 and compile the data.
