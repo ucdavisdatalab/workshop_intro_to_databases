@@ -1,11 +1,10 @@
 # Data
 
-> Data (noun): Quantities, characters, or symbols on which operations are
-> performed by a computer, considered collectively.
+> Data (noun): Quantities, characters, or symbols...considered collectively.
 >
 > \- Oxford English Dictionary
 
-```{=html}
+
 <!--
 Information becomes data when it takes on a structure.
 
@@ -30,7 +29,7 @@ so you can ask different questions
 Note: there are other definitions of data structure from other disciplines
 (ex. in comp sci), we will not be using those definitions
 -->
-```
+
 If you are doing research, chances are you are going to be working with data in
 some form or another. Even if you do not use traditional rows and columns, you
 are certainly working with some form of information. And if you have translated
@@ -39,14 +38,14 @@ are working with data. Information becomes data when we give it some sort of
 structure. That could be the rows and columns of a table, or something more
 human readable, like the grammar and syntax of natural language in text form.
 
-One of the challenges of working with data is figuring out a useful way, to
-store it. Thankfully, we have mostly left behind the 20th century's favorite
-way of storing data: paper in filing cabinets. Modern digital methods
-definitely take up less space but also have a higher barrier to entry. There
-are many more types of data stores available now as well. This means you will
-need to make a decision on which one to use. **Ultimately, the best way to
-store your data** **will depend on the data you want to store and the questions
-you want to ask** **with it.**
+One of the challenges of working with data is figuring out a useful way to store
+it. Thankfully, we have mostly left behind the 20th century's favorite way of
+storing data: paper in filing cabinets. Modern digital methods definitely take
+up less space but also have a higher barrier to entry. There are many more types
+of data stores available now as well. This means you will need to make a
+decision on which one to use. **Ultimately, the best way to store your data**
+**will depend on the data you want to store and the questions you want to ask**
+**with it.**
 
 When describing data, we generally talk about two main characteristics: data
 type and data structure.
@@ -81,8 +80,8 @@ as characters.
 
 Unlike with data types, a single piece of data cannot have a data structure.
 This is because data structure is about capturing relationships between data
-points. We will discuss five of the most common data: tabular/columnar, graph,
-tree, categorical/relational, and spatial data. In practice, data often
+points. We will discuss four of the most common data structures:
+tabular/columnar, graph, tree, and spatial data. In practice, data often
 exhibits traits from multiple data structures.
 
 Data is information translated into a form to store for later use. The type of
@@ -100,23 +99,6 @@ just as important as the analysis you do afterward.
 
 ### Columnar/Tabular
 
-```{=html}
-<!--
-Convention is rows are observations and columns are your variables,
-value associated with a given variable for a given observation lives in that
-cell
-
-Discrete (brief) observations of a particular thing, 
-dealing with a class of object where every observation of one of those objects
-can be described using the same set of variables
-
-sorting is easy
-
-better at working across the entire data structure
-
-location and scale aka spread
--->
-```
 ```{r format_cars, echo=FALSE}
 
 makers = c('Mazda', 'Merc', 'Toyota', 'Ferarri', 'Lincoln', 'Chrysler', 'Dodge')
@@ -143,7 +125,7 @@ common, especially in the sciences. Many researchers, regardless of field store
 at least some of their data in tabular form. Tables work well when all of the
 objects in your study can be summarized with the same set of characteristics.
 Many study designs require this, which is one of the reasons why tabular data
-is so common.
+is so common. 
 
 The table below contains data from the US magazine *Motor Trend* in 1974. In
 the table below, each row is an observation of a car model released between
