@@ -346,22 +346,41 @@ databases can contain data from multiple structures, including
 -   wide column tables
 
 This makes NoSQL databases are much better at storing tree and graph data, as
-those data structures do not fit well into relational tables.
+those data structures do not fit well into relational tables. 
 
 ### Why Use NoSQL Databases?
 
-1.  Compatible with multiple data non-tabular structures
+1.  Compatible with multiple, non-tabular, data structures
 
-2.  Capable of storing vast amounts of data with impressive speed
+2.  Data requests are much faster
 
-3.  Adding more computing power is easier
+3.  Adding storage capacity is easier
 
-Because NoSQL databases do not have to adhere to the more rigid structure of
-relational databases, they can store more data and access and modify it more
-quickly than relational databases. This is particularly important when working
-with textual data, which can easily take up many terabytes of storage. It is
-also generally easier to upgrade NoSQL databases, which is important when you
-are working on the edge of what is possible data storage-wise.
+One of the strengths of relational databases is that we can easily combine data
+from different parts of the database using joins. However, functionality does
+come with a cost. Using joins means relational databases must move a lot of data
+around, which can slow down operations. Because NoSQL databases do not have this
+feature, they can respond much faster to requests for information. While a RDBMS
+can support a few thousand transactions per day, a NoSQL database can run
+millions of transactions a day.
+
+This lack of data joins also means NoSQL databases can also store data in
+in many different locations without having it affect the database's response
+time. This means a single NoSQL database could run on just as easily multiple 
+on multiple machines as one machine. The practical implication of this is that
+adding more storage space or processing power is much easier. You can add an
+additional computer instead of needing to upgrade the one you already have.
+
+One common use case for NoSQL databases is for social network sites like
+Facebook and Twitter/X. Social media contains a lot of text data that does not
+fit neatly into the tabular structure mandated by relational databases.
+Additionally, minimizing response time is critical for a company who wants to
+convince more people use their website or platform. Finally, social media
+generates massive amounts of data, which means companies like Twitter/X and Meta
+regularly need to expand their storage capacity, something that is much easier
+with NoSQL databases.
+
+<!-- companies may switch to nosql as their computing needs grow -->
 
 ### Example Software
 
@@ -381,5 +400,5 @@ the functionality available varies fairly widely.
 | Neo4J     | Graph                           | vector            |
 | ArangoDB  | Tree/Document, graph, key-value | vector            |
 
-: Table 3.3. A comparison of some of the more common software implementations 
+: Table 3.3. A comparison of some of the more common software implementations
 of NoSQL databases.
