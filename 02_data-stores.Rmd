@@ -47,25 +47,31 @@ that differentiate them from other data stores like flat files.
     same time without locking people out or introducing conflicts. They also
     provide fine-grained controls on who can access, modify, and delete data.
 
-Specific types of databases have other differentiating features, like data
-integrity constraints, flexible data structure support. Databases also have
-several drawbacks:
+Databases can also formalize some processes that should be done on flat files
+but often are not. The first of these is version control. When working with data
+it is vitally important to define which version of the data is the correct and
+up to date. This is particularly important when multiple people have the data
+stored locally on their computers. Databases provide a definitive version of the 
+data that users can access remotely. This ensures that everyone working on a 
+project uses the same data.
 
--   Data in databases is not human readable without specialized software. This
-    is different from some file types including csv, xml, DOT, and GML.
-    However, binary files, like xlsx and docx, require specialized software as
-    well.
+The second is administration. Because databases can set controls over who has
+access to what, you can control who has the ability to add data to and modify
+the database. You also need to designate someone to be in charge of fixing 
+things if something in the database breaks. This is also true for flat files but
+because everyone has the same access it is often not clear whose job it is.
 
--   Database software generally has a steeper learning curve than graphical
-    user interfaces. You may need to learn a specialized language to interact
-    with the data in your database.
+Some databases also provide tools to prevent mistakes and maintain data
+integrity. This includes restricting data to specific data types or specific
+sets of values. This means if you type a "w" instead of a "2", the database will
+tell you to check your data and try again. 
 
--   There may be cost associated, either for the database software or for
-    hardware needed to run the software.
-
--   Databases require some level of administration. Someone will need to be in
-    charge of adding data to the database, determining who has access to what,
-    and fixing things when they break.
+Most databases do not have a Graphical User Interface (GUI) like Microsoft Excel
+or Google Sheets. This means you will be interacting with the database through
+a query language. If you already use a programming language like R or
+python, this will be very familiar to you. If not, don't worry. Query languages,
+like SQL, are designed to be simpler and easier to use than most programming
+languages, but also incredibly powerful.
 
 If you are running into any of the following issues, a database may be the
 solution to your problems.
