@@ -145,7 +145,7 @@ is much more tedious than analyzing small ones.
 
 Spreadsheets also store data in ways that cause a lot of data duplication and
 make data entry susceptible to typos. In the spreadsheet visualized below, we
-have data on the Die Hard movie franchise. Specifically, we have information
+have data on the Die Hard movie franchise [@imdb]. Specifically, we have information
 about the actors that starred in the series and the movies in which they
 appeared.
 
@@ -249,7 +249,7 @@ tables can be combined, and which keys should be used to combine them. The
 connector lines also specify what type of relationship between the two tables.
 
 *Figure 3.1. A partial Entity Relationship Diagram for the IMDB non-commercial
-database.*
+database [@imdb; @sql_imdb].*
 
 ![](img/imdb_ERD.png)
 

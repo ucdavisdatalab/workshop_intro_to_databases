@@ -1,3 +1,4 @@
+
 # Data
 
 > Data (noun): Quantities, characters, or symbols...considered collectively.
@@ -127,11 +128,11 @@ objects in your study can be summarized with the same set of characteristics.
 Many study designs require this, which is one of the reasons why tabular data
 is so common. 
 
-The table below contains data from the US magazine *Motor Trend* in 1974. In
-the table below, each row is an observation of a car model released between
-1973 and 1974. The magazine recorded the make, model and origin of each car and
-measured the car's fuel efficiency (mpg), horsepower, weight, and number of
-cylinders in the engine.
+The table below contains data from the US magazine *Motor Trend* in 1974
+[@mt_cars]. In the table below, each row is an observation of a car model released
+between 1973 and 1974. The magazine recorded the make, model and origin of each
+car and measured the car's fuel efficiency (mpg), horsepower, weight, and number
+of cylinders in the engine.
 
 -------------------------------------------------------------------------------
 
@@ -183,7 +184,7 @@ observations that fall under a particular subtree.
 Family trees are a common example of tree structured data. In family trees, the
 nodes represent people in the family. Horizontal lines represent marriages or
 couplings, and vertical lines represent a connection to offspring. In the
-family tree of the Tutor Dynasty in England below, it is easy to determine
+family tree of the Tutor Dynasty in England below [@tudor], it is easy to determine
 things like who had the most wives (Henry VIII), which people shared a
 generation, and who was the last member of the dynasty (James I of England).
 Questions like what was the average age at death for the Tudors would be harder
@@ -227,7 +228,8 @@ Graph structured data tends to be more common in the social sciences and
 humanities. A common example of a graph in popular culture is a social
 network. Transportation data, like roads and flight paths, also lend themselves
 to the graph structure. In the digital world, we can use graphs to map out the
-link connections between Wikipedia pages, as seen below with Abraham Lincoln.
+link connections between Wikipedia pages, as seen below with Abraham Lincoln 
+[@wqs].
 
 *Figure 2.5. A graph of relationships between Abraham Lincoln's Wikipedia page
 and other pages linked to it. Each linkage contains a label describing the 
@@ -270,7 +272,7 @@ data to predict values for places where we don't any.
 
 *Figure 2.6. A map of the counties of North Carolina, with the county areas
 shaded to correspond to the number of live births in the county from 1974 to
-1978.*
+1978 [@nc].*
 
 ```{r, echo=FALSE}
 suppressMessages(library(sf))

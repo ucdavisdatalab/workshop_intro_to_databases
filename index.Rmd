@@ -60,3 +60,7 @@ information courtesy of IMDb ([https://www.imdb.com][imdb]). Used with
 permission for non-commercial purposes only.
 
 [imdb]: https://www.imdb.com
+
+### References
+
+::: {#refs}
