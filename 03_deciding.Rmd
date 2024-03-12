@@ -44,17 +44,21 @@ and database option, what would be a good second option, what would not work -->
 ### General Database Information
 
 -   [Intro to Databases (for people who don’t know a whole lot about them)][medium]
+-   [Database Management System (DBMS) Tutorial][g4gsql]
+-   [NoSQL Explained][nosql]
+-   [Introduction to NoSQL][g4gno]
 
 ### Learning Query Languages
 
--   [W3 Schools SQL Tutorial][w3sql]
--   [W3 MongoDB]
+-   [W3Schools SQL Tutorial][w3sql]
+-   [W3Schools PostgreSQL Tutorial][w3post]
+-   [W3Schools MongoDB Tutorial][w3mongo]
 
 ### Campus Database Resources
 
 -   [Research Data Services][rds], and the [data service librarians][email]
 -   [Research Data Management Topic Guide][rdm]
--   [Davis Cloud Services][cloud], includes Amazon Web Services, Microsoft
+-   [UC Davis Cloud Services][cloud], includes Amazon Web Services, Microsoft
     Azure, and private cloud services
 -   [Research Electronic Data Capture (REDCap)][redcap]
 
@@ -67,3 +71,8 @@ and database option, what would be a good second option, what would not work -->
 [cloud]: https://cloud.ucdavis.edu/services-available
 [email]: mailto:dataservices@ucdavis.edu
 [w3sql]: https://www.w3schools.com/sql/
+[w3post]: https://www.w3schools.com/postgresql/index.php
+[w3mongo]: https://www.w3schools.com/mongodb/index.php
+[nosql]: https://www.mongodb.com/nosql-explained
+[g4gno]: https://www.geeksforgeeks.org/introduction-to-nosql/
+[g4gsql]: https://www.geeksforgeeks.org/dbms/
