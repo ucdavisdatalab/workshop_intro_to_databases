@@ -1,5 +1,5 @@
 ---
-title:  An Overview of Databases and Data Storage Technologies
+title:  An Overview of Databases and Data Storage
 author: [Elise Hellwig]
 date: "`r Sys.Date()`"
 
@@ -10,6 +10,7 @@ lang: en-us
 
 site: "bookdown::bookdown_site"
 knit: "bookdown::render_book"
+bibliography: data/references.bib  
 ---
 
 # Workshop Description 
@@ -28,8 +29,6 @@ the [Research Computing micro-credential][micro_cred]
 After completing this workshop, you will be able to answer the following
 questions:
 
-  * What is the difference between information and data?
-  
   * What are the most common data structures people use?
   
   * Which data structures lend themselves to answering different types of
@@ -39,7 +38,7 @@ questions:
   
   * What are the differences between relational and noSQL databases?
   
-  * When would a database help answer a research question?
+  * When would a database help answer a particular research question?
 
 
 [sql]: https://ucdavisdatalab.github.io/workshop_intro_to_sql/
@@ -64,3 +63,4 @@ permission for non-commercial purposes only.
 ### References
 
 ::: {#refs}
+:::
