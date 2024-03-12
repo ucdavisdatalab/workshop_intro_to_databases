@@ -1,5 +1,4 @@
 tab:unnamed-chunk-1
-tab:unnamed-chunk-3
 workshop-description
 learning-objectives
 prerequisites
@@ -25,7 +24,7 @@ why-use-nosql-databases
 example-software
 choosing-the-right-data-store
 further-reading
-assessment
 general-database-information
 learning-query-languages
 campus-database-resources
+assessment
