@@ -18,7 +18,7 @@ need to preserve this access over a period of time.
 Regardless of your data's structure you have two general options for how to
 store your data digitally: in flat files or in a database.
 
-Probably the most common type of data store is a flat file. A *flat file* is
+Probably the most common type of data store is a flat file. A **flat file** is
 stand alone file on your computer that is not linked to data elsewhere. You can
 store tabular data in .xlsx and .csv files, tree data in .xml and .json files,
 graph data in .GML and .DOT, and spatial data in .GeoJSON and .GeoTIFF files.
@@ -28,7 +28,7 @@ In addition, some of these file types, like csvs and jsons are human readable,
 meaning you do *not* need special software to access or modify the data they
 contain.
 
-In comparison, a *database* is an organized collection of data that is linked
+In comparison, a **database** is an organized collection of data that is linked
 or related in some way. Users can interact with a database through specialized
 software called a database management system, often abbreviated DBMS. Databases
 are not generally human readable. Databases have several key characteristics
@@ -41,7 +41,7 @@ that differentiate them from other data stores like flat files.
     flat files. Additionally, databases support substantial computing upgrades,
     which means you can maintain performance as your data set grows. Even if
     you upgrade your computer, you still can't have more than 1 million rows in
-    Excel.
+    an Excel file.
 
 3.  **Access** - Databases allow multiple people to interact with data at the
     same time without locking people out or introducing conflicts. They also
@@ -105,25 +105,6 @@ solution to your problems.
 
 -   Processing your data requires you to spend a lot of time moving data
     between spreadsheets by hand.
-
-```{css, echo=FALSE}
-pre {
-  max-height: 300px;
-  overflow-y: auto;
-}
-
-pre[class] {
-  max-height: 300px;
-}
-```
-
-```{css, echo=FALSE}
-.scroll-300 {
-  max-height: 300px;
-  overflow-y: auto;
-  background-color: inherit;
-}
-```
 
 ## Spreadsheets
 
