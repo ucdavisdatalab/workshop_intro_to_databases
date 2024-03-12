@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>An Overview of Databases and Data Storage Technologies</title>
-  <meta name="description" content="An Overview of Databases and Data Storage Technologies" />
+  <title>An Overview of Databases and Data Storage</title>
+  <meta name="description" content="An Overview of Databases and Data Storage" />
   <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="An Overview of Databases and Data Storage Technologies" />
+  <meta property="og:title" content="An Overview of Databases and Data Storage" />
   <meta property="og:type" content="book" />
   
   
   <meta name="github-repo" content="ucdavisdatalab/workshop_intro_to_databases" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="An Overview of Databases and Data Storage Technologies" />
+  <meta name="twitter:title" content="An Overview of Databases and Data Storage" />
   
   
   
@@ -23,7 +23,7 @@
 <meta name="author" content="Elise Hellwig" />
 
 
-<meta name="date" content="2024-03-08" />
+<meta name="date" content="2024-03-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -61,6 +61,28 @@
   
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 </head>
 
@@ -84,7 +106,10 @@
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#learning-objectives"><i class="fa fa-check"></i><b>1.1</b> Learning Objectives</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#prerequisites"><i class="fa fa-check"></i><b>1.2</b> Prerequisites</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#credits"><i class="fa fa-check"></i><b>1.3</b> Credits</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#credits"><i class="fa fa-check"></i><b>1.3</b> Credits</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#references"><i class="fa fa-check"></i><b>1.3.1</b> References</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>2</b> Data</a>
 <ul>
@@ -116,7 +141,10 @@
 <li class="chapter" data-level="3.3.2" data-path="data-stores.html"><a href="data-stores.html#example-software"><i class="fa fa-check"></i><b>3.3.2</b> Example Software</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html"><i class="fa fa-check"></i><b>4</b> Choosing the Right Data Store</a></li>
+<li class="chapter" data-level="4" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html"><i class="fa fa-check"></i><b>4</b> Choosing the Right Data Store</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html#further-reading"><i class="fa fa-check"></i><b>4.1</b> Further Reading</a></li>
+</ul></li>
 <li class="chapter" data-level="5" data-path="assessment.html"><a href="assessment.html"><i class="fa fa-check"></i><b>5</b> Assessment</a></li>
 <li class="divider"></li>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
@@ -132,7 +160,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">An Overview of Databases and Data Storage Technologies</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">An Overview of Databases and Data Storage</a>
           </h1>
         </div>
 
@@ -141,9 +169,9 @@
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">An Overview of Databases and Data Storage Technologies</h1>
+<h1 class="title">An Overview of Databases and Data Storage</h1>
 <p class="author"><em>Elise Hellwig</em></p>
-<p class="date"><em>2024-03-08</em></p>
+<p class="date"><em>2024-03-11</em></p>
 </div>
 <div id="workshop-description" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">1</span> Workshop Description<a href="index.html#workshop-description" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -160,13 +188,12 @@ the <a href="https://gradpathways.ucdavis.edu/research-computing-pathway">Resear
 <p>After completing this workshop, you will be able to answer the following
 questions:</p>
 <ul>
-<li><p>What is the difference between information and data?</p></li>
 <li><p>What are the most common data structures people use?</p></li>
 <li><p>Which data structures lend themselves to answering different types of
 research questions?</p></li>
 <li><p>What is a database?</p></li>
 <li><p>What are the differences between relational and noSQL databases?</p></li>
-<li><p>When would a database help answer a research question?</p></li>
+<li><p>When would a database help answer a particular research question?</p></li>
 </ul>
 </div>
 <div id="prerequisites" class="section level2 hasAnchor" number="1.2">
@@ -180,7 +207,30 @@ with active or planned data collection and storage.</p>
 <p>All images were created by Elise Hellwig unless otherwise noted. Movie
 information courtesy of IMDb (<a href="https://www.imdb.com">https://www.imdb.com</a>). Used with
 permission for non-commercial purposes only.</p>
+<div id="references" class="section level3 hasAnchor" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> References<a href="index.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div class="csl-entry">
+Henderson, Harold V., and Paul F. Velleman. 1981. <span>“Building Multiple Regression Models Interactively.”</span> <em>Biometrics</em> 37 (2): 391–411. <a href="https://doi.org/10.2307/2530428">https://doi.org/10.2307/2530428</a>.
+</div>
+<div class="csl-entry">
+IMDb. 2023. <span>“<span>IMDb</span> Non-Commercial Datasets. <span>IMDb</span> Developer.”</span> November 12, 2023. <a href="https://developer.imdb.com/non-commercial-datasets/">https://developer.imdb.com/non-commercial-datasets/</a>.
+</div>
+<div class="csl-entry">
+Symons, M. J., R. C. Grimson, and Y. C. Yuan. 1983. <span>“Clustering of Rare Events.”</span> <em>Biometrics</em> 39 (1): 193–205. <a href="https://doi.org/10.2307/2530819">https://doi.org/10.2307/2530819</a>.
+</div>
+<div class="csl-entry">
+Tingeborn, Jonas. 2023. <span>“Imdb-Sqlite: Imports <span>IMDB</span> <span>TSV</span> Files into a <span>SQLite</span> Database.”</span> <a href="https://github.com/jojje/imdb-sqlite">https://github.com/jojje/imdb-sqlite</a>.
+</div>
+<div class="csl-entry">
+Wikimedia. 2024. <span>“Wikidata Query Service. Wikidata.”</span> March 5, 2024. <a href="https://query.wikidata.org/">https://query.wikidata.org/</a>.
+</div>
+<div class="csl-entry">
+Wikipedia contributors. 2024. <span>“House of Tudor.”</span> In <em>Wikipedia</em>. Wikipedia, The Free Encyclopedia. <a href="https://en.wikipedia.org/w/index.php?title=House_of_Tudor&amp;oldid=1212771076">https://en.wikipedia.org/w/index.php?title=House_of_Tudor&amp;oldid=1212771076</a>.
+</div>
+</div>
 
+</div>
 </div>
 </div>
             </section>

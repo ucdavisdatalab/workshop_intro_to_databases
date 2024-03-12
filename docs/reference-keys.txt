@@ -4,6 +4,7 @@ workshop-description
 learning-objectives
 prerequisites
 credits
+references
 data
 data-types
 data-structures
@@ -23,4 +24,8 @@ nosql-databases
 why-use-nosql-databases
 example-software
 choosing-the-right-data-store
+further-reading
 assessment
+general-database-information
+learning-query-languages
+campus-database-resources
