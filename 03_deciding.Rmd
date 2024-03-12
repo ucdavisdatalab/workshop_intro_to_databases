@@ -38,3 +38,32 @@ Some important questions to consider when you are deciding on a data store are:
 
 <!-- Have a research project or question what is a good structure and 
 and database option, what would be a good second option, what would not work -->
+
+## Further Reading
+
+### General Database Information
+
+-   [Intro to Databases (for people who don’t know a whole lot about them)][medium]
+
+### Learning Query Languages
+
+-   [W3 Schools SQL Tutorial][w3sql]
+-   [W3 MongoDB]
+
+### Campus Database Resources
+
+-   [Research Data Services][rds], and the [data service librarians][email]
+-   [Research Data Management Topic Guide][rdm]
+-   [Davis Cloud Services][cloud], includes Amazon Web Services, Microsoft
+    Azure, and private cloud services
+-   [Research Electronic Data Capture (REDCap)][redcap]
+
+
+
+[medium]: https://medium.com/@rwilliams_bv/intro-to-databases-for-people-who-dont-know-a-whole-lot-about-them-a64ae9af712
+[redcap]: https://health.ucdavis.edu/data/redcap.html
+[rdm]: https://guides.library.ucdavis.edu/data-management
+[rds]: https://servicehub.ucdavis.edu/servicehub?id=catalog&spa=1&sys_id=58cf6a65db87d09009ad5055ca96194d
+[cloud]: https://cloud.ucdavis.edu/services-available
+[email]: mailto:dataservices@ucdavis.edu
+[w3sql]: https://www.w3schools.com/sql/
