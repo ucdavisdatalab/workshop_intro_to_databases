@@ -1,0 +1,6 @@
+Software,Support,Cost,License,Spatial Data
+SQLite,Extensive documentation and community support,Free,Public Domain,Vector support with SpatiaLite
+PostgreSQL,"Technical documentation, with robust community support",Free,Open Source,Raster and vector support with PostGIS
+MySQL,"Large community base, No professional support without a paid subscription",Free,Partially Open Source,Built-in vector support
+Microsoft SQL Server,Robust professional and community support,Paid,Proprietary,Built-in vector support
+Oracle,Robust professional and some community support,Paid,Proprietary,Raster and vector support with Spatial Studio

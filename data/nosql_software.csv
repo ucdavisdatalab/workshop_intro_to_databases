@@ -1,0 +1,7 @@
+Software,Data Structure,Spatial Data
+MongoDB,Tree/Document,vector
+Couchbase,Tree/Document,vector
+Cassandra,Column Family,vector (DataStax)
+Redis,Key-value,point only
+Neo4J,Graph,vector
+ArangoDB,"Tree/Document, graph, key-value",vector

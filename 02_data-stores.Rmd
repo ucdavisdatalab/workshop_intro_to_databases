@@ -306,16 +306,21 @@ provide some level of support for spatial data. However, that level of support
 varies, so if you have specific requirements, it's best to do additional
 research before making a decision.
 
-| Software             | Support                                                                   | Cost | License               | Spatial Data                                  |
-|-------------|--------------------------|-------|-------------|---------------------|
-| SQLite               | Extensive documentation and community support                             | Free | Public Domain         | vector support with SpatiaLite                |
-| PostgreSQL           | Technical documentation, with robust community support                    | Free | Open Source           | raster and vector support with PostGIS        |
-| MySQL                | Large community base, No professional support without a paid subscription | Free | Partially Open Source | built-in vector support                       |
-| Microsoft SQL Server | Robust professional and community support                                 | Paid | Proprietary           | built-in vector support                       |
-| Oracle               | Robust professional and some community support                            | Paid | Proprietary           | raster and vector support with Spatial Studio |
+-------------------------------------------------------------------------------
 
-: Table 2.2. A comparison of some of the more common software implementations
-of SQL databases.
+```{r, echo=FALSE}
+
+sql = read.csv('data/sql_software.csv')
+
+sql_cap = paste("A comparison of some of the more common software",
+                "implementations of SQL databases.")
+
+sql_cols = c("Software", "Support", "Cost", "License", "Spatial Data")
+
+kbl(sql, col.names=sql_cols, caption=sql_cap) 
+
+```
+
 
 ## NoSQL Databases
 
@@ -377,14 +382,18 @@ Similar to RDBMSs, all the most common NoSQL database software provides some
 support of spatial data. However, that support is limited to vector data and
 the functionality available varies fairly widely.
 
-| Software  | Data Structure                  | Spatial Support   |
-|-----------|---------------------------------|-------------------|
-| MongoDB   | Tree/Document                   | vector            |
-| Couchbase | Tree/Document                   | vector            |
-| Cassandra | Column family                   | vector (DataStax) |
-| Redis     | key-value                       | point only        |
-| Neo4J     | Graph                           | vector            |
-| ArangoDB  | Tree/Document, graph, key-value | vector            |
+-------------------------------------------------------------------------------
+```{r, echo=FALSE}
 
-: Table 3.3. A comparison of some of the more common software implementations
-of NoSQL databases.
+nosql = read.csv('data/nosql_software.csv')
+
+nosql_cap = paste("A comparison of some of the more common software",
+                "implementations of NoSQL databases.")
+
+nosql_cols = c("Software", "Data Structure", "Spatial Data")
+
+kbl(nosql, col.names=nosql_cols, caption=nosql_cap) 
+
+
+```
+
