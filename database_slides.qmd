@@ -1,0 +1,804 @@
+---
+title: "An Overview of Databases and Data Storage"
+title-slide-attributes:
+  data-background-image: img/slides/datalab-logo-full-color-rgb.png
+  data-background-size: 35%
+  data-background-position: 5% 2%
+author: "Elise Hellwig"
+format: 
+  revealjs:
+    logo: img/slides/abridged_datalab_logo.png
+    sc-sb-title: true
+    theme: simple
+filters:
+  - reveal-header
+slide-level: 3
+editor: source
+bibliography: data/references.bib  
+nocite: '@*'
+---
+
+```{r format_cars, echo=FALSE}
+
+makers = c('Mazda', 'Merc', 'Toyota', 'Ferarri', 'Lincoln', 'Chrysler', 'Dodge')
+origins = c(rep('Japan', 2), rep('Europe', 7), rep('Japan', 2), rep('USA', 3))
+
+
+maker_ids = sapply(makers, grep, rownames(mtcars)) |> 
+  unlist(use.names=FALSE) |>
+  unique()
+
+mpg = mtcars[maker_ids, c('mpg', 'cyl', 'hp', 'wt', 'am')]
+
+rownames(mpg) = gsub('Merc', 'Mercedes-Benz', rownames(mpg))
+mpg$origin = origins
+
+names(mpg) = c('mpg', 'cylinders', 'horsepower', 'weight', 'manual', 'origin')
+
+```
+# Introduction {background-image="img/slides/Burgess_Field.jpg" background-opacity="0.5"}
+
+## Topics Covered
+
+-   What is data?
+
+-   What are the most common data structures people use?
+
+-   Which data structures lend themselves to answering different types of
+    research questions?
+
+-   What is a database vs a data store?
+
+-   What are the differences between relational and noSQL databases?
+
+-   How to pick a data stored based on your research question?
+
+## Microcredentials
+
+<br>
+
+An Overview of Databases and Data Storage is a part of the 
+[[Research Computing GradPathways micro-credential]{.underline}][micro], and is
+a prerequisite for Introduction to SQL (event, [[reader]{.underline}][dl_sql]
+and Spatial SQL (event, [[reader]{.underline}][dl_ssql]) workshops.
+
+<br>
+
+![](img/slides/GPI_logo.png)
+
+[micro]: https://ucd.badgr.com/public/pathway/6160c163fc391a6821c02fbd
+[dl_sql]:  https://ucdavisdatalab.github.io/workshop_intro_to_sql/
+[dl_ssql]: https://github.com/ucdavisdatalab/Spatial_SQL
+
+## 
+::: {style="font-size: 140%;"}
+
+Question → Data Structure → Data Store
+:::
+
+## Road Map{background-image="img/slides/directions.png" background-size="40%"
+            background-position="80% 30%"}
+
+::: {style="font-size: 90%;"}
+
+-   Data
+    -   What is data?
+    -   Data Types
+    -   Data Structures 
+-   Data Stores
+    -   Flat File vs. Database
+    -   Spreadsheets
+    -   Relational Databases
+    -   NoSQL Databases
+-   Picking a Data Store
+
+:::
+
+### Credits
+::: {style="font-size: 70%;"}
+
+All images were created by Elise Hellwig unless otherwise noted. Movie
+information courtesy of IMDb ([https://www.imdb.com][imdb]). Used with
+permission for non-commercial purposes only.
+
+[imdb]: https://www.imdb.com
+
+:::
+#### Icons - color modified
+
+::: {style="font-size: 50%;"}
+
+
+Roadmap: [By Font Awesome Free 5.2.0 by \@fontawesome - https://fontawesome.com][rm],
+CC BY 4.0
+
+Data: [By priyanka, "data", an icon from Noun Project][fr], CC BY 4.0
+
+Tabular Data: [By Adam Mullin - Noun Project][tad], CC0
+
+Tree Data: [By HitomiAkane, Tree icon-arzwiki.svg][td], CC BY-SA 4.0
+
+Graph Data: [By Adam Beasley - The Noun Project][gd], CC BY 3.0
+
+Spatial Data: [By Ben Davis, Noun Project Map icon][sd], CC BY 3.0
+
+Data Stores: [By Gaelen Pinnock][ds] - Designer commissioned by the UCT Research
+office, CC BY-SA 4.0
+
+Spreadsheets: [By Icons8 - Noun Project][ss], CC0 
+
+Relational Databases: [By Aybige - The Noun Project][rd], CC BY 4.0
+
+NoSQL Databases: [By Five by Five - Noun Project][nd], CC0
+
+How To Decide: [By SimpleIcon http://www.simpleicon.com/][htd], CC BY 3.0, 
+
+Further Reading: [By Icon Lauk from the Noun Project][fr], CC BY 3.0 
+:::
+
+[rm]: https://commons.wikimedia.org/w/index.php?curid=71510971
+[tad]: https://commons.wikimedia.org/w/index.php?curid=67122938
+[td]: https://commons.wikimedia.org/w/index.php?curid=130967171
+[gd]: https://commons.wikimedia.org/w/index.php?curid=105266675
+[sd]: https://commons.wikimedia.org/w/index.php?curid=74462493
+[ds]: https://commons.wikimedia.org/w/index.php?curid=78355715
+[ss]: https://commons.wikimedia.org/w/index.php?curid=67122942
+[rd]: https://commons.wikimedia.org/w/index.php?curid=64472365
+[nd]: https://commons.wikimedia.org/w/index.php?curid=64905590
+[htd]: https://commons.wikimedia.org/w/index.php?curid=47382021
+[fr]: https://commons.wikimedia.org/w/index.php?curid=109499378
+
+# Data{background-image="img/slides/Noun_Data.png" background-size="95%"
+      background-opacity="0.1"}
+      
+
+<br>
+
+> Data (noun): Quantities, characters, or symbols...considered collectively.
+>
+> \- Oxford English Dictionary
+
+## What is data?{background-image="img/slides/Noun_Data.png"
+                background-size="10%" background-opacity="0.8"
+                background-position="92% 7%"}
+
+<br>
+
+Data is information translated into a form for storage and later use. That form
+could be:
+
+-   Rows and columns of a spreadsheet
+-   A visual diagram
+-   Written human language
+-   And many others...
+
+
+## Data Types{background-image="img/slides/Noun_Data.png"
+              background-size="10%" background-opacity="0.8"
+              background-position="92% 7%"}
+
+Data type tells your computer what types of operations make sense.
+
+-   integer
+-   decimal/floating point numbers
+-   characters (text)
+-   Boolean values (TRUE or FALSE)
+-   Dates and times
+
+## Data Structures{background-image="img/slides/Noun_Data.png"
+                  background-size="10%" background-opacity="0.8"
+                  background-position="92% 7%"}
+
+::: {style="font-size: 130%;"}
+-   Tabular/columnar
+-   Tree
+-   Graph
+-   Spatial
+:::
+
+<br>
+
+::: {style="font-size: 175%; text-align: center;"}
+Question → Data structure
+:::
+
+## Tabular Data{background-image="img/slides/tabular.png"
+                background-size="20%" background-opacity="0.8"
+                background-position="92% 7%"}
+
+<br>
+<br>
+
+::: {style="font-size: 60%;"}
+```{r, echo=FALSE}
+
+library(kableExtra)
+
+mpg_cap = paste("A subset of the mtcars data set, containing information",
+                "about 32 cars from the 1974 Motor Trend Magazine",
+                "(Henderson and Velleman 1981).")
+
+kbl(mpg, caption = mpg_cap) |>
+   scroll_box(width = "100%", height = "550px")
+
+```
+:::
+
+### Tabular Structure{background-image="img/slides/tabular.png"
+                      background-size="10%" background-opacity="0.8"
+                      background-position="92% 7%"}
+
+-   Organized by rows and columns
+-   Each row is an observation, each column a measurement
+-   Useful when all study subjects can be described with the same set of
+    characteristics
+-   Focus is at the observation level
+-   Sorting observations is easy
+
+### Tabular Data Research Questions{background-image="img/slides/tabular.png"
+                                    background-size="10%"
+                                    background-opacity="0.8"
+                                    background-position="92% 7%"}
+::: {style="font-size: 75%;"}
+
+-   What is the average value of a particular measurement across a data set?
+-   What is the range or spread of values in a data set?
+-   Are there trends in the values of a variable?
+-   How to two columns in a data set relate to each other?
+:::
+#### Example Questions?
+
+::: {style="font-size: 75%;"}
+
+-   What is the is the average yield (lb/acre) for California almond farms?
+-   What is the normal range of values for a vitamin A blood test in humans?
+-   Have summer temperatures increased in the Bay Area, and if so, by how much?
+-   Are there compounds present in blood we can use to detect rabies in urban
+    wildlife?
+:::
+### `mtcars` Tabular Questions{background-image="img/slides/tabular.png"
+                                    background-size="10%"
+                                    background-opacity="0.8"
+                                    background-position="92% 7%"}
+
+::: {style="font-size: 70%;"}
+```{r}
+kbl(mpg) |>
+   scroll_box(width = "100%", height = "600px")
+```
+:::
+
+## Tree Data{background-image="img/slides/tree.svg"
+             background-size="25%" background-opacity="0.8"
+             background-position="92% 7%"}
+
+<br>
+
+![](img/House_of_Tudor.png)
+
+### Tree Structure{background-image="img/slides/tree.svg"
+                  background-size="10%" background-opacity="0.8"
+                  background-position="92% 7%"}
+
+::: columns
+::: {.column width="60%"}
+-   Organized around relationships between entities
+-   Structure more important than individual observations
+-   Explicitly nested relationships
+-   The root is the center of the tree
+-   Distance from the root node defines place in the hierarchy
+-   Subsetting observations is easy
+:::
+
+::: {.column width="40%"}
+![](img/tree_data.png){width="120%"}
+:::
+:::
+
+### Tree Data Research Questions{background-image="img/slides/tree.svg"
+                                    background-size="10%"
+                                    background-opacity="0.8"
+                                    background-position="92% 7%"}
+
+-   How many nodes separate two entities?
+-   Which elements fall under a particular subtree?
+-   Text or directory searching
+
+#### Examples Questions
+
+-   Are elephants more closely related to sloths or rhinoceroses?
+-   How many species of dinosaurs were there and are there any alive today?
+-   Which journals published the most articles mentioning AI this year?
+
+### `mtcars` Tree Questions {background-image="img/slides/tree.svg"
+                                    background-size="10%"
+                                    background-opacity="0.8"
+                                    background-position="92% 7%"}
+
+![](img/mpg_tree_data.png)
+
+## Graph Data{background-image="img/slides/network.png"
+             background-size="25%" background-opacity="0.8"
+             background-position="92% 3%"}
+
+<br>
+
+<center>![](img/abraham_lincoln.png)</center>
+
+### Graph Structure {background-image="img/slides/network.png"
+                     background-size="10%"
+                     background-opacity="0.8"
+                     background-position="92% 7%"}
+::: {style="font-size: 125%;"}
+
+-   Organized around relationships between entities
+-   Structure more important than individual observations
+-   No inherent center or hierarchy
+-   Relationships can be directional but don't have to be
+:::
+### Graph Structure {background-image="img/slides/network.png"
+                                    background-size="10%"
+                                    background-opacity="0.8"
+                                    background-position="92% 7%"}
+
+<center>![](img/graph_data.png){width="75%"}</center>
+
+### Graph Data Research Questions {background-image="img/slides/network.png"
+                                    background-size="10%"
+                                    background-opacity="0.8"
+                                    background-position="92% 7%"}
+
+-   How many edges separate two entities?
+-   How many paths are there between two nodes?
+-   Which parts of the graph are most or least connected?
+
+#### Examples Questions
+
+-   How man flight connections needed to fly between Honolulu, Hawaii and
+    Cairo, Egypt?
+-   Would adding a public transit line between San Francisco and Santa Rosa
+    relieve highway congestion?
+-   Which jobs in a hospital will most likely expose you to COVID?
+
+## Spatial Data{background-image="img/slides/map.png"
+                background-size="20%" background-opacity="0.8"
+                background-position="92% 3%"}
+
+```{r, echo=FALSE}
+suppressMessages(library(sf))
+
+#read in North Carolina data
+nc = st_read(system.file("shape/nc.shp", package="sf"), quiet = TRUE)
+
+plot_title = 'Live Births in North Carolina from 1974-1978'
+par(bg=NA)
+plot(nc['BIR74'], key.pos=1, main=plot_title)
+```
+
+### Spatial Structure {background-image="img/slides/map.png"
+                       background-size="10%"
+                       background-opacity="0.8"
+                       background-position="92% 7%"}
+
+::: columns
+::: {.column width="60%"}
+-   Organized around location
+-   Geographic location or relative location
+-   Discrete points or continuous sheet
+-   Used to make maps
+:::
+
+::: {.column width="40%"}
+![](img/slides/spatial_data.jpg){width="120%"}
+:::
+:::
+
+### Spatial Data Research Questions {background-image="img/slides/map.png"
+                                     background-size="10%"
+                                     background-opacity="0.8"
+                                     background-position="92% 7%"}
+::: {style="font-size: 75%;"}
+
+-   Where are entities located?
+-   How close or far apart are various entities?
+-   Are events more closely clustered than we would expect?
+-   Predicting information for locations where we do not have data
+:::
+#### Examples Questions
+::: {style="font-size: 75%;"}
+
+-   What is the air quality around homes of people with asthma?
+-   How far do people commute for their job?
+-   Is leukemia more common around nuclear power plants?
+-   What is the frost risk for agricultural areas in between weather stations?
+:::
+# Data Stores {background-image="img/slides/data-store.png" 
+               background-size="60%"
+               background-opacity="0.1"}
+
+> A data store is repository for persistently storing and managing collections
+> of data which include not just repositories like databases, but also simpler
+> store types such as simple files, emails etc.
+>
+> Wikipedia
+
+## Data Stores {background-image="img/slides/data-store.png"
+                                    background-size="10%"
+                                    background-opacity="0.8"
+                                    background-position="92% 7%"}
+
+<br>
+<br>
+
+::: {style="font-size: 175%; text-align: center;"}
+Data Structure → Data Store
+:::
+## Types of Data Stores {background-image="img/slides/data-store.png"
+                                    background-size="10%"
+                                    background-opacity="0.8"
+                                    background-position="92% 7%"}
+
+![](img/data_stores.png)
+
+### Flat Files {background-image="img/slides/data-store.png"
+                                    background-size="10%"
+                                    background-opacity="0.8"
+                                    background-position="92% 7%"}
+
+-   Stand alone file, not connected to other files
+-   Data structures have relatively low complexity
+-   Interact via Graphical User Interface (GUI) or programming language
+-   Data storage capacity determined by GUI
+-   Usually only one person can edit at a time
+
+### Databases {background-image="img/slides/data-store.png"
+                                    background-size="10%"
+                                    background-opacity="0.8"
+                                    background-position="92% 7%"}
+
+-   Organized collection of linked or related data
+-   Data structures can range from low to high complexity
+-   Interact via query language or programming language
+-   No hard storage limit
+-   Many people can edit at a time
+-   Built in version control and admin
+
+### You might need a database if... {background-image="img/slides/data-store.png"
+                                    background-size="10%"
+                                    background-opacity="0.8"
+                                    background-position="92% 7%"}
+
+-   Your data set has many repeated values
+
+-   Your data set contains information about many unrelated or loosely related
+    studies
+
+-   You are sharing data with multiple people and everyone seems to have a
+    different version
+
+-   Your data set is so large, your computer slows down or freezes when trying
+    to view it
+
+-   You have to keep making the same corrections to your data over and over
+    again
+
+### You might need a database if... {background-image="img/slides/data-store.png"
+                                    background-size="10%"
+                                    background-opacity="0.8"
+                                    background-position="92% 7%"}
+
+-   Excel keeps converting your columns to the wrong data type
+
+-   You have so many pivot tables
+
+-   You have hundreds (or thousands) of data files you need to share with your
+    collaborators
+
+-   You have a hard time finding and extracting the information you need to
+    answer a particular research question
+
+-   Processing your data requires you to spend a lot of time moving data
+    between spreadsheets by hand.
+    
+# Spreadsheets{background-image="img/slides/spreadsheet.png" 
+               background-size="60%"
+               background-opacity="0.2"}
+
+## Spreadsheets{background-image="img/slides/spreadsheet.png"
+                background-size="10%"
+                background-opacity="0.8"
+                background-position="92% 7%"}
+
+-   Imposes tabular data structure
+-   Widely available and easy to use via a Graphical User Interface (GUI)
+-   Generally limited to 1 million rows or 10 million cells if using a GUI
+-   Setting permissions is cumbersome
+-   May cause a lot of data duplication
+-   Easy to introduce typos or errors
+
+## Spreadsheet Data{background-image="img/slides/spreadsheet.png"
+                    background-size="10%"
+                    background-opacity="0.8"
+                    background-position="92% 7%"}
+
+::: {style="font-size: 55%;"}
+```{r, echo=FALSE}
+
+library(data.table)
+library(kableExtra)
+
+dh = fread('data/die_hard.csv', header=FALSE)
+setnames(dh, names(dh),
+         c('title_id', 'person_id', 'title', 'premiered', 
+           'runtime', 'genres', 'rating', 'votes', 'name', 'birth',
+            'death', 'role', 'characters'))
+
+dh_cap = paste("Information from IMDB about the Die Hard movie franchise and",
+               "the people who acted in those films.")
+
+dh = dh[,.(title_id, person_id, title, name, characters, premiered,
+           runtime, genres, rating, votes, birth, death, role)]
+
+kbl(dh, caption=dh_cap) |>
+  scroll_box(width = "100%", height = "600px")
+
+```
+:::
+
+## Example Spreadsheet Software{background-image="img/slides/spreadsheet.png"
+                                background-size="10%"
+                                background-opacity="0.8"
+                                background-position="92% 7%"}
+
+-   Microsoft Excel
+-   Google Sheets
+-   Numbers
+-   LibreOffice Calc\*
+-   OpenRefine\*
+-   Open Science Framework\*
+
+\* Open Source
+
+# Relational Databases{background-image="img/slides/database.png" 
+                       background-size="60%"
+                       background-opacity="0.2"}
+
+## Relational Databases{background-image="img/slides/database.png"
+                                background-size="10%"
+                                background-opacity="0.9"
+                                background-position="92% 7%"}
+
+-   Group of tables connected by shared columns called keys
+
+-   Managed by software called a Relational Database Management System (RDBMS)
+
+-   Interact with the database using SQL (Structured Query Language)
+
+-   Built in data quality control and user roles
+
+-   Provides definitive version of your data
+
+## Relational Keys{background-image="img/slides/database.png"
+                                background-size="10%"
+                                background-opacity="0.9"
+                                background-position="92% 7%"}
+
+Relational Keys: Pair of columns with the same values
+
+-   Primary Key - column that uniquely identifies row in a table
+-   Foreign Key - column that is a primary key in another table
+
+**Types of Relationships**
+
+-   One-to-One
+-   One-to-Many
+-   Many-to-Many
+
+## IMDb Entity Relationship Diagram {background-image="img/slides/database.png"
+                                background-size="10%"
+                                background-opacity="0.9"
+                                background-position="92% 7%"}
+
+![](img/imdb_ERD.png)
+
+## Why use a relational database? {background-image="img/slides/database.png"
+                                background-size="10%"
+                                background-opacity="0.9"
+                                background-position="92% 7%"}
+
+1.  Reduce data duplication
+
+2.  Speed up and standardize accessing and updating the data
+
+3.  Ease of reformatting data
+
+4.  Ensure data integrity
+
+## Die Hard Movie Data {background-image="img/slides/database.png"
+                                background-size="10%"
+                                background-opacity="0.9"
+                                background-position="92% 7%"}
+
+::: {style="font-size: 60%;"}
+```{r}
+kbl(dh) |>
+  scroll_box(width = "100%", height = "750px")
+```
+:::
+
+## Die Hard Movie Data {background-image="img/slides/database.png"
+                                background-size="10%"
+                                background-opacity="0.9"
+                                background-position="92% 7%"}
+
+![](img/imdb_ERD.png)
+
+## Example RDBMS Software {background-image="img/slides/database.png"
+                                background-size="10%"
+                                background-opacity="0.9"
+                                background-position="92% 7%"}
+
+::: {style="font-size: 60%;"}
+```{r, echo=FALSE}
+
+sql = read.csv('data/sql_software.csv')
+
+sql_cols = c("Software", "Support", "Cost", "License", "Spatial Data")
+
+kbl(sql, col.names=sql_cols) 
+
+```
+:::
+
+# NoSQL Databases{background-image="img/slides/nosql.png" 
+                       background-size="60%"
+                       background-opacity="0.3"}
+
+## NoSQL Databases{background-image="img/slides/nosql.png"
+                                background-size="10%"
+                                background-opacity="0.8"
+                                background-position="92% 7%"}
+
+NoSQL (Not Only SQL) databases are databases that *do not* impose a tabular
+data structure. Instead they use a variety of data structures:
+
+-   documents
+-   key-value pairs
+-   graphs
+-   trees
+-   wide column tables 
+
+## Why Use NoSQL Databases?{background-image="img/slides/nosql.png"
+                                background-size="10%"
+                                background-opacity="0.8"
+                                background-position="92% 7%"}
+
+1.  Compatible with multiple data structures
+
+2.  Data transactions are much faster than other data stores
+
+3.  Adding storage capacity is easier than for other data stores
+
+## Example NoSQL Software{background-image="img/slides/nosql.png"
+                                background-size="10%"
+                                background-opacity="0.8"
+                                background-position="92% 7%"}
+
+```{r, echo=FALSE}
+
+nosql = read.csv('data/nosql_software.csv')
+
+nosql_cap = paste("A comparison of some of the more common software",
+                "implementations of NoSQL databases.")
+
+nosql_cols = c("Software", "Data Structure", "Spatial Data")
+
+kbl(nosql, col.names=nosql_cols, caption=nosql_cap) 
+
+
+```
+
+# How to Decide? {background-image="img/slides/lightbulb.png" 
+                       background-size="60%"
+                       background-opacity="0.1"}
+
+<br>
+
+::: {style="font-size: 145%;"}
+
+Question → Data Structure → Data Store
+:::
+
+## Data Store Principles {background-image="img/slides/lightbulb.png"
+                                background-size="10%"
+                                background-opacity="0.8"
+                                background-position="92% 7%"}
+
+1.  Different data structures facilitate different research questions.
+
+1.  When we convert information to data, we encode it in a structure.
+
+3.  All data stores impose structure on your data.
+
+4.  The best data storage technology for any research question matches the
+    structure of the data with the structure of the data store.
+
+## Questions to Consider {background-image="img/slides/lightbulb.png"
+                                background-size="10%"
+                                background-opacity="0.8"
+                                background-position="92% 7%"}
+
+ * What is the structure of the data to be stored?
+ * How much data needs to be stored?
+ * How many people will be accessing the data store?
+ * How frequently will people be interacting with the data?
+ * Will the data be updated by humans or by a computer?
+ * How will people be accessing the data?
+
+
+## Further Reading{background-image="img/slides/book.png" 
+                       background-size="60%"
+                       background-opacity="0.3"} 
+
+### General Database Information {background-image="img/slides/book.png"
+                                background-size="10%"
+                                background-opacity="0.9"
+                                background-position="92% 7%"}
+
+-   [[An Overview of Databases and Data Storage Reader]{.underline}][dl_db]
+-   [[Intro to Databases (for people who don’t know a whole lot about them)]{.underline}][medium]
+-   [[Database Management System (DBMS) Tutorial]{.underline}][g4gsql]
+-   [[Creating a database from scratch]{.underline}][create]
+-   [[NoSQL Explained]{.underline}][nosql]
+-   [[Introduction to NoSQL]{.underline}][g4gno]
+
+### Learning Query Languages {background-image="img/slides/book.png"
+                                background-size="10%"
+                                background-opacity="0.9"
+                                background-position="92% 7%"}
+
+-   [[Intro to SQL for Querying Databases Reader]{.underline}][dl_sql]
+-   [[Spatial SQL Reader]{.underline}][dl_ssql]
+-   [[W3Schools SQL Tutorial]{.underline}][w3sql]
+-   [[W3Schools PostgreSQL Tutorial]{.underline}][w3post]
+-   [[W3Schools MongoDB Tutorial]{.underline}][w3mongo]
+
+### Campus Database Resources {background-image="img/slides/book.png"
+                                background-size="10%"
+                                background-opacity="0.9"
+                                background-position="92% 7%"}
+
+-   [[Research Data Services]{.underline}][rds], 
+    and the [[data service librarians]{.underline}][email]
+    
+-   [[Research Data Management Topic Guide]{.underline}][rdm]
+
+-   [[UC Davis Cloud Services]{.underline}][cloud], includes Amazon Web Services,
+    Microsoft Azure, and private cloud services
+    
+-   [[Research Electronic Data Capture (REDCap)]{.underline}][redcap]
+
+
+## References {background-image="img/slides/book.png"
+                                background-size="10%"
+                                background-opacity="0.9"
+                                background-position="92% 7%"}
+
+::: {#refs}
+:::
+
+
+[medium]: https://medium.com/@rwilliams_bv/intro-to-databases-for-people-who-dont-know-a-whole-lot-about-them-a64ae9af712
+[redcap]: https://health.ucdavis.edu/data/redcap.html
+[rdm]: https://guides.library.ucdavis.edu/data-management
+[rds]: https://servicehub.ucdavis.edu/servicehub?id=catalog&spa=1&sys_id=58cf6a65db87d09009ad5055ca96194d
+[cloud]: https://cloud.ucdavis.edu/services-available
+[email]: mailto:dataservices@ucdavis.edu
+[w3sql]: https://www.w3schools.com/sql/
+[w3post]: https://www.w3schools.com/postgresql/index.php
+[w3mongo]: https://www.w3schools.com/mongodb/index.php
+[nosql]: https://www.mongodb.com/nosql-explained
+[g4gno]: https://www.geeksforgeeks.org/introduction-to-nosql/
+[g4gsql]: https://www.geeksforgeeks.org/dbms/
+[create]: https://interestingengineering.com/lists/build-a-database-part-1
+[dl_db]: https://ucdavisdatalab.github.io/workshop_intro_to_databases/
