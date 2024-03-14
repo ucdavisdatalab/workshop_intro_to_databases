@@ -4,7 +4,13 @@
 .LSOverride
 #.RData
 .Rhistory
+
+#data 
 *.db
+*.xcf
+img/slides/*
+*slide*
+_extensions/*
 
 # Thumbnails
 ._*
