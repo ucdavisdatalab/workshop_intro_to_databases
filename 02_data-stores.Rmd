@@ -397,3 +397,7 @@ kbl(nosql, col.names=nosql_cols, caption=nosql_cap)
 
 ```
 
+## Putting it all together
+
+Now we know what our options are regarding data structures and data stores. Next
+we will combine this information to make decisions!
