@@ -43,6 +43,7 @@ and database option, what would be a good second option, what would not work -->
 
 ### General Database Information
 
+-   [An Overview of Databases and Data Storage Reader][dl_db]
 -   [Intro to Databases (for people who don’t know a whole lot about them)][medium]
 -   [Database Management System (DBMS) Tutorial][g4gsql]
 -   [Creating a database from scratch][create]
@@ -51,6 +52,8 @@ and database option, what would be a good second option, what would not work -->
 
 ### Learning Query Languages
 
+-   [Intro to SQL for Querying Databases Reader][dl_sql]
+-   [Spatial SQL Reader][dl_ssql]
 -   [W3Schools SQL Tutorial][w3sql]
 -   [W3Schools PostgreSQL Tutorial][w3post]
 -   [W3Schools MongoDB Tutorial][w3mongo]
@@ -76,3 +79,7 @@ and database option, what would be a good second option, what would not work -->
 [g4gno]: https://www.geeksforgeeks.org/introduction-to-nosql/
 [g4gsql]: https://www.geeksforgeeks.org/dbms/
 [create]: https://interestingengineering.com/lists/build-a-database-part-1
+[dl_db]: https://ucdavisdatalab.github.io/workshop_intro_to_databases/
+[dl_sql]:  https://ucdavisdatalab.github.io/workshop_intro_to_sql/
+[dl_ssql]: https://github.com/ucdavisdatalab/Spatial_SQL
+
