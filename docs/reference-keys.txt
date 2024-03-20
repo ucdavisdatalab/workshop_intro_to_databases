@@ -23,3 +23,11 @@ rdbms-software
 nosql-databases
 why-use-nosql-databases
 example-software
+tab:unnamed-chunk-3
+putting-it-all-together
+choosing-the-right-data-store
+further-reading
+general-database-information
+learning-query-languages
+campus-database-resources
+assessment
