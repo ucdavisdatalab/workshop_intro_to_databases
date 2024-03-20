@@ -249,7 +249,7 @@ also span multiple cities.
 
 ### Why Use Relational Databases?
 
-There are three primary reasons to use a RDBMS as a data store:
+There are four primary reasons to use a RDBMS as a data store:
 
 1.  Reduce data duplication
 
