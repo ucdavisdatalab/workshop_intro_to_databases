@@ -9,7 +9,7 @@
 *.db
 *.xcf
 img/slides/*
-*slide*
+*slides.html
 _extensions/*
 
 # Thumbnails
