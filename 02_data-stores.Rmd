@@ -382,7 +382,6 @@ Similar to RDBMSs, all the most common NoSQL database software provides some
 support of spatial data. However, that support is limited to vector data and
 the functionality available varies fairly widely.
 
--------------------------------------------------------------------------------
 ```{r, echo=FALSE}
 
 nosql = read.csv('data/nosql_software.csv')

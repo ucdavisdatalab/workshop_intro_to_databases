@@ -1,5 +1,6 @@
 tab:unnamed-chunk-1
 tab:unnamed-chunk-2
+tab:unnamed-chunk-3
 workshop-description
 learning-objectives
 prerequisites
@@ -23,3 +24,10 @@ rdbms-software
 nosql-databases
 why-use-nosql-databases
 example-software
+putting-it-all-together
+choosing-the-right-data-store
+further-reading
+general-database-information
+learning-query-languages
+campus-database-resources
+assessment
