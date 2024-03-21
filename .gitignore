@@ -11,6 +11,8 @@
 img/slides/*
 *slides.html
 _extensions/*
+database_slides_files/
+docs/_main_files/
 
 # Thumbnails
 ._*
@@ -34,5 +36,6 @@ Temporary Items
 # Bookdown intermediate files
 docs/*.md
 .Rproj.user
-*_files/
 _main.rds
+_bookdown_files/
+
