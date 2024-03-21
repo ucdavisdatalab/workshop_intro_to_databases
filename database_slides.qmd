@@ -36,9 +36,32 @@ mpg$origin = origins
 names(mpg) = c('mpg', 'cylinders', 'horsepower', 'weight', 'manual', 'origin')
 
 ```
-# Introduction {background-image="img/slides/Burgess_Field.jpg" background-opacity="0.5"}
+# Introduction {background-image="img/slides/trail.png"
+                background-size="60%"
+                background-opacity="0.5"}
 
-## Topics Covered
+
+## {background-image="img/slides/trail.png"
+                background-size="10%" background-opacity="0.9"
+                background-position="92% 7%"}
+
+::: {style="font-size: 200%; text-align: center;"}
+
+Research Question
+
+&darr; 
+
+Data Structure
+
+&darr;
+
+Data Store
+:::
+
+
+## Topics Covered {background-image="img/slides/trail.png"
+                  background-size="10%" background-opacity="0.9"
+                  background-position="92% 7%"}
 
 -   What is data?
 
@@ -51,9 +74,11 @@ names(mpg) = c('mpg', 'cylinders', 'horsepower', 'weight', 'manual', 'origin')
 
 -   What are the differences between relational and noSQL databases?
 
--   How to pick a data stored based on your research question?
+-   How to pick a data store based on your research question?
 
-## Microcredentials
+## Microcredentials {background-image="img/slides/trail.png"
+                    background-size="10%" background-opacity="0.9"
+                    background-position="92% 7%"}
 
 <br>
 
@@ -70,14 +95,9 @@ and Spatial SQL (event, [[reader]{.underline}][dl_ssql]) workshops.
 [dl_sql]:  https://ucdavisdatalab.github.io/workshop_intro_to_sql/
 [dl_ssql]: https://github.com/ucdavisdatalab/Spatial_SQL
 
-## 
-::: {style="font-size: 140%;"}
 
-Question → Data Structure → Data Store
-:::
-
-## Road Map{background-image="img/slides/directions.png" background-size="40%"
-            background-position="80% 30%"}
+## Road Map{background-image="img/slides/trail.png" background-size="40%"
+            background-opacity="0.9" background-position="80% 30%"}
 
 ::: {style="font-size: 90%;"}
 
@@ -94,7 +114,9 @@ Question → Data Structure → Data Store
 
 :::
 
-### Credits
+### Credits {background-image="img/slides/trail.png"
+                    background-size="10%" background-opacity="0.9"
+                    background-position="92% 7%"}
 ::: {style="font-size: 70%;"}
 
 All images were created by Elise Hellwig unless otherwise noted. Movie
@@ -106,11 +128,9 @@ permission for non-commercial purposes only.
 :::
 #### Icons - color modified
 
-::: {style="font-size: 50%;"}
+::: {style="font-size: 45%;"}
 
-
-Roadmap: [By Font Awesome Free 5.2.0 by \@fontawesome - https://fontawesome.com][rm],
-CC BY 4.0
+Introduction: [By SkepticalScience - Own work][rm], CC BY-SA 4.0
 
 Data: [By priyanka, "data", an icon from Noun Project][fr], CC BY 4.0
 
@@ -136,7 +156,7 @@ How To Decide: [By SimpleIcon http://www.simpleicon.com/][htd], CC BY 3.0,
 Further Reading: [By Icon Lauk from the Noun Project][fr], CC BY 3.0 
 :::
 
-[rm]: https://commons.wikimedia.org/w/index.php?curid=71510971
+[rm]: https://commons.wikimedia.org/w/index.php?curid=99619583
 [tad]: https://commons.wikimedia.org/w/index.php?curid=67122938
 [td]: https://commons.wikimedia.org/w/index.php?curid=130967171
 [gd]: https://commons.wikimedia.org/w/index.php?curid=105266675
@@ -159,8 +179,7 @@ Further Reading: [By Icon Lauk from the Noun Project][fr], CC BY 3.0
 > \- Oxford English Dictionary
 
 ## What is data?{background-image="img/slides/Noun_Data.png"
-                background-size="10%" background-opacity="0.8"
-                background-position="92% 7%"}
+                background-size="10%" background-position="92% 7%"}
 
 <br>
 
@@ -174,8 +193,7 @@ could be:
 
 
 ## Data Types{background-image="img/slides/Noun_Data.png"
-              background-size="10%" background-opacity="0.8"
-              background-position="92% 7%"}
+              background-size="10%" background-position="92% 7%"}
 
 Data type tells your computer what types of operations make sense.
 
@@ -186,8 +204,7 @@ Data type tells your computer what types of operations make sense.
 -   Dates and times
 
 ## Data Structures{background-image="img/slides/Noun_Data.png"
-                  background-size="10%" background-opacity="0.8"
-                  background-position="92% 7%"}
+                  background-size="10%" background-position="92% 7%"}
 
 ::: {style="font-size: 130%;"}
 -   Tabular/columnar
@@ -239,23 +256,14 @@ kbl(mpg, caption = mpg_cap) |>
                                     background-size="10%"
                                     background-opacity="0.8"
                                     background-position="92% 7%"}
-::: {style="font-size: 75%;"}
+::: {style="font-size: 130%;"}
 
 -   What is the average value of a particular measurement across a data set?
 -   What is the range or spread of values in a data set?
 -   Are there trends in the values of a variable?
 -   How to two columns in a data set relate to each other?
 :::
-#### Example Questions?
 
-::: {style="font-size: 75%;"}
-
--   What is the is the average yield (lb/acre) for California almond farms?
--   What is the normal range of values for a vitamin A blood test in humans?
--   Have summer temperatures increased in the Bay Area, and if so, by how much?
--   Are there compounds present in blood we can use to detect rabies in urban
-    wildlife?
-:::
 ### `mtcars` Tabular Questions{background-image="img/slides/tabular.png"
                                     background-size="10%"
                                     background-opacity="0.8"
@@ -299,17 +307,11 @@ kbl(mpg) |>
                                     background-size="10%"
                                     background-opacity="0.8"
                                     background-position="92% 7%"}
-
+::: {style="font-size: 130%;"}
 -   How many nodes separate two entities?
 -   Which elements fall under a particular subtree?
 -   Text or directory searching
-
-#### Examples Questions
-
--   Are elephants more closely related to sloths or rhinoceroses?
--   How many species of dinosaurs were there and are there any alive today?
--   Which journals published the most articles mentioning AI this year?
-
+:::
 ### `mtcars` Tree Questions {background-image="img/slides/tree.svg"
                                     background-size="10%"
                                     background-opacity="0.8"
@@ -347,19 +349,12 @@ kbl(mpg) |>
                                     background-size="10%"
                                     background-opacity="0.8"
                                     background-position="92% 7%"}
+::: {style="font-size: 130%;"}
 
 -   How many edges separate two entities?
 -   How many paths are there between two nodes?
 -   Which parts of the graph are most or least connected?
-
-#### Examples Questions
-
--   How man flight connections needed to fly between Honolulu, Hawaii and
-    Cairo, Egypt?
--   Would adding a public transit line between San Francisco and Santa Rosa
-    relieve highway congestion?
--   Which jobs in a hospital will most likely expose you to COVID?
-
+:::
 ## Spatial Data{background-image="img/slides/map.png"
                 background-size="20%" background-opacity="0.8"
                 background-position="92% 3%"}
@@ -397,21 +392,14 @@ plot(nc['BIR74'], key.pos=1, main=plot_title)
                                      background-size="10%"
                                      background-opacity="0.8"
                                      background-position="92% 7%"}
-::: {style="font-size: 75%;"}
+::: {style="font-size: 130%;"}
 
 -   Where are entities located?
 -   How close or far apart are various entities?
 -   Are events more closely clustered than we would expect?
 -   Predicting information for locations where we do not have data
 :::
-#### Examples Questions
-::: {style="font-size: 75%;"}
 
--   What is the air quality around homes of people with asthma?
--   How far do people commute for their job?
--   Is leukemia more common around nuclear power plants?
--   What is the frost risk for agricultural areas in between weather stations?
-:::
 # Data Stores {background-image="img/slides/data-store.png" 
                background-size="60%"
                background-opacity="0.1"}
@@ -513,8 +501,8 @@ Data Structure → Data Store
 -   Widely available and easy to use via a Graphical User Interface (GUI)
 -   Generally limited to 1 million rows or 10 million cells if using a GUI
 -   Setting permissions is cumbersome
--   May cause a lot of data duplication
 -   Easy to introduce typos or errors
+-   May cause a lot of data duplication
 
 ## Spreadsheet Data{background-image="img/slides/spreadsheet.png"
                     background-size="10%"
@@ -568,6 +556,8 @@ kbl(dh, caption=dh_cap) |>
                                 background-opacity="0.9"
                                 background-position="92% 7%"}
 
+-   Imposes tabular data structure
+
 -   Group of tables connected by shared columns called keys
 
 -   Managed by software called a Relational Database Management System (RDBMS)
@@ -583,16 +573,10 @@ kbl(dh, caption=dh_cap) |>
                                 background-opacity="0.9"
                                 background-position="92% 7%"}
 
-Relational Keys: Pair of columns with the same values
+Pair of columns with the same values
 
--   Primary Key - column that uniquely identifies row in a table
--   Foreign Key - column that is a primary key in another table
+![](img/slides/linked_tables.png)
 
-**Types of Relationships**
-
--   One-to-One
--   One-to-Many
--   Many-to-Many
 
 ## IMDb Entity Relationship Diagram {background-image="img/slides/database.png"
                                 background-size="10%"
@@ -688,12 +672,9 @@ data structure. Instead they use a variety of data structures:
 
 nosql = read.csv('data/nosql_software.csv')
 
-nosql_cap = paste("A comparison of some of the more common software",
-                "implementations of NoSQL databases.")
-
 nosql_cols = c("Software", "Data Structure", "Spatial Data")
 
-kbl(nosql, col.names=nosql_cols, caption=nosql_cap) 
+kbl(nosql, col.names=nosql_cols) 
 
 
 ```
@@ -735,6 +716,14 @@ Question → Data Structure → Data Store
  * Will the data be updated by humans or by a computer?
  * How will people be accessing the data?
 
+## {background-image="img/slides/lightbulb.png"
+                                background-size="40%"
+                                background-opacity="0.8"
+                                background-position="80% 50%"}
+::: {style="font-size: 500%;"}
+
+**Q & A**
+:::
 
 ## Further Reading{background-image="img/slides/book.png" 
                        background-size="60%"
