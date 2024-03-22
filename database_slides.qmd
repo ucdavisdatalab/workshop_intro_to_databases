@@ -361,7 +361,7 @@ kbl(mpg) |>
 -   Which parts of the graph are most or least connected?
 :::
 
-### Abraham Lincoln Link Data {background-image="img/slides/network.png"
+### Abraham Lincoln Graph Data {background-image="img/slides/network.png"
                                     background-size="10%"
                                     background-opacity="0.8"
                                     background-position="92% 7%"}
