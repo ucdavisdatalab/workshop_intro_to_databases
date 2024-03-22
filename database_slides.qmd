@@ -69,18 +69,27 @@ names(mpg) = c('mpg', 'cylinders', 'horsepower', 'weight', 'manual', 'origin')
 ## {background-image="img/slides/trail.png"
                 background-size="10%" background-opacity="0.9"
                 background-position="92% 7%"}
+                
+<center>
+![](img/slides/data_store_factors.png){width="80%"}
+</center>
 
-::: {style="font-size: 200%; text-align: center;"}
 
-Research Question
+## {background-image="img/slides/trail.png"
+                background-size="10%" background-opacity="0.9"
+                background-position="92% 7%"}
+            
 
-&darr; 
+::: {style="font-size: 145%; text-align: center;"}
+Research Question → Data Structure
 
-Data Structure
+<br>
 
-&darr;
+Use Case → Data Management
 
-Data Store
+<br>
+
+XX → Computing Resources
 :::
 
 
@@ -101,6 +110,20 @@ Data Store
 
 -   How to pick a data store based on your research question?
 -->
+
+## Questions to Consider {background-image="img/slides/trail.png"
+                                background-size="10%"
+                                background-opacity="0.8"
+                                background-position="92% 7%"}
+
+ * What is the structure of the data to be stored?
+ * How much data needs to be stored?
+ * How many people will be accessing the data store?
+ * How frequently will people be interacting with the data?
+ * Will the data be updated by humans or by a computer?
+ * How will people be accessing the data
+ 
+<center> **Multiple questions may mean multiple data stores**<center>
 
 ## Road Map{background-image="img/slides/trail.png" background-size="40%"
             background-opacity="0.9" background-position="80% 30%"}
@@ -695,19 +718,7 @@ Question → Data Structure → Data Store
 4.  The best data storage technology for any research question matches the
     structure of the data with the structure of the data store.
 
-## Questions to Consider {background-image="img/slides/lightbulb.png"
-                                background-size="10%"
-                                background-opacity="0.8"
-                                background-position="92% 7%"}
 
- * What is the structure of the data to be stored?
- * How much data needs to be stored?
- * How many people will be accessing the data store?
- * How frequently will people be interacting with the data?
- * Will the data be updated by humans or by a computer?
- * How will people be accessing the data
- 
-<center> **Multiple questions may mean multiple data stores**<center>
 
 ## {background-image="img/slides/lightbulb.png"
                                 background-size="40%"
