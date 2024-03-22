@@ -60,16 +60,29 @@ and database option, what would be a good second option, what would not work -->
 
 ### Campus Database Resources
 
--   [Research Data Services][rds], and the [data service librarians][email]
+-   UC Davis DataLab [Office Hours][oh]:
+    - Mondays, 1-2pm via Zoom
+    - Tuesdays 1-2pm in person (Shields Library, room 360)
+
+-   [Research Data Services][rds], 
+    and the [research services librarians][email]
+    
+-   [Campus Data Services Catalog][cds]
+    
 -   [Research Data Management Topic Guide][rdm]
--   [UC Davis Cloud Services][cloud], includes Amazon Web Services, Microsoft
-    Azure, and private cloud services
+
+-   [UC Davis Cloud Services][cloud], includes Amazon Web Services,
+    Microsoft Azure, and private cloud services
+    
 -   [Research Electronic Data Capture (REDCap)][redcap]
 
+
+
 [medium]: https://medium.com/@rwilliams_bv/intro-to-databases-for-people-who-dont-know-a-whole-lot-about-them-a64ae9af712
+[rds]: https://library.ucdavis.edu/data-analysis-and-management/
 [redcap]: https://health.ucdavis.edu/data/redcap.html
 [rdm]: https://guides.library.ucdavis.edu/data-management
-[rds]: https://servicehub.ucdavis.edu/servicehub?id=catalog&spa=1&sys_id=58cf6a65db87d09009ad5055ca96194d
+[cds]: https://servicehub.ucdavis.edu/servicehub?id=catalog&spa=1&sys_id=58cf6a65db87d09009ad5055ca96194d
 [cloud]: https://cloud.ucdavis.edu/services-available
 [email]: mailto:dataservices@ucdavis.edu
 [w3sql]: https://www.w3schools.com/sql/
@@ -80,6 +93,4 @@ and database option, what would be a good second option, what would not work -->
 [g4gsql]: https://www.geeksforgeeks.org/dbms/
 [create]: https://interestingengineering.com/lists/build-a-database-part-1
 [dl_db]: https://ucdavisdatalab.github.io/workshop_intro_to_databases/
-[dl_sql]:  https://ucdavisdatalab.github.io/workshop_intro_to_sql/
-[dl_ssql]: https://github.com/ucdavisdatalab/Spatial_SQL
-
+[oh]: https://datalab.ucdavis.edu/office-hours/

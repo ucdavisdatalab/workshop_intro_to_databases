@@ -760,9 +760,16 @@ Question → Data Structure → Data Store
                                 background-size="10%"
                                 background-opacity="0.9"
                                 background-position="92% 7%"}
+::: {style="font-size: 80%;"}
+
+-   UC Davis DataLab [Office Hours][oh]:
+    - Mondays, 1-2pm via Zoom
+    - Tuesdays 1-2pm in person (Shields Library, room 360)
 
 -   [[Research Data Services]{.underline}][rds], 
-    and the [[data service librarians]{.underline}][email]
+    and the [[research services librarians]{.underline}][email]
+    
+-   [[Campus Data Services Catalog]{.underline}][cds]
     
 -   [[Research Data Management Topic Guide]{.underline}][rdm]
 
@@ -771,7 +778,7 @@ Question → Data Structure → Data Store
     
 -   [[Research Electronic Data Capture (REDCap)]{.underline}][redcap]
 
-
+:::
 ## References {background-image="img/slides/book.png"
                                 background-size="10%"
                                 background-opacity="0.9"
@@ -781,10 +788,13 @@ Question → Data Structure → Data Store
 :::
 
 
+
+
 [medium]: https://medium.com/@rwilliams_bv/intro-to-databases-for-people-who-dont-know-a-whole-lot-about-them-a64ae9af712
+[rds]: https://library.ucdavis.edu/data-analysis-and-management/
 [redcap]: https://health.ucdavis.edu/data/redcap.html
 [rdm]: https://guides.library.ucdavis.edu/data-management
-[rds]: https://servicehub.ucdavis.edu/servicehub?id=catalog&spa=1&sys_id=58cf6a65db87d09009ad5055ca96194d
+[cds]: https://servicehub.ucdavis.edu/servicehub?id=catalog&spa=1&sys_id=58cf6a65db87d09009ad5055ca96194d
 [cloud]: https://cloud.ucdavis.edu/services-available
 [email]: mailto:dataservices@ucdavis.edu
 [w3sql]: https://www.w3schools.com/sql/
@@ -795,3 +805,4 @@ Question → Data Structure → Data Store
 [g4gsql]: https://www.geeksforgeeks.org/dbms/
 [create]: https://interestingengineering.com/lists/build-a-database-part-1
 [dl_db]: https://ucdavisdatalab.github.io/workshop_intro_to_databases/
+[oh]: https://datalab.ucdavis.edu/office-hours/
