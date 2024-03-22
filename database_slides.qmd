@@ -235,22 +235,32 @@ Data type tells your computer what types of operations make sense.
 
 ## Data Structures{background-image="img/slides/Noun_Data.png"
                   background-size="10%" background-position="92% 7%"}
-
-::: {style="font-size: 130%;"}
--   Tabular/columnar
--   Tree
--   Graph
--   Spatial
-:::
+                  
+<br>
+<br>
+**Data Structure: a way of organizing data that makes it easier to store** 
+**and use**
 
 <br>
+<br>
 
-::: {style="font-size: 175%; text-align: center;"}
+::: {style="font-size: 200%; text-align: center;"}
 Question → Data structure
+:::
+<br>
+
+## Data Structures{background-image="img/slides/Noun_Data.png"
+                  background-size="10%" background-position="92% 7%"}
+                  
+::: {style="font-size: 180%;"}
+-   Tabular/columnar ![](img/slides/tabular.png){width="7%"}
+-   Tree ![](img/slides/tree.svg){width="10%"}
+-   Graph ![](img/slides/network.png){width="10%"}
+-   Relational ![](img/slides/categories.png){width="10%"}
 :::
 
 ## Tabular Data{background-image="img/slides/tabular.png"
-                background-size="20%" background-opacity="0.8"
+                background-size="10%" background-opacity="0.8"
                 background-position="92% 7%"}
 
 <br>
