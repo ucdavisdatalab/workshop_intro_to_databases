@@ -47,18 +47,17 @@ names(mpg) = c('mpg', 'cylinders', 'horsepower', 'weight', 'manual', 'origin')
 
 <br>
 
-Want to take your research computing to the next level?
+::: {style="font-size: 130%;"}
 
-The UC Davis Datalab offers two workshops during spring quarter to do just that.
-The Introduction to SQL Workshop (event, [[reader]{.underline}][dl_sql]), offered 
-on 4/18, gives you hands on experience interacting with relational databases 
-using SQL. The Spatial SQL (event, [[reader]{.underline}][dl_ssql]) 
-offered on 5/3, gives you the tools to add spatial data to your relational
-database toolkit. 
+
+-   Introduction to SQL, 4/18 (event, [[reader]{.underline}][dl_sql])
+
+-   Spatial SQL, 5/3 (event, [[reader]{.underline}][dl_ssql])
+
+:::
 
 <br>
-
-![](img/slides/datalab-logo-full-color-rgb.png)
+<center>![](img/slides/datalab-logo-full-color-rgb.png){width="70%"}</center>
 
 
 [micro]: https://ucd.badgr.com/public/pathway/6160c163fc391a6821c02fbd
@@ -206,6 +205,7 @@ Data type tells your computer what types of operations make sense.
 
 -   integer
 -   decimal/floating point numbers
+-   categorical (small, medium, large)
 -   characters (text)
 -   Boolean values (TRUE or FALSE)
 -   Dates and times
@@ -248,6 +248,7 @@ kbl(mpg, caption = mpg_cap) |>
 ```
 :::
 
+<!--
 ### Tabular Structure{background-image="img/slides/tabular.png"
                       background-size="10%" background-opacity="0.8"
                       background-position="92% 7%"}
@@ -258,6 +259,8 @@ kbl(mpg, caption = mpg_cap) |>
     characteristics
 -   Focus is at the observation level
 -   Sorting observations is easy
+
+-->
 
 ### Tabular Data Research Questions{background-image="img/slides/tabular.png"
                                     background-size="10%"
@@ -295,20 +298,8 @@ kbl(mpg) |>
                   background-size="10%" background-opacity="0.8"
                   background-position="92% 7%"}
 
-::: columns
-::: {.column width="60%"}
--   Organized around relationships between entities
--   Structure more important than individual observations
--   Explicitly nested relationships
--   The root is the center of the tree
--   Distance from the root node defines place in the hierarchy
--   Subsetting observations is easy
-:::
+![](img/tree_data.png){width="130%"}
 
-::: {.column width="40%"}
-![](img/tree_data.png){width="120%"}
-:::
-:::
 
 ### Tree Data Research Questions{background-image="img/slides/tree.svg"
                                     background-size="10%"
@@ -332,25 +323,9 @@ kbl(mpg) |>
 
 <br>
 
-<center>![](img/abraham_lincoln.png)</center>
-
-### Graph Structure {background-image="img/slides/network.png"
-                     background-size="10%"
-                     background-opacity="0.8"
-                     background-position="92% 7%"}
-::: {style="font-size: 125%;"}
-
--   Organized around relationships between entities
--   Structure more important than individual observations
--   No inherent center or hierarchy
--   Relationships can be directional but don't have to be
-:::
-### Graph Structure {background-image="img/slides/network.png"
-                                    background-size="10%"
-                                    background-opacity="0.8"
-                                    background-position="92% 7%"}
 
 <center>![](img/graph_data.png){width="75%"}</center>
+
 
 ### Graph Data Research Questions {background-image="img/slides/network.png"
                                     background-size="10%"
@@ -362,6 +337,15 @@ kbl(mpg) |>
 -   How many paths are there between two nodes?
 -   Which parts of the graph are most or least connected?
 :::
+
+### Abraham Lincoln Link Data {background-image="img/slides/network.png"
+                                    background-size="10%"
+                                    background-opacity="0.8"
+                                    background-position="92% 7%"}
+
+<center>![](img/abraham_lincoln.png)</center>
+
+
 ## Spatial Data{background-image="img/slides/map.png"
                 background-size="20%" background-opacity="0.8"
                 background-position="92% 3%"}
@@ -377,23 +361,11 @@ par(bg=NA)
 plot(nc['BIR74'], key.pos=1, main=plot_title)
 ```
 
-### Spatial Structure {background-image="img/slides/map.png"
-                       background-size="10%"
-                       background-opacity="0.8"
-                       background-position="92% 7%"}
-
-::: columns
-::: {.column width="60%"}
--   Organized around location
--   Geographic location or relative location
--   Discrete points or continuous sheet
--   Used to make maps
-:::
-
-::: {.column width="40%"}
-![](img/slides/spatial_data.jpg){width="120%"}
-:::
-:::
+## Spatial Data{background-image="img/slides/map.png"
+                background-size="20%" background-opacity="0.8"
+                background-position="92% 3%"}
+                
+<center>![](img/slides/spatial_data.jpg){width="50%"}</center>
 
 ### Spatial Data Research Questions {background-image="img/slides/map.png"
                                      background-size="10%"
@@ -434,7 +406,7 @@ Data Structure → Data Store
                                     background-position="92% 7%"}
 
 ![](img/data_stores.png)
-
+<!--
 ### Flat Files {background-image="img/slides/data-store.png"
                                     background-size="10%"
                                     background-opacity="0.8"
@@ -457,7 +429,19 @@ Data Structure → Data Store
 -   No hard storage limit
 -   Many people can edit at a time
 -   Built in version control and admin
+-->
 
+## {background-image="img/slides/data-store.png"
+                                    background-size="10%"
+                                    background-opacity="0.8"
+                                    background-position="92% 7%"}
+::: {style="font-size: 200%;"}
+
+Problems a database could help you solve...
+
+:::
+
+<!--
 ### You might need a database if... {background-image="img/slides/data-store.png"
                                     background-size="10%"
                                     background-opacity="0.8"
@@ -494,7 +478,7 @@ Data Structure → Data Store
 
 -   Processing your data requires you to spend a lot of time moving data
     between spreadsheets by hand.
-    
+-->
 # Spreadsheets{background-image="img/slides/spreadsheet.png" 
                background-size="60%"
                background-opacity="0.2"}
@@ -702,7 +686,7 @@ Question → Data Structure → Data Store
                                 background-opacity="0.8"
                                 background-position="92% 7%"}
 
-1.  Different data structures facilitate different research questions.
+<!-- 1.  Different data structures facilitate different research questions. -->
 
 1.  When we convert information to data, we encode it in a structure.
 
@@ -721,7 +705,9 @@ Question → Data Structure → Data Store
  * How many people will be accessing the data store?
  * How frequently will people be interacting with the data?
  * Will the data be updated by humans or by a computer?
- * How will people be accessing the data?
+ * How will people be accessing the data
+ 
+<center> **Multiple questions may mean multiple data stores**<center>
 
 ## {background-image="img/slides/lightbulb.png"
                                 background-size="40%"
