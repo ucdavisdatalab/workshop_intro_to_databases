@@ -41,6 +41,32 @@ names(mpg) = c('mpg', 'cylinders', 'horsepower', 'weight', 'manual', 'origin')
                 background-opacity="0.5"}
 
 
+## Research Computing Workshops {background-image="img/slides/trail.png"
+                        background-size="10%" background-opacity="0.9"
+                        background-position="92% 7%"}
+
+<br>
+
+Want to take your research computing to the next level?
+
+The UC Davis Datalab offers two workshops during spring quarter to do just that.
+The Introduction to SQL Workshop (event, [[reader]{.underline}][dl_sql]), offered 
+on 4/18, gives you hands on experience interacting with relational databases 
+using SQL. The Spatial SQL (event, [[reader]{.underline}][dl_ssql]) 
+offered on 5/3, gives you the tools to add spatial data to your relational
+database toolkit. 
+
+<br>
+
+![](img/slides/datalab-logo-full-color-rgb.png)
+
+
+[micro]: https://ucd.badgr.com/public/pathway/6160c163fc391a6821c02fbd
+[dl_sql]:  https://ucdavisdatalab.github.io/workshop_intro_to_sql/
+[dl_ssql]: https://ucdavisdatalab.github.io/Spatial_SQL/
+
+
+
 ## {background-image="img/slides/trail.png"
                 background-size="10%" background-opacity="0.9"
                 background-position="92% 7%"}
@@ -59,7 +85,7 @@ Data Store
 :::
 
 
-## Topics Covered {background-image="img/slides/trail.png"
+<!-- ## Topics Covered {background-image="img/slides/trail.png"
                   background-size="10%" background-opacity="0.9"
                   background-position="92% 7%"}
 
@@ -75,26 +101,7 @@ Data Store
 -   What are the differences between relational and noSQL databases?
 
 -   How to pick a data store based on your research question?
-
-## Microcredentials {background-image="img/slides/trail.png"
-                    background-size="10%" background-opacity="0.9"
-                    background-position="92% 7%"}
-
-<br>
-
-An Overview of Databases and Data Storage is a part of the 
-[[Research Computing GradPathways micro-credential]{.underline}][micro], and is
-a prerequisite for Introduction to SQL (event, [[reader]{.underline}][dl_sql]
-and Spatial SQL (event, [[reader]{.underline}][dl_ssql]) workshops.
-
-<br>
-
-![](img/slides/GPI_logo.png)
-
-[micro]: https://ucd.badgr.com/public/pathway/6160c163fc391a6821c02fbd
-[dl_sql]:  https://ucdavisdatalab.github.io/workshop_intro_to_sql/
-[dl_ssql]: https://github.com/ucdavisdatalab/Spatial_SQL
-
+-->
 
 ## Road Map{background-image="img/slides/trail.png" background-size="40%"
             background-opacity="0.9" background-position="80% 30%"}
