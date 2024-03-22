@@ -169,7 +169,7 @@ Tree Data: [By HitomiAkane, Tree icon-arzwiki.svg][td], CC BY-SA 4.0
 
 Graph Data: [By Adam Beasley - The Noun Project][gd], CC BY 3.0
 
-Spatial Data: [By Ben Davis, Noun Project Map icon][sd], CC BY 3.0
+Relational Data: [categories by Nira Inds, Noun Project][rd], CC BY 3.0
 
 Data Stores: [By Gaelen Pinnock][ds] - Designer commissioned by the UCT Research
 office, CC BY-SA 4.0
@@ -189,7 +189,7 @@ Further Reading: [By Icon Lauk from the Noun Project][fr], CC BY 3.0
 [tad]: https://commons.wikimedia.org/w/index.php?curid=67122938
 [td]: https://commons.wikimedia.org/w/index.php?curid=130967171
 [gd]: https://commons.wikimedia.org/w/index.php?curid=105266675
-[sd]: https://commons.wikimedia.org/w/index.php?curid=74462493
+[rd]: https://thenounproject.com/icon/categories-6069462/
 [ds]: https://commons.wikimedia.org/w/index.php?curid=78355715
 [ss]: https://commons.wikimedia.org/w/index.php?curid=67122942
 [rd]: https://commons.wikimedia.org/w/index.php?curid=64472365
@@ -263,9 +263,6 @@ Question → Data structure
                 background-size="10%" background-opacity="0.8"
                 background-position="92% 7%"}
 
-<br>
-<br>
-
 ::: {style="font-size: 60%;"}
 ```{r, echo=FALSE}
 
@@ -320,7 +317,7 @@ kbl(mpg) |>
 :::
 
 ## Tree Data{background-image="img/slides/tree.svg"
-             background-size="25%" background-opacity="0.8"
+             background-size="10%" background-opacity="0.8"
              background-position="92% 7%"}
 
 <br>
@@ -338,7 +335,7 @@ kbl(mpg) |>
                                     background-size="10%"
                                     background-opacity="0.8"
                                     background-position="92% 7%"}
-::: {style="font-size: 130%;"}
+::: {style="font-size: 140%;"}
 -   How many nodes separate two entities?
 -   Which elements fall under a particular subtree?
 -   Text or directory searching
@@ -351,7 +348,7 @@ kbl(mpg) |>
 ![](img/mpg_tree_data.png)
 
 ## Graph Data{background-image="img/slides/network.png"
-             background-size="25%" background-opacity="0.8"
+             background-size="10%" background-opacity="0.8"
              background-position="92% 3%"}
 
 <br>
@@ -369,6 +366,7 @@ kbl(mpg) |>
 -   How many edges separate two entities?
 -   How many paths are there between two nodes?
 -   Which parts of the graph are most or least connected?
+-   What is the direction or volume of flow between entities?
 :::
 
 ### Abraham Lincoln Graph Data {background-image="img/slides/network.png"
@@ -379,38 +377,40 @@ kbl(mpg) |>
 <center>![](img/abraham_lincoln.png)</center>
 
 
-## Spatial Data{background-image="img/slides/map.png"
-                background-size="20%" background-opacity="0.8"
-                background-position="92% 3%"}
-
-```{r, echo=FALSE}
-suppressMessages(library(sf))
-
-#read in North Carolina data
-nc = st_read(system.file("shape/nc.shp", package="sf"), quiet = TRUE)
-
-plot_title = 'Live Births in North Carolina from 1974-1978'
-par(bg=NA)
-plot(nc['BIR74'], key.pos=1, main=plot_title)
-```
-
-## Spatial Data{background-image="img/slides/map.png"
-                background-size="20%" background-opacity="0.8"
+## Relational Data{background-image="img/slides/categories.png"
+                background-size="10%" background-opacity="0.8"
                 background-position="92% 3%"}
                 
-<center>![](img/slides/spatial_data.jpg){width="50%"}</center>
+<br>
 
-### Spatial Data Research Questions {background-image="img/slides/map.png"
+<center>
+![](img/slides/student_characteristics.png){width="140%"}
+</center>
+
+<br>
+
+### Relational Data Research Questions {background-image="img/slides/categories.png"
                                      background-size="10%"
                                      background-opacity="0.8"
                                      background-position="92% 7%"}
-::: {style="font-size: 130%;"}
+                                     
 
--   Where are entities located?
--   How close or far apart are various entities?
--   Are events more closely clustered than we would expect?
--   Predicting information for locations where we do not have data
+::: {style="font-size: 140%;"}
+
+-   Which groups are the largest or smallest?
+-   Do certain memberships tend to co-occur?
+-   How many groups does an entity tend to belong to?
+
 :::
+
+### `mtcars` Relational Questions {background-image="img/slides/categories.png"
+                                    background-size="10%"
+                                    background-opacity="0.8"
+                                    background-position="92% 7%"}
+
+
+<center>![](img/slides/mpg_relate_data.png){width="100%"}</center>
+
 
 # Data Stores {background-image="img/slides/data-store.png" 
                background-size="60%"
