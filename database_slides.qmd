@@ -110,7 +110,7 @@ names(mpg) = c('mpg', 'cylinders', 'horsepower', 'weight', 'manual', 'origin')
     -   Data Structures 
 -   Data Stores
     -   Flat File vs. Database
-    -   Spreadsheets
+    -   Spreadsheet Software
     -   Relational Databases
     -   NoSQL Databases
 -   Picking a Data Store
