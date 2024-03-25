@@ -205,7 +205,8 @@ Data type tells your computer what types of operations make sense.
 -   categorical (small, medium, large)
 -   characters (text)
 -   Boolean values (TRUE or FALSE)
--   Dates and times
+-   dates and times
+-   spatial data
 
 ## Data Structures{background-image="img/slides/Noun_Data.png"
                   background-size="10%" background-position="92% 7%"}
