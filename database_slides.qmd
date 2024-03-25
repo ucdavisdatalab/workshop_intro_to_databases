@@ -413,13 +413,6 @@ unit.
 
 :::
 
-## {background-image="img/slides/data-store.png" background-size="10%"
-    background-opacity="0.8" background-position="92% 7%"}
-
-<center>
-![](img/slides/data_store_factors.png){width="80%"}
-</center>
-
 ## Types of Data Stores {background-image="img/slides/data-store.png"
                                     background-size="10%"
                                     background-opacity="0.8"
@@ -451,15 +444,13 @@ unit.
 -   Built in version control and admin
 -->
 
-## {background-image="img/slides/data-store.png"
-                                    background-size="10%"
-                                    background-opacity="0.8"
-                                    background-position="92% 7%"}
-::: {style="font-size: 200%;"}
+## {background-image="img/slides/data-store.png" background-size="10%"
+    background-opacity="0.8" background-position="92% 7%"}
 
-Problems a database could help you solve...
+<center>
+![](img/slides/data_store_factors.png){width="80%"}
+</center>
 
-:::
 
 <!--
 ### You might need a database if... {background-image="img/slides/data-store.png"
@@ -721,6 +712,17 @@ Question → Data Structure → Data Store
 4.  The best data storage technology for any research question matches the
     structure of the data with the structure of the data store.
 
+
+
+## {background-image="img/slides/data-store.png"
+                                    background-size="10%"
+                                    background-opacity="0.8"
+                                    background-position="92% 7%"}
+::: {style="font-size: 200%;"}
+
+Problems a database could help you solve...
+
+:::
 
 
 ## {background-image="img/slides/lightbulb.png"
