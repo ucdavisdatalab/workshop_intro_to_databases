@@ -1,7 +1,10 @@
-Software,Data Structure,Spatial Data
-MongoDB,Tree/Document,vector
-Couchbase,Tree/Document,vector
-Cassandra,Column Family,vector (DataStax)
-Redis,Key-value,point only
-Neo4J,Graph,vector
-ArangoDB,"Tree/Document, graph, key-value",vector
+Software,Data Structure,Query Functionality,Transactions,Cost,Spatial Data
+MongoDB,Tree/Document,SQL-similar,Multi-document,Free,Vector
+Couchbase,Tree/Document,SQL-similar,Multi-document,Free,Vector
+Cassandra,Column Family,SQL-similar,Limited,Free,Vector (DataStax)
+HBase,Column Family,Limited,Multi-row,Free,
+Redis,Key-value,Limited,Limited,Free,Point only
+Neo4J,Graph,Graph traversal focused,SQL-like,Free,Vector
+ArangoDB,"Tree/Document, graph, key-value",Read/update focused,SQL-like,Free,Vector
+DynamoDB,"Document, key-value",Basic,SQL-like,Paid,Point only
+Elastisearch,Document,Text search focused,Limited,Free,Vector
