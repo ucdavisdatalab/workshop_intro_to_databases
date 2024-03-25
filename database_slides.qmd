@@ -661,6 +661,9 @@ data structure. Instead they use a variety of data structures:
 
 3.  Adding storage capacity is easier than for other data stores
 
+::: {style="font-size: 55%;"}
+
+
 ## Example NoSQL Software{background-image="img/slides/nosql.png"
                                 background-size="10%"
                                 background-opacity="0.8"
@@ -670,12 +673,15 @@ data structure. Instead they use a variety of data structures:
 
 nosql = read.csv('data/nosql_software.csv')
 
-nosql_cols = c("Software", "Data Structure", "Spatial Data")
+nosql_cols = c("Software", "Data Structure", "Query Functionality",
+               "Transactions", "Cost", "Spatial Data")
 
 kbl(nosql, col.names=nosql_cols) 
 
 
 ```
+
+:::
 
 # How to Decide? {background-image="img/slides/lightbulb.png" 
                        background-size="60%"
