@@ -400,7 +400,8 @@ nosql = read.csv('data/nosql_software.csv')
 nosql_cap = paste("A comparison of some of the more common software",
                 "implementations of NoSQL databases.")
 
-nosql_cols = c("Software", "Data Structure", "Spatial Data")
+nosql_cols = c("Software", "Data Structure", "Query Functionality",
+               "Transactions", "Cost", "Spatial Data")
 
 kbl(nosql, col.names=nosql_cols, caption=nosql_cap) 
 
