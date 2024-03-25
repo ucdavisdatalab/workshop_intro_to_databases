@@ -413,36 +413,14 @@ unit.
 
 :::
 
+
 ## Types of Data Stores {background-image="img/slides/data-store.png"
                                     background-size="10%"
                                     background-opacity="0.8"
                                     background-position="92% 7%"}
 
 ![](img/data_stores.png)
-<!--
-### Flat Files {background-image="img/slides/data-store.png"
-                                    background-size="10%"
-                                    background-opacity="0.8"
-                                    background-position="92% 7%"}
 
--   Stand alone file, not connected to other files
--   Data structures have relatively low complexity
--   Interact via Graphical User Interface (GUI) or programming language
--   Data storage capacity determined by GUI
--   Usually only one person can edit at a time
-
-### Databases {background-image="img/slides/data-store.png"
-                                    background-size="10%"
-                                    background-opacity="0.8"
-                                    background-position="92% 7%"}
-
--   Organized collection of linked or related data
--   Data structures can range from low to high complexity
--   Interact via query language or programming language
--   No hard storage limit
--   Many people can edit at a time
--   Built in version control and admin
--->
 
 ## {background-image="img/slides/data-store.png" background-size="10%"
     background-opacity="0.8" background-position="92% 7%"}
@@ -451,45 +429,6 @@ unit.
 ![](img/slides/data_store_factors.png){width="80%"}
 </center>
 
-
-<!--
-### You might need a database if... {background-image="img/slides/data-store.png"
-                                    background-size="10%"
-                                    background-opacity="0.8"
-                                    background-position="92% 7%"}
-
--   Your data set has many repeated values
-
--   Your data set contains information about many unrelated or loosely related
-    studies
-
--   You are sharing data with multiple people and everyone seems to have a
-    different version
-
--   Your data set is so large, your computer slows down or freezes when trying
-    to view it
-
--   You have to keep making the same corrections to your data over and over
-    again
-
-### You might need a database if... {background-image="img/slides/data-store.png"
-                                    background-size="10%"
-                                    background-opacity="0.8"
-                                    background-position="92% 7%"}
-
--   Excel keeps converting your columns to the wrong data type
-
--   You have so many pivot tables
-
--   You have hundreds (or thousands) of data files you need to share with your
-    collaborators
-
--   You have a hard time finding and extracting the information you need to
-    answer a particular research question
-
--   Processing your data requires you to spend a lot of time moving data
-    between spreadsheets by hand.
--->
 # Spreadsheet Software{background-image="img/slides/spreadsheet.png" 
                background-size="60%"
                background-opacity="0.2"}
@@ -693,10 +632,24 @@ kbl(nosql, col.names=nosql_cols)
 
 <br>
 
-::: {style="font-size: 145%;"}
 
-Question → Data Structure → Data Store
+## {background-image="img/slides/lightbulb.png" background-size="10%"
+    background-opacity="0.8" background-position="92% 7%"}
+
+<center>
+![](img/slides/data_store_factors.png){width="80%"}
+</center>
+
+## {background-image="img/slides/lightbulb.png"
+                                    background-size="10%"
+                                    background-opacity="0.8"
+                                    background-position="92% 7%"}
+::: {style="font-size: 200%;"}
+
+Problems a database could help you solve...
+
 :::
+
 
 ## Data Store Principles {background-image="img/slides/lightbulb.png"
                                 background-size="10%"
@@ -712,17 +665,6 @@ Question → Data Structure → Data Store
 4.  The best data storage technology for any research question matches the
     structure of the data with the structure of the data store.
 
-
-
-## {background-image="img/slides/data-store.png"
-                                    background-size="10%"
-                                    background-opacity="0.8"
-                                    background-position="92% 7%"}
-::: {style="font-size: 200%;"}
-
-Problems a database could help you solve...
-
-:::
 
 
 ## {background-image="img/slides/lightbulb.png"
