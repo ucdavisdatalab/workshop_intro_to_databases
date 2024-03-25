@@ -74,56 +74,30 @@ names(mpg) = c('mpg', 'cylinders', 'horsepower', 'weight', 'manual', 'origin')
 ![](img/slides/data_store_factors.png){width="80%"}
 </center>
 
-
-## {background-image="img/slides/trail.png"
-                background-size="10%" background-opacity="0.9"
-                background-position="92% 7%"}
-            
-
-::: {style="font-size: 145%; text-align: center;"}
-Research Question → Data Structure
-
-<br>
-
-Use Case → Data Management
-
-<br>
-
-XX → Computing Resources
-:::
-
-
-<!-- ## Topics Covered {background-image="img/slides/trail.png"
-                  background-size="10%" background-opacity="0.9"
-                  background-position="92% 7%"}
-
--   What is data?
-
--   What are the most common data structures people use?
-
--   Which data structures lend themselves to answering different types of
-    research questions?
-
--   What is a database vs a data store?
-
--   What are the differences between relational and noSQL databases?
-
--   How to pick a data store based on your research question?
--->
-
-## Questions to Consider {background-image="img/slides/trail.png"
-                                background-size="10%"
-                                background-opacity="0.8"
+## Data Storage Considerations {.smaller
+                                background-image="img/slides/trail.png" 
+                                background-size="10%" background-opacity="0.9"
                                 background-position="92% 7%"}
 
- * What is the structure of the data to be stored?
- * How much data needs to be stored?
- * How many people will be accessing the data store?
- * How frequently will people be interacting with the data?
- * Will the data be updated by humans or by a computer?
- * How will people be accessing the data
- 
-<center> **Multiple questions may mean multiple data stores**<center>
+-   **Data Structure:** What are my research questions?
+
+-   **Data Interaction**
+      
+      - What kinds of analysis will I do?
+      - Will I need to include outside information?
+
+-   **Data Management**
+       
+    - When and how is the data collected?
+    - Who needs to access it? one or more people?
+    - How long does the data need to persist?
+
+-   **Computing Resources**
+
+    - How much data do I have?
+    - Do I have access to external or shared data storage?
+    - What software to I have licenses for?
+
 
 ## Road Map{background-image="img/slides/trail.png" background-size="40%"
             background-opacity="0.9" background-position="80% 30%"}
