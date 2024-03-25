@@ -59,9 +59,11 @@ data types include:
 -   integers
 -   decimal
 -   floating point numbers
+-   categories (small, medium, large)
 -   characters (text)
 -   Boolean values (TRUE and FALSE)
 -   Dates and times
+-   spatial data
 
 All data, including individual data points, have a type. However, a given piece
 of information can be stored using multiple data types. For example, you can
