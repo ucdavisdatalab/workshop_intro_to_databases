@@ -413,17 +413,13 @@ unit.
 
 :::
 
-## Data Stores {background-image="img/slides/data-store.png"
-                                    background-size="10%"
-                                    background-opacity="0.8"
-                                    background-position="92% 7%"}
+## {background-image="img/slides/data-store.png" background-size="10%"
+    background-opacity="0.8" background-position="92% 7%"}
 
-<br>
-<br>
+<center>
+![](img/slides/data_store_factors.png){width="80%"}
+</center>
 
-::: {style="font-size: 175%; text-align: center;"}
-Data Structure → Data Store
-:::
 ## Types of Data Stores {background-image="img/slides/data-store.png"
                                     background-size="10%"
                                     background-opacity="0.8"
