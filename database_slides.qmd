@@ -213,9 +213,11 @@ Data type tells your computer what types of operations make sense.
                   
 <br>
 <br>
-**Data Structure: a way of organizing data that makes it easier to store** 
-**and use**
 
+::: {style="font-size: 130%;"}
+
+Data Structure: a way of organizing data that makes it easier to store and use
+:::
 <br>
 <br>
 
