@@ -255,20 +255,6 @@ kbl(mpg, caption = mpg_cap) |>
 ```
 :::
 
-<!--
-### Tabular Structure{background-image="img/slides/tabular.png"
-                      background-size="10%" background-opacity="0.8"
-                      background-position="92% 7%"}
-
--   Organized by rows and columns
--   Each row is an observation, each column a measurement
--   Useful when all study subjects can be described with the same set of
-    characteristics
--   Focus is at the observation level
--   Sorting observations is easy
-
--->
-
 ### Tabular Data Research Questions{background-image="img/slides/tabular.png"
                                     background-size="10%"
                                     background-opacity="0.8"
