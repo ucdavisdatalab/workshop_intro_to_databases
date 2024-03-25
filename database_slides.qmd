@@ -487,11 +487,11 @@ Problems a database could help you solve...
 -   Processing your data requires you to spend a lot of time moving data
     between spreadsheets by hand.
 -->
-# Spreadsheets{background-image="img/slides/spreadsheet.png" 
+# Spreadsheet Software{background-image="img/slides/spreadsheet.png" 
                background-size="60%"
                background-opacity="0.2"}
 
-## Spreadsheets{background-image="img/slides/spreadsheet.png"
+## Spreadsheet Software{background-image="img/slides/spreadsheet.png"
                 background-size="10%"
                 background-opacity="0.8"
                 background-position="92% 7%"}
