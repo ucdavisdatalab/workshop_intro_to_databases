@@ -291,13 +291,17 @@ kbl(mpg) |>
                   background-size="10%" background-opacity="0.8"
                   background-position="92% 7%"}
 
+<center>
 ![](img/tree_data.png){width="130%"}
-
+</center>
 
 ### Tree Data Research Questions{background-image="img/slides/tree.svg"
                                     background-size="10%"
                                     background-opacity="0.8"
                                     background-position="92% 7%"}
+                                    
+<br>
+
 ::: {style="font-size: 140%;"}
 -   How many nodes separate two entities?
 -   Which elements fall under a particular subtree?
