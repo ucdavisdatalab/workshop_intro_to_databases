@@ -15,6 +15,17 @@ stores have two primary functions. First, they need to facilitate people
 accessing the data (reading) and making changes to it (writing). Second, they
 need to preserve this access over a period of time.
 
+## Data Store Definitions
+
+**Query:** commands that create, read, update, delete (CRUD) information from a
+data store.
+
+**Transaction:** the unit of work in a data store. Ideally a transaction 
+succeeds or fails as a unit.
+
+
+## Types of Data Stores
+
 Regardless of your data's structure you have two general options for how to
 store your data digitally: in flat files or in a database.
 

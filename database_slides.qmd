@@ -389,6 +389,30 @@ kbl(mpg) |>
 >
 > Wikipedia
 
+
+## Data Store Definitions {background-image="img/slides/data-store.png"
+                                    background-size="10%"
+                                    background-opacity="0.8"
+                                    background-position="92% 7%"}
+
+<br>
+
+::: {style="font-size: 120%;"}
+
+
+**Data store:** where your data is saved + how you interact with your data
+
+<br>
+
+**Query:** database commands that create, read, update, delete (CRUD) 
+
+<br>
+
+**Transaction:** the unit of work in a database, ideally succeeds or fails as a 
+unit.
+
+:::
+
 ## Data Stores {background-image="img/slides/data-store.png"
                                     background-size="10%"
                                     background-opacity="0.8"
