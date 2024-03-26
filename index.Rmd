@@ -20,9 +20,8 @@ and organizing different collections of data. We will discuss how data structure
 and data types impact your storage options, when you should use a database, and
 which platforms you might consider for your research. This workshop is a general
 lecture with case studies and Q&A (no laptops necessary). This workshop is a
-prerequisite for DataLab's [Intro to SQL for Querying Databases][sql] 
-and [Spatial SQL with SpatiaLite][spat_sql] workshops as well as being part of 
-the [Research Computing micro-credential][micro_cred]
+prerequisite for DataLab's [Intro to SQL for Querying Databases Workshop][sql],
+and [Spatial SQL with SpatiaLite Workshop][spat_sql].
 
 ## Learning Objectives
 
@@ -42,8 +41,7 @@ questions:
 
 
 [sql]: https://ucdavisdatalab.github.io/workshop_intro_to_sql/
-[spat_sql]: https://github.com/ucdavisdatalab/Spatial_SQL
-[micro_cred]: https://gradpathways.ucdavis.edu/research-computing-pathway
+[spat_sql]: https://ucdavisdatalab.github.io/Spatial_SQL/
 
 ## Prerequisites
 
