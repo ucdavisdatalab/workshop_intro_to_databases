@@ -79,25 +79,30 @@ names(mpg) = c('mpg', 'cylinders', 'horsepower', 'weight', 'manual', 'origin')
                                 background-size="10%" background-opacity="0.9"
                                 background-position="92% 7%"}
 
--   **Data Structure:** What are my research questions?
 
--   **Data Interaction**
-      
-      - What kinds of analysis will I do?
-      - Will I need to include outside information?
 
--   **Data Management**
+::: {style="font-size: 90%;"}
+
+1.  **Data Structure:** What are my research questions?
+
+2.  **Data Interaction**
        
+    - What kinds of analysis will I do?
+    - How does my data need to be formatted?
+
+3.  **Data Management**
+    
     - When and how is the data collected?
-    - Who needs to access it? one or more people?
+    - Who needs access to it? one or more people?
     - How long does the data need to persist?
 
--   **Computing Resources**
+4.  **Computing Resources**
 
     - How much data do I have?
-    - Do I have access to external or shared data storage?
+    - Do I have access to external or shared storage space?
     - What software to I have licenses for?
 
+:::
 
 ## Road Map{background-image="img/slides/trail.png" background-size="40%"
             background-opacity="0.9" background-position="80% 30%"}
