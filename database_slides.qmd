@@ -71,7 +71,7 @@ names(mpg) = c('mpg', 'cylinders', 'horsepower', 'weight', 'manual', 'origin')
                 background-position="92% 7%"}
                 
 <center>
-![](img/slides/data_store_factors.png){width="80%"}
+![](img/data_store_factors.png){width="80%"}
 </center>
 
 ## Data Storage Considerations {.smaller
@@ -434,7 +434,7 @@ unit.
     background-opacity="0.8" background-position="92% 7%"}
 
 <center>
-![](img/slides/data_store_factors.png){width="80%"}
+![](img/data_store_factors.png){width="80%"}
 </center>
 
 # Spreadsheet Software{background-image="img/slides/spreadsheet.png" 
@@ -699,7 +699,7 @@ kbl(nosql, col.names=nosql_cols)
     background-opacity="0.8" background-position="92% 7%"}
 
 <center>
-![](img/slides/data_store_factors.png){width="80%"}
+![](img/data_store_factors.png){width="80%"}
 </center>
 
 ## Data Structure Decision{background-image="img/slides/lightbulb.png"
