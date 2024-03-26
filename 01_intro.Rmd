@@ -1,0 +1,29 @@
+# Data Storage Considerations
+
+<center>
+![](img/data_store_factors.png){width="80%"}
+</center>
+
+When deciding on a method for storing your data (a data store), there are four
+primary aspects to consider: your data's structure, the ways to anticipate 
+interacting with your data, your data management needs, and the computing
+resources you have access to. 
+
+1.  **Data Structure:** What are my research questions?
+
+2.  **Data Interaction**
+       
+    - What kinds of analysis will I do?
+    - How does my data need to be formatted?
+
+3.  **Data Management**
+    
+    - When and how is the data collected?
+    - Who needs access to it? one or more people?
+    - How long does the data need to persist?
+
+4.  **Computing Resources**
+
+    - How much data do I have?
+    - Do I have access to external or shared storage space?
+    - What software to I have licenses for?
