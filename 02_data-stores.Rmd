@@ -117,16 +117,16 @@ solution to your problems.
 -   Processing your data requires you to spend a lot of time moving data
     between spreadsheets by hand.
 
-## Spreadsheets
+## Spreadsheet Software
 
-Spreadsheets, a type of flat file, are a common form of digital data store. If
-you have used Microsoft Excel or Google Sheets, you have used a spreadsheet.
-Like some databases, spreadsheets impose a tabular data structure on the data
-they store. Despite this, a spreadsheet is not a database. Like most modern
-software, spreadsheet applications have graphical user interfaces, making the
-barrier to entry very low. Spreadsheet software also offers some built in
-analysis tools, so you don't have to learn a new application to do basic
-statistics and data visualization.
+Using spreadsheet software with tabular data files is very a common form of
+digital data store. If you have used Microsoft Excel or Google Sheets, you have
+used spreadsheet software. Like some databases, spreadsheets impose a tabular
+data structure on the data they store. Despite this, a spreadsheet is not a
+database. Like most modern software, spreadsheet applications have graphical
+user interfaces, making the barrier to entry very low. Spreadsheet software also
+offers some built in analysis tools, so you don't have to learn a new
+application to do basic statistics and data visualization.
 
 Spreadsheet software also suffers from some drawbacks. They offer limited
 storage capacity, making it difficult to work with large data sets. Excel and
@@ -137,9 +137,9 @@ is much more tedious than analyzing small ones.
 
 Spreadsheets also store data in ways that cause a lot of data duplication and
 make data entry susceptible to typos. In the spreadsheet visualized below, we
-have data on the Die Hard movie franchise [@imdb]. Specifically, we have information
-about the actors that starred in the series and the movies in which they
-appeared.
+have data on the Die Hard movie franchise [@imdb]. Specifically, we have
+information about the actors that starred in the series and the movies in which
+they appeared.
 
 ```{r, echo=FALSE}
 # class.output="scroll-300",
@@ -171,11 +171,28 @@ actor, we would have to make that change in many different places, and
 potentially miss one or make a mistake. If we accidentally left out an "l" in
 Bruce Willis's last name, we would have to modify five cells to fix our data.
 
-Finally, most spreadsheet applications store their data locally, so unless you
-are very careful about version control outside the application, it is easy to
-end up with people working on different versions of the data. Google Sheets
-offers shared access and some version control, but still fails to deliver on
-storage capacity, and data integrity.
+Finally, most spreadsheet applications make it difficult to work with multiple
+people on a single data set. Generally, GUIs only allow one person to edit a
+file at a time, and setting user permissions is cumbersome. They also make it
+easy to collect many versions of a given data set. So unless you are diligent
+about naming, you may end up with people working on different different versions
+of your data. Google Sheets offers shared access and some version control, but
+still fails to deliver on storage capacity, and data integrity.
+
+### Spreadsheet Software Decision Factors
+
+1.  **Structure:** tabular
+2.  **Interaction:**
+    - Graphical User Interface
+    - Some offer built in analysis and visualization tools
+    - reformatting is hard
+3.  **Management:**
+    - Managing multiple users is challenging
+    - Easy to introduce typos or erros when adding data
+4.  **Computing Resources:**
+    - Software is easy to use and widely available
+    - GUI limits data size
+    - Lots of data duplication makes data larger
 
 ### Examples
 
@@ -191,9 +208,9 @@ storage capacity, and data integrity.
 Relational Database Management Systems (RDBMSs), or relational databases, are
 one type of database. When people use the word "database", nine times out of
 ten they are referring to a relational database. Like spreadsheets, RDBMSs
-impose a tabular structure on the data they contain. A basic relational
-database is a collection of connected tables. However, they can be more
-complex. The tables in the database are linked by shared columns, called keys.
+impose a tabular structure on the data they contain. A basic RMDBS is a 
+collection of tables connected by shared columns called keys. However, they can
+be more complex.
 
 Users often interact with an RDBMS through the Structured Query Language (SQL)
 instead of a graphical user interface, though there are exceptions. SQL is a
@@ -206,7 +223,7 @@ learn than a more complex programming language like python or R.
 
 To learn about using SQL in practice, check out DataLab's Intro to SQL
 ([reader](https://ucdavisdatalab.github.io/workshop_intro_to_sql/), workshop)
-and Spatial SQL ([reader](https://github.com/ucdavisdatalab/Spatial_SQL),
+and Spatial SQL ([reader](https://ucdavisdatalab.github.io/Spatial_SQL/),
 workshop) resources.
 
 ### Relationship keys
@@ -304,6 +321,35 @@ new data. While it may be easy to successfully fix 5 errors, it will be much
 harder to fix 50, or 5,000. This is especially true if they are scattered
 throughout your data set and not just in a single column.
 
+Relational databases also have a built-in system for managing multiple people
+interacting with the same data. Whenever someone submits a transaction to a
+RDBMS, the database puts that transaction in a first come, first served queue.
+If the transaction is successful, the entire database is updated and any future
+transaction will work off the new data. If the transaction fails, nothing is
+updated and the data stays as is for the next transaction in line.
+
+### RDBMS Decision Factors
+
+1. **Structure:** tabular, relational
+
+2. **Interaction:** 
+
+    - SQL (Structured Query Language)
+    - Data manipulation is easy and reproducible
+
+3. **Management**
+
+    - Built in data quality control and multi-user management
+    - Standardizes data updates
+    - Provides definitive version of your data
+
+4. **Computing Resources**
+
+    - Fewer size restrictions
+    - Requires some specialized setup
+    - Thousands of transactions per day
+
+
 ### RDBMS Software
 
 Because of relational databases' widespread utility, there are many software
@@ -348,7 +394,10 @@ databases can contain data from multiple structures, including
 -   wide column tables
 
 This makes NoSQL databases are much better at storing tree and graph data, as
-those data structures do not fit well into relational tables. 
+those data structures do not fit well into relational tables. Like RDBMSs,
+NoSQL users interact with their database via a query language. However, the exact
+one depends on the database software. This is in part because different data 
+structures lend themselves to different types of operations.
 
 ### Why Use NoSQL Databases?
 
@@ -358,20 +407,20 @@ those data structures do not fit well into relational tables.
 
 3.  Adding storage capacity is easier than for other data stores
 
-One of the strengths of relational databases is that we can easily combine data
-from different parts of the database using joins. However, functionality does
-come with a cost. Using joins means relational databases must move a lot of data
-around, which can slow down operations. Because NoSQL databases do not have this
-feature, they can respond much faster to requests for information. While a RDBMS
-can support a few thousand transactions per day, a NoSQL database can run
-millions of transactions a day.
+One of the strengths of RDBMSs is that we can easily combine data from different
+parts of the database using joins. However, functionality does come with a cost.
+Using joins means relational databases must move a lot of data around, which can
+slow down operations. Because NoSQL databases do not have this feature, they can
+respond much faster to requests for information. While a RDBMS can support a few
+thousand transactions per day, a NoSQL database can run millions of transactions
+a day.
 
 This lack of data joins also means NoSQL databases can also store data in
 in many different locations without having it affect the database's response
 time. This means a single NoSQL database could run on just as easily multiple 
 on multiple machines as one machine. The practical implication of this is that
 adding more storage space or processing power is much easier. You can add an
-additional computer instead of needing to upgrade the one you already have.
+additional computer instead of needing to upgrade the one you already have. 
 
 One common use case for NoSQL databases is for social network sites like
 Facebook and Twitter/X. Social media contains a lot of text data that does not
@@ -383,6 +432,27 @@ regularly need to expand their storage capacity, something that is much easier
 with NoSQL databases.
 
 <!-- companies may switch to nosql as their computing needs grow -->
+
+### NoSQL Decision Factors
+
+1. **Structure:** documents, trees, graphs, key-value pairs, wide column tables
+
+2. **Interaction:** 
+
+    - Via various query languages
+    - Data manipulation is easy and reproducible
+
+3. **Management**
+
+    - Multi-user management
+    - Standardizes data updates
+    - Provides somewhat definitive version of your data
+
+4. **Computing Resources**
+
+    - Fewer size restrictions
+    - Requires some specialized setup
+    - Millions of transactions per day
 
 ### Example Software
 
