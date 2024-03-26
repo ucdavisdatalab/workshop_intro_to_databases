@@ -702,32 +702,47 @@ kbl(nosql, col.names=nosql_cols)
 ![](img/slides/data_store_factors.png){width="80%"}
 </center>
 
-## {background-image="img/slides/lightbulb.png"
+## Data Structure Decision{background-image="img/slides/lightbulb.png"
                                     background-size="10%"
                                     background-opacity="0.8"
                                     background-position="92% 7%"}
-::: {style="font-size: 200%;"}
 
-Problems a database could help you solve...
-
-:::
-
-
-## Data Store Principles {background-image="img/slides/lightbulb.png"
-                                background-size="10%"
-                                background-opacity="0.8"
-                                background-position="92% 7%"}
-
-<!-- 1.  Different data structures facilitate different research questions. -->
-
-1.  When we convert information to data, we encode it in a structure.
-
-3.  All data stores impose structure on your data.
-
-4.  The best data storage technology for any research question matches the
-    structure of the data with the structure of the data store.
+<center>
+![](img/slides/decision_map_structure.png)
+</center>
 
 
+## Data Interaction Decision{background-image="img/slides/lightbulb.png"
+                                    background-size="10%"
+                                    background-opacity="0.8"
+                                    background-position="92% 7%"}
+
+<center>
+![](img/slides/decision_map_interaction.png)
+</center>
+
+
+
+
+## Data Management Decision{background-image="img/slides/lightbulb.png"
+                                    background-size="10%"
+                                    background-opacity="0.8"
+                                    background-position="92% 7%"}
+
+<center>
+![](img/slides/decision_map_management.png){width="80%"}
+</center>
+
+
+
+## Computing Resources Decision{background-image="img/slides/lightbulb.png"
+                                    background-size="10%"
+                                    background-opacity="0.8"
+                                    background-position="92% 7%"}
+
+<center>
+![](img/slides/decision_map_CR.png)
+</center>
 
 ## {background-image="img/slides/lightbulb.png"
                                 background-size="40%"
