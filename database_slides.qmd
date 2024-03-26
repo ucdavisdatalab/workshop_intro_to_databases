@@ -424,7 +424,10 @@ unit.
                                     background-opacity="0.8"
                                     background-position="92% 7%"}
 
-![](img/data_stores.png)
+<center>
+
+![](img/slides/data_store_quadrants.png){width="60%"}
+</center>
 
 
 ## {background-image="img/slides/data-store.png" background-size="10%"
