@@ -446,13 +446,32 @@ unit.
                 background-opacity="0.8"
                 background-position="92% 7%"}
 
+::: {style="font-size: 90%;"}
+
+1.  **Structure:** tabular
+
+2.  **Interaction:** Graphical User Interface (GUI), reformatting is hard
+
+3.  **Management:**
+    
+    - Managing multiple users is challenging
+    - Easy to introduce typos or erros when adding data
+
+4.  **Computing Resources:**
+
+    - Software is easy to use and widely available
+    - GUI limits data size
+    - Lots of data duplication
+
+:::
+<!--
 -   Imposes tabular data structure
 -   Widely available and easy to use via a Graphical User Interface (GUI)
 -   Generally limited to 1 million rows or 10 million cells if using a GUI
 -   Setting permissions is cumbersome
 -   Easy to introduce typos or errors
 -   May cause a lot of data duplication
-
+-->
 ## Spreadsheet Data{background-image="img/slides/spreadsheet.png"
                     background-size="10%"
                     background-opacity="0.8"
@@ -496,26 +515,37 @@ kbl(dh, caption=dh_cap) |>
 
 \* Open Source
 
-# Relational Databases{background-image="img/slides/database.png" 
+# Relational Database Management Systems (RDBMS) {background-image="img/slides/database.png" 
                        background-size="60%"
                        background-opacity="0.2"}
 
-## Relational Databases{background-image="img/slides/database.png"
+## RDBMSs{background-image="img/slides/database.png"
                                 background-size="10%"
                                 background-opacity="0.9"
                                 background-position="92% 7%"}
 
--   Imposes tabular data structure
+::: {style="font-size: 77%;"}
 
--   Group of tables connected by shared columns called keys
+1. **Structure:** Tables connected by shared columns called keys
 
--   Managed by software called a Relational Database Management System (RDBMS)
+2. **Interaction:** 
 
--   Interact with the database using SQL (Structured Query Language)
+    - SQL (Structured Query Language)
+    - Data manipulation is easy and reproducible
 
--   Built in data quality control and user roles
+3. **Management**
 
--   Provides definitive version of your data
+    - Built in data quality control and multi-user management
+    - Standardizes data updates
+    - Provides definitive version of your data
+
+4. **Computing Resources**
+
+    - No built-in size restrictions
+    - Requires some specialized setup
+    - thousands of transactions per day
+
+:::
 
 ## Relational Keys{background-image="img/slides/database.png"
                                 background-size="10%"
@@ -534,18 +564,23 @@ Pair of columns with the same values
 
 ![](img/imdb_ERD.png)
 
-## Why use a relational database? {background-image="img/slides/database.png"
+## Why use an RDBMS? {background-image="img/slides/database.png"
                                 background-size="10%"
                                 background-opacity="0.9"
                                 background-position="92% 7%"}
 
-1.  Reduce data duplication
+::: {style="font-size: 120%;"}
 
-2.  Speed up and standardize accessing and updating the data
 
-3.  Ease of reformatting data
+-  Reduce data duplication
 
-4.  Ensure data integrity
+-  Speed up and standardize accessing and updating the data
+
+-  Ease of reformatting data
+
+-  Ensure data integrity
+
+:::
 
 ## Die Hard Movie Data {background-image="img/slides/database.png"
                                 background-size="10%"
@@ -583,7 +618,7 @@ kbl(sql, col.names=sql_cols)
 ```
 :::
 
-# NoSQL Databases{background-image="img/slides/nosql.png" 
+# NoSQL Management Systems{background-image="img/slides/nosql.png" 
                        background-size="60%"
                        background-opacity="0.3"}
 
@@ -592,25 +627,44 @@ kbl(sql, col.names=sql_cols)
                                 background-opacity="0.8"
                                 background-position="92% 7%"}
 
-NoSQL (Not Only SQL) databases are databases that *do not* impose a tabular
-data structure. Instead they use a variety of data structures:
+::: {style="font-size: 77%;"}
 
--   documents
--   key-value pairs
--   graphs
--   trees
--   wide column tables 
+
+1. **Structure:** documents, trees, graphs, key-value pairs, wide column tables
+
+2. **Interaction:** 
+
+    - Via various query languages
+    - Data manipulation is easy and reproducible
+
+3. **Management**
+
+    - Multi-user management
+    - Standardizes data updates
+    - Provides somewhat definitive version of your data
+
+4. **Computing Resources**
+
+    - No built-in size restrictions
+    - Requires some specialized setup
+    - millions of transactions per day
+:::
 
 ## Why Use NoSQL Databases?{background-image="img/slides/nosql.png"
                                 background-size="10%"
                                 background-opacity="0.8"
                                 background-position="92% 7%"}
 
-1.  Compatible with multiple data structures
+::: {style="font-size: 140%;"}
 
-2.  Data transactions are much faster than other data stores
 
-3.  Adding storage capacity is easier than for other data stores
+-  Compatible with multiple data structures
+
+-  Data transactions are much faster than other data stores
+
+-  Adding storage capacity is easier than for other data stores
+
+:::
 
 ::: {style="font-size: 55%;"}
 
