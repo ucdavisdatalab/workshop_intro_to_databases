@@ -62,7 +62,7 @@ data types include:
 -   categories (small, medium, large)
 -   characters (text)
 -   Boolean values (TRUE and FALSE)
--   Dates and times
+-   dates and times
 -   spatial data
 
 All data, including individual data points, have a type. However, a given piece
