@@ -426,7 +426,7 @@ unit.
 
 <center>
 
-![](img/slides/data_store_quadrants.png){width="60%"}
+![](img/data_stores.png){width="100%"}
 </center>
 
 
