@@ -189,7 +189,7 @@ viewing tree structured data on a computer, it often looks very "nested", like
 sections and subsections of a document. In fact, tree data is sometimes
 referred to as document structured data because of this.
 
-*Figure 2.1. An generic example of tree structured data. Intersections are
+*Figure 3.1. An generic example of tree structured data. Intersections are
 labeled as nodes and the nodes are connected with edges.*
 
 <center>![](img/tree_data.png){width="50%"}</center>
@@ -220,8 +220,8 @@ see which car manufacturer produced the greatest number of models in 1973-74
 and how many different models came out of Japan during that time period.
 
 
-*Figure 2.3. A tree representation of the subset of the `mtcars` data set
-displayed in Table 2.1.* 
+*Figure 3.3. A tree representation of the subset of the `mtcars` data set
+displayed in Table 3.1.* 
 ![](img/mpg_tree_data.png)
 
 #### Example Research Questions
@@ -247,7 +247,7 @@ or root node, and there is no implicit hierarchy or nesting. Additionally, the
 relationships between the vertices can be directional, and that direction does
 not have to be consistent throughout the graph.
 
-*Figure 2.4. Two examples of generic graph data, one a directed graph and one
+*Figure 3.4. Two examples of generic graph data, one a directed graph and one
 and undirected graph. The directed graph has arrows connecting the nodes, while
 the undirected graph simply has lines.*
 
@@ -263,7 +263,7 @@ to the graph structure. In the digital world, we can use graphs to map out the
 link connections between Wikipedia pages, as seen below with Abraham Lincoln 
 [@wqs].
 
-*Figure 2.5. A graph of relationships between Abraham Lincoln's Wikipedia page
+*Figure 3.5. A graph of relationships between Abraham Lincoln's Wikipedia page
 and other pages linked to it. Each linkage contains a label describing the 
 relationship between the two pages*
 
@@ -318,7 +318,7 @@ uses of spatial data. However, we can also ask as questions like whether points
 are clustered more closely than we would expect, and whether we can use nearby
 data to predict values for places where we don't any.
 
-*Figure 2.6. A map of the counties of North Carolina, with the county areas
+*Figure 3.6. A map of the counties of North Carolina, with the county areas
 shaded to correspond to the number of live births in the county from 1974 to
 1978 [@nc].*
 

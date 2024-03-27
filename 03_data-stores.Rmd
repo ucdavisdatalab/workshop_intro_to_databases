@@ -30,7 +30,7 @@ Regardless of your data's structure you have two general options for how to
 store your data digitally: in flat files with a GUI or in a database.
 
 
-*Figure 3.1: A tree diagram enumerating different ways of managing your data,* 
+*Figure 4.1: A tree diagram enumerating different ways of managing your data,* 
 *in part based on the data structure.*
 
 ![](img/data_stores.png){width="80%"}
@@ -264,7 +264,7 @@ Connector lines link primary/foreign key pairs. These lines specify which
 tables can be combined, and which keys should be used to combine them. The
 connector lines also specify what type of relationship between the two tables.
 
-*Figure 3.2. A partial Entity Relationship Diagram for the IMDB non-commercial
+*Figure 4.2. A partial Entity Relationship Diagram for the IMDB non-commercial
 database [@imdb; @sql_imdb].*
 
 ![](img/imdb_ERD.png)
