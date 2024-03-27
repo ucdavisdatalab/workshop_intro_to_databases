@@ -161,16 +161,15 @@ data types include:
 -   characters (text)
 -   Boolean values (TRUE and FALSE)
 -   dates and times
--   spatial data
 
 All data, including individual data points, have a type. However, a given piece
 of information can be stored using multiple data types. For example, you can
 store the value of 1 as the integer 1, the decimal 1.0, the text "1", the
-Boolean TRUE, or the date 1900-01-02. The underlying information is the same
-(1), but the computer will treat each of these pieces of data differently. It
-will not allow you to add "1" to another number, and it may have issues
-combining the integer or decimal 1.0 with text. Text itself can only be stored
-as characters.
+Boolean TRUE, or the date 1900-01-02 (days after January 1, 1900). The
+underlying information is the same (1), but the computer will treat each of
+these pieces of data differently. It will not allow you to add "1" to another
+number, and it may have issues combining the integer or decimal 1.0 with text.
+Text itself can only be stored as characters.
 
 ## Data Structures
 
