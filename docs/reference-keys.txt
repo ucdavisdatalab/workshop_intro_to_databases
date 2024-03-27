@@ -6,7 +6,6 @@ learning-objectives
 prerequisites
 credits
 references
-data
 data-storage-considerations
 data-structure
 key-questions
@@ -16,6 +15,7 @@ data-management
 key-questions-2
 computing-resources
 key-questions-3
+data
 data-types
 data-structures
 columnartabular
@@ -24,7 +24,7 @@ trees
 example-research-questions-1
 graphs
 example-research-questions-2
-spatial
+relational-data
 example-research-questions-3
 data-stores
 data-store-definitions
