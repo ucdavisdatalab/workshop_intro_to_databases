@@ -1,15 +1,18 @@
 # Data Storage Considerations
 
-<center>
-![](img/data_store_factors.png){width="80%"}
-</center>
-
 When deciding on a method for storing your data (a data store), you have many
 options. While none of the options will likely be perfect, some are undoubtedly
 more suited to your situation than others. In order to figure out which data
-store will best suit your needs, it is important to consider your data's
-structure, the ways you anticipate interacting with your data, your data
-management needs, and the computing resources you have access to.
+store will best suit your needs, it is important to consider the following four
+factors: your data's structure, the ways you anticipate interacting with your
+data, your data management needs, and the computing resources you have access
+to.
+
+<center>
+*Figure 2.1. Diagram outlining four factors to consider when choosing a data
+store.*
+![](img/data_store_factors.png){width="80%"}
+</center>
 
 ## Data Structure
 
