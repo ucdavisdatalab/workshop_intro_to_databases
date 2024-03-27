@@ -216,15 +216,20 @@ accessing the data (reading) and making changes to it (writing). Second, they
 need to preserve this access over a period of time.</p>
 <div id="data-store-definitions" class="section level2 hasAnchor" number="4.1">
 <h2><span class="header-section-number">4.1</span> Data Store Definitions<a href="data-stores.html#data-store-definitions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>Query:</strong> commands that create, read, update, delete (CRUD) information from a
-data store.</p>
+<p><strong>Data Store:</strong> Where your data is saved and how you interact with it.</p>
+<p><strong>GUI:</strong> Graphical User Interface, a software application that allows you to
+interact with the computer via icons, buttons, and windows. Often referred to in
+contrast to a command line interface which only allows you to interact with the
+computer through text commands.</p>
+<p><strong>Query:</strong> commands that create, read, update, or delete information from a data
+store, generally entered through a command line interface.</p>
 <p><strong>Transaction:</strong> the unit of work in a data store. Ideally a transaction
 succeeds or fails as a unit.</p>
 </div>
 <div id="types-of-data-stores" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Types of Data Stores<a href="data-stores.html#types-of-data-stores" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Regardless of your data’s structure you have two general options for how to
-store your data digitally: in flat files with a GUI or in a database.</p>
+store your data digitally: in flat files using a GUI or in a database.</p>
 <p><em>Figure 4.1: A tree diagram enumerating different ways of managing your data,</em>
 <em>in part based on the data structure.</em></p>
 <p><img src="img/data_stores.png" style="width:80.0%" /></p>
@@ -232,10 +237,10 @@ store your data digitally: in flat files with a GUI or in a database.</p>
 stand alone file on your computer that is not linked to data elsewhere. You can
 store tabular data in .xlsx and .csv files, tree data in .xml and .json files,
 and graph data in .GML and .DOT files. Generally, people interact with data
-stored in flat files via a <strong>graphical user interface</strong> (GUI). Most GUIs are
-specific to file type or data structure. For example, spreadsheet applications
-like Microsoft Excel or Google Sheets can edit xlsx and csv files, and
-applications like Graphviz can visualize and modify DOT files.</p>
+stored in flat files via a GUI. Most GUIs are specific to file type or data
+structure. For example, spreadsheet applications like Microsoft Excel or Google
+Sheets can edit xlsx and csv files, and applications like Graphviz can visualize
+and modify DOT files.</p>
 <p>In comparison, a <strong>database</strong> is an organized collection of data that is linked
 or related in some way. Users interact with a database through specialized
 software called a database management system, often abbreviated DBMS. Most
@@ -244,7 +249,8 @@ database through a query language instead of clicking on buttons. If you already
 use a programming language like R or python, this will be very familiar to you.
 If not, don’t worry. Query languages, like SQL, are designed to be simpler and
 easier to use than most programming languages, but also incredibly powerful.</p>
-<p>Database management systems have several advantages over GUIs with flat files.</p>
+<p>Database management systems have several advantages accessing flat files with a
+GUI.</p>
 <ol style="list-style-type: decimal">
 <li><p><strong>Structure</strong> - Databases can store data with structures ranging from low
 to high complexity.</p></li>
