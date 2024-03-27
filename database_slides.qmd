@@ -356,7 +356,7 @@ kbl(mpg) |>
 <br>
 
 <center>
-![](img/slides/student_characteristics.png){width="140%"}
+![](img/student_characteristics.png){width="140%"}
 </center>
 
 <br>
@@ -381,7 +381,7 @@ kbl(mpg) |>
                                     background-position="92% 7%"}
 
 
-<center>![](img/slides/mpg_relate_data.png){width="100%"}</center>
+<center>![](img/mpg_relate_data.png){width="100%"}</center>
 
 
 # Data Stores {background-image="img/slides/data-store.png" 

@@ -303,48 +303,59 @@ multiple networks of the same data/situation
     relieve highway congestion?
 -   Which jobs in a hospital will most likely expose you to COVID?
 
-### Spatial
+### Relational Data
 
-Depending on the context, spatial data can be thought of as either a data type,
-or a data structure. This workshop focuses on how data structures enable us to
-ask different types of questions. Since spatial data allows us to ask novel
-questions, we will discuss spatial data as a data structure.
+In relational data, also called category or group membership data, the
+organizing principle is group membership. Each group in the data structure
+has a list of members. Those members can then be linked to members of other
+groups. For example, Alice is a member of the group "Students". She is 
+linked to Davis in the "Hometown" group, indicating she is from Davis. She 
+is also linked to Cell Biology in the "Majors" group and Club de Español and
+PreMed Mentorship in the "Clubs" group. 
 
-In spatial data, the organizing principle is location. This can be geographic
-location (ex latitude/longitude) or relative location on an arbitrary grid (ex.
-[2, 4]). Data can either be continuous, like a sheet over a landscape, or
-discrete like points on a map. In fact, map making is one of the most common
-uses of spatial data. However, we can also ask as questions like whether points
-are clustered more closely than we would expect, and whether we can use nearby
-data to predict values for places where we don't any.
+*Figure 3.6. A relational diagram of characteristics of fictional first year 
+students at UC Davis.*
 
-*Figure 3.6. A map of the counties of North Carolina, with the county areas
-shaded to correspond to the number of live births in the county from 1974 to
-1978 [@nc].*
+![](img/student_characteristics.png){width="140%"}
+</center>
 
-```{r, echo=FALSE}
-suppressMessages(library(sf))
+This data structure has some similarities to graph and tree data. Both tree data
+and relational data share some level of nestedness in their data structure.
+However, for tree data every relationship is a nested relationship. By contrast,
+with relational data, entities can be a part of a group, but they can also be
+linked to entities in other groups in a non-hierarchical way. Like in graph
+data, relationship connections link entities in relational data. However, those
+entities are also nested in groups, something that isn't captured in graph data.
+Additionally, neither graph nor tree data allows entities to appear multiple
+times in a data set. However, that is exactly what you see in Figure 3.6. Alice
+and Casey are members of both the "Students" group and the "Club Leadership" 
+group. This helps capture the multifaceted-ness of some entities, like people!
 
-#read in North Carolina data
-nc = st_read(system.file("shape/nc.shp", package="sf"), quiet = TRUE)
+Like we did in the Tree Data section, we can structure the `mtcars` fuel 
+efficiency data set in a relational diagram. This doesn't give us much more 
+more information than we had with previous structures. In fact, there is a lot 
+of information we had to leave out because it couldn't be captured in the
+relational structure. Specifically, the relational structure does not handle 
+numeric data well. Because of this, researchers often combine relational data
+with other data structures in practice.
 
-plot_title = 'Live Births in North Carolina from 1974-1978'
+*Figure 3.7. A relational representation of the subset of the `mtcars` data set
+displayed in Table 3.1.*
 
-plot(nc['BIR74'], key.pos=1, main=plot_title)
-```
+<center>![](img/mpg_relate_data.png){width="100%"}</center>
+
 
 #### Example Research Questions
 
 **General Research Questions**
 
--   Where are entities located?
--   How close or far apart are various entities?
--   Are events more closely clustered than we would expect?
--   Predicting information for locations where we do not have data
+-   Which groups are the largest or smallest?
+-   Do certain memberships tend to co-occur?
+-   How many groups does an entity tend to belong to?
 
 **Topic Specific Examples**
 
--   What is the air quality around homes of people with asthma?
--   How far do people commute for their job?
--   Are broken bones more common around poorly maintained playground equipment?
--   What is the frost risk for agricultural areas in between weather stations?
+-   Which US state has the most government agencies related to health and 
+    medical care?
+-   Do students majoring in Environmental Science and Management tend to join 
+    student groups related to outdoor recreation?
