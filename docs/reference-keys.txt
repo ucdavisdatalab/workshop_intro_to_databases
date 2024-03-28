@@ -44,6 +44,11 @@ nosql-decision-factors
 example-software
 putting-it-all-together
 choosing-the-right-data-store
+decision-flow-charts
+data-structure-1
+data-interaction-1
+data-management-1
+computing-resources-1
 further-reading
 general-database-information
 learning-query-languages
