@@ -702,13 +702,23 @@ kbl(nosql, col.names=nosql_cols)
 ![](img/data_store_factors.png){width="80%"}
 </center>
 
+## {background-image="img/slides/lightbulb.png"
+                                    background-size="10%"
+                                    background-opacity="0.8"
+                                    background-position="92% 7%"}
+
+<center>
+![](img/slides/questions.png)
+</center>
+
+
 ## Data Structure Decision{background-image="img/slides/lightbulb.png"
                                     background-size="10%"
                                     background-opacity="0.8"
                                     background-position="92% 7%"}
 
 <center>
-![](img/slides/decision_map_structure.png)
+![](img/slides/structure.png)
 </center>
 
 
@@ -718,7 +728,7 @@ kbl(nosql, col.names=nosql_cols)
                                     background-position="92% 7%"}
 
 <center>
-![](img/slides/decision_map_interaction.png)
+![](img/slides/interaction.png)
 </center>
 
 
@@ -730,7 +740,7 @@ kbl(nosql, col.names=nosql_cols)
                                     background-position="92% 7%"}
 
 <center>
-![](img/slides/decision_map_management.png){width="80%"}
+![](img/slides/management.png){width="80%"}
 </center>
 
 
@@ -741,7 +751,7 @@ kbl(nosql, col.names=nosql_cols)
                                     background-position="92% 7%"}
 
 <center>
-![](img/slides/decision_map_CR.png)
+![](img/slides/cr.png)
 </center>
 
 ## {background-image="img/slides/lightbulb.png"
