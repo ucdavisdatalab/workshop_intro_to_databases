@@ -78,6 +78,8 @@ and database option, what would be a good second option, what would not work -->
 
 
 
+[dl_sql]:  https://ucdavisdatalab.github.io/workshop_intro_to_sql/
+[dl_ssql]: https://ucdavisdatalab.github.io/Spatial_SQL/
 [medium]: https://medium.com/@rwilliams_bv/intro-to-databases-for-people-who-dont-know-a-whole-lot-about-them-a64ae9af712
 [rds]: https://library.ucdavis.edu/data-analysis-and-management/
 [redcap]: https://health.ucdavis.edu/data/redcap.html
