@@ -24,7 +24,7 @@ questions. Many data stores impose structure on the data they store. To make
 your life easier, choose a data store whose structure aligns with the types of
 research questions you want to ask.
 
-### Key Questions
+### Key Questions {-}
 
 - What types of research questions will I ask?
 
@@ -39,7 +39,7 @@ research question. Some data stores have built in tools to make data
 manipulation faster, easier, and reproducible. If you spend a lot of time 
 reformatting your data, consider a data store that has this functionality.
 
-### Key Questions
+### Key Questions {-}
 
 - What kinds of analysis will I do?
 - How does my data need to be formatted?
@@ -73,7 +73,7 @@ you may need to select or change to a data store that is publicly accessible or
 can be maintained by other members of the project team.
 
 
-### Key Questions
+### Key Questions {-}
 
 - When and how is the data collected?
 - Who needs access to it? one or more people?
@@ -93,7 +93,7 @@ of study. Finally, if you work with data that contains sensitive information,
 like medical data, you will need to make sure the data store you select is
 sufficiently secure.
 
-### Key Questions
+### Key Questions {-}
 
 - How much data do I have? Is any of it sensitive?
 - Do I have access to external or shared storage space?

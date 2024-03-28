@@ -194,7 +194,7 @@ about naming, you may end up with people working on different different versions
 of your data. Google Sheets offers shared access and some version control, but
 still fails to deliver on storage capacity, and data integrity.
 
-### Spreadsheet Software Decision Factors
+### Spreadsheet Software Decision Factors {-}
 
 1.  **Structure:** tabular
 2.  **Interaction:**
@@ -209,7 +209,7 @@ still fails to deliver on storage capacity, and data integrity.
     - GUI limits data size
     - Lots of data duplication makes data larger
 
-### Examples
+### Examples {-}
 
 -   Microsoft Excel
 -   Google Sheets
@@ -241,7 +241,7 @@ To learn about using SQL in practice, check out DataLab's Intro to SQL
 and Spatial SQL ([reader](https://ucdavisdatalab.github.io/Spatial_SQL/),
 workshop) resources.
 
-### Relationship keys
+### Relationship keys {-}
 
 A relationship key is a column or pair of columns that links two tables. One
 example of a relationship key you may use is a student or employee ID number.
@@ -260,7 +260,7 @@ of the students at the university with some basic information about them. It
 would be a foreign key in a table that lists all food and beverage sales at a
 particular on campus eatery.
 
-### Entity Relationship Diagrams
+### Entity Relationship Diagrams {-}
 
 An Entity Relationship Diagram (ERD) provides a visual summary of of the
 information in a database without needing to interact with it. ERDs are a
@@ -290,7 +290,7 @@ correspond to multiple rows in table A. The classic example of this is cities
 and zip codes. Many cities contain more than one zip code, but some zip codes
 also span multiple cities.
 
-### Why Use Relational Databases?
+### Why Use Relational Databases? {-}
 
 There are four primary reasons to use a RDBMS as a data store:
 
@@ -365,7 +365,7 @@ updated and the data stays as is for the next transaction in line.
     - Thousands of transactions per day
 
 
-### RDBMS Software
+### RDBMS Software {-}
 
 Because of relational databases' widespread utility, there are many software
 options to choose from when creating a database. While all of them work off the
@@ -414,7 +414,7 @@ NoSQL users interact with their database via a query language. However, the exac
 one depends on the database software. This is in part because different data 
 structures lend themselves to different types of operations.
 
-### Why Use NoSQL Databases?
+### Why Use NoSQL Databases? {-}
 
 1.  Compatible with multiple, non-tabular, data structures
 
@@ -448,7 +448,7 @@ with NoSQL databases.
 
 <!-- companies may switch to nosql as their computing needs grow -->
 
-### NoSQL Decision Factors
+### NoSQL Decision Factors {-}
 
 1. **Structure:** documents, trees, graphs, key-value pairs, wide column tables
 
@@ -469,7 +469,7 @@ with NoSQL databases.
     - Requires some specialized setup
     - Millions of transactions per day
 
-### Example Software
+### Example Software {-}
 
 Not every NoSQL database supports every data structure. Some support multiple
 structures while others specialize in one. They generally also low cost to
@@ -492,8 +492,3 @@ kbl(nosql, col.names=nosql_cols, caption=nosql_cap)
 
 
 ```
-
-## Putting it all together
-
-Now we know what our options are regarding data structures and data stores. Next
-we will combine this information to make decisions!

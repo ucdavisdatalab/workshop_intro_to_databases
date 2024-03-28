@@ -30,7 +30,7 @@ project. If you want understand a subject deeply, you need to ask many different
 types of questions about it. And this necessitates storing your data in multiple
 forms.
 
-### Data Structure
+### 1. Data Structure {-}
 
 <center>
 ![](img/questions.png)
@@ -40,21 +40,21 @@ forms.
 ![](img/structure.png)
 </center>
 
-### Data Interaction
+### 2. Data Interaction {-}
 
 
 <center>
 ![](img/interaction.png)
 </center>
 
-### Data Management
+### 3. Data Management {-}
 
 
 <center>
 ![](img/management.png)
 </center>
 
-### Computing Resources
+### 4. Computing Resources {-}
 
 
 <center>
@@ -67,7 +67,7 @@ This workshop is just the beginning. If a database seems like a good data store
 for your current (or next) research project, the resources below can help you
 get started.
 
-### General Database Information
+### General Database Information {-}
 
 -   [An Overview of Databases and Data Storage Reader][dl_db]
 
@@ -81,7 +81,7 @@ get started.
 
 -   [Introduction to NoSQL][g4gno]
 
-### Learning Query Languages
+### Learning Query Languages {-}
 
 -   [Intro to SQL for Querying Databases Reader][dl_sql]
 
@@ -93,7 +93,7 @@ get started.
 
 -   [W3Schools MongoDB Tutorial][w3mongo]
 
-### Campus Database Resources
+### Campus Database Resources {-}
 
 -   UC Davis DataLab [Office Hours][oh]:
     - Mondays, 1-2pm via Zoom

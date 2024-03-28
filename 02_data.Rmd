@@ -99,7 +99,7 @@ represent your data using multiple structures. Because data structure has such
 a large impact on how you interact with your data, the structure you choose is
 just as important as the analysis you do afterward.
 
-### Columnar/Tabular
+### Columnar/Tabular {-}
 
 ```{r format_cars, echo=FALSE}
 
@@ -161,7 +161,7 @@ relative fuel efficiency of cars from different parts of the world or if there
 is any relationship between a car's weight and its horsepower. The tabular data
 structure also makes sorting observations very easy.
 
-#### Example Research Questions
+#### Example Research Questions {-}
 
 **General Research Questions**
 
@@ -178,7 +178,7 @@ structure also makes sorting observations very easy.
 -   Are there compounds present in blood we can use to detect rabies in urban
     wildlife?
 
-### Trees
+### Trees {-}
 
 Trees are another commonly used data structure. Tree structured data explicitly
 capture hierarchical relationships between entities. Trees are made of up nodes
@@ -224,7 +224,7 @@ and how many different models came out of Japan during that time period.
 displayed in Table 3.1.* 
 ![](img/mpg_tree_data.png)
 
-#### Example Research Questions
+#### Example Research Questions {-}
 
 **General Research Questions**
 
@@ -238,7 +238,7 @@ displayed in Table 3.1.*
 -   How many species of dinosaurs were there and are there any alive today?
 -   Which journals published the most articles mentioning AI this year?
 
-### Graphs
+### Graphs {-}
 
 Graph data, also called network data, is similar to tree data in many ways. It
 also explicitly captures information about relationships between entities using
@@ -287,7 +287,7 @@ of the graph are the most connected and which are the least connected.
 multiple networks of the same data/situation
 -->
 
-#### Example Research Questions
+#### Example Research Questions {-}
 
 **General Research Questions**
 
@@ -303,7 +303,7 @@ multiple networks of the same data/situation
     relieve highway congestion?
 -   Which jobs in a hospital will most likely expose you to COVID?
 
-### Relational Data
+### Relational Data {-}
 
 In relational data, also called category or group membership data, the
 organizing principle is group membership. Each group in the data structure
@@ -345,7 +345,7 @@ displayed in Table 3.1.*
 <center>![](img/mpg_relate_data.png){width="100%"}</center>
 
 
-#### Example Research Questions
+#### Example Research Questions {-}
 
 **General Research Questions**
 
