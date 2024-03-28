@@ -1,61 +1,96 @@
 # Choosing the Right Data Store
 
 You've just learned a bunch of information about data structures and data
-stores. Now the challenge is applying that information to your own data. When
-you are trying to decide what type of data storage to use, consider these ideas:
+stores. Now the challenge is applying that information to your own data. 
+Remember the four factors to consider when deciding on a type of data store:
 
-1.  Different data structures facilitate different research questions.
+1. Data Structure
 
-1.  When we convert information to data, we encode it in a structure.
+2. Data Interaction
 
-3.  All data stores impose structure on your data.
+3. Data Management
 
-4.  The best data storage technology for any research question matches the
-    structure of the data with the structure of the data store.
-    
-All information needs to be encoded in a data structure in order for it to be
-useful in research. When you have identified your research question, you can use
-that to determine what data structures will make it easiest for you to carry
-out your research. Finally you can match the structure, size, and use case
-of your data to the data store(s) that best fit your needs.
+4. Computing Resources
 
-It is important to remember that as you ask different questions of your data,
-you may need to change how you structure and store that data. Reproducibility
-experts will sometimes require that you only store one "definitive" version of
+
+## Decision Flow Charts
+
+While each factor compasses a wide range of considerations, the flow charts
+below can act as a starting point for deciding on the best data store type
+for your research. 
+
+You may find that various parts of your data require different answers to the
+questions in these decision charts. Or, your answers to the questions may change
+over time. You may want to ask different questions of your data, and therefore
+need to change how you structure your data. You may start working with more
+collaborators and need provide other people access to your data. Reproducibility
+experts will sometimes assert that you only store one "definitive" version of
 your data. However, that plan rarely survives first contact with a research
 project. If you want understand a subject deeply, you need to ask many different
 types of questions about it. And this necessitates storing your data in multiple
 forms.
 
-Some important questions to consider when you are deciding on a data store are:
+### Data Structure
 
- * What is the structure of the data to be stored?
- * How much data needs to be stored?
- * How many people will be accessing the data store?
- * How frequently will people be interacting with the data?
- * Will the data be updated by humans or by a computer?
- * How will people be accessing the data?
+<center>
+![](img/questions.png)
 
-<!-- Have a research project or question what is a good structure and 
-and database option, what would be a good second option, what would not work -->
+-------------------------------------------------------------------------------
+
+![](img/structure.png)
+</center>
+
+### Data Interaction
+
+
+<center>
+![](img/interaction.png)
+</center>
+
+### Data Management
+
+
+<center>
+![](img/management.png)
+</center>
+
+### Computing Resources
+
+
+<center>
+![](img/cr.png)
+</center>
 
 ## Further Reading
+
+This workshop is just the beginning. If a database seems like a good data store
+for your current (or next) research project, the resources below can help you
+get started.
 
 ### General Database Information
 
 -   [An Overview of Databases and Data Storage Reader][dl_db]
+
 -   [Intro to Databases (for people who don’t know a whole lot about them)][medium]
+
 -   [Database Management System (DBMS) Tutorial][g4gsql]
+
 -   [Creating a database from scratch][create]
+
 -   [NoSQL Explained][nosql]
+
 -   [Introduction to NoSQL][g4gno]
 
 ### Learning Query Languages
 
 -   [Intro to SQL for Querying Databases Reader][dl_sql]
+
 -   [Spatial SQL Reader][dl_ssql]
+
 -   [W3Schools SQL Tutorial][w3sql]
+
 -   [W3Schools PostgreSQL Tutorial][w3post]
+
 -   [W3Schools MongoDB Tutorial][w3mongo]
 
 ### Campus Database Resources
