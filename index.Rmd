@@ -37,7 +37,7 @@ questions:
   
   * What are the differences between relational and noSQL databases?
   
-  * When would a database help answer a particular research question?
+  * What factors impact what type of data store I should use for my research?
 
 
 [sql]: https://ucdavisdatalab.github.io/workshop_intro_to_sql/
