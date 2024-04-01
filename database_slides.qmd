@@ -409,6 +409,21 @@ kbl(mpg) |>
 
 <br>
 
+**GUI:** Graphical User Interface, a software application that allows you to 
+interact with the computer via icons, buttons, and windows.
+
+:::
+
+## Data Store Definitions {background-image="img/slides/data-store.png"
+                                    background-size="10%"
+                                    background-opacity="0.8"
+                                    background-position="92% 7%"}
+
+<br>
+
+::: {style="font-size: 120%;"}
+
+
 **Query:** database commands that create, read, update, delete (CRUD) 
 
 <br>
@@ -417,6 +432,7 @@ kbl(mpg) |>
 unit.
 
 :::
+
 
 
 ## Types of Data Stores {background-image="img/slides/data-store.png"
