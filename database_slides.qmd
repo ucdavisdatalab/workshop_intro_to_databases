@@ -113,7 +113,7 @@ names(mpg) = c('mpg', 'cylinders', 'horsepower', 'weight', 'manual', 'origin')
     -   What is data?
     -   Data Types
     -   Data Structures 
--   Data Stores
+-   Data Stores 
     -   Flat File vs. Database
     -   Spreadsheet Software
     -   Relational Databases
@@ -597,25 +597,6 @@ Pair of columns with the same values
 -  Ensure data integrity
 
 :::
-
-## Die Hard Movie Data {background-image="img/slides/database.png"
-                                background-size="10%"
-                                background-opacity="0.9"
-                                background-position="92% 7%"}
-
-::: {style="font-size: 60%;"}
-```{r}
-kbl(dh) |>
-  scroll_box(width = "100%", height = "750px")
-```
-:::
-
-## Die Hard Movie Data {background-image="img/slides/database.png"
-                                background-size="10%"
-                                background-opacity="0.9"
-                                background-position="92% 7%"}
-
-![](img/imdb_ERD.png)
 
 ## Example RDBMS Software {background-image="img/slides/database.png"
                                 background-size="10%"
