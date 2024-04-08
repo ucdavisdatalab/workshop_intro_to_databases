@@ -362,9 +362,9 @@ kbl(mpg, caption = mpg_cap) |>
 :::
 
 ### `mtcars` Tabular Questions{background-image="img/slides/tabular.png"
-                                    background-size="8%"
+                                    background-size="6%"
                                     background-opacity="0.8"
-                                    background-position="97% 97%"}
+                                    background-position="58% 9%"}
 
 ::: {style="font-size: 70%;"}
 ```{r}
@@ -622,9 +622,9 @@ unit.
 -   May cause a lot of data duplication
 -->
 ## Spreadsheet Data{background-image="img/slides/spreadsheet.png"
-                    background-size="8%"
+                    background-size="6%"
                     background-opacity="0.8"
-                    background-position="97% 97%"}
+                    background-position="48% 6%"}
 
 ::: {style="font-size: 55%;"}
 ```{r, echo=FALSE}
