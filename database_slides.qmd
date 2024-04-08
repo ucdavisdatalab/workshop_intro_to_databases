@@ -360,6 +360,7 @@ kbl(mpg, caption = mpg_cap) |>
 -   test predict likelihood of complications from diabetes
 
 :::
+
 ### `mtcars` Tabular Questions{background-image="img/slides/tabular.png"
                                     background-size="8%"
                                     background-opacity="0.8"
@@ -403,7 +404,7 @@ kbl(mpg) |>
 ![](img/tree_data.png){width="130%"}
 </center>
 
-:::{.note}
+:::{.notes}
 -   root is the center, distance defines place
 -   subsetting and searching is easy
 -   this is where text data lives (doc structure)
@@ -424,7 +425,7 @@ kbl(mpg) |>
 :::
 
 
-:::{.note}
+:::{.notes}
 -   Elephants closer to rhinos or sloths
 -   how many dinosaurs are there
 -   which journals have most articles with AI this year
@@ -438,7 +439,8 @@ kbl(mpg) |>
                                     background-position="97% 97%"}
 
 ![](img/mpg_tree_data.png)
-:::{.note}
+
+:::{.notes}
 -   needed to parse manufacturers from names
 -   how many models did japan produce
 -   which manufacturer did most models
@@ -453,7 +455,7 @@ kbl(mpg) |>
 
 <center>![](img/graph_data.png){width="75%"}</center>
 
-:::{.note}
+:::{.notes}
 -   organized around relationships
 -   structure more important than obs
 -   no inherent center or hierarchy
