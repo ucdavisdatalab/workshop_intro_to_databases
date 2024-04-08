@@ -40,6 +40,18 @@ names(mpg) = c('mpg', 'cylinders', 'horsepower', 'weight', 'manual', 'origin')
                 background-size="60%"
                 background-opacity="0.5"}
 
+::: {.notes}
+Before we dive in...some info. Not required but helpful for me
+to know. Raise your hand if:
+
+-   Have data you are working with or are in the process of collecting data
+-   Analyze data using a programming language like R or Python
+-   Know what a database is
+-   Have used a database before
+
+
+:::
+
 
 ## Research Computing Workshops {background-image="img/slides/trail.png"
                         background-size="10%" background-opacity="0.9"
@@ -60,11 +72,18 @@ names(mpg) = c('mpg', 'cylinders', 'horsepower', 'weight', 'manual', 'origin')
 <center>![](img/slides/datalab-logo-full-color-rgb.png){width="70%"}</center>
 
 
+
+
 [micro]: https://ucd.badgr.com/public/pathway/6160c163fc391a6821c02fbd
 [dl_sql]:  https://ucdavisdatalab.github.io/workshop_intro_to_sql/
 [dl_ssql]: https://ucdavisdatalab.github.io/Spatial_SQL/
 
+:::{.notes}
 
+If you decide you want to store your data in database, this would be a good 
+next step.
+
+:::
 
 ## {background-image="img/slides/trail.png"
                 background-size="10%" background-opacity="0.9"
@@ -73,6 +92,12 @@ names(mpg) = c('mpg', 'cylinders', 'horsepower', 'weight', 'manual', 'origin')
 <center>
 ![](img/data_store_factors.png){width="80%"}
 </center>
+
+:::{.notes}
+Data store -> method of storing your data.
+databases are a type data store but not the only type
+:::
+
 
 ## Data Storage Considerations {.smaller
                                 background-image="img/slides/trail.png" 
@@ -102,6 +127,11 @@ names(mpg) = c('mpg', 'cylinders', 'horsepower', 'weight', 'manual', 'origin')
     - Do I have access to external or shared storage space?
     - What software to I have licenses for?
 
+:::
+
+:::{.notes}
+Will go over how each of these factors relate to several differen type of data 
+stores.
 :::
 
 ## Road Map{background-image="img/slides/trail.png" background-size="40%"
@@ -190,14 +220,31 @@ Further Reading: [By Icon Lauk from the Noun Project][fr], CC BY 3.0
                 background-size="10%" background-position="92% 7%"}
 
 <br>
+<center>
 
-Data is information translated into a form for storage and later use. That form
-could be:
+**Data is information translated into a form for storage and later use. **
+
+</center>
+
+<br>
+
+That form could be:
 
 -   Rows and columns of a spreadsheet
 -   A visual diagram
 -   Written human language
 -   And many others...
+
+:::{.notes}
+
+-   paper is still data, and can be a problem
+-   form is the data's structure
+-   what form our data takes can help guide our choice of data store
+-   spreadsheets are very familiar
+-   people now think of language as data
+    
+So how to we categorize our data?
+:::
 
 
 ## Data Types{background-image="img/slides/Noun_Data.png"
@@ -212,6 +259,16 @@ Data type tells your computer what types of operations make sense.
 -   Boolean values (TRUE or FALSE)
 -   dates and times
 -   spatial data
+
+:::{.notes}
+
+-   Side effects of working on a computer
+-   May be different than computer science and informatics data types
+-   tells the computer what to do with a piece of information
+-   Single point can have data type
+-   1 as int, decimal, text and date
+
+:::
 
 ## Data Structures{background-image="img/slides/Noun_Data.png"
                   background-size="10%" background-position="92% 7%"}
@@ -231,6 +288,16 @@ Question → Data structure
 :::
 <br>
 
+
+:::{.notes}
+
+- capture info about relationship between data pts
+- Need multiple points for structure
+- structure makes some Qs easier and others harder
+- structure choice just as important as analysis choice
+
+:::
+
 ## Data Structures{background-image="img/slides/Noun_Data.png"
                   background-size="10%" background-position="92% 7%"}
                   
@@ -241,6 +308,13 @@ Question → Data structure
 -   Relational ![](img/slides/categories.png){width="10%"}
 :::
 
+:::{.notes}
+
+-   may see yours already but don't worry if not
+-   not an exhaustive list
+-   if you don't see yours feel free to ask about it
+
+:::
 ## Tabular Data{background-image="img/slides/tabular.png"
                 background-size="10%" background-opacity="0.8"
                 background-position="92% 7%"}
@@ -260,6 +334,14 @@ kbl(mpg, caption = mpg_cap) |>
 ```
 :::
 
+:::{.notes}
+
+-   rows + columns is organizing principle, mention convention
+-   entities can be summarized with same set of chars
+-   focus on questions over entire set of obs
+-   sorting is easy, relationships not explicit
+:::
+
 ### Tabular Data Research Questions{background-image="img/slides/tabular.png"
                                     background-size="10%"
                                     background-opacity="0.8"
@@ -272,6 +354,13 @@ kbl(mpg, caption = mpg_cap) |>
 -   How to two columns in a data set relate to each other?
 :::
 
+:::{.notes}
+-   avg almond yield
+-   range normal values for vitamin A
+-   bay area temp increases
+-   test predict likelihood of complications from diabetes
+
+:::
 ### `mtcars` Tabular Questions{background-image="img/slides/tabular.png"
                                     background-size="10%"
                                     background-opacity="0.8"
@@ -284,6 +373,14 @@ kbl(mpg) |>
 ```
 :::
 
+:::{.notes}
+
+-   avg, range of mpg
+-   relationship between mpg and other vars
+-   relationship between cylinders and hp
+
+:::
+
 ## Tree Data{background-image="img/slides/tree.svg"
              background-size="10%" background-opacity="0.8"
              background-position="92% 7%"}
@@ -292,6 +389,13 @@ kbl(mpg) |>
 
 ![](img/House_of_Tudor.png)
 
+:::{.notes}
+-   organized around relationships (nested)
+-   relationships between entities is explicit
+-   structure can be more important than entities
+
+:::
+
 ### Tree Structure{background-image="img/slides/tree.svg"
                   background-size="10%" background-opacity="0.8"
                   background-position="92% 7%"}
@@ -299,6 +403,13 @@ kbl(mpg) |>
 <center>
 ![](img/tree_data.png){width="130%"}
 </center>
+
+:::{.note}
+-   root is the center, distance defines place
+-   subsetting and searching is easy
+-   this is where text data lives (doc structure)
+:::
+
 
 ### Tree Data Research Questions{background-image="img/slides/tree.svg"
                                     background-size="10%"
@@ -312,12 +423,27 @@ kbl(mpg) |>
 -   Which elements fall under a particular subtree?
 -   Text or directory searching
 :::
+
+
+:::{.note}
+-   Elephants closer to rhinos or sloths
+-   how many dinosaurs are there
+-   which journals have most articles with AI this year
+
+:::
+
+
 ### `mtcars` Tree Questions {background-image="img/slides/tree.svg"
                                     background-size="10%"
                                     background-opacity="0.8"
                                     background-position="92% 7%"}
 
 ![](img/mpg_tree_data.png)
+:::{.note}
+-   needed to parse manufacturers from names
+-   how many models did japan produce
+-   which manufacturer did most models
+:::
 
 ## Graph Data{background-image="img/slides/network.png"
              background-size="10%" background-opacity="0.8"
@@ -327,6 +453,12 @@ kbl(mpg) |>
 
 
 <center>![](img/graph_data.png){width="75%"}</center>
+
+:::{.note}
+-   organized around relationships
+-   structure more important than obs
+-   no inherent center or hierarchy
+:::
 
 
 ### Graph Data Research Questions {background-image="img/slides/network.png"
