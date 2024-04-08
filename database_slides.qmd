@@ -7,7 +7,6 @@ title-slide-attributes:
 author: "Elise Hellwig"
 format: 
   revealjs:
-    logo: img/slides/abridged_datalab_logo.png
     sc-sb-title: true
     theme: simple
 filters:
@@ -54,8 +53,8 @@ to know. Raise your hand if:
 
 
 ## Research Computing Workshops {background-image="img/slides/trail.png"
-                        background-size="10%" background-opacity="0.9"
-                        background-position="92% 7%"}
+                        background-size="8%" background-opacity="0.9"
+                        background-position="97% 97%"}
 
 <br>
 
@@ -86,8 +85,8 @@ next step.
 :::
 
 ## {background-image="img/slides/trail.png"
-                background-size="10%" background-opacity="0.9"
-                background-position="92% 7%"}
+                background-size="8%" background-opacity="0.9"
+                background-position="97% 97%"}
                 
 <center>
 ![](img/data_store_factors.png){width="80%"}
@@ -101,8 +100,8 @@ databases are a type data store but not the only type
 
 ## Data Storage Considerations {.smaller
                                 background-image="img/slides/trail.png" 
-                                background-size="10%" background-opacity="0.9"
-                                background-position="92% 7%"}
+                                background-size="8%" background-opacity="0.9"
+                                background-position="97% 97%"}
 
 
 
@@ -153,8 +152,8 @@ stores.
 :::
 
 ### Credits {background-image="img/slides/trail.png"
-                    background-size="10%" background-opacity="0.9"
-                    background-position="92% 7%"}
+                    background-size="8%" background-opacity="0.9"
+                    background-position="97% 97%"}
 ::: {style="font-size: 70%;"}
 
 All images were created by Elise Hellwig unless otherwise noted. Movie
@@ -217,7 +216,7 @@ Further Reading: [By Icon Lauk from the Noun Project][fr], CC BY 3.0
 > \- Oxford English Dictionary
 
 ## What is data?{background-image="img/slides/Noun_Data.png"
-                background-size="10%" background-position="92% 7%"}
+                background-size="8%" background-position="97% 97%"}
 
 <br>
 <center>
@@ -248,7 +247,7 @@ So how to we categorize our data?
 
 
 ## Data Types{background-image="img/slides/Noun_Data.png"
-              background-size="10%" background-position="92% 7%"}
+              background-size="8%" background-position="97% 97%"}
 
 Data type tells your computer what types of operations make sense.
 
@@ -271,7 +270,7 @@ Data type tells your computer what types of operations make sense.
 :::
 
 ## Data Structures{background-image="img/slides/Noun_Data.png"
-                  background-size="10%" background-position="92% 7%"}
+                  background-size="8%" background-position="97% 97%"}
                   
 <br>
 <br>
@@ -299,7 +298,7 @@ Question → Data structure
 :::
 
 ## Data Structures{background-image="img/slides/Noun_Data.png"
-                  background-size="10%" background-position="92% 7%"}
+                  background-size="8%" background-position="97% 97%"}
                   
 ::: {style="font-size: 180%;"}
 -   Tabular/columnar ![](img/slides/tabular.png){width="7%"}
@@ -316,8 +315,8 @@ Question → Data structure
 
 :::
 ## Tabular Data{background-image="img/slides/tabular.png"
-                background-size="10%" background-opacity="0.8"
-                background-position="92% 7%"}
+                background-size="6%" background-opacity="0.8"
+                background-position="39% 9%"}
 
 ::: {style="font-size: 60%;"}
 ```{r, echo=FALSE}
@@ -343,9 +342,9 @@ kbl(mpg, caption = mpg_cap) |>
 :::
 
 ### Tabular Data Research Questions{background-image="img/slides/tabular.png"
-                                    background-size="10%"
+                                    background-size="8%"
                                     background-opacity="0.8"
-                                    background-position="92% 7%"}
+                                    background-position="97% 97%"}
 ::: {style="font-size: 130%;"}
 
 -   What is the average value of a particular measurement across a data set?
@@ -362,9 +361,9 @@ kbl(mpg, caption = mpg_cap) |>
 
 :::
 ### `mtcars` Tabular Questions{background-image="img/slides/tabular.png"
-                                    background-size="10%"
+                                    background-size="8%"
                                     background-opacity="0.8"
-                                    background-position="92% 7%"}
+                                    background-position="97% 97%"}
 
 ::: {style="font-size: 70%;"}
 ```{r}
@@ -382,8 +381,8 @@ kbl(mpg) |>
 :::
 
 ## Tree Data{background-image="img/slides/tree.svg"
-             background-size="10%" background-opacity="0.8"
-             background-position="92% 7%"}
+             background-size="7%" background-opacity="0.8"
+             background-position="33% 7%"}
 
 <br>
 
@@ -397,8 +396,8 @@ kbl(mpg) |>
 :::
 
 ### Tree Structure{background-image="img/slides/tree.svg"
-                  background-size="10%" background-opacity="0.8"
-                  background-position="92% 7%"}
+                  background-size="8%" background-opacity="0.8"
+                  background-position="97% 97%"}
 
 <center>
 ![](img/tree_data.png){width="130%"}
@@ -412,9 +411,9 @@ kbl(mpg) |>
 
 
 ### Tree Data Research Questions{background-image="img/slides/tree.svg"
-                                    background-size="10%"
+                                    background-size="8%"
                                     background-opacity="0.8"
-                                    background-position="92% 7%"}
+                                    background-position="97% 97%"}
                                     
 <br>
 
@@ -434,9 +433,9 @@ kbl(mpg) |>
 
 
 ### `mtcars` Tree Questions {background-image="img/slides/tree.svg"
-                                    background-size="10%"
+                                    background-size="8%"
                                     background-opacity="0.8"
-                                    background-position="92% 7%"}
+                                    background-position="97% 97%"}
 
 ![](img/mpg_tree_data.png)
 :::{.note}
@@ -446,8 +445,8 @@ kbl(mpg) |>
 :::
 
 ## Graph Data{background-image="img/slides/network.png"
-             background-size="10%" background-opacity="0.8"
-             background-position="92% 3%"}
+             background-size="7%" background-opacity="0.8"
+             background-position="37% 4%"}
 
 <br>
 
@@ -462,9 +461,9 @@ kbl(mpg) |>
 
 
 ### Graph Data Research Questions {background-image="img/slides/network.png"
-                                    background-size="10%"
+                                    background-size="8%"
                                     background-opacity="0.8"
-                                    background-position="92% 7%"}
+                                    background-position="97% 97%"}
 ::: {style="font-size: 130%;"}
 
 -   How many edges separate two entities?
@@ -474,16 +473,16 @@ kbl(mpg) |>
 :::
 
 ### Abraham Lincoln Graph Data {background-image="img/slides/network.png"
-                                    background-size="10%"
+                                    background-size="8%"
                                     background-opacity="0.8"
-                                    background-position="92% 7%"}
+                                    background-position="97% 97%"}
 
 <center>![](img/abraham_lincoln.png)</center>
 
 
 ## Relational Data{background-image="img/slides/categories.png"
-                background-size="10%" background-opacity="0.8"
-                background-position="92% 3%"}
+                   background-size="7%" background-opacity="0.8"
+                   background-position="44% 6%"}
                 
 <br>
 
@@ -494,9 +493,9 @@ kbl(mpg) |>
 <br>
 
 ### Relational Data Research Questions {background-image="img/slides/categories.png"
-                                     background-size="10%"
+                                     background-size="8%"
                                      background-opacity="0.8"
-                                     background-position="92% 7%"}
+                                     background-position="97% 97%"}
                                      
 
 ::: {style="font-size: 140%;"}
@@ -508,9 +507,9 @@ kbl(mpg) |>
 :::
 
 ### `mtcars` Relational Questions {background-image="img/slides/categories.png"
-                                    background-size="10%"
+                                    background-size="8%"
                                     background-opacity="0.8"
-                                    background-position="92% 7%"}
+                                    background-position="97% 97%"}
 
 
 <center>![](img/mpg_relate_data.png){width="100%"}</center>
@@ -528,9 +527,9 @@ kbl(mpg) |>
 
 
 ## Data Store Definitions {background-image="img/slides/data-store.png"
-                                    background-size="10%"
+                                    background-size="8%"
                                     background-opacity="0.8"
-                                    background-position="92% 7%"}
+                                    background-position="97% 97%"}
 
 <br>
 
@@ -547,9 +546,9 @@ interact with the computer via icons, buttons, and windows.
 :::
 
 ## Data Store Definitions {background-image="img/slides/data-store.png"
-                                    background-size="10%"
+                                    background-size="8%"
                                     background-opacity="0.8"
-                                    background-position="92% 7%"}
+                                    background-position="97% 97%"}
 
 <br>
 
@@ -568,9 +567,9 @@ unit.
 
 
 ## Types of Data Stores {background-image="img/slides/data-store.png"
-                                    background-size="10%"
+                                    background-size="8%"
                                     background-opacity="0.8"
-                                    background-position="92% 7%"}
+                                    background-position="97% 97%"}
 
 <center>
 
@@ -578,8 +577,8 @@ unit.
 </center>
 
 
-## {background-image="img/slides/data-store.png" background-size="10%"
-    background-opacity="0.8" background-position="92% 7%"}
+## {background-image="img/slides/data-store.png" background-size="8%"
+    background-opacity="0.8" background-position="97% 97%"}
 
 <center>
 ![](img/data_store_factors.png){width="80%"}
@@ -590,9 +589,9 @@ unit.
                background-opacity="0.2"}
 
 ## Spreadsheet Software{background-image="img/slides/spreadsheet.png"
-                background-size="10%"
+                background-size="8%"
                 background-opacity="0.8"
-                background-position="92% 7%"}
+                background-position="97% 97%"}
 
 ::: {style="font-size: 90%;"}
 
@@ -621,9 +620,9 @@ unit.
 -   May cause a lot of data duplication
 -->
 ## Spreadsheet Data{background-image="img/slides/spreadsheet.png"
-                    background-size="10%"
+                    background-size="8%"
                     background-opacity="0.8"
-                    background-position="92% 7%"}
+                    background-position="97% 97%"}
 
 ::: {style="font-size: 55%;"}
 ```{r, echo=FALSE}
@@ -650,9 +649,9 @@ kbl(dh, caption=dh_cap) |>
 :::
 
 ## Example Spreadsheet Software{background-image="img/slides/spreadsheet.png"
-                                background-size="10%"
+                                background-size="8%"
                                 background-opacity="0.8"
-                                background-position="92% 7%"}
+                                background-position="97% 97%"}
 
 -   Microsoft Excel
 -   Google Sheets
@@ -668,9 +667,9 @@ kbl(dh, caption=dh_cap) |>
                        background-opacity="0.2"}
 
 ## RDBMSs{background-image="img/slides/database.png"
-                                background-size="10%"
+                                background-size="8%"
                                 background-opacity="0.9"
-                                background-position="92% 7%"}
+                                background-position="97% 97%"}
 
 ::: {style="font-size: 77%;"}
 
@@ -696,9 +695,9 @@ kbl(dh, caption=dh_cap) |>
 :::
 
 ## Relational Keys{background-image="img/slides/database.png"
-                                background-size="10%"
+                                background-size="8%"
                                 background-opacity="0.9"
-                                background-position="92% 7%"}
+                                background-position="97% 97%"}
 
 Pair of columns with the same values
 
@@ -706,16 +705,16 @@ Pair of columns with the same values
 
 
 ## IMDb Entity Relationship Diagram {background-image="img/slides/database.png"
-                                background-size="10%"
+                                background-size="8%"
                                 background-opacity="0.9"
-                                background-position="92% 7%"}
+                                background-position="97% 97%"}
 
 ![](img/imdb_ERD.png)
 
 ## Why use an RDBMS? {background-image="img/slides/database.png"
-                                background-size="10%"
+                                background-size="8%"
                                 background-opacity="0.9"
-                                background-position="92% 7%"}
+                                background-position="97% 97%"}
 
 ::: {style="font-size: 120%;"}
 
@@ -731,9 +730,9 @@ Pair of columns with the same values
 :::
 
 ## Example RDBMS Software {background-image="img/slides/database.png"
-                                background-size="10%"
+                                background-size="8%"
                                 background-opacity="0.9"
-                                background-position="92% 7%"}
+                                background-position="97% 97%"}
 
 ::: {style="font-size: 60%;"}
 ```{r, echo=FALSE}
@@ -752,9 +751,9 @@ kbl(sql, col.names=sql_cols)
                        background-opacity="0.3"}
 
 ## NoSQL Databases{background-image="img/slides/nosql.png"
-                                background-size="10%"
+                                background-size="8%"
                                 background-opacity="0.8"
-                                background-position="92% 7%"}
+                                background-position="97% 97%"}
 
 ::: {style="font-size: 77%;"}
 
@@ -780,9 +779,9 @@ kbl(sql, col.names=sql_cols)
 :::
 
 ## Why Use NoSQL Databases?{background-image="img/slides/nosql.png"
-                                background-size="10%"
+                                background-size="8%"
                                 background-opacity="0.8"
-                                background-position="92% 7%"}
+                                background-position="97% 97%"}
 
 ::: {style="font-size: 140%;"}
 
@@ -799,9 +798,9 @@ kbl(sql, col.names=sql_cols)
 
 
 ## Example NoSQL Software{background-image="img/slides/nosql.png"
-                                background-size="10%"
+                                background-size="8%"
                                 background-opacity="0.8"
-                                background-position="92% 7%"}
+                                background-position="97% 97%"}
 
 ```{r, echo=FALSE}
 
@@ -824,17 +823,17 @@ kbl(nosql, col.names=nosql_cols)
 <br>
 
 
-## {background-image="img/slides/lightbulb.png" background-size="10%"
-    background-opacity="0.8" background-position="92% 7%"}
+## {background-image="img/slides/lightbulb.png" background-size="8%"
+    background-opacity="0.8" background-position="97% 97%"}
 
 <center>
 ![](img/data_store_factors.png){width="80%"}
 </center>
 
 ## {background-image="img/slides/lightbulb.png"
-                                    background-size="10%"
+                                    background-size="8%"
                                     background-opacity="0.8"
-                                    background-position="92% 7%"}
+                                    background-position="97% 97%"}
 
 <center>
 ![](img/slides/questions.png)
@@ -842,9 +841,9 @@ kbl(nosql, col.names=nosql_cols)
 
 
 ## Data Structure Decision{background-image="img/slides/lightbulb.png"
-                                    background-size="10%"
+                                    background-size="8%"
                                     background-opacity="0.8"
-                                    background-position="92% 7%"}
+                                    background-position="97% 97%"}
 
 <center>
 ![](img/slides/structure.png)
@@ -852,9 +851,9 @@ kbl(nosql, col.names=nosql_cols)
 
 
 ## Data Interaction Decision{background-image="img/slides/lightbulb.png"
-                                    background-size="10%"
+                                    background-size="8%"
                                     background-opacity="0.8"
-                                    background-position="92% 7%"}
+                                    background-position="97% 97%"}
 
 <center>
 ![](img/slides/interaction.png)
@@ -864,9 +863,9 @@ kbl(nosql, col.names=nosql_cols)
 
 
 ## Data Management Decision{background-image="img/slides/lightbulb.png"
-                                    background-size="10%"
+                                    background-size="8%"
                                     background-opacity="0.8"
-                                    background-position="92% 7%"}
+                                    background-position="97% 97%"}
 
 <center>
 ![](img/slides/management.png){width="80%"}
@@ -875,9 +874,9 @@ kbl(nosql, col.names=nosql_cols)
 
 
 ## Computing Resources Decision{background-image="img/slides/lightbulb.png"
-                                    background-size="10%"
+                                    background-size="8%"
                                     background-opacity="0.8"
-                                    background-position="92% 7%"}
+                                    background-position="97% 97%"}
 
 <center>
 ![](img/slides/cr.png)
@@ -897,9 +896,9 @@ kbl(nosql, col.names=nosql_cols)
                        background-opacity="0.3"} 
 
 ### General Database Information {background-image="img/slides/book.png"
-                                background-size="10%"
+                                background-size="8%"
                                 background-opacity="0.9"
-                                background-position="92% 7%"}
+                                background-position="97% 97%"}
 
 -   [[An Overview of Databases and Data Storage Reader]{.underline}][dl_db]
 -   [[Intro to Databases (for people who don’t know a whole lot about them)]{.underline}][medium]
@@ -909,9 +908,9 @@ kbl(nosql, col.names=nosql_cols)
 -   [[Introduction to NoSQL]{.underline}][g4gno]
 
 ### Learning Query Languages {background-image="img/slides/book.png"
-                                background-size="10%"
+                                background-size="8%"
                                 background-opacity="0.9"
-                                background-position="92% 7%"}
+                                background-position="97% 97%"}
 
 -   [[Intro to SQL for Querying Databases Reader]{.underline}][dl_sql]
 -   [[Spatial SQL Reader]{.underline}][dl_ssql]
@@ -920,9 +919,9 @@ kbl(nosql, col.names=nosql_cols)
 -   [[W3Schools MongoDB Tutorial]{.underline}][w3mongo]
 
 ### Campus Database Resources {background-image="img/slides/book.png"
-                                background-size="10%"
+                                background-size="8%"
                                 background-opacity="0.9"
-                                background-position="92% 7%"}
+                                background-position="97% 97%"}
 ::: {style="font-size: 80%;"}
 
 -   UC Davis DataLab [Office Hours][oh]:
@@ -943,9 +942,9 @@ kbl(nosql, col.names=nosql_cols)
 
 :::
 ## References {background-image="img/slides/book.png"
-                                background-size="10%"
+                                background-size="8%"
                                 background-opacity="0.9"
-                                background-position="92% 7%"}
+                                background-position="97% 97%"}
 
 ::: {#refs}
 :::
