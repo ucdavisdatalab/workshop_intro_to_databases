@@ -447,19 +447,30 @@ kbl(mpg) |>
 :::
 
 ## Graph Data{background-image="img/slides/network.png"
-             background-size="7%" background-opacity="0.8"
-             background-position="37% 4%"}
-
-<br>
+             background-size="6%" background-opacity="0.8"
+             background-position="36% 7%"}
 
 
-<center>![](img/graph_data.png){width="75%"}</center>
+<center>
+![](img/slides/SocialNetworkAnalysis.png){width="120%"}
+</center>
 
 :::{.notes}
 -   organized around relationships
 -   structure more important than obs
 -   no inherent center or hierarchy
 :::
+
+### Graph Data {background-image="img/slides/network.png"
+                background-size="8%"
+                background-opacity="0.8"
+                background-position="97% 97%"}
+<br>
+
+
+<center>![](img/graph_data.png){width="75%"}</center>
+
+
 
 
 ### Graph Data Research Questions {background-image="img/slides/network.png"
