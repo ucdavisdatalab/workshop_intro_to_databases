@@ -383,7 +383,7 @@ kbl(mpg) |>
 
 ## Tree Data{background-image="img/slides/tree.svg"
              background-size="7%" background-opacity="0.8"
-             background-position="33% 7%"}
+             background-position="31% 7%"}
 
 <br>
 
