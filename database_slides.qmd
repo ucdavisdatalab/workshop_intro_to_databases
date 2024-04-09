@@ -994,13 +994,23 @@ kbl(sql, col.names=sql_cols)
 
 :::
 
-::: {style="font-size: 55%;"}
+:::{.notes}
+-   many data structures, but not all software serves all structures
+-   like sql data manipulation is easy and standardized
+-   Also has ways of dealing with 
+-   not as strict as nosql databases, vis a vis transactions
+-   even faster than SQL, because data isn't all linked 
+:::
+
+
 
 
 ## Example NoSQL Software{background-image="img/slides/nosql.png"
                                 background-size="8%"
                                 background-opacity="0.8"
                                 background-position="97% 97%"}
+::: {style="font-size: 55%;"}
+
 
 ```{r, echo=FALSE}
 
@@ -1047,6 +1057,9 @@ kbl(nosql, col.names=nosql_cols)
 ![](img/slides/questions.png)
 </center>
 
+:::{.notes}
+we will use spreadsheet software as a proxy for flat file + gui
+:::
 
 ## Data Structure Decision{background-image="img/slides/lightbulb.png"
                                     background-size="8%"
