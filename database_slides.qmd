@@ -582,7 +582,13 @@ kbl(mpg) |>
 
 
 :::{.notes}
-Now we will dig deeper on data stores themselves.
+-   Now we will dig deeper on data stores themselves.
+-   Note: I make a lot of generalizations about how different software works
+-   You could fine counter examples to each
+-   ex. google sheets and concurrent editing without conflicts
+-   What I'm just saying is rule of thumb 
+-   Ask if you have questions
+
 :::
 
 ## Data Store Definitions {background-image="img/slides/data-store.png"
@@ -652,12 +658,34 @@ unit.
 </center>
 
 
+:::{.notes}
+-   flat file + gui
+  -   storage separate from interaction
+  -   stand alone files, not linked elsewhere
+  -   ex spreadsheet software with csv or xlsx
+-   dbms
+  -   storage and interaction together
+  -   data linked in some way
+- Secret third type is to use a programming language like R or python
+- we will talk about spreadsheets, RDBMS, and NoSQL MS
+
+:::
+
+
 ## {background-image="img/slides/data-store.png" background-size="8%"
     background-opacity="0.8" background-position="97% 97%"}
 
 <center>
 ![](img/data_store_factors.png){width="80%"}
 </center>
+
+:::{.notes}
+1.  data structure can be more complex
+2.  queries make interaction reproducible
+3.  multiple people can access and edit without conflicts
+4.  higher data size limits
+
+:::
 
 # Spreadsheet Software{background-image="img/slides/spreadsheet.png" 
                background-size="60%"
@@ -686,6 +714,19 @@ unit.
     - Lots of data duplication
 
 :::
+
+:::{.notes}
+-   Tabular structure
+-   Stand alone (not generally linked to other files)
+-   Supports relatively low complexity in dat
+-   Interact via GUI or programming language
+-   One person can edit at a time
+-   Data storage determined by GUI, is generally low
+-   Software is very widely available and UC Davis provides licenses
+-   Very easy to use
+
+:::
+
 <!--
 -   Imposes tabular data structure
 -   Widely available and easy to use via a Graphical User Interface (GUI)
@@ -723,6 +764,16 @@ kbl(dh, caption=dh_cap) |>
 ```
 :::
 
+:::{.notes}
+
+-   lots of duplication (260)
+-   if there is a typo it may be hard to find
+-   may need to correct typos multiple times, in various places
+-   then redistribute the data
+
+
+:::
+
 ## Example Spreadsheet Software{background-image="img/slides/spreadsheet.png"
                                 background-size="8%"
                                 background-opacity="0.8"
@@ -737,9 +788,26 @@ kbl(dh, caption=dh_cap) |>
 
 \* Open Source
 
+:::{.notes}
+-   Excel also has analysis tools (especially financial)
+-   Google sheets has capability for simultaneous editing and some vc
+-   Open refine provides some data cleaning
+-   open science framework has project management tools as well
+
+
+:::
+
+
 # Relational Database Management Systems (RDBMS) {background-image="img/slides/database.png" 
                        background-size="60%"
                        background-opacity="0.2"}
+
+:::{.notes}
+-   This is what people generally mean when they say database
+-   Both the data storage mechanism and interaction engine 
+
+:::
+
 
 ## RDBMSs{background-image="img/slides/database.png"
                                 background-size="8%"
@@ -763,11 +831,26 @@ kbl(dh, caption=dh_cap) |>
 
 4. **Computing Resources**
 
-    - No built-in size restrictions
+    - Few built-in size restrictions
     - Requires some specialized setup
     - thousands of transactions per day
 
 :::
+
+:::{.notes}
+-   tabular and relational
+-   instead of GUI, use SQL on command line, much easier than PL
+  -   interacting is reproducible
+  -   standardizes process for updating data
+-   automatically deals with conflicts via transactions
+  - multiple people can edit at a time
+-   built in version control and admin
+  - easy to set permissions
+-   larger storage capacity, reduced data duplication
+-   free options and options through UC Davis Licensing
+
+:::
+
 
 ## Relational Keys{background-image="img/slides/database.png"
                                 background-size="8%"
@@ -778,6 +861,15 @@ Pair of columns with the same values
 
 ![](img/slides/linked_tables.png)
 
+:::{.notes}
+-   databases store connected data
+-   tables connected by shared columns = keys
+-   keys implement relational part of relational database
+-   Primary key = column in table where key uniquely identifies observations
+-   Foreign key = primary key in another table, isn't necessarily unique
+-   Allows us to look up phone number without storing phone number with sales
+:::
+
 
 ## IMDb Entity Relationship Diagram {background-image="img/slides/database.png"
                                 background-size="8%"
@@ -785,6 +877,12 @@ Pair of columns with the same values
                                 background-position="97% 97%"}
 
 ![](img/imdb_ERD.png)
+
+:::{.notes}
+-   visual representation of entire rdb with links drawn between key pairs
+-   list columns in each table and data types
+-   3 types of relationships
+:::
 
 ## Why use an RDBMS? {background-image="img/slides/database.png"
                                 background-size="8%"
@@ -802,6 +900,16 @@ Pair of columns with the same values
 
 -  Ensure data integrity
 
+:::
+
+:::{.notes}
+-   duplication = 260 -> 156 is 40% reduction in size
+-   SQL makes everything standarized and reproducible
+-   update database once and everyoen runs new query and gets new data
+-   very fast = 60M observations, query took 0.5 seconds
+-   relational nature makes it easy to recombine and reformat data
+-   data type rules mean QC is easier
+-   only change typos once in source table
 :::
 
 ## Example RDBMS Software {background-image="img/slides/database.png"
@@ -824,6 +932,14 @@ kbl(sql, col.names=sql_cols)
 # NoSQL Management Systems{background-image="img/slides/nosql.png" 
                        background-size="60%"
                        background-opacity="0.3"}
+                       
+:::{.notes}
+-   Not only sql
+-   If you like the features of a relational database but you don't have 
+    tabular data
+-   sometimes data is contained within database, sometimes database sits on top
+    of flat files
+:::
 
 ## NoSQL Databases{background-image="img/slides/nosql.png"
                                 background-size="8%"
@@ -852,6 +968,15 @@ kbl(sql, col.names=sql_cols)
     - Requires some specialized setup
     - millions of transactions per day
 :::
+
+:::{.notes}
+-   many data structures, but not all software serves all structures
+-   like sql data manipulation is easy and standardized
+-   Also has ways of dealing with 
+-   not as strict as nosql databases, vis a vis transactions
+-   even faster than SQL, because data isn't all linked 
+:::
+
 
 ## Why Use NoSQL Databases?{background-image="img/slides/nosql.png"
                                 background-size="8%"
@@ -890,6 +1015,14 @@ kbl(nosql, col.names=nosql_cols)
 ```
 
 :::
+
+:::{.notes}
+-   frequently free means limited storage
+-   queries = how easy it is to manipulate your data reproducibly
+-   transactions = how strict is database about not introducing different 
+    versions of your data if people edit at the same time.
+:::
+
 
 # How to Decide? {background-image="img/slides/lightbulb.png" 
                        background-size="60%"
