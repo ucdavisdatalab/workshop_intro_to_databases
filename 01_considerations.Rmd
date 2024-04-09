@@ -2,11 +2,11 @@
 
 When deciding on a method for storing your data (a data store), you have many
 options. While none of the options will likely be perfect, some are undoubtedly
-more suited to your situation than others. In order to figure out which data
-store will best suit your needs, it is important to consider the following four
-factors: your data's structure, the ways you anticipate interacting with your
-data, your data management needs, and the computing resources you have access
-to.
+more suited to your situation than others. To figure out which data store will
+best suit your needs, it is important to consider the following four factors:
+(1) your data's structure, (2) the ways you anticipate interacting with your
+data, (3) your data management needs, and (4) the computing resources you have
+access to.
 
 <center>
 *Figure 2.1. Diagram outlining four factors to consider when choosing a data
@@ -47,7 +47,10 @@ reformatting your data, consider a data store that has this functionality.
 ## Data Management
 
 Data management concerns the logistics of working with data. It encompasses 
-the challenges of people (including you) interacting with your data over time and space. 
+the challenges of people (including you) interacting with your data over time 
+and space. There are different considerations for data management when you are 
+working on a project alone, as a collaboration, or archiving data for future 
+use. However, similar best practices for data management will benefit them all.
 
 Even if you are the only person who will ever interact with your data, data
 management is still something to consider. If you collect or modify your data
