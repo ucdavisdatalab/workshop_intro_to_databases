@@ -459,6 +459,7 @@ kbl(mpg) |>
 -   organized around relationships
 -   structure more important than obs
 -   no inherent center or hierarchy
+
 :::
 
 ### Graph Data {background-image="img/slides/network.png"
@@ -471,7 +472,12 @@ kbl(mpg) |>
 <center>![](img/graph_data.png){width="75%"}</center>
 
 
+:::{.notes}
+-   relationships can directional but don't have to be
+-   structure is contained in the data itself
+-   very flexible -> high computational intensity
 
+:::
 
 ### Graph Data Research Questions {background-image="img/slides/network.png"
                                     background-size="8%"
@@ -485,12 +491,25 @@ kbl(mpg) |>
 -   What is the direction or volume of flow between entities?
 :::
 
+:::{.notes}
+-   number of connections from honolulu to cairo
+-   how many different ways to get from empire state building to brooklyn bridge 
+-   hospital jobs with the highest exposure risk
+-   would a transit line to the north bay improve traffic
+
+:::
+
 ### Abraham Lincoln Graph Data {background-image="img/slides/network.png"
                                     background-size="8%"
                                     background-opacity="0.8"
                                     background-position="97% 97%"}
 
 <center>![](img/abraham_lincoln.png)</center>
+
+:::{.notes}
+-   mtcars is not graph structured, won't even try to reformat it
+-   as many links to things lincoln was opposed to as he supported
+:::
 
 
 ## Relational Data{background-image="img/slides/categories.png"
@@ -504,6 +523,15 @@ kbl(mpg) |>
 </center>
 
 <br>
+
+:::{.notes}
+-   organized by group membership
+-   similarities
+  -   trees: entities are nested within groups
+  -   graphs: links between entities are non-hierarchical
+-   difference: entities can show up in multiple groups
+-   often used with other types of data (ex tabular)
+:::
 
 ### Relational Data Research Questions {background-image="img/slides/categories.png"
                                      background-size="8%"
@@ -519,6 +547,13 @@ kbl(mpg) |>
 
 :::
 
+:::{.notes}
+-   which state has most gvt agencies related to health and medicine
+-   do students majoring in Env sci and mgmnt join outdoor rec groups?
+-   How many diff roles does the average student play on campus
+
+:::
+
 ### `mtcars` Relational Questions {background-image="img/slides/categories.png"
                                     background-size="8%"
                                     background-opacity="0.8"
@@ -526,6 +561,13 @@ kbl(mpg) |>
 
 
 <center>![](img/mpg_relate_data.png){width="100%"}</center>
+
+:::{.notes}
+-   not really any questions this structure is useful to use to ask
+-   can't even represent all the data (no numbers)
+-   this is why choosing the correct structure is important
+
+:::
 
 
 # Data Stores {background-image="img/slides/data-store.png" 
@@ -538,6 +580,10 @@ kbl(mpg) |>
 >
 > Wikipedia
 
+
+:::{.notes}
+Now we will dig deeper on data stores themselves.
+:::
 
 ## Data Store Definitions {background-image="img/slides/data-store.png"
                                     background-size="8%"
@@ -555,6 +601,16 @@ kbl(mpg) |>
 
 **GUI:** Graphical User Interface, a software application that allows you to 
 interact with the computer via icons, buttons, and windows.
+
+:::
+
+:::{.notes}
+-   Data store storage+interaction
+-   these can be independent or together in one software package
+-   can be very simple or complex
+-   They also may impose a structure
+-   Gui - graphical user interface
+-   as opposed to command line interface
 
 :::
 
@@ -577,7 +633,13 @@ unit.
 
 :::
 
+:::{.notes}
 
+-   Query - database command: create read update delete
+-   Transaction - database unit of work, 
+
+
+:::
 
 ## Types of Data Stores {background-image="img/slides/data-store.png"
                                     background-size="8%"
