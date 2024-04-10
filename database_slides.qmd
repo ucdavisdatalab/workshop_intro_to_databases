@@ -515,6 +515,9 @@ kbl(mpg) |>
 :::{.notes}
 -   mtcars is not graph structured, won't even try to reformat it
 -   as many links to things lincoln was opposed to as he supported
+-   wiki hyperlinks aren't the same as links in our head
+-   expect 4 clicks (lincoln movie, Daniel Day Lewis, wild river, kevin bacon)
+-   but do not directly link each movie in the database, only do notable work
 :::
 
 
@@ -900,7 +903,7 @@ Pair of columns with the same values
 
 :::{.notes}
 -   duplication = 260 -> 156 is 40% reduction in size
--   SQL makes everything standarized and reproducible
+-   SQL makes everything standardized and reproducible
 -   update database once and everyone runs new query and gets new data
 -   very fast = 60M observations, query took 0.5 seconds
 -   relational nature makes it easy to recombine and reformat data
