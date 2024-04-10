@@ -61,7 +61,7 @@ forms.
 ![](img/cr.png)
 </center>
 
-## Further Reading
+## Additional Resources
 
 This workshop is just the beginning. If a database seems like a good data store
 for your current (or next) research project, the resources below can help you
