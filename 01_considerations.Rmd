@@ -52,15 +52,16 @@ and space. There are different considerations for data management when you are
 working on a project alone, as a collaboration, or archiving data for future 
 use. However, similar best practices for data management will benefit them all.
 
-Even if you are the only person who will ever interact with your data, data
-management is still something to consider. If you collect or modify your data
-over time, you need to make sure you keep track of those changes, and make sure
-you are always working with the most up to date version of your data. This could
-be because you are adding new data or correcting errors in older data. This is
-doubly important if data gets entered by hand. Some data stores keep track of
-changes to your data for you and even provide some quality control tools. Others
-require you to do track versions of your data and do quality control on your
-own.
+Data Management is a crucial part of valid and reproducible research. Even if
+you are the only person who will ever interact with your data, you must manage
+your data in a way that you in the future will be able to recall what past you
+did, and why. If you collect or modify your data over time, you need to make
+sure you keep track of those changes, and make sure you are always working with
+the most up to date version of your data. This could be because you are adding
+new data or correcting errors in older data. This is doubly important if data
+gets entered by hand. Some data stores keep track of changes to your data for
+you and even provide some quality control tools. Others require you to track
+versions of your data and do quality control manually.
 
 However, science is a collaborative process, so it is more than likely you won't
 be the only one working with your data. Any time more than one person needs to

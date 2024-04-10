@@ -4,3 +4,4 @@ PostgreSQL,"Technical documentation, with robust community support",Free,Open So
 MySQL,"Large community base, No professional support without a paid subscription",Free,Partially Open Source,Built-in vector support
 Microsoft SQL Server,Robust professional and community support,Paid,Proprietary,Built-in vector support
 Oracle,Robust professional and some community support,Paid,Proprietary,Raster and vector support with Spatial Studio
+Microsoft Access,"Not supported, do not use",NA,Proprietary,None
