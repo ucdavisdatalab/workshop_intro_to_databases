@@ -31,14 +31,13 @@ Note: there are other definitions of data structure from other disciplines
 (ex. in comp sci), we will not be using those definitions
 -->
 
-I think the first paragraph should be “Information becomes data when we give it
-some sort of structure. If you are doing research, chances are you are going to
-be working with data in some form or another. If you have translated information
+Information becomes data when we give it some sort of structure. If you are
+doing research, chances are you are going to be working with data in some form
+or another. Even if you do not use traditional spreadsheets, you are certainly
+working with some form of information. And if you have translated information
 into a form that is more easily shared or stored for later use, you are working
 with data. That could be the rows and columns of a table, or something more
 human readable, like the grammar and syntax of natural language in text form.
-Even if you do not use traditional rows and columns, you are certainly working
-with some form of information that you have turned into data.
 
 One of the challenges of working with data is figuring out a useful way to store
 it. Thankfully, we have mostly left behind the 20th century's favorite way of
