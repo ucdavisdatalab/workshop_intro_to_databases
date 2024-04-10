@@ -91,32 +91,29 @@ next step.
                 background-position="97% 97%"}
                 
 <center>
-![](img/data_store_factors.png){width="80%"}
+![](img/data_store_factors.png){width="70%"}
 </center>
 
 :::{.notes}
 Data store -> method of storing your data.
+
 databases are a type data store but not the only type
 
-1   Structure
-  -   determined by research question
-  -   stores impose structure so match structure to store
-2   Interaction
-  -   how you format/reformat your data
-  -   based on what analysis you do
-  -   one way or many ways
-3   Management
-  -   logistics around your data
-  -   who collects it, and how frequently
-  -   how many people access it
-  -   how long does it need to be available
-4   Computing Resources
-  -   size of your data
-  -   software you have access to, features you need
-  
-GGE graduate once tweeted "working on a phd is like working on a group 
-    project with someone who made a whole bunch of mistakes at the beginning,
-    but that person is yourself from four years ago."
+-   **Structure:**
+    -   Determined by research question
+    -   stores impose structure so match structure to store
+-   **Interaction:**
+    -   how you format/reformat your data
+    -   based on what analysis you do
+    -   one way or many ways
+-   **Management:** 
+    -   logistics around your data
+    -   who collects it, and how frequently
+    -   how many people access it? 
+    -   how long does it need to be available
+-   **Computing Resources:** 
+    -   size of your data
+    -   software you have access to, features you need
   
 :::
 
@@ -669,30 +666,14 @@ unit.
 
 :::{.notes}
 -   flat file + gui
-  -   storage separate from interaction
-  -   stand alone files, not linked elsewhere
-  -   ex spreadsheet software with csv or xlsx
+    -   storage separate from interaction
+    -   stand alone files, not linked elsewhere
+    -   ex spreadsheet software with csv or xlsx
 -   dbms
-  -   storage and interaction together
-  -   data linked in some way
+    -   storage and interaction together
+    -   data linked in some way
 - Secret third type is to use a programming language like R or python
 - we will talk about spreadsheets, RDBMS, and NoSQL MS
-
-:::
-
-
-## {background-image="img/slides/data-store.png" background-size="8%"
-    background-opacity="0.8" background-position="97% 97%"}
-
-<center>
-![](img/data_store_factors.png){width="80%"}
-</center>
-
-:::{.notes}
-1.  data structure can be more complex
-2.  queries make interaction reproducible
-3.  multiple people can access and edit without conflicts
-4.  higher data size limits
 
 :::
 
@@ -727,10 +708,10 @@ unit.
 :::{.notes}
 -   Tabular structure
 -   Stand alone (not generally linked to other files)
--   Supports relatively low complexity in dat
+-   Supports relatively low complexity in data
 -   Interact via GUI or programming language
 -   One person can edit at a time
--   Data storage determined by GUI, is generally low
+-   Data storage determined by GUI, is generally low 
 -   Software is very widely available and UC Davis provides licenses
 -   Very easy to use
 
@@ -814,7 +795,7 @@ kbl(dh, caption=dh_cap) |>
 :::{.notes}
 -   This is what people generally mean when they say database
 -   Both the data storage mechanism and interaction engine 
-
+-   Related to relational data but this is a data store not structure
 :::
 
 
@@ -900,7 +881,6 @@ Pair of columns with the same values
 
 ::: {style="font-size: 120%;"}
 
-
 -  Reduce data duplication
 
 -  Speed up and standardize accessing and updating the data
@@ -909,17 +889,21 @@ Pair of columns with the same values
 
 -  Ensure data integrity
 
+-  Manage multiple users
+
 :::
 
 :::{.notes}
 -   duplication = 260 -> 156 is 40% reduction in size
 -   SQL makes everything standarized and reproducible
--   update database once and everyoen runs new query and gets new data
+-   update database once and everyone runs new query and gets new data
 -   very fast = 60M observations, query took 0.5 seconds
 -   relational nature makes it easy to recombine and reformat data
 -   data type rules mean QC is easier
 -   only change typos once in source table
+-   set permissions and transactions take care of conflicts
 :::
+
 
 ## Example RDBMS Software {background-image="img/slides/database.png"
                                 background-size="8%"
@@ -1101,7 +1085,13 @@ we will use spreadsheet software as a proxy for flat file + gui
 ![](img/slides/management.png){width="80%"}
 </center>
 
+:::{.notes}
+Every project is a group project (with your past self)
 
+GGE graduate once tweeted "working on a phd is like working on a group 
+    project with someone who made a whole bunch of mistakes at the beginning,
+    but that person is yourself from four years ago."
+:::
 
 ## Computing Resources Decision{background-image="img/slides/lightbulb.png"
                                     background-size="8%"
