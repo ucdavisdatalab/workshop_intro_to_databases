@@ -935,8 +935,7 @@ kbl(sql, col.names=sql_cols)
 -   Not only sql
 -   If you like the features of a relational database but you don't have 
     tabular data
--   sometimes data is contained within database, sometimes database sits on top
-    of flat files
+
 :::
 
 ## NoSQL Databases{background-image="img/slides/nosql.png"
@@ -1046,6 +1045,10 @@ kbl(nosql, col.names=nosql_cols)
 ![](img/data_store_factors.png){width="80%"}
 </center>
 
+:::{.notes}
+we will use spreadsheet software as a proxy for flat file + gui
+:::
+
 ## {background-image="img/slides/lightbulb.png"
                                     background-size="8%"
                                     background-opacity="0.8"
@@ -1055,9 +1058,7 @@ kbl(nosql, col.names=nosql_cols)
 ![](img/slides/questions.png)
 </center>
 
-:::{.notes}
-we will use spreadsheet software as a proxy for flat file + gui
-:::
+
 
 ## Data Structure Decision{background-image="img/slides/lightbulb.png"
                                     background-size="8%"
