@@ -6,7 +6,7 @@ title-slide-attributes:
   data-background-position: 5% 2%
 author: "Elise Hellwig"
 format: 
-  revealjs:
+  revealjs: 
     sc-sb-title: true
     theme: simple
 filters:
@@ -36,13 +36,6 @@ names(mpg) = c('mpg', 'cylinders', 'horsepower', 'weight', 'manual', 'origin')
 
 ```
 
-:::{.notes}
--   Welcome
--   Introduce self
--   Overview = no coding, not no thinking
--   Point is to ask questions about how your research fits
--   Think about current or future data problems
-:::
 
 # Introduction {background-image="img/slides/trail.png"
                 background-size="60%"
@@ -210,6 +203,13 @@ Further Reading: [By Icon Lauk from the Noun Project][fr], CC BY 3.0
 >
 > \- Oxford English Dictionary
 
+
+
+:::{.notes}
+-   Oxford focuses on digital data, but we know data is not just digital
+:::
+
+
 ## What is data?{background-image="img/slides/Noun_Data.png"
                 background-size="8%" background-position="97% 97%"}
 
@@ -220,7 +220,8 @@ Further Reading: [By Icon Lauk from the Noun Project][fr], CC BY 3.0
 
 </center>
 
-<br>
+::: columns
+::: {.column width="60%"}
 
 That form could be:
 
@@ -229,13 +230,26 @@ That form could be:
 -   Written human language
 -   And many others...
 
+:::
+
+::: {.column width="40%"}
+
+![](img/cuniform.jpg){width="65%"}
+
+
+:::
+:::
+
+
 :::{.notes}
 
 -   paper is still data, and can be a problem
+-   Clay cuniform tablet, Neo-Sumerian 2041 BCE, cattle receipt
 -   form is the data's structure
 -   what form our data takes can help guide our choice of data store
 -   spreadsheets are very familiar
 -   people now think of language as data
+
     
 So how to we categorize our data?
 :::
