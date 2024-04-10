@@ -23,7 +23,7 @@
 <meta name="author" content="Elise Hellwig" />
 
 
-<meta name="date" content="2024-03-28" />
+<meta name="date" content="2024-04-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -174,7 +174,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html#data-management-1"><i class="fa fa-check"></i>3. Data Management</a></li>
 <li class="chapter" data-level="" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html#computing-resources-1"><i class="fa fa-check"></i>4. Computing Resources</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html#further-reading"><i class="fa fa-check"></i><b>5.2</b> Further Reading</a>
+<li class="chapter" data-level="5.2" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html#additional-resources"><i class="fa fa-check"></i><b>5.2</b> Additional Resources</a>
 <ul>
 <li class="chapter" data-level="" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html#general-database-information"><i class="fa fa-check"></i>General Database Information</a></li>
 <li class="chapter" data-level="" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html#learning-query-languages"><i class="fa fa-check"></i>Learning Query Languages</a></li>
@@ -229,8 +229,11 @@ contrast to a command line interface which only allows you to interact with the
 computer through text commands.</p>
 <p><strong>Query:</strong> commands that create, read, update, or delete information from a data
 store, generally entered through a command line interface.</p>
-<p><strong>Transaction:</strong> the unit of work in a data store. Ideally a transaction
-succeeds or fails as a unit.</p>
+<p><strong>Transaction:</strong> the unit of work in a data store. The database keeps track of
+the order of transactions submitted by each user, to prevent conflicts. A
+transaction succeeds or fails as a unit, so if an update affects multiple parts
+of a database, the update only succeeds if every individual part of it is
+allowed.</p>
 </div>
 <div id="types-of-data-stores" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Types of Data Stores<a href="data-stores.html#types-of-data-stores" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -1504,6 +1507,23 @@ Proprietary
 </td>
 <td style="text-align:left;">
 Raster and vector support with Spatial Studio
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Microsoft Access
+</td>
+<td style="text-align:left;">
+Not supported, do not use
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Proprietary
+</td>
+<td style="text-align:left;">
+None
 </td>
 </tr>
 </tbody>

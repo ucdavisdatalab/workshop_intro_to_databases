@@ -23,5 +23,5 @@ rdbms-decision-factors
 nosql-databases
 choosing-the-right-data-store
 decision-flow-charts
-further-reading
+additional-resources
 assessment

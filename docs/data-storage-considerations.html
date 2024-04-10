@@ -23,7 +23,7 @@
 <meta name="author" content="Elise Hellwig" />
 
 
-<meta name="date" content="2024-03-28" />
+<meta name="date" content="2024-04-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -174,7 +174,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html#data-management-1"><i class="fa fa-check"></i>3. Data Management</a></li>
 <li class="chapter" data-level="" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html#computing-resources-1"><i class="fa fa-check"></i>4. Computing Resources</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html#further-reading"><i class="fa fa-check"></i><b>5.2</b> Further Reading</a>
+<li class="chapter" data-level="5.2" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html#additional-resources"><i class="fa fa-check"></i><b>5.2</b> Additional Resources</a>
 <ul>
 <li class="chapter" data-level="" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html#general-database-information"><i class="fa fa-check"></i>General Database Information</a></li>
 <li class="chapter" data-level="" data-path="choosing-the-right-data-store.html"><a href="choosing-the-right-data-store.html#learning-query-languages"><i class="fa fa-check"></i>Learning Query Languages</a></li>
@@ -208,11 +208,11 @@ div.csl-indent {
 <h1><span class="header-section-number">2</span> Data Storage Considerations<a href="data-storage-considerations.html#data-storage-considerations" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>When deciding on a method for storing your data (a data store), you have many
 options. While none of the options will likely be perfect, some are undoubtedly
-more suited to your situation than others. In order to figure out which data
-store will best suit your needs, it is important to consider the following four
-factors: your data’s structure, the ways you anticipate interacting with your
-data, your data management needs, and the computing resources you have access
-to.</p>
+more suited to your situation than others. To figure out which data store will
+best suit your needs, it is important to consider the following four factors:
+(1) your data’s structure, (2) the ways you anticipate interacting with your
+data, (3) your data management needs, and (4) the computing resources you have
+access to.</p>
 <center>
 <em>Figure 2.1. Diagram outlining four factors to consider when choosing a data
 store.</em>
@@ -255,16 +255,20 @@ reformatting your data, consider a data store that has this functionality.</p>
 <div id="data-management" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Data Management<a href="data-storage-considerations.html#data-management" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Data management concerns the logistics of working with data. It encompasses
-the challenges of people (including you) interacting with your data over time and space.</p>
-<p>Even if you are the only person who will ever interact with your data, data
-management is still something to consider. If you collect or modify your data
-over time, you need to make sure you keep track of those changes, and make sure
-you are always working with the most up to date version of your data. This could
-be because you are adding new data or correcting errors in older data. This is
-doubly important if data gets entered by hand. Some data stores keep track of
-changes to your data for you and even provide some quality control tools. Others
-require you to do track versions of your data and do quality control on your
-own.</p>
+the challenges of people (including you) interacting with your data over time
+and space. There are different considerations for data management when you are
+working on a project alone, as a collaboration, or archiving data for future
+use. However, similar best practices for data management will benefit them all.</p>
+<p>Data Management is a crucial part of valid and reproducible research. Even if
+you are the only person who will ever interact with your data, you must manage
+your data in a way that you in the future will be able to recall what past you
+did, and why. If you collect or modify your data over time, you need to make
+sure you keep track of those changes, and make sure you are always working with
+the most up to date version of your data. This could be because you are adding
+new data or correcting errors in older data. This is doubly important if data
+gets entered by hand. Some data stores keep track of changes to your data for
+you and even provide some quality control tools. Others require you to track
+versions of your data and do quality control manually.</p>
 <p>However, science is a collaborative process, so it is more than likely you won’t
 be the only one working with your data. Any time more than one person needs to
 access or modify a data set, data management gets more complicated. By default,
