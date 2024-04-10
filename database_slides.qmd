@@ -626,7 +626,7 @@ interact with the computer via icons, buttons, and windows.
 
 :::
 
-## Data Store Definitions {background-image="img/slides/data-store.png"
+## Database Definitions {background-image="img/slides/data-store.png"
                                     background-size="8%"
                                     background-opacity="0.8"
                                     background-position="97% 97%"}
@@ -640,15 +640,20 @@ interact with the computer via icons, buttons, and windows.
 
 <br>
 
-**Transaction:** the unit of work in a database, ideally succeeds or fails as a 
-unit.
+**Transaction:** the unit of work in a database, succeeds or fails as a 
+unit. Allows database to prevent conflicts.
 
 :::
 
 :::{.notes}
 
--   Query - database command: create read update delete
--   Transaction - database unit of work, 
+-   Query - how you interact with a database, submit through the command line
+interface
+-   Transaction - database unit of work
+    -   tracking transactions allows database to prevent conflicts
+    -   transaction succeeds or fails as a unit
+    -   if an update affects multiple parts of a database, the update only 
+    succeeds if every individual part of it is allowed.
 
 
 :::
@@ -965,7 +970,7 @@ kbl(sql, col.names=sql_cols)
 :::{.notes}
 -   many data structures, but not all software serves all structures
 -   like sql data manipulation is easy and standardized
--   Also has ways of dealing with 
+-   Also has ways of dealing with multiple users/conflicts
 -   not as strict as nosql databases, vis a vis transactions
 -   even faster than SQL, because data isn't all linked 
 :::
@@ -1087,10 +1092,6 @@ we will use spreadsheet software as a proxy for flat file + gui
 
 :::{.notes}
 Every project is a group project (with your past self)
-
-GGE graduate once tweeted "working on a phd is like working on a group 
-    project with someone who made a whole bunch of mistakes at the beginning,
-    but that person is yourself from four years ago."
 :::
 
 ## Computing Resources Decision{background-image="img/slides/lightbulb.png"
@@ -1111,9 +1112,9 @@ GGE graduate once tweeted "working on a phd is like working on a group
 **Q & A**
 :::
 
-## Further Reading{background-image="img/slides/book.png" 
-                       background-size="60%"
-                       background-opacity="0.3"} 
+## Additional Resources {background-image="img/slides/book.png" 
+                         background-size="60%"
+                         background-opacity="0.3"} 
 
 ### General Database Information {background-image="img/slides/book.png"
                                 background-size="8%"
