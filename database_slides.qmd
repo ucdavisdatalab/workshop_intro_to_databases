@@ -35,6 +35,15 @@ mpg$origin = origins
 names(mpg) = c('mpg', 'cylinders', 'horsepower', 'weight', 'manual', 'origin')
 
 ```
+
+:::{.notes}
+-   Welcome
+-   Introduce self
+-   Overview = no coding, not no thinking
+-   Point is to ask questions about how your research fits
+-   Think about current or future data problems
+:::
+
 # Introduction {background-image="img/slides/trail.png"
                 background-size="60%"
                 background-opacity="0.5"}
@@ -84,7 +93,7 @@ next step.
 
 :::
 
-## {background-image="img/slides/trail.png"
+## Data Storage Considerations {background-image="img/slides/trail.png"
                 background-size="8%" background-opacity="0.9"
                 background-position="97% 97%"}
                 
@@ -95,43 +104,29 @@ next step.
 :::{.notes}
 Data store -> method of storing your data.
 databases are a type data store but not the only type
+
+1   Structure
+  -   determined by research question
+  -   stores impose structure so match structure to store
+2   Interaction
+  -   how you format/reformat your data
+  -   based on what analysis you do
+  -   one way or many ways
+3   Management
+  -   logistics around your data
+  -   who collects it, and how frequently
+  -   how many people access it
+  -   how long does it need to be available
+4   Computing Resources
+  -   size of your data
+  -   software you have access to, features you need
+  
+GGE graduate once tweeted "working on a phd is like working on a group 
+    project with someone who made a whole bunch of mistakes at the beginning,
+    but that person is yourself from four years ago."
+  
 :::
 
-
-## Data Storage Considerations {.smaller
-                                background-image="img/slides/trail.png" 
-                                background-size="8%" background-opacity="0.9"
-                                background-position="97% 97%"}
-
-
-
-::: {style="font-size: 90%;"}
-
-1.  **Data Structure:** What are my research questions?
-
-2.  **Data Interaction**
-       
-    - What kinds of analysis will I do?
-    - How does my data need to be formatted?
-
-3.  **Data Management**
-    
-    - When and how is the data collected?
-    - Who needs access to it? one or more people?
-    - How long does the data need to persist?
-
-4.  **Computing Resources**
-
-    - How much data do I have?
-    - Do I have access to external or shared storage space?
-    - What software to I have licenses for?
-
-:::
-
-:::{.notes}
-Will go over how each of these factors relate to several differen type of data 
-stores.
-:::
 
 ## Road Map{background-image="img/slides/trail.png" background-size="40%"
             background-opacity="0.9" background-position="80% 30%"}
