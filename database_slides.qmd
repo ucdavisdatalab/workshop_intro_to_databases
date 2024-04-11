@@ -1153,7 +1153,7 @@ Every project is a group project (with your past self)
                                 background-position="97% 97%"}
 ::: {style="font-size: 80%;"}
 
--   UC Davis DataLab [Office Hours][oh]:
+-   UC Davis DataLab [[Office Hours]{.underline}][oh]:
     - Mondays, 1-2pm via Zoom
     - Tuesdays 1-2pm in person (Shields Library, room 360)
 
