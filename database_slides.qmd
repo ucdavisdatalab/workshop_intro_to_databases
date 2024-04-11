@@ -63,9 +63,11 @@ to know. Raise your hand if:
 ::: {style="font-size: 130%;"}
 
 
--   Introduction to SQL, 4/18 (event, [[reader]{.underline}][dl_sql])
+-   Intro to SQL for Querying Databases, 4/23 
+    ([[event]{.underline}][sql_event], [[reader]{.underline}][dl_sql])
 
--   Spatial SQL, 5/3 (event, [[reader]{.underline}][dl_ssql])
+-   Spatial SQL, 5/3 ([[event]{.underline}][spat_event],
+    [[reader]{.underline}][dl_ssql])
 
 :::
 
@@ -75,9 +77,11 @@ to know. Raise your hand if:
 
 
 
-[micro]: https://ucd.badgr.com/public/pathway/6160c163fc391a6821c02fbd
 [dl_sql]:  https://ucdavisdatalab.github.io/workshop_intro_to_sql/
 [dl_ssql]: https://ucdavisdatalab.github.io/Spatial_SQL/
+[sql_event]: https://datalab.ucdavis.edu/eventscalendar/workshop-introduction-to-sql-for-querying-databases/
+[spat_event]: https://datalab.ucdavis.edu/eventscalendar/workshop-spatial-sql-2/
+
 
 :::{.notes}
 
