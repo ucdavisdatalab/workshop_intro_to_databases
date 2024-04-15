@@ -72,7 +72,7 @@ to know. Raise your hand if:
 :::
 
 <br>
-<center>![](img/slides/datalab-logo-full-color-rgb.png){width="70%"}</center>
+![](img/slides/datalab-logo-full-color-rgb.png){width="70%" fig-align="center"}
 
 
 
@@ -94,9 +94,7 @@ next step.
                 background-size="8%" background-opacity="0.9"
                 background-position="97% 97%"}
                 
-<center>
-![](img/data_store_factors.png){width="70%"}
-</center>
+![](img/data_store_factors.png){width="70%" fig-align="center"}
 
 :::{.notes}
 Data store -> method of storing your data.
@@ -410,9 +408,7 @@ kbl(mpg) |>
                   background-size="8%" background-opacity="0.8"
                   background-position="97% 97%"}
 
-<center>
-![](img/tree_data.png){width="130%"}
-</center>
+![](img/tree_data.png){width="130%" fig-align="center"}
 
 :::{.notes}
 -   root is the center, distance defines place
@@ -461,9 +457,7 @@ kbl(mpg) |>
              background-position="36% 7%"}
 
 
-<center>
-![](img/slides/SocialNetworkAnalysis.png){width="120%"}
-</center>
+![](img/slides/SocialNetworkAnalysis.png){width="120%" fig-align="center"}
 
 :::{.notes}
 -   organized around relationships
@@ -479,7 +473,7 @@ kbl(mpg) |>
 <br>
 
 
-<center>![](img/graph_data.png){width="75%"}</center>
+[](img/graph_data.png){width="75%" fig-align="center"}
 
 
 :::{.notes}
@@ -514,7 +508,7 @@ kbl(mpg) |>
                                     background-opacity="0.8"
                                     background-position="97% 97%"}
 
-<center>![](img/abraham_lincoln.png)</center>
+![](img/abraham_lincoln.png){fig-align="center"}
 
 :::{.notes}
 -   mtcars is not graph structured, won't even try to reformat it
@@ -531,9 +525,7 @@ kbl(mpg) |>
                 
 <br>
 
-<center>
-![](img/student_characteristics.png){width="140%"}
-</center>
+![](img/student_characteristics.png){width="140%" fig-align="center"}
 
 <br>
 
@@ -573,7 +565,7 @@ kbl(mpg) |>
                                     background-position="97% 97%"}
 
 
-<center>![](img/mpg_relate_data.png){width="100%"}</center>
+![](img/mpg_relate_data.png){width="100%" fig-align="center"}
 
 :::{.notes}
 -   not really any questions this structure is useful to use to ask
@@ -670,10 +662,8 @@ interface
                                     background-opacity="0.8"
                                     background-position="97% 97%"}
 
-<center>
 
-![](img/data_stores.png){width="100%"}
-</center>
+![](img/data_stores.png){width="100%" fig-align="center"}
 
 
 :::{.notes}
@@ -1048,9 +1038,7 @@ kbl(nosql, col.names=nosql_cols)
 ## {background-image="img/slides/lightbulb.png" background-size="8%"
     background-opacity="0.8" background-position="97% 97%"}
 
-<center>
-![](img/data_store_factors.png){width="80%"}
-</center>
+![](img/data_store_factors.png){width="80%" fig-align="center"}
 
 :::{.notes}
 we will use spreadsheet software as a proxy for flat file + gui
@@ -1061,9 +1049,7 @@ we will use spreadsheet software as a proxy for flat file + gui
                                     background-opacity="0.8"
                                     background-position="97% 97%"}
 
-<center>
-![](img/slides/questions.png)
-</center>
+![](img/slides/questions.png){fig-align="center"}
 
 
 
@@ -1072,9 +1058,7 @@ we will use spreadsheet software as a proxy for flat file + gui
                                     background-opacity="0.8"
                                     background-position="97% 97%"}
 
-<center>
-![](img/slides/structure.png)
-</center>
+![](img/slides/structure.png){fig-align="center"}
 
 
 ## Data Interaction Decision{background-image="img/slides/lightbulb.png"
@@ -1082,9 +1066,7 @@ we will use spreadsheet software as a proxy for flat file + gui
                                     background-opacity="0.8"
                                     background-position="97% 97%"}
 
-<center>
-![](img/slides/interaction.png)
-</center>
+![](img/slides/interaction.png){fig-align="center"}
 
 
 
@@ -1094,9 +1076,9 @@ we will use spreadsheet software as a proxy for flat file + gui
                                     background-opacity="0.8"
                                     background-position="97% 97%"}
 
-<center>
-![](img/slides/management.png){width="80%"}
-</center>
+
+![](img/slides/management.png){width="80%" fig-align="center"}
+
 
 :::{.notes}
 Every project is a group project (with your past self)
@@ -1107,9 +1089,7 @@ Every project is a group project (with your past self)
                                     background-opacity="0.8"
                                     background-position="97% 97%"}
 
-<center>
-![](img/slides/cr.png)
-</center>
+![](img/slides/cr.png){fig-align="center"}
 
 ## {background-image="img/slides/lightbulb.png"
                                 background-size="40%"

@@ -8,16 +8,15 @@ best suit your needs, it is important to consider the following four factors:
 data, (3) your data management needs, and (4) the computing resources you have
 access to.
 
-<center>
+
 *Figure 2.1. Diagram outlining four factors to consider when choosing a data
 store.*
-![](img/data_store_factors.png){width="80%"}
-</center>
+![](img/data_store_factors.png){width="80%" fig-align="center"}
+
 
 ## Data Structure
 
 Your data's structure describes how your data is organized. While the same
-information *can* be encoded in multiple data structures, certain types of
 information tend to lend them selves to certain data structures. Additionally,
 different data structures can make it easier or harder to ask specific research
 questions. Many data stores impose structure on the data they store. To make
