@@ -9,6 +9,8 @@ format:
   revealjs: 
     sc-sb-title: true
     theme: simple
+    template-partials:
+      - title-slide.html
 filters:
   - reveal-header
 slide-level: 3
