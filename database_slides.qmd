@@ -1,7 +1,7 @@
 ---
 title: "An Overview of Databases and Data Storage"
 title-slide-attributes:
-  data-background-image: img/slides/datalab-logo-full-color-rgb.png
+  data-background-image: img/datalab-logo-full-color-rgb.png
   data-background-size: 35%
   data-background-position: 5% 2%
 author: "Elise Hellwig"
@@ -9,6 +9,7 @@ format:
   revealjs: 
     sc-sb-title: true
     theme: simple
+    embed-resources: false
     template-partials:
       - title-slide.html
 filters:
@@ -166,7 +167,7 @@ Tree Data: [By HitomiAkane, Tree icon-arzwiki.svg][td], CC BY-SA 4.0
 
 Graph Data: [By Adam Beasley - The Noun Project][gd], CC BY 3.0
 
-Relational Data: [categories by Nira Inds, Noun Project][rd], CC BY 3.0
+Relational Data: [categories by Nira Inds, Noun Project][reda], CC BY 3.0
 
 Data Stores: [By Gaelen Pinnock][ds] - Designer commissioned by the UCT Research
 office, CC BY-SA 4.0
@@ -186,7 +187,7 @@ Further Reading: [By Icon Lauk from the Noun Project][fr], CC BY 3.0
 [tad]: https://commons.wikimedia.org/w/index.php?curid=67122938
 [td]: https://commons.wikimedia.org/w/index.php?curid=130967171
 [gd]: https://commons.wikimedia.org/w/index.php?curid=105266675
-[rd]: https://thenounproject.com/icon/categories-6069462/
+[reda]: https://thenounproject.com/icon/categories-6069462/
 [ds]: https://commons.wikimedia.org/w/index.php?curid=78355715
 [ss]: https://commons.wikimedia.org/w/index.php?curid=67122942
 [rd]: https://commons.wikimedia.org/w/index.php?curid=64472365
